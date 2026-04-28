@@ -1,7 +1,7 @@
 title: Julius Martov
 is-pinned-card: true
 tags: advisor, centrist
-card-image: img/portraits/MartovHat.jpg
+card-image: img/portraits/MartovHat.jpeg
 view-if: wels_advisor = 1
 new-page: true
 
