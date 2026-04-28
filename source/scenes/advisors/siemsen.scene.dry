@@ -1,13 +1,13 @@
-title: Anna Siemsen
+title: Eva Broido
 is-pinned-card: true
 tags: advisor, left
-card-image: img/portraits/SiemsenAnna.jpg
+card-image: img/portraits/EvaBroido.jpg
 view-if: siemsen_advisor = 1
 new-page: true 
 
-= Anna Siemsen
+= Eva Broido
 
-Anna Siemsen is an educational reform advocate and pacifist, who was one of the few German women to receive a PhD in the pre-war period. She was a former member of the USPD.
+Eva Broido is an internationalist, women's rights advocate, and author.
 
 - @campaign_pacifism
 - @structure_
