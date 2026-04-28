@@ -1,13 +1,13 @@
-title: Otto Wels
+title: Julius Martov
 is-pinned-card: true
 tags: advisor, centrist
-card-image: img/portraits/WelsOtto.jpg
+card-image: img/portraits/MartovHat.jpg
 view-if: wels_advisor = 1
 new-page: true
 
-= Otto Wels
+= Julius Martov
 
-Wels is the long-time chairman of the SPD. He is a gifted organizer and a member of the centrist faction.
+Martov is the long-time chairman of the RSDRP(O). He is a gifted organizer, orator, and a member of the centrist faction.
 
 - @clear_agenda
 - @party_discipline
