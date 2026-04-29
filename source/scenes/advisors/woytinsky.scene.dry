@@ -5,9 +5,9 @@ card-image: img/portraits/Voitinsky.jpg
 view-if: woytinsky_advisor = 1
 new-page: true 
 
-= Wladimir Woytinsky
+= Vladimir Voitinsky
 
-Wladimir Woytinsky is a Russian Menshevik in exile, and the chief economist of the socialist trade union federation. His primary idea is to use massive government spending as a way of stimulating demand to extricate us from the depression.
+Vladimir Voitinsky is a long-time Menshevik, and the chief economist of the All-Russian Conference of the Soviets. His primary idea is to use massive government spending as a way of stimulating demand to extricate us from the depression.
 
 - @plan
 - @carry_out_policy
