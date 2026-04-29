@@ -15,8 +15,8 @@ The RSDRP(O) is torn between many different ideological currents. What should be
 [? if ideology != 0 : We have previously chosen a [+ ideology +] ideology. Changing it will likely have drawbacks. ?]
 
 - @class_struggle: Class struggle and preparing the proletariat for the revolution are our primary goals.
-- @centrist: The Center Marxism of Karl Kautsky remains the best way to resolve our internal contradictions.
-- @labor: We should work with the trade unions to improve the lives of workers.
+- @centrist: The Center Marxism of Karl Kautsky and Yuliy Martov remains the best way to resolve our internal contradictions.
+- @labor: We should work with the trade unions to improve the lives of workers immediately, focusing on real, tangible results.
 - @reform: Following the Economists, we should work for ethical socialism, strengthen democracy, and expand the party's electorate.
 - @easy_discard
 
