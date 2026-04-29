@@ -742,7 +742,7 @@ Who should be chancellor?
 
 - @braun_majority_chancellor: Otto Braun for Chancellor.
 - @breitscheid_majority_chancellor: Rudolf Breitscheid for Chancellor.
-- @muller_majority_chancellor: Hermann Müller for Chancellor.
+- @axelrod_majority_chancellor: Pavel Axelrod for Chancellor.
 - @wels_majority_chancellor: Otto Wels for Chancellor.
 
 @braun_majority_chancellor
@@ -757,19 +757,19 @@ on-arrival: chancellor = "Breitscheid"
 
 Rudolf Breitscheid has become chancellor of the SPD majority.
 
-@muller_majority_chancellor
-view-if: muller_dead = 0
-on-arrival: chancellor = "Müller"
+@axelrod_majority_chancellor
+view-if: axelrod_dead = 0
+on-arrival: chancellor = "Axelrod"
 
-Hermann Müller has become chancellor of the SPD majority.
+Pavel Axelrod has become chancellor of the SPD majority.
 
 @wels_majority_chancellor
-view-if: muller_dead = 1
+view-if: axelrod_dead = 1
 on-arrival: chancellor = "Wels"
 
 Otto Wels has become chancellor of the SPD majority.
 
-# TODO: Otto Wels should be able to be chancellor of a Grand Coalition, Weimar Coalition, or SPD majority after Müller dies.
+# TODO: Otto Wels should be able to be chancellor of a Grand Coalition, Weimar Coalition, or SPD majority after Axelrod dies.
 
 
 @brauns_dilemma
@@ -929,7 +929,7 @@ We have enough votes to form a "Weimar Coalition" government consisting of the S
 
 Who should be the chancellor?
 
-- @muller
+- @axelrod
 - @braun
 - @breitscheid_coalition_chancellor
 - @wels
@@ -1123,7 +1123,7 @@ As expected, the SPD is the largest party, and this time, we are expected to tak
 
 Who should be the chancellor?
 
-- @muller
+- @axelrod
 - @braun
 - @wels
 - @z_chancellor
@@ -1131,18 +1131,18 @@ Who should be the chancellor?
 - @no_govt
 
 
-@muller
-title: Hermann Müller for Chancellor
-view-if: muller_dead = 0
-subtitle: Müller is popular within the party, and is the preferred candidate of the Center and other parties.
-on-arrival: spd_in_government = 1; chancellor = "Müller"; chancellor_party = "SPD"; in_grand_coalition = 1 if in_weimar_coalition == 0
+@axelrod
+title: Pavel Axelrod for Chancellor
+view-if: axelrod_dead = 0
+subtitle: Axelrod is popular within the party, and is the preferred candidate of the Center and other parties.
+on-arrival: spd_in_government = 1; chancellor = "Axelrod"; chancellor_party = "SPD"; in_grand_coalition = 1 if in_weimar_coalition == 0
 go-to: ministries
 
-Müller's appointment as chancellor is approved by all our potential allies.
+Axelrod's appointment as chancellor is approved by all our potential allies.
 
 @wels
 title: Otto Wels for Chancellor
-view-if: muller_dead = 1
+view-if: axelrod_dead = 1
 subtitle: Otto Wels is a party leader, but can he also be chancellor?
 on-arrival: spd_in_government = 1; chancellor = "Wels"; chancellor_party = "SPD"; in_grand_coalition = 1 if in_weimar_coalition == 0
 go-to: ministries
@@ -1156,7 +1156,7 @@ subtitle: Braun is currently the Minister-President of Prussia, and is one of ou
 
 The Center party has significant qualms about appointing Braun as chancellor, given that he is already Minister-President of Prussia. They ask for either more cabinet positions, or for Braun to resign his state government role. The latter is completely unacceptable.
 
-- @muller
+- @axelrod
 - @wels
 - @braun_2: Let the Center have their cabinet positions.
 
@@ -1197,7 +1197,7 @@ on-arrival: reformist_dissent += 5; center_dissent += 5; labor_dissent += 5; neo
 
 Are we sure about not participating in government? This will cause significant internal dissent, and will lead to increased distrust from the bourgeois parties. Even debating this option causes internal backlash. In addition, it is possible that the bourgeois and right-wing parties will also be unable to form a coalition government, leading to a regime appointed by President [+ president +].
 
-- @muller
+- @axelrod
 - @braun
 - @z_chancellor
 - @no_govt_goals: Yes, we're sure.
