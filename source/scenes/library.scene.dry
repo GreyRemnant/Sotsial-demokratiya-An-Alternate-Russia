@@ -295,7 +295,7 @@ Overall dissent: [+ dissent_percent : dissent +]
 
 **Internationalists**
 
-The Internationalists are the left-wing of the  RSDRP(O), staunch Marxists who believe that class struggle, historical materialism, and revolution are the principles that should guide the Party. Historically, they pushed for an immediate end to the Great War without territorial changes, putting them at odds with the party-right.
+The Internationalists are the left-wing of the  RSDRP(O), staunch Marxists who believe that class struggle, historical materialism, and revolution are the principles that should guide the Party. Historically, they pushed for an immediate end to the Great War without territorial changes, putting them at odds with the Economists.
 Strength: [+ left_strength : strength +]
 
 Dissent: [+ left_dissent : dissent +]
@@ -316,9 +316,9 @@ Strength: [+ labor_strength : strength +]
 
 Dissent: [+ labor_dissent : dissent +]
 
-**Reformists**
+**Economists**
 
-The Reformists are pragmatic participants in government, and seek to expand the welfare state and defend democracy against the conservatism, ultranationalism, and revolution. The Reformists are the party-right, composed of Great War Defencists and young Socialists alike. [? if spd_prussia : They are dominant in the state government of Petrograd. ?]
+The Economists are pragmatic participants in government, and seek to expand the welfare state and defend democracy against the conservatism, ultranationalism, and revolution. The Economists are the party-right, composed of Great War Defencists and young Socialists alike. [? if spd_prussia : They are dominant in the state governments of West Russia. ?]
 
 Strength: [+ reformist_strength : strength +]
 
