@@ -4,12 +4,12 @@ is-card: true
 tags: party_affairs
 view-if: media_timer <= 0
 on-arrival: month_actions += 1; media_timer += 6;
-card-image: img/sangerbund.jpg
+card-image: img/NovayaZhizn.jpg
 #subtitle: Setting the direction for our newspapers and radio.
 
 = Media
 
-The SPD runs a veritable media empire, with many newspapers throughout every German city and region. We could use the media for various purposes...
+The RSDRP(O) runs a veritable media empire, with many newspapers throughout every Russian city and most regions. We could use the media for various purposes...
 
 - @commercial
 - @campaign
@@ -27,7 +27,7 @@ title: Make our newspapers more commercialized by broadening their appeal beyond
 subtitle: This might upset ideological purists, but it may bring in more funds and perhaps expose the middle class to socialist views.
 on-arrival: resources += 1; commercialized_media += 1; new_middle_spd += 4*(1 - dissent); old_middle_spd += 3*(1-dissent); left_dissent += 10; labor_dissent += 10
 
-Our commercialized newspapers are able to bring in more funds. However, the left and labor factions express their displeasure.
+Our commercialized newspapers are able to bring in more funds. However, the Internationalist and Labor factions express their displeasure.
 
 @campaign
 title: The purpose of our media is to elect more Social Democrats.
@@ -51,7 +51,7 @@ unavailable-subtitle: Not enough resources.
 view-if: radio = 0
 on-arrival: radio += 1; resources -= 2; new_middle_spd += 4*(1 - dissent); old_middle_spd += 3*(1 - dissent); workers_spd += 2*(1 - dissent); labor_dissent += 5; socialism += 3*(1 - dissent); nationalism -= 3*(1 - dissent) if pacifism > 1; pro_republic += 3*(1-dissent) if democratization > 1
 
-Our new radio station allows us to connect to people in a more intimate setting than before, spreading the message of socialism along with music and other popular content. Since most proletarians cannot afford family radios right now, we are reaching the middle class, a fact of which our labor comrades are painfully aware.
+Our new radio station allows us to connect to people in a more intimate setting than before, spreading the message of socialism along with music and other popular content. Since most proletarians cannot afford family radios right now, we are reaching the Intelligensia and Bourgeoisie, a fact of which our Labor comrades are painfully aware.
 
 @radio_2
 title: We must keep on building up our radio network.
