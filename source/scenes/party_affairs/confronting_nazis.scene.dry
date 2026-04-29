@@ -12,9 +12,9 @@ The Nazis' strength is gaining, as shown by their recent election results and th
 
 Many in our party are calling for urgent action. The "neorevisionist" faction, led by young socialists like Carlo Mierendorff and Julius Leber, have formed specifically around this cause. But many in all factions of the party are calling for action.
 
-- @not_a_big_deal: The Nazis' moment will pass. Let's not get too hasty.
+- @not_a_big_deal: The ultranationalists' moment will pass. Let's not get too hasty.
 - @economic_crisis
-- @major_crisis: We must do something to confront the Nazis.
+- @major_crisis: We must do something to confront the absolutists.
 - @iron_front
 
 
@@ -33,7 +33,7 @@ go-to: crisis_program
 view-if: nazi_urgency < 5
 on-arrival: nazi_urgency += 1; neorevisionist_dissent -= 5; neorevisionist_strength += 5
 
-The Nazis are one of the foremost threats to the German republic. However, we are still formulating a strategy to confront them, and still trying to build up consensus within our party for action. Check back on this later.
+The ultranationalists are one of the foremost threats to the German republic. However, we are still formulating a strategy to confront them, and still trying to build up consensus within our party for action. Check back on this later.
 
 @iron_front
 title: Form the Iron Front!
@@ -42,7 +42,7 @@ view-if: nazi_urgency >= 3 and iron_front_formed == 0
 on-arrival: iron_front_formed = 1; radicalization += 1; nazi_urgency += 1; workers_spd += 5*(1-dissent); pro_republic += 5*(1-dissent); left_dissent -= 8; neorevisionist_dissent -= 10; neorevisionist_strength += 5
 achievement: eiserne_front
 
-The Nazi threat can no longer be ignored. We must build a new organization to confront them - the Iron Front - consisting of the SPD, the ADGB trade union federation, and the *Reichsbanner Schwarz-Rot-Gold*. We have a new symbol - the Three Arrows, pointing down towards the left.
+The Black-Hundredists threat can no longer be ignored. We must build a new organization to confront them - the Iron Front - consisting of the SPD, the ADGB trade union federation, and the *Reichsbanner Schwarz-Rot-Gold*. We have a new symbol - the Three Arrows, pointing down towards the left.
 
 What do the three arrows stand for?
 
