@@ -1,13 +1,13 @@
-title: Siegfried Aufhäuser
+title: Arkadi Kremer
 is-pinned-card: true
 tags: advisor, reformist
-card-image: img/portraits/AufhäuserSiegfried.jpg
+card-image: img/portraits/kremer.jpg
 view-if: aufhauser_advisor = 1
 new-page: true 
 
-= Siegfried Aufhäuser
+= Arkadi Kremer
 
-Aufhäuser is a leader of the AfA-Bund, the federation of socialist white-collar trade unions.
+Kremer is a leader of the General Jewish Labour Bund, the federation of Jewish socialists.
 
 - @white_collar
 - @union_unity
