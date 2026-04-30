@@ -97,9 +97,7 @@ The Kadets have been one of our closest rivals through the course of the Republi
 @dvp_loss
 on-arrival: dvp_relation += 5*(1 - dissent)
 
-Holding meetings with Müsavat is not unheard of, but is unlikely to go anywhere, especially following the expulsion of their socialist-wing back in 1925. The Kadet's left-wing is happy to hear from us, thankfully.
-
-However, given the influence of Müsavat and the Kadets among the other minority- and liberal-leaning parties [? if president == "Hindenburg": and with President Hindenburg ?], it can still be helpful to influence them.
+Holding meetings with Müsavat is not unheard of, but is unlikely to go anywhere, especially following the expulsion of their socialist-wing back in 1925. The Kadet's left-wing is happy to hear from us, thankfully. However, given the influence of Müsavat and the Kadets among the other minority- and liberal-leaning parties [? if president == "Hindenburg": and with President Hindenburg ?], it can still be helpful to influence them.
 
 @spd_alone
 
