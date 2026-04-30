@@ -43,22 +43,22 @@ go-to: rm_main
 Hilferding has been removed as an advisor. The Centrist faction disapproves.
 
 @remove_wels
-title: Remove Wels
+title: Remove Martov
 view-if: wels_advisor = 1
 tags: remove_advisor
 on-arrival: wels_advisor = 0; center_dissent += 5; n_advisors -= 1
 go-to: rm_main
 
-Wels has been removed as an advisor. The Centrist faction disapproves.
+Martov has been removed as an advisor. The Centrist faction disapproves.
 
 @remove_muller
-title: Remove Müller
+title: Remove Axelrod
 view-if: muller_advisor = 1
 tags: remove_advisor
 on-arrival: muller_advisor = 0; center_dissent += 5; n_advisors -= 1
 go-to: rm_main
 
-Müller has been removed as an advisor. The Centrist faction disapproves.
+Axelrod has been removed as an advisor. The Centrist faction disapproves.
 
 
 @remove_breitscheid
@@ -170,31 +170,31 @@ go-to: rm_main
 Sender has been removed as an advisor. The Leftist faction disapproves.
 
 @remove_rosenfeld
-title: Remove Rosenfeld
+title: Remove Abramovich
 view-if: rosenfeld_advisor = 1
 tags: remove_advisor
 on-arrival: rosenfeld_advisor = 0; left_dissent += 3; n_advisors -= 1
 go-to: rm_main
 
-Rosenfeld has been removed as an advisor. The Leftist faction disapproves.
+Abramovich has been removed as an advisor. The Leftist faction disapproves.
 
 @remove_seydewitz
-title: Remove Seydewitz
+title: Remove Kamenev
 view-if: seydewitz_advisor = 1
 tags: remove_advisor
 on-arrival: seydewitz_advisor = 0; left_dissent += 3; n_advisors -= 1
 go-to: rm_main
 
-Seydewitz has been removed as an advisor. The Leftist faction disapproves.
+Kamenev has been removed as an advisor. The Leftist faction disapproves.
 
 @remove_siemsen
-title: Remove Siemsen
+title: Remove Broido
 view-if: siemsen_advisor = 1
 tags: remove_advisor
 on-arrival: siemsen_advisor = 0; left_dissent += 3; n_advisors -= 1
 go-to: rm_main
 
-Siemsen has been removed as an advisor. The Leftist faction disapproves.
+Broido has been removed as an advisor. The Leftist faction disapproves.
 
 
 
@@ -342,28 +342,28 @@ go-to: advisor_menu
 Rudolf Hilferding is now an advisor.
 
 @add_wels
-title: Otto Wels
-subtitle: Otto Wels is a long-time party organizer and member of the leadership, serving under Friedrich Ebert. {!<br><br>!}[? if difficulty < 0 : Actions -  Clear the Agenda, Party Discipline, Emergency Fundraising ?]
+title: Yuliy Martov
+subtitle: Yuliy Martov is a long-time party organizer and member of the leadership, going back to the party's founding. {!<br><br>!}[? if difficulty < 0 : Actions -  Clear the Agenda, Party Discipline, Emergency Fundraising ?]
 is-card: true
-card-image: img/portraits/WelsRudolf.jpg
+card-image: img/portraits/MartovHat.jpg
 tags: center_advisor
 view-if: wels_advisor = 0 and n_advisors < 3 and centrists_resign = 0
 on-arrival: wels_advisor = 1; n_advisors += 1
 go-to: advisor_menu
 
-Otto Wels is now an advisor.
+Yuliy Martov is now an advisor.
 
 @add_muller
 title: Hermann Müller
-subtitle: Hermann Müller is the last Social Democratic Chancellor. {!<br><br>!}[? if difficulty < 0 : Actions - Negotiating with the Coalition, Defending Toleration ?]
+subtitle: Pavel Axelrod is the last Social Democratic Chancellor. {!<br><br>!}[? if difficulty < 0 : Actions - Negotiating with the Coalition, Defending Toleration ?]
 is-card: true
-card-image: img/portraits/MüllerHermann.jpg
+card-image: img/portraits/Axelrod.jpg
 tags: center_advisor
 view-if: muller_advisor = 0 and muller_dead = 0 and n_advisors < 3 and centrists_resign = 0
 on-arrival: muller_advisor = 1; n_advisors += 1
 go-to: advisor_menu
 
-Hermann Müller is now an advisor.
+Pavel Axelrod is now an advisor.
 
 @add_breitscheid
 title: Rudolf Breitscheid
@@ -457,40 +457,40 @@ tags: left_advisor
 Toni Sender is now an advisor.
 
 @add_rosenfeld
-title: Kurt Rosenfeld
-subtitle: Kurt Rosenfeld is a lawyer, anti-militarist activist, and Reichstag member. {!<br><br>!}[? if difficulty < 0 : Actions - Building the Left, Cooperation with the KPD, Against Toleration ?]
+title: Rafail Abramovitch
+subtitle: Rafail Abramovitch is a Bundist, Internationalist, and Reichstag member. {!<br><br>!}[? if difficulty < 0 : Actions - Building the Left, Cooperation with the KPD, Against Toleration ?]
 is-card: true
-card-image: img/portraits/RosenfeldKurt.jpg
+card-image: img/portraits/Abramovitch.jpg
 view-if: rosenfeld_advisor = 0 and n_advisors < 3 and left_split = 0
 on-arrival: rosenfeld_advisor = 1; n_advisors += 1; left_strength += 5
 go-to: advisor_menu
 tags: left_advisor
 
-Kurt Rosenfeld is now an advisor.
+Rafail Abramovitch is now an advisor.
 
 @add_seydewitz
-title: Max Seydewitz
-subtitle: Max Seydewitz is a former leader of the youth wing, current supporter of the left wing of the SPD, and advocates for class struggle. {!<br><br>!}[? if difficulty < 0 : Actions - Rally for Class Struggle, Socialist Youth, Against Toleration ?]
+title: Lev Kamenev
+subtitle: Lev Kamenev is a former Bolshevik who opposed their failed rebellion, he is a current supporter of the left wing of the RSDRP, and advocates for class struggle. {!<br><br>!}[? if difficulty < 0 : Actions - Rally for Class Struggle, Snap Elections, Against Toleration ?]
 is-card: true
-card-image: img/portraits/SeydewitzMax.jpg
+card-image: img/portraits/kamenev.jpg
 view-if: seydewitz_advisor = 0 and n_advisors < 3 and left_split = 0
 on-arrival: seydewitz_advisor = 1; n_advisors += 1; left_strength += 5
 go-to: advisor_menu
 tags: left_advisor
 
-Max Seydewitz is now an advisor.
+Lev Kamenev is now an advisor.
 
 @add_siemsen
-title: Anna Siemsen
-subtitle: Anna Siemsen is an and educational reform advocate and pacifist, who was one of the few German women to receive a PhD in the pre-war period. {!<br><br>!}[? if difficulty < 0 : Actions - Rally for Pacifism, Educational Curriculum, Educational Structure ?]
+title: Eva Broido
+subtitle: Eva Broido is an internationalist, women's rights advocate, and author. {!<br><br>!}[? if difficulty < 0 : Actions - Rally for Pacifism, Educational Curriculum, Educational Structure ?]
 is-card: true
-card-image: img/portraits/SiemsenAnna.jpg
+card-image: img/portraits/EvaBroido.jpg
 view-if: siemsen_advisor = 0 and n_advisors < 3 and left_split = 0
 on-arrival: siemsen_advisor = 1; n_advisors += 1; left_strength += 5
 go-to: advisor_menu
 tags: left_advisor
 
-Anna Siemsen is now an advisor.
+Eva Broido is now an advisor.
 
 
 
