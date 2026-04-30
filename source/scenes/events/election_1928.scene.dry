@@ -750,7 +750,7 @@ Who should be chancellor?
 - @braun_majority_chancellor: Otto Braun for Chancellor.
 - @breitscheid_majority_chancellor: Rudolf Breitscheid for Chancellor.
 - @axelrod_majority_chancellor: Pavel Axelrod for Chancellor.
-- @wels_majority_chancellor: Otto Wels for Chancellor.
+- @kamenev_majority_chancellor: Lev Kamenev for Chancellor.
 
 @braun_majority_chancellor
 view-if: not historical_mode or not spd_prussia
@@ -770,13 +770,11 @@ on-arrival: chancellor = "Axelrod"
 
 Pavel Axelrod has become chancellor of the SPD majority.
 
-@wels_majority_chancellor
+@kamenev_majority_chancellor
 view-if: axelrod_dead = 1
-on-arrival: chancellor = "Wels"
+on-arrival: chancellor = "Kamenev"
 
-Otto Wels has become chancellor of the SPD majority.
-
-# TODO: Otto Wels should be able to be chancellor of a Grand Coalition, Weimar Coalition, or SPD majority after Axelrod dies.
+Lev Kamenev has become chancellor of the RSDRP majority, Liberals and Conservatives have voiced their concerns, while the PLSRI looks on with cautious approval.
 
 
 @brauns_dilemma
@@ -939,7 +937,7 @@ Who should be the chancellor?
 - @axelrod
 - @braun
 - @breitscheid_coalition_chancellor
-- @wels
+- @kamenev
 - @z_chancellor
 - @z_chancellor_wirth
 
@@ -1132,7 +1130,7 @@ Who should be the chancellor?
 
 - @axelrod
 - @braun
-- @wels
+- @kamenev
 - @z_chancellor
 - @z_chancellor_wirth
 - @no_govt
@@ -1147,14 +1145,17 @@ go-to: ministries
 
 Axelrod's appointment as chancellor is approved by all our potential allies.
 
-@wels
-title: Otto Wels for Chancellor
+@kamenev
+title: Lev Kamenev for Chancellor
 view-if: axelrod_dead = 1
-subtitle: Otto Wels is a party leader, but can he also be chancellor?
-on-arrival: spd_in_government = 1; chancellor = "Wels"; chancellor_party = "SPD"; in_grand_coalition = 1 if in_weimar_coalition == 0
+subtitle: Lev Kamenev is an Internationalist and former Bolshevik, but can he also be chancellor? *It will take a lot of convincing...* (-2 resources)
+choose-if: resources >= 2
+on-arrival: spd_in_government = 1; chancellor = "Kamenev"; chancellor_party = "SPD"; in_grand_coalition = 1 if in_weimar_coalition == 0; resources -= 2
 go-to: ministries
 
-Otto Wels's appointment as chancellor is approved by our potential allies.
+Lev Kamenev's appointment as chancellor is, with lots of convincing, approved by our potential allies.
+
+//to-do: make Kamenev reduce coaliton unity and relations. He is a former bolshevik after all.
 
 @braun
 title: Otto Braun for Chancellor
@@ -1164,7 +1165,7 @@ subtitle: Braun is currently the Minister-President of Prussia, and is one of ou
 The Center party has significant qualms about appointing Braun as chancellor, given that he is already Minister-President of Prussia. They ask for either more cabinet positions, or for Braun to resign his state government role. The latter is completely unacceptable.
 
 - @axelrod
-- @wels
+- @kamenev
 - @braun_2: Let the Center have their cabinet positions.
 
 @braun_2
