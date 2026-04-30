@@ -11,6 +11,8 @@ max-visits: 4
 At the Labor and Socialist International, we can forge contacts with our fraternal socialist parties in Europe and across the world.
 
 - @fr_uk: Build relationships with the French SFIO and British Labour Party to move their governments in Germany's favor.
+- @east: Repair relations with our neighbors in Eastern Europe.
+- @ger: Let's continue to nomralize and rebuild relations with Germany and the SPD.
 - @austria: Learn organization and street fighting from the Austrian SDAPÖ.
 - @scandi: Learn the path of economics and reform from the Scandinavian social democrats.
 - @comintern: Forget the second international - embed a spy in the Comintern's conference.
@@ -41,7 +43,7 @@ choose-if: resources >= 999
 unavailable-subtitle: WIP, sorry loser, maybe I'll get to this soon, maybe not. We'll see.
 on-arrival: resources -= 1; west_relation += 1; reformist_strength += 5; pacifism += 1; moderate_plan_support += 1
 
-The SPD has been the largest party in most German elections, and a natural ally for us to support, their particpation in governance helps us stay friendly with Germany. [? if year > 1930: With the German "National-Socialist" threat growing, an expansionist and hostile government seems more and more likely, hopefully our financial support can prevent that.]
+The SPD has been the largest party in most German elections, and a natural ally for us to support, their particpation in governance helps us stay friendly with Germany. [? if year > 1930: With the German "National-Socialist" threat growing, an expansionist and hostile government seems more and more likely, hopefully our financial support can prevent that. ?]
 
 @austria
 subtitle: -1 resources [? if austrian_parliament_seen and not austrian_civil_war_seen: - We will also help the Austrians oppose their dictatorship. ?]
@@ -49,7 +51,7 @@ choose-if: resources >= 1
 unavailable-subtitle: Not enough resources.
 on-arrival: left_strength += 5; radicalization += 1; rb_militancy += 0.03; resources -= 1; austria_relation += 1; sdapo_strength += 1 if austrian_parliament_seen = 1
 
-Our *Soyuz Fevralya* can learn much in paramilitary organization and training from the Austrian *Republikanischer Schutzbund* (Republican Protection Units), the paramilitary branch of the Austrian social democrats.
+Our *Soyuz Fevralya* can learn much in paramilitary organization and training from the Austrian *Republikanischer Schutzbund* (Republican Protection Units), the paramilitary branch of the Austrian social democrats. 
 
 [? if austrian_parliament_seen and not austrian_civil_war_seen: We are also helping the Austrian Social Democratic Worker's Party build up their resources in preparation for a future struggle, legally and illegally. ?]
 
