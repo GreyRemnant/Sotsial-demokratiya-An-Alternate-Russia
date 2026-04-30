@@ -275,6 +275,7 @@ Q.left_coalition = Q.spd_r + Q.kpd_r;
 // this is an absurd concept lol
 Q.united_front_coalition = Q.spd_r + Q.kpd_r + Q.z_r + Q.ddp_r - 3;
 Q.anti_democratic_coalition = Q.kpd_r + Q.nsdap_r;
+Q.noway_coalition = Q.spd_r + Q.nsdap_r;
 // aka everyone except nazi, kpd, dnvp
 Q.neo_weimar_coalition = Q.spd_r + Q.ddp_r + Q.z_r + Q.dvp_r + Q.other_r;
 !}
@@ -316,4 +317,6 @@ Grand Coalition (SPD + Z + BVP + DDP + DVP): [+ grand_coalition +]
 Bourgeois Coalition (Z + BVP + DDP + DVP + Others): [+ bourgeois_coalition +]
 
 Right-wing Coalition (Z + BVP + DVP + Others + DNVP): [+ right_coalition +]
+
+Tsarist-Socialist Coalition (RSDRP + SRN): [+ noway_coalition +]
 
