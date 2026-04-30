@@ -566,6 +566,7 @@ on-arrival: spd_in_government = 0; spd_toleration = 0; chancellor = "Brüning"; 
 Even though the DNVP is very reluctant to participate in such a coalition, they still accede to President Hindenburg's wishes. Thus, a majority center-right coalition is formed, with Brüning as chancellor.
 
 @social-tsarist_coalition
+title: Is a coalition between Social Democrats and Ultranationalists possible?
 unavailable-subtitle: *Are you insane?!?*
 view-if: year < 1925
 choose-if: nsdap_relation = 100
