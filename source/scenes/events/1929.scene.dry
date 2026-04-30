@@ -1,5 +1,6 @@
 title: 1929
 subtitle: A new year
+face-image: img/morningcomes.jpg
 on-arrival: {!
 // see post_event.scene.dry for changes.
 Q.economic_growth -= 4;
