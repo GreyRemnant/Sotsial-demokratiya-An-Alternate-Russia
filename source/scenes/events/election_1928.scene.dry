@@ -568,7 +568,7 @@ Even though the DNVP is very reluctant to participate in such a coalition, they 
 @social-tsarist_coalition
 title: Is a coalition between Social Democrats and Ultranationalists possible?
 unavailable-subtitle: *Are you insane?!?*
-view-if: (year = 1928) or (year > 1928)
+view-if: noway_coalition <>= 50
 choose-if: nsdap_relation = 100
 
 
