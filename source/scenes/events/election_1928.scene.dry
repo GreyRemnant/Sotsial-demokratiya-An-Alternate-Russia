@@ -567,9 +567,9 @@ on-arrival: spd_in_government = 0; spd_toleration = 0; chancellor = "Brüning"; 
 Even though the DNVP is very reluctant to participate in such a coalition, they still accede to President Hindenburg's wishes. Thus, a majority center-right coalition is formed, with Brüning as chancellor.
 
 @social_tsarist_coalition
-title: A coalition of socialists and absolutists?
+title: A coalition of Socialists and the Black-Hundredists?
 subtitle: RSDRP + SRN ([+ noway_coalition +]%)
-unavailable-subtitle: Are you completely insane?!?
+unavailable-subtitle: RSDRP + SRN ([+ noway_coalition +]%) - Are you completely insane?!?
 view-if: noway_coalition >= 50
 choose-if: nsdap_relation = 100
 
