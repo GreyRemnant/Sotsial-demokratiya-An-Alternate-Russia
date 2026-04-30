@@ -1,6 +1,6 @@
 title: 1930
 subtitle: A new year
-audio: clear shuffle music/1930_1934/Farewell_of_Slavianka.mp3 music/1930_1934/Kalinka.mp3
+audio: clear shuffle out/html/music/1930_1934/Farewell_of_Slavianka.mp3 out/html/music/1930_1934/Kalinka.mp3
 on-arrival: {!
 // increase NSDAP vote share 
 Q.unemployed += 6.8; 

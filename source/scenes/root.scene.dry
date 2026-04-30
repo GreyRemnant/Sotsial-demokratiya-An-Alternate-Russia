@@ -621,7 +621,7 @@ this.state.disableSaves = true;
 go-to: 1928_main
 
 @1928_main
-audio: shuffle music/1928_1930/1919RuInternationale.mp3 music/1928_1930/DaloyPolitsey.mp3 music/1928_1930/HillsOfManchuria.mp3 music/1928_1930/Varshavianka.mp3 music/1928_1930/swanlake.mp3 music/1928_1930/workermars.mp3
+audio: shuffle out/html/music/1928_1930/1919RuInternationale.mp3 out/html/music/1928_1930/DaloyPolitsey.mp3 out/html/music/1928_1930/HillsOfManchuria.mp3 out/html/music/1928_1930/Varshavianka.mp3 out/html/music/1928_1930/swanlake.mp3 out/html/music/1928_1930/workermars.mp3
 go-to: main if difficulty >= 0; main.main_easy if difficulty < 0
 
 = 1928
