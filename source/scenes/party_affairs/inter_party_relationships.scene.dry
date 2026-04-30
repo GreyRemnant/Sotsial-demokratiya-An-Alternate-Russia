@@ -90,7 +90,7 @@ subtitle: -1 resources
 choose-if: resources >= 1
 unavailable-subtitle: Not enough resources.
 on-arrival: resources -= 1; ddp_relation += 5*(1 - dissent)
-go-to: dvp_loss and dvp_moribund if year > 1930
+go-to: @dvp_loss and @dvp_moribund if year > 1930
 
 The Kadets have been one of our closest rivals through the course of the Republic, but we are not enemies. Perhaps reaching out to their left-wing of Progressives could help us?
 
