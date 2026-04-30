@@ -44,8 +44,8 @@ on-arrival: east_relation += 2;
 We also aim to improve relations with our eastern neighbors, Poland and Czechoslovakia, who are righfully terrified of German aggression. Hopefully we can convince them of our peaceful intentions.
 
 @improve_ger
-title: Improve our relations with the Soviet Union.
-subtitle: We could also broach the question of the KPD...
+title: Improve our relations with the German Reich.
+subtitle: We could also broach the question of their debt payments...
 
 The Soviet Union also suffered from the international order created by the Treaty of Versailles; they have been participating in our secret rearmament program. The Treaty of Rapallo in 1922 affirmed our friendly relations.
 
@@ -70,7 +70,7 @@ on-arrival: budget -= 1; soviet_relation += 2; coalition_dissent += 1; foreign_g
 The Germans are pleased that we have sent them aid, and have not asked for anything specific in exchange. Our anti-German coalition partners are less pleased.
 
 - @wittorf: Reducing their payments to us could help boost relations.
-- @root: Lets not mention debt payments.
+- @root: They owe us for the Great War, why would we reduce their obligations?
 
 @economic_aid_no
 
