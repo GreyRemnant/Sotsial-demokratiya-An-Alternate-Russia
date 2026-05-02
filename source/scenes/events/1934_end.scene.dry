@@ -1,5 +1,6 @@
 title: A New Day in Germany
 subtitle: Has democracy finally triumphed?
+face-image: img/russiamap.jpg
 tags: event
 priority: 3
 view-if: hindenburg_dead = 1 and president != "Hitler" and president != "Göring" and president != "Seldte"

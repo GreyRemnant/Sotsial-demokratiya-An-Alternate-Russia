@@ -1,5 +1,6 @@
 title: 1932
-subtitle: A new year 
+subtitle: A new year
+face-image: img/1932.jpg
 on-arrival: {!
 // increase NSDAP vote share 
 // TODO: if a public works program has started, unemployment is not so bad.

@@ -1,8 +1,8 @@
 title: 1931
-subtitle: A new year 
+subtitle: A new year
+face-image: img/1931.jpg
 on-arrival: {!
-// increase NSDAP vote share 
-// TODO: if a public works program has started, unemployment is not so bad.
+// increase NSDAP vote share
 Q.unemployed += 6;
 Q.inflation -= 5;
 // historical: -7.7%
