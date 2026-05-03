@@ -53,7 +53,7 @@ unavailable-subtitle: [? if kpd_relation < 50 : We do not have good enough relat
 Supporting Thälmann is rather unpopular in our party, even if the Communists accept our support. Are we sure?
 
 - @support_thalmann_2: Yes, we will support Thälmann, despite the reformists' pleas against it.
-- @support_martof: Support Braun instead.
+- @support_martov: Support Braun instead.
 - @support_hindenburg: Support Hindenburg instead.
 
 @support_thalmann_2
