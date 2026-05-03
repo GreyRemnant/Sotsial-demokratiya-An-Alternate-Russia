@@ -23,25 +23,25 @@ Many are calling for us to support the incumbent Hindenburg, despite his well-kn
 [? if kpd_relation >= 50 : Another strange possibilty is an united front with the Communists, either to support Thälmann or our own candidate. ?]
 
 
-- @support_hindenburg: Support Hindenburg.
-- @support_braun: Run Otto Braun of the SPD.
+- @support_kornilov: Support Kornilov.
+- @support_martov: Run Yuliy Martov of the RSDRP.
 - @support_thalmann: Support Ernst Thälmann of the KPD.
 
-@support_hindenburg
+@support_kornilov
 subtitle: This is the default option.
 
-Despite his known reactionary nature, Hindenburg has at least been keeping the Nazis at bay. Thus, we must support him.
+Despite his known conservative nature, Kornilov has at least been keeping the ultranationalists at bay. Thus, we must, reluctantly, support him.
 
 - @final_election: The final vote...
 
-@support_braun
+@support_martov
 subtitle: This will cost us 2 resources.
 choose-if: resources >= 2
 unavailable-subtitle: Not enough resources.
-on-arrival: resources -= 2; braun_campaign = 1
-go-to: braun_campaign
+on-arrival: resources -= 2; martov_campaign = 1
+go-to: martov_campaign
 
-It takes effort to run a somewhat unexpected campaign. First, Braun has to be convinced to run. He himself had supported voting for Hindenburg, and it takes a good deal of prodding to convince him of his destiny.
+It takes effort to run a somewhat unexpected campaign. First, Martov has to be convinced to run, which shouldn't be too difficult. Then, we must convince the other parties to support Martov; *or not...*
 
 The miniscule remnants of the Democratic Party (now called the German State Party) will likely support us. Who else will? Can we convince the Center to support Braun? What about the Communists?
 
@@ -63,7 +63,7 @@ Fine. We have thrown our support to Chairman Thälmann of the KPD.
 
 - @final_election: The final vote...
 
-@braun_campaign
+@martov_campaign
 
 - @convince_z: Convince the Center Party.
 - @convince_kpd: Convince the Communists.
@@ -250,7 +250,7 @@ Q.any_majority = Q.hindenburg_majority | Q.thalmann_majority | Q.hitler_majority
 Q.hindenburg_plurality = (Q.hindenburg_votes >= Q.hitler_votes && Q.hindenburg_votes >= Q.braun_votes && Q.hindenburg_votes >= Q.thalmann_votes);
 Q.thalmann_plurality = (Q.thalmann_votes >= Q.hindenburg_votes && Q.thalmann_votes >= Q.braun_votes && Q.thalmann_votes >= Q.hitler_votes);
 Q.hitler_plurality = (Q.hitler_votes >= Q.hindenburg_votes && Q.hitler_votes >= Q.braun_votes && Q.hitler_votes >= Q.thalmann_votes);
-Q.braun_plurality = (Q.braun_votes >= Q.hindenburg_votes && Q.braun_votes >= Q.hitler_votes && Q.braun_votes >= Q.thalmann_votes);
+Q.martov_plurality = (Q.braun_votes >= Q.hindenburg_votes && Q.braun_votes >= Q.hitler_votes && Q.braun_votes >= Q.thalmann_votes);
 // If no candidate gets above 50%, then there's a second round. In the second round, a plurality wins. 
 Q.election_round += 1;
 
@@ -273,12 +273,12 @@ Hindenburg - [+ hindenburg_votes_disp +]%
 [? if braun_campaign > 0 : Braun - [+ braun_votes_disp +]% ?]
 
 @no_majority_round1
-on-arrival: hitler_support_hindenburg = 1 if (braun_plurality or thalmann_plurality)
+on-arrival: hitler_support_hindenburg = 1 if (martov_plurality or thalmann_plurality)
 go-to: round2_menu
 
 There is no majority in this round. In the second round, any candidate who wins a plurality will win overall. What should we do?
 
-[? if braun_plurality or thalmann_plurality : In order to consolidate the vote for the Right, and to prevent a socialist from becoming president, [+ nsdap_candidate +] is no longer running in the second round, and has switched his endorsement to Hindenburg. ?]
+[? if martov_plurality or thalmann_plurality : In order to consolidate the vote for the Right, and to prevent a socialist from becoming president, [+ nsdap_candidate +] is no longer running in the second round, and has switched his endorsement to Hindenburg. ?]
 
 
 @round2_menu
@@ -338,14 +338,14 @@ on-arrival: resources -= 2; z_support_braun = 1
 on-departure: hitler_support_hindenburg = 1 if braun_votes + z_votes > hitler_votes
 go-to: round2_menu
 
-With our resources, the Center are convinced to support Braun over Hindenburg.
+With our resources, the Center are convinced to support Martov over Kornilov.
 
 [? if not hitler_support_hindenburg and braun_votes + z_votes > hitler_votes: With the Center Party supporting Braun, [+ nsdap_candidate +] has dropped out of the race, and the Nazis have endorsed Hindenburg to prevent a socialist from becoming president. ?]
 
 @r2_z_failed
 go-to: round2_menu
 
-Unfortunately, we fail to turn them away from Hindenburg. [? if hindenburg_votes > braun_votes : Given that Hindenburg received more votes than Braun, they believe that we should turn to Hindenburg, not the other way around. ?]
+Unfortunately, we fail to turn them away from Kornilov. [? if hindenburg_votes > braun_votes : Given that Kornilov received more votes than Martov, they believe that we should support the incumbent President, not the other way around. ?]
 
 
 
@@ -370,7 +370,7 @@ unavailable-subtitle: Not enough resources (need 3).
 on-arrival: resources -= 3; kpd_support_braun = 1
 go-to: round2_menu
 
-The KPD now endorses Braun in the presidential election! We ask them to keep their support low-key, so as to not alienate the bourgeois voters.
+The KPD now endorses Martov in the presidential election! We ask them to keep their support low-key, so as to not alienate the bourgeois voters.
 
 @r2_kpd_relations
 view-if: kpd_relation >= 60 or (kpd_party_leader == "Conciliators" and kpd_relation >= 45)
@@ -378,7 +378,7 @@ unavailable-subtitle: Our relations are not good enough.
 on-arrival: kpd_support_braun = 1
 go-to: round2_menu
 
-The KPD now endorses Braun in the presidential election! We ask them to keep their support low-key, so as to not alienate the bourgeois voters. 
+The KPD now endorses Martov in the presidential election! We ask them to keep their support low-key, so as to not alienate the bourgeois voters. 
 
 @round2_thalmann
 view-if: spd_support_thalmann == 0 and kpd_support_braun == 0
@@ -414,7 +414,7 @@ go-to: election_algorithm
 set-jump: post_election
 
 @round2_results
-go-to: hindenburg_wins if hindenburg_plurality == 1; thalmann_wins if thalmann_plurality == 1; braun_wins if braun_plurality == 1; hitler_wins if hitler_plurality == 1
+go-to: hindenburg_wins if hindenburg_plurality == 1; thalmann_wins if thalmann_plurality == 1; martov_wins if martov_plurality == 1; hitler_wins if hitler_plurality == 1
 
 
 @hindenburg_wins
@@ -438,7 +438,7 @@ on-arrival: president = nsdap_candidate; chancellor = "Hitler"; chancellor_party
 - @hitler_takes_power: What do we do now?
 
 
-@braun_wins
+@martov_wins
 on-arrival: president = "Braun"; reformist_dissent -= 15; center_dissent -= 15; labor_dissent -= 15; left_dissent -= 5; workers_spd += 8*(1-dissent); old_middle_spd += 5*(1-dissent); new_middle_spd += 5*(1-dissent); rural_spd += 5*(1-dissent); unemployed_spd += 5*(1-dissent);
 
-Otto Braun of the SPD has won the presidency! This is a moment of celebration for our party, and his victory is able to bolster our support.
+Yuliy Martov of the RSDRP has won the presidency! This is a moment of celebration for our party, and his victory is able to bolster our support.
