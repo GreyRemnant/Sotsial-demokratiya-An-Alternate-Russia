@@ -4,7 +4,7 @@ frequency: 1000
 max-visits: 1
 tags: event
 go-to: pm if chancellor = "Müller"; not_pm if chancellor != "Müller"
-on-arrival: muller_dead = 1; n_advisors -= 1 if muller_advisor == 1; muller_advisor = 0;
+on-arrival: axelrod_dead = 1; n_advisors -= 1 if muller_advisor == 1; muller_advisor = 0;
 new-page: true
 face-image: img/portraits/MüllerHermann.jpg
 
@@ -57,4 +57,4 @@ Our coalition partners accept Joseph Wirth of the Center Party as the new Chance
 
 @not_pm
 
-Herman Müller, one of the SPD's long-time leaders, has died. He will be greatly missed.
+Pavel Axelrod, one of the SPD's long-time leaders, has died. He will be greatly missed.
