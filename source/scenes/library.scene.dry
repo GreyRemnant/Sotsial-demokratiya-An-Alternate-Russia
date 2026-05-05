@@ -2,13 +2,13 @@ title: library
 new-page: true
 is-special: true
 go-to: menu
+set-bg: img/russiamap.jpg
 
 = The Library
 
 Herein contains relevant information about the government and politics of the Russian Democratic Federative Republic.
 
 @menu
-set-bg: img/russiamap.jpg
 
 //<span style="color: #000000;">**name**</span>
 
