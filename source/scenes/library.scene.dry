@@ -8,6 +8,7 @@ go-to: menu
 Herein contains relevant information about the government and politics of the Russian Democratic Federative Republic.
 
 @menu
+set-bg: img/russiamap.jpg
 
 - @government: Russia's system of government
 - @russia_timeline: Timeline of the Russian Republic before 1926
@@ -22,6 +23,8 @@ Herein contains relevant information about the government and politics of the Ru
 
 @government
 go-to: menu
+face-image: img/russianeagle.png
+set-bg: img/russianflag.png
 
 The Russian Republic, called by some of our detractors as the "February Republic", is a parliamentary republic with a somewhat weak president and a strong parliament, called the Duma. The Duma is responsible for governing, while the President has a largely ceremonial role but also has some important governing responsibilities.
 
