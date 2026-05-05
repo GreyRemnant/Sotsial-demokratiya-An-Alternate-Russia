@@ -79,6 +79,7 @@ go-to: menu
 @curr_gov
 go-to: cabinet if spd_in_government; menu if not spd_in_government
 set-bg: img/duma.jpg
+face-image: img/cabinet.jpg
 
 = Current Government
 
@@ -116,6 +117,7 @@ SPD position: [? if spd_toleration : toleration ?][? if spd_in_government : in g
 @cabinet
 go-to: menu
 set-bg: img/cabinet.jpg
+face-image: img/menshevikcabinet.jpg
 
 Current cabinet:
 
@@ -139,6 +141,7 @@ Agriculture: [+ agriculture_minister_party +]
 @demographics
 go-to: menu
 set-bg: img/1932.jpg
+face-image: img/bundrally.jpg
 
 **Demographic Groups**
 
@@ -164,6 +167,7 @@ Q.socialism_disp = Math.round(Q.socialism);
 view-if: (not historical_mode) or game_over
 go-to: election_algorithm
 set-bg: img/electionposters.jpg
+face-image: img/bundyell.jpg
 set-jump: election_projections
 
 **Public Opinion**
@@ -179,6 +183,7 @@ Support for the Republic: [+ pro_republic_disp +]%
 view-if: (not historical_mode) or game_over
 go-to: menu
 set-bg: img/electionresults.jpg
+face-image: img/duma.jpg
 
 **Projected election results** (if the election were to be held now):
 
@@ -225,6 +230,7 @@ Catholics: SPD: [+ catholics_spd_display +]%, Z: [+ catholics_z_display +]%, KPD
 @parties
 go-to: menu
 set-bg: img/neorevs.jpg
+face-image: img/votesocdem.jpg
 
 **RSDRP(O)** - *Rossijskaja Social-Demokratičeskaja Rabočaja Partija (Ob’jedinjonnaja)* (Russian Social Democratic Labour Party (United)) - this is us. We are a socialist and democratic party of the working class. We are the heirs of the legacy of Marx and Engels, Martov and Plekhanov. We are the foremost defenders of the Republic. The modern RSDRP(O) is the continuation of the Menshevik sections of the RSDRP.
 
@@ -265,6 +271,7 @@ Q.sa_strength = Math.round(Q.sa_strength);
 !}
 go-to: menu
 set-bg: img/streetfighting2.jpg
+face-image: img/soyuzfevralya.jpg
 
 **Paramilitary groups:**
 
@@ -307,6 +314,7 @@ Loyalty: [+ prussian_police_loyalty : loyalty +]
 @factions
 go-to: neorevisionists if neorevisionism > 0; menu if neorevisionism <= 0
 set-bg: img/groupphoto.jpg
+face-image: img/disunity.jpg
 
 **Internal factions of the SPD**
 
@@ -358,6 +366,7 @@ Dissent: [+ neorevisionist_dissent : dissent +]
 @figures
 title: Figures and Charts
 set-bg: img/duma.jpg
+face-image: img/bannersduma.jpg
 go-to: menu
 on-arrival: z_minus_bvp_r = z_r - 3;
 on-display: {!
