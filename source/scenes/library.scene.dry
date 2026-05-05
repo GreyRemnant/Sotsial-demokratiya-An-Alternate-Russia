@@ -357,6 +357,7 @@ Dissent: [+ neorevisionist_dissent : dissent +]
 
 @figures
 title: Figures and Charts
+set-bg: img/duma.jpg
 go-to: menu
 on-arrival: z_minus_bvp_r = z_r - 3;
 on-display: {!
