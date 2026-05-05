@@ -182,7 +182,6 @@ Support for the Republic: [+ pro_republic_disp +]%
 @election_projections
 view-if: (not historical_mode) or game_over
 go-to: menu
-set-bg: img/electionresults.jpg
 face-image: img/duma.jpg
 
 **Projected election results** (if the election were to be held now):
@@ -366,7 +365,6 @@ Dissent: [+ neorevisionist_dissent : dissent +]
 @figures
 title: Figures and Charts
 set-bg: img/duma.jpg
-face-image: img/bannersduma.jpg
 go-to: menu
 on-arrival: z_minus_bvp_r = z_r - 3;
 on-display: {!
