@@ -2,7 +2,6 @@ title: library
 new-page: true
 is-special: true
 go-to: menu
-set-bg: img/russiamap.jpg
 
 = The Library
 
@@ -65,7 +64,7 @@ go-to: menu
 
 **1921**: Moscow is captured by Lavr Kornilov's *Volunteer Army*, while Petrograd is captured by the British, who turn it over to Kornilov's control. The Communists surrender, their leadership is largely imprisoned or executed without trial, and new elections are held.
 
-*Dec., 1921**: Elections are finished, Georgy Lvov, an independent republican and universally-respected Liberal, is elected President of Russia. In the State Duma, the PSR emerge as the largest party, followed by the Kadets, then the RSDRP(O), and finally the VS. A *Trudovaya Koalitsiya* is established of the PSR-RSDRP and other left-wing parties.
+**Dec., 1921**: Elections are finished, Georgy Lvov, an independent republican and universally-respected Liberal, is elected President of Russia. In the State Duma, the PSR emerge as the largest party, followed by the Kadets, then the RSDRP(O), and finally the VS. A *Trudovaya Koalitsiya* is established of the PSR-RSDRP and other left-wing parties.
 
 **1922**: The Treaty of Rapallo is signed, which normalized relations with Germany. Talks with Germany, largely despised by the population, causes the Labor Coalition to collapse.
 
@@ -75,10 +74,11 @@ go-to: menu
 
 **1925**:  President Lvov dies, and new presidential elections are held, leading to the landslide election of Lavr Kornilov, who ran at the urging of the Conservative Narodist and Nationalist, Boris Savinkov. Kornilov, a conservative, war hero, and anti-communist, prevents the RSDRP from entering government in the 1925 general elections. Biannual elections lead to a continued Russia Coalition, though with a meager 52% majority, compared to a previous 63%.
 
-**Jan. 1926**: The incumbent Russia Coalition collapses over rural taxation disputes, new elections are scheduled in five months.
+**Jan., 1926**: The incumbent Russia Coalition collapses over rural taxation disputes, new elections are scheduled in five months.
 
 @curr_gov
 go-to: cabinet if spd_in_government; menu if not spd_in_government
+set-bg: img/duma.jpg
 
 = Current Government
 
@@ -115,6 +115,7 @@ SPD position: [? if spd_toleration : toleration ?][? if spd_in_government : in g
 
 @cabinet
 go-to: menu
+set-bg: img/cabinet.jpg
 
 Current cabinet:
 
@@ -137,6 +138,7 @@ Agriculture: [+ agriculture_minister_party +]
 
 @demographics
 go-to: menu
+set-bg: img/1932.jpg
 
 **Demographic Groups**
 
@@ -161,6 +163,7 @@ Q.socialism_disp = Math.round(Q.socialism);
 !}
 view-if: (not historical_mode) or game_over
 go-to: election_algorithm
+set-bg: img/electionposters.jpg
 set-jump: election_projections
 
 **Public Opinion**
@@ -175,6 +178,7 @@ Support for the Republic: [+ pro_republic_disp +]%
 @election_projections
 view-if: (not historical_mode) or game_over
 go-to: menu
+set-bg: img/electionresults.jpg
 
 **Projected election results** (if the election were to be held now):
 
@@ -220,6 +224,7 @@ Catholics: SPD: [+ catholics_spd_display +]%, Z: [+ catholics_z_display +]%, KPD
 
 @parties
 go-to: menu
+set-bg: img/neorevs.jpg
 
 **RSDRP(O)** - *Rossijskaja Social-Demokratičeskaja Rabočaja Partija (Ob’jedinjonnaja)* (Russian Social Democratic Labour Party (United)) - this is us. We are a socialist and democratic party of the working class. We are the heirs of the legacy of Marx and Engels, Martov and Plekhanov. We are the foremost defenders of the Republic. The modern RSDRP(O) is the continuation of the Menshevik sections of the RSDRP.
 
@@ -259,6 +264,7 @@ Q.sh_strength = Math.round(Q.sh_strength);
 Q.sa_strength = Math.round(Q.sa_strength); 
 !}
 go-to: menu
+set-bg: img/streetfighting2.jpg
 
 **Paramilitary groups:**
 
@@ -300,6 +306,7 @@ Loyalty: [+ prussian_police_loyalty : loyalty +]
 
 @factions
 go-to: neorevisionists if neorevisionism > 0; menu if neorevisionism <= 0
+set-bg: img/groupphoto.jpg
 
 **Internal factions of the SPD**
 
