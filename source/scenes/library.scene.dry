@@ -228,7 +228,7 @@ Catholics: SPD: [+ catholics_spd_display +]%, Z: [+ catholics_z_display +]%, KPD
 @parties
 go-to: menu
 set-bg: img/neorevs.jpg
-face-image: img/votesocdem.jpg
+face-image: img/VoteSocDem.jpg
 
 <span style="color: #ED1B34;">**RSDRP(O)**</span> - *Rossijskaja Social-Demokratičeskaja Rabočaja Partija (Ob’jedinjonnaja)* (Russian Social Democratic Labour Party (United)) - this is us. We are a socialist and democratic party of the working class. We are the heirs of the legacy of Marx and Engels, Martov and Plekhanov. We are the foremost defenders of the Republic. The modern RSDRP(O) is the continuation of the Menshevik sections of the RSDRP.
 
