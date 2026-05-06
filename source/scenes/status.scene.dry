@@ -15,8 +15,9 @@ if (Q.economic_growth) {
 !}
 
 = Status
-face-image: img/russianflag.png
 
+
+face-image: img/russianflag.png
 [+ month : month +] [+ year +]
 
 Resources available: [+ resources +]
