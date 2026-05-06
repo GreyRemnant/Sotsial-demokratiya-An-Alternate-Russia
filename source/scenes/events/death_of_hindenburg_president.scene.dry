@@ -1,4 +1,4 @@
-title: The Death of Hindenburg
+title: The Death of Kornilov
 subtitle: The President has died...
 new-page: true
 view-if: year = 1934 and month >= 7 and president = "Kornilov"
@@ -7,7 +7,7 @@ max-visits: 1
 face-image: img/kornilovdead.png
 tags: event
 
-= The Death of Hindenburg
+= The Death of Kornilov
 
 President Lavr Kornilov has passed away at age 65. An era of history is closing, and the future remains to be seen. He had reportedly contracted tubercolosis while visiting Ukraine, this does explain his unusual absence since he left office.
 
