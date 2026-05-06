@@ -71,7 +71,7 @@ go-to: menu
 
 **1924**: <span style="color: #ffffaa;">**Georgy Lvov**</span> is re-elected President.
 
-**1925**:  President <span style="color: #F48100;">**Lvov**</span> dies, and new presidential elections are held, leading to the landslide election of Lavr Kornilov, who ran at the urging of the <span style="color: #004090;">**Conservative**</span> <span style="color: #B4121A;">**Narodist**</span> and Nationalist, Boris Savinkov. Kornilov, a <span style="color: #004090;">**conservative**</span>, war hero, and anti-<span style="color: #D40000;">**Communist**</span>, prevents the <span style="color: #ED1B34;">**RSDRP(O)**</span> from entering government in the 1925 general elections. Biannual elections lead to a continued <span style="color: #888888;">**Ru**</span><span style="color: #0032a0;">**ss**</span><span style="color: #DA291C;">**ia**</span> **Coalition**, though with a meager 52% majority, compared to a previous 63%.
+**1925**: President <span style="color: #F48100;">**Lvov**</span> dies, and new presidential elections are held, leading to the landslide election of Lavr Kornilov, who ran at the urging of the <span style="color: #004090;">**Conservative**</span> <span style="color: #B4121A;">**Narodist**</span> and Nationalist, Boris Savinkov. Kornilov, a <span style="color: #004090;">**conservative**</span>, war hero, and anti-<span style="color: #D40000;">**Communist**</span>, prevents the <span style="color: #ED1B34;">**RSDRP(O)**</span> from entering government in the 1925 general elections. Biannual elections lead to a continued <span style="color: #888888;">**Ru**</span><span style="color: #0032a0;">**ss**</span><span style="color: #DA291C;">**ia**</span> **Coalition**, though with a meager 52% majority, compared to a previous 63%.
 
 **Jan., 1926**: The incumbent <span style="color: #888888;">**Ru**</span><span style="color: #0032a0;">**ss**</span><span style="color: #DA291C;">**ia**</span> **Coalition** collapses over rural taxation disputes, new elections are scheduled in five months.
 
@@ -237,7 +237,7 @@ face-image: img/votesocdem.jpg
 Current relations: [+ z_relation : relationships +]
 
 # TODO: replace this with the german state party after 1930
-<span style="color: #0087dc;">**K-D**</span> - *Konstitutsionno-Demokraticheskaya Partiya/Pártiya Naródnoy Svobódy* (Constitutional Democratic Party, or officially the Party of People's Freedom ) - a centrist to center-right liberal party, popular among the intelligensia and educated middle class. They have historically been cordial with us but, especially following their recent conservative turn, oppose our economic policies. The <span style="color: #008000;">**Alash Party**</span> is closely tied to the Kadets, generally considered to be their sister-party in Russian Central Asia. [? if year >= 1930 : They have recently reformed themselves as the German State Party (DStP). ?]
+<span style="color: #0087dc;">**K-D**</span> - *Konstitutsionno-Demokraticheskaya Partiya/Pártiya Naródnoy Svobódy* (Constitutional Democratic Party, or officially the Party of People's Freedom) - a centrist to center-right liberal party, popular among the intelligensia and educated middle class. They have historically been cordial with us but, especially following their recent conservative turn, oppose our economic policies. The <span style="color: #008000;">**Alash Party**</span> is closely tied to the Kadets, generally considered to be their sister-party in Russian Central Asia. [? if year >= 1930 : They have recently reformed themselves as the German State Party (DStP). ?]
 
 Current relations: [+ ddp_relation : relationships +]
 
@@ -249,17 +249,17 @@ Current relations: [+ dnvp_relation : relationships +]
 
 Current relations: [+ dvp_relation : relationships +]
 
-<span style="color: #990000;">**PLSRI**</span> - *Partiya Levykh Sotsialistov-Revolyutsionerov-Internatsionalistov* (Party of Left Socialist-Revolutionaries-Internationalists) - a radical left-wing offshoot of the PSR that emerged in the aftermath of the failed Bolshevik Revolution of 1917, they are split between former Bolsheviks and Narodists. The party is currently crippled by internal fighting, which is unlikely to end soon. 
+<span style="color: #990000;">**PLSRI**</span> - *Partiya Levykh Sotsialistov-Revolyutsionerov-Internatsionalistov* (Party of Left Socialist-Revolutionaries-Internationalists) - a radical left-wing offshoot of the PSR that emerged in the aftermath of the Civil War, they are split between former Bolsheviks and Narodists. The party is currently crippled by internal fighting, which is unlikely to end soon. 
 
 Current relations: [+ kpd_relation : relationships +]
 
-[? if sapd_formed: <span style="color: #d84c4c;">**RSDRPI**</span> - *Rossijskaja Social-Demokratičeskaja Rabočaja Partija internatsionalistov* (Russian Social Democratic Labour Party of Internationalists) - a party recently formed in a split from the RSDRP(O), the RSDRPI is essentially an agglomeration of various left-wing splinter groups between the RSRDP(O) and PLSRI. ?]
+[? if sapd_formed: <span style="color: #d84c4c;">**RSDRPI**</span> - *Rossijskaja Social-Demokratičeskaja Rabočaja Partija Internatsionalistov* (Russian Social Democratic Labour Party of Internationalists) - a party recently formed in a split from the RSDRP(O), the RSDRPI is essentially an agglomeration of various left-wing splinter groups between the RSRDP(O) and PLSRI. ?]
 
-<span style="color: #ff9c00;">**SRN**</span> - *Soyuz Russkogo Naroda* - (Union of the Russian People, or Black-Hundredists) - a far-right ultranationalist, monarchist, and reactionary party. Led by Vladimir Purishkevich, many of their members and leaders supported Wrangel's attempted rebellion, and were nearly banned for it.
+<span style="color: #ff9c00;">**SRN**</span> - *Soyuz Russkogo Naroda* - (Union of the Russian People, or Black-Hundredists) - a far-right ultranationalist, monarchist, and reactionary party. Led by Vladimir Purishkevich, many of their members and leaders supported monarchist and nationalist groups in the Civil War.
 
 Current relations: [+ nsdap_relation : relationships +]
 
-**Other parties** - there is a multitude of small, mostly conservative, regionalist, or socialist parties, such as the Labourist Popular-Socialist Party, the Armenian Populist Party, the All-Peasant Union, and others. Their political position usually lies between the RSDRP and VS.
+**Other parties** - there is a multitude of small, mostly conservative, regionalist, or socialist parties, such as the Labourist Popular-Socialist Party, the Armenian Populist Party, the All-Peasant Union, and others. Their political position usually lies between the RSDRP and K-D.
 
 @paramilitaries
 on-arrival: {!

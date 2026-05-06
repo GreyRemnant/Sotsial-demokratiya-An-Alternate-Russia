@@ -418,9 +418,10 @@ go-to: hindenburg_wins if hindenburg_plurality == 1; thalmann_wins if thalmann_p
 
 
 @hindenburg_wins
-on-arrival: president = "Hindenburg"
+on-arrival: president = "Kornilov"
+face-image: img/kornilovwins.jpg
 
-As expected, the incumbent Hindenburg wins the presidency. Let's hope he continues to keep the Nazis out of power.
+As expected, the incumbent Kornilov wins the presidency. Let's hope he continues to keep the ultranationalists out of power.
 
 @thalmann_wins
 on-arrival: president = "Thälmann"; kpd_relation = 80;
@@ -431,6 +432,7 @@ Ernst Thälmann of the KPD has won the presidency. Immediately, the far-right la
 
 @hitler_wins
 on-arrival: president = nsdap_candidate; chancellor = "Hitler"; chancellor_party = "NSDAP"
+face-image: img/badending.jpg
 
 [? if nsdap_candidate == "Hitler" : Adolf Hitler of the NSDAP has won the presidency. He wastes no time in consolidating power. ?]
 [? if nsdap_candidate != "Hitler" : The NSDAP candidate [+ president +] has won. The first action President [+ president +] takes is inviting Hitler back into Germany, and appointing him chancellor. The Nazis waste no time in consolidating power. ?]
@@ -439,6 +441,7 @@ on-arrival: president = nsdap_candidate; chancellor = "Hitler"; chancellor_party
 
 
 @martov_wins
-on-arrival: president = "Braun"; reformist_dissent -= 15; center_dissent -= 15; labor_dissent -= 15; left_dissent -= 5; workers_spd += 8*(1-dissent); old_middle_spd += 5*(1-dissent); new_middle_spd += 5*(1-dissent); rural_spd += 5*(1-dissent); unemployed_spd += 5*(1-dissent);
+on-arrival: president = "Martov"; reformist_dissent -= 15; center_dissent -= 15; labor_dissent -= 15; left_dissent -= 5; workers_spd += 8*(1-dissent); old_middle_spd += 5*(1-dissent); new_middle_spd += 5*(1-dissent); rural_spd += 5*(1-dissent); unemployed_spd += 5*(1-dissent);
+face-image: img/martovwins.jpg
 
 Yuliy Martov of the RSDRP has won the presidency! This is a moment of celebration for our party, and his victory is able to bolster our support.
