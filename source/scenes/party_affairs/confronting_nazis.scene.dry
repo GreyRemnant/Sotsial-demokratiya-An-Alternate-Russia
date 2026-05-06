@@ -22,7 +22,7 @@ Many in our party are calling for urgent action. The "neorevisionist" faction, l
 on-arrival: nazi_urgency -= 1; left_dissent += 5; neorevisionist_dissent += 15
 view-if: mierendorff_advisor = 0 and leber_advisor = 0 and schumacher_advisor = 0
 
-The Nazis are just another far-right movement that will die of its own contradictions sooner or later; we do not need to build a specific policy to combat them.
+The Solidarists are just another far-right movement that will die of its own contradictions sooner or later; we do not need to build a specific policy to combat them.
 
 @economic_crisis
 title: We must address the economic crisis first.
@@ -33,7 +33,7 @@ go-to: crisis_program
 view-if: nazi_urgency < 5
 on-arrival: nazi_urgency += 1; neorevisionist_dissent -= 5; neorevisionist_strength += 5
 
-The ultranationalists are one of the foremost threats to the German republic. However, we are still formulating a strategy to confront them, and still trying to build up consensus within our party for action. Check back on this later.
+The Solidarists are one of the foremost threats to the Russian Republic. However, we are still formulating a strategy to confront them, and still trying to build up consensus within our party for action. Check back on this later.
 
 @iron_front
 title: Form the Iron Front!
@@ -42,13 +42,13 @@ view-if: nazi_urgency >= 3 and iron_front_formed == 0
 on-arrival: iron_front_formed = 1; radicalization += 1; nazi_urgency += 1; workers_spd += 5*(1-dissent); pro_republic += 5*(1-dissent); left_dissent -= 8; neorevisionist_dissent -= 10; neorevisionist_strength += 5
 achievement: eiserne_front
 
-The Black-Hundredists threat can no longer be ignored. We must build a new organization to confront them - the Iron Front - consisting of the SPD, the ADGB trade union federation, and the *Reichsbanner Schwarz-Rot-Gold*. We have a new symbol - the Three Arrows, pointing down towards the left.
+The Solidarists threat can no longer be ignored. We must build a new organization to confront them - the People's Front - consisting of the RSDRP, Socialist Trade Unions, and the *Soyuz Fevralya*. Taking inspiration from the German *Iron Front*, we will adopt a new logo for our branding - the Three Arrows, pointing down towards the left.
 
 What do the three arrows stand for?
 
 - @unity: Unity, Activity, and Discipline.
 - @anti: Opposition to Fascism, Stalinism, and Monarchism.
-- @orgs: The SPD, ADGB, and Reichsbanner.
+- @orgs: The RSDRP, Unions, and the SF.
 - @wtb: Voitinsky, Tarnow, and Baade of the WTB-Plan
 - @all: All of the above.
 

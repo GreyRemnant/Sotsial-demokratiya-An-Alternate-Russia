@@ -25,7 +25,7 @@ subtitle: -[+ rb_militarization_cost +] resources
 choose-if: resources >= rb_militarization_cost
 on-arrival: resources -= rb_militarization_cost; rb_strength += 50; rb_militancy += 0.05; z_relation -= 5 if historical_mode
 
-The Iron Front rallies for the militant defense of the republic against the fascist paramilitaries, strengthening the Reichsbanner.
+The Iron Front rallies for the militant defense of the republic against the Solidarist paramilitaries, strengthening the SF.
 
 [? if historical_mode : The Center Party decries the militarization of the Reichsbanner and Iron Front, and its members are leaving the republican organization. ?]
 
@@ -53,5 +53,4 @@ title: Rally against antisemitism and in defense of Jewish Germans.
 view-if: confronting_antisemitism > 1
 on-arrival: nationalism -= 4*(1-dissent); pro_republic += 3*(1-dissent); confronting_antisemitism += 1; workers_nsdap -= 4*(1-dissent); unemployed_nsdap -= 4*(1-dissent);
 
-# TODO
-The Nazis and other far-right political movements are increasingly turning their hatred against the Jewish community of Germany. The Iron Front rallies in defense of individual Jews and the broader community against violence.
+The Solidarists and other far-right political movements are increasingly turning their hatred against the Jewish community of Russia. The People's Front rallies in defense of individual Jews and the broader community against violence.

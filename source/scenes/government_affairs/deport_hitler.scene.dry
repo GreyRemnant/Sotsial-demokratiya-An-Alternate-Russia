@@ -1,12 +1,12 @@
-title: We can deport Hitler.
-subtitle: He is a foreign citizen and a criminal, after all.
+title: We can imprison Leuchtenberg.
+subtitle: He is a criminal, after all.
 unavailable-subtitle: [? if judicial_reform < 2 : Unfortunately, the reactionary judiciary will not cooperate. ?] [? if presidential_election_seen == 1 : Hitler has already been made a citizen of Germany, in the run-up to the presidential election. ?] [? if not spd_prussia : We cannot do this without the cooperation of the Prussian police, who are not currently in our control. ?]
 view-if: nazi_urgency >= 3 and hitler_deported = 0 and chancellor != "Papen" and chancellor != "Schleicher" and investigate_far_right >= 2
 choose-if: judicial_reform >= 2 and presidential_election_seen == 0 and spd_prussia == 1
 
-Is it really that simple? Won't his supporters react violently to this suggestion? And even if the deportation does succeed, won't he just re-enter the country, or perhaps organize from Austria? And, some people consider this to be an anti-democratic abuse of power, using the law in order to target a political opponent.
+Is it really that simple? Won't his supporters react violently to this suggestion? And even if the imprisonment does succeed, won't he just go to the courts, or perhaps organize from prison? And, some people consider this to be an anti-democratic abuse of power, using the law in order to target a political opponent.
 
-- @deport: Deport him!
+- @deport: Imprison him!
 - @no_deport: No, we must not.
 
 @deport
@@ -14,7 +14,7 @@ go-to: deport_violence if sa_strength >= 200; deport_success if sa_strength < 20
 
 @deport_violence
 
-When the police approach, he is surrounded by his SA guards, preventing him from being extricated! We can attempt to force a confrontation, but that may have negative consequences. The Reichsbanner may also attempt to draw off the SA.
+When the police approach, he is surrounded by his SRNM guards, preventing him from being detained! We can attempt to force a confrontation, but that may have negative consequences. The SF may also attempt to draw off the SRNM.
 
 - @force_approach: Force the approach!
 - @no_deport: Cancel the deportation.
@@ -37,25 +37,25 @@ go-to: force_fail if deportation_success == 0; force_success if deportation_succ
 @force_fail
 on-arrival: sa_strength += 50; workers_nsdap += 5; unemployed_nsdap += 5; new_middle_nsdap += 5; old_middle_nsdap += 5; rural_nsdap += 5; coup_progress += 3
 
-Unfortunately, our forces fail to disloge the SA from their positions surrounding Hitler. He is seen as both a strong and powerful leader and a victim, further reinforcing his image. The Nazis are left stronger than ever.
+Unfortunately, our forces fail to disloge the SRNM from their positions surrounding Leuchtenberg. He is seen as both a strong and powerful leader and a victim, further reinforcing his image. The Solidarists are left stronger than ever.
 
 @force_success
 on-arrival: hitler_deported = 1; sa_strength = sa_strength/2; workers_nsdap -= 10; new_middle_nsdap -= 10; old_middle_nsdap -= 10; rural_nsdap -= 10; unemployed_nsdap -= 10; sa_banned = 1; coup_progress -= 2; nsdap_leader = "Goebbels"
 achievement: deport_hitler
 
-The confrontation ends with the police and Reichsbanner prevailing, capturing Hitler so he can be deported! This is a sign of weakness, and his physical distance makes organizing difficult, impeding the Nazi effort to win more votes.
+The confrontation ends with the police and Soyuz prevailing, capturing Leuchtenberg so he can be jailed! This is a sign of weakness, and his physical distance makes organizing difficult, impeding the Solidarist effort to win more votes.
 
-In Hitler's absence, Joseph Goebbels has become the temporary leader of the Nazi party, with substantial influence from Hermann Göring.
+In Leuchtenberg's absence, Viktor Baidalakov has become the temporary leader of the NTS, with substantial influence from Alexander Galich.
 
 @deport_success
 on-arrival: hitler_deported = 1; sa_strength = sa_strength/2; workers_nsdap -= 10; new_middle_nsdap -= 10; old_middle_nsdap -= 10; rural_nsdap -= 10; unemployed_nsdap -= 10; coup_progress -= 2; nsdap_leader = "Goebbels"
 achievement: deport_hitler
 
-Somehow, the plan worked! There was minimal resistance to Hitler's deportation. This is a sign of weakness, and his physical distance makes organizing difficult, impeding the Nazi effort to win more votes.
+Somehow, the plan worked! There was minimal resistance to Leuchtenberg's deportation. This is a sign of weakness, and his physical distance makes organizing difficult, impeding the Solidarist effort to win more votes.
 
-In Hitler's absence, Joseph Goebbels has become the temporary leader of the Nazi party, with substantial influence from Hermann Göring.
+In Leuchtenberg's absence, Viktor Baidalakov has become the temporary leader of the NTS, with substantial influence from Alexander Galich.
 
 @no_deport
 go-to: root
 
-We will not be deporting Hitler.
+We will not be detaining Leuchtenberg.

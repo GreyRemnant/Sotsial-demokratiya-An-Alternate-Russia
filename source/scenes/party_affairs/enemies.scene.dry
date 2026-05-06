@@ -13,9 +13,9 @@ In our media and campaign materials, who should we consider as our main opponent
 
 [? if enemies != 0 : Previously, we had considered the [+ enemies +] as our prior enemies. Is a change of direction necessary? ?]
 
-- @anti_dem: The anti-democratic parties of the far right and left - the PLSRI, Tsarists, and Black-Hundredists.
-- @far_right: The far right - the Black-Hundredists and Tsarists.
-- @nsdap: The Black-Hundredists alone.
+- @anti_dem: The anti-democratic parties of the far right and left - the PLSRI, Tsarists, and Solidarists.
+- @far_right: The far right - the Solidarists and Tsarists.
+- @nsdap: The Solidarists alone.
 - @kpd: The Left Esers and Bolshevik Remnants of the PLSRI.
 - @bourgeois: The bourgeois parties - the Kadets and Müsavat.
 - @easy_discard
@@ -33,7 +33,7 @@ Attacking the far right is popular among the entire party, although the left con
 @nsdap
 on-arrival: enemies = "NSDAP"; neorevisionist_strength += 5; nazi_urgency += 1; workers_nsdap -= 4;
 
-[? if nazi_urgency == 0 or nsdap_r < 10 : The Black-Hundredists are a tiny group right now, with more bark than bite. Many in our party are questioning our choices. ?][? if nazi_urgency > 0 and nsdap_r >= 10 : The ultranationalists are the most urgent problem for us to deal with. ?]
+[? if nazi_urgency == 0 or nsdap_r < 10 : The Solidarists are a tiny group right now, with more bark than bite. Many in our party are questioning our choices. ?][? if nazi_urgency > 0 and nsdap_r >= 10 : The Solidarists are the most urgent problem for us to deal with. ?]
 
 @kpd
 on-arrival: enemies = "KPD"; reformist_strength += 5; left_dissent += 8; reformist_dissent -= 5; kpd_relation -= 15; dvp_relation += 5; z_relation += 5; workers_kpd -= 4;
