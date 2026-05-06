@@ -15,6 +15,7 @@ if (Q.economic_growth) {
 !}
 
 = Status
+face-image: img/russianflag.png
 
 [+ month : month +] [+ year +]
 
@@ -30,6 +31,7 @@ RSDRP(O) position: [? if spd_toleration : toleration ?][? if spd_in_government :
 Internal dissent: [+ dissent_percent : dissent +]
 
 = Government
+face-image: img/russianeagle.png
 
 President: [+ president +]
 
@@ -60,6 +62,7 @@ Others: [+ other_r +]%
 Next election: [+ next_election_month : month +] [+ next_election_year +]
 
 = Economics
+face-image: img/bank.jpg
 
 Inflation: [+ inflation_2 +]%
 
@@ -72,6 +75,7 @@ Economic growth: [+ economic_growth_2 +]%
 # = Public Opinion
 
 @politics
+face-image: img/electionposters.jpg
 
 = Inter-party Relations
 
@@ -90,18 +94,19 @@ Economic growth: [+ economic_growth_2 +]%
 
 = Internal Factions of the SPD
 
-{!<span class="tooltip-text" title="The Left is interested in radical, transformative policies and cooperation with the KPD.">Left</span>!} strength: [+ left_strength : strength +], dissent: [+ left_dissent : dissent +]
+{!<span class="tooltip-text" title="The Left is interested in radical, transformative policies and cooperation with the PLSRI.">Internationalist</span>!} strength: [+ left_strength : strength +], dissent: [+ left_dissent : dissent +]
 
 {!<span class="tooltip-text" title="The Center is a faction of Center Marxists, between reform and revolution.">Center</span>!} strength: [+ center_strength : strength +], dissent: [+ center_dissent : dissent +]
 
 {!<span class="tooltip-text" title="Labor's goal is economic reform and benefits for organized workers.">Labor</span>!} strength: [+ labor_strength : strength +], dissent: [+ labor_dissent : dissent +]
 
-{!<span class="tooltip-text" title="Reformists are pragmatic participants in government, and seek to expand the welfare state and defend democracy.">Reformist</span>!} strength: [+ reformist_strength : strength +], dissent: [+ reformist_dissent : dissent +]
+{!<span class="tooltip-text" title="Reformists are pragmatic participants in government, and seek to expand the welfare state and defend democracy.">Economist</span>!} strength: [+ reformist_strength : strength +], dissent: [+ reformist_dissent : dissent +]
 
 [? if neorevisionism > 0 : Neorevisionist strength: [+ neorevisionist_strength : strength +], dissent: [+ neorevisionist_dissent : dissent +] ?]
 
 
 @paramilitaries
+face-image: img/soyuzfevralya.jpg
 on-arrival: {!
 if (Q.rb_strength) {
     Q.rb_strength_2 = Q.rb_strength.toFixed(1);
@@ -148,6 +153,7 @@ Prussian police loyalty: [+ prussian_police_loyalty : loyalty +]
 [? if spd_in_government : Interior police loyalty: [+ interior_police_loyalty : loyalty +] ?]
 
 @polls
+face-image: img/duma.jpg
 on-arrival: {!
 Q.pro_republic_disp = Math.round(Q.pro_republic);
 Q.nationalism_disp = Math.round(Q.nationalism);
