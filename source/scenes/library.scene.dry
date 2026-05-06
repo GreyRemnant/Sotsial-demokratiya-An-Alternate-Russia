@@ -237,7 +237,7 @@ face-image: img/votesocdem.jpg
 Current relations: [+ z_relation : relationships +]
 
 # TODO: replace this with the german state party after 1930
-<span style="color: #0087dc;">**K-D**</span> - *Konstitutsionno-Demokraticheskaya Partiya/Pártiya Naródnoy Svobódy* (Constitutional Democratic Party, or officially the Party of People's Freedom ) - a centrist to center-right liberal party, popular among the intelligensia and educated middle class. They have historically been cordial with us but, especially following their recent conservative turn, oppose our economic policies. The **Alash Party** is closely tied to the Kadets, generally considered to be their counterpart in Russian Central Asia. [? if year >= 1930 : They have recently reformed themselves as the German State Party (DStP). ?]
+<span style="color: #0087dc;">**K-D**</span> - *Konstitutsionno-Demokraticheskaya Partiya/Pártiya Naródnoy Svobódy* (Constitutional Democratic Party, or officially the Party of People's Freedom ) - a centrist to center-right liberal party, popular among the intelligensia and educated middle class. They have historically been cordial with us but, especially following their recent conservative turn, oppose our economic policies. The <span style="color: #008000;">**Alash Party**</span> is closely tied to the Kadets, generally considered to be their sister-party in Russian Central Asia. [? if year >= 1930 : They have recently reformed themselves as the German State Party (DStP). ?]
 
 Current relations: [+ ddp_relation : relationships +]
 
