@@ -13,7 +13,7 @@ President Lavr Kornilov has passed away at age 64. An era of history is closing,
 
 The nation engages in an outpouring of grief for its war hero and president, with even some sympathy among committed republicans and socialists. After all, Kornilov steered the republic through some of its most challenging times, without giving in to extremists on the far right. Perhaps he is one reason democracy remains alive.
 
-New presidential elections are to be held as soon as possible. The German political landscape is wide open, with contenders from all over the political space. In the meantime, Supreme Court chief justice [? if judicial_reform < 4 : Erwin Bumke ?][? if judicial_reform >= 4 : Hermann Großmann ?] serves as the acting president.
+New presidential elections are to be held as soon as possible. The Russian political landscape is wide open, with contenders from all over the political space. In the meantime, Supreme Court chief justice [? if judicial_reform < 4 : Erwin Bumke ?][? if judicial_reform >= 4 : Hermann Großmann ?] serves as the acting president.
 
 # Hermann Großmann is the supreme court chief justice in judicial reform.
 
@@ -26,16 +26,16 @@ go-to: candidate_menu
 [? if hitler_deported : With Hitler deported, the Nazis will be running Hermann Göring as their candidate. ?]
 This might be the Nazis' last hurrah; the party's internal contradictions are heightening, and it is in desperate shortage of funds.
 
-The DNVP will nominate Franz Seldte, leader of the Stahlhelm paramilitary group. He will be endorsed by many of Hindenburg's most right-wing supporters. They are working more closely with the Nazis than before, and in the second round, the far-right parties are expected to consolidate into a single anti-republican front.
+The VS will nominate Michael Alexandrovich Romanov, the brother of Nicholas II who refused the throne. He will be endorsed by many of Kornilovs's Monarchist and Conservative supporters. They are working more closely with the Ultranationalists than before, and in the second round, the far-right parties are expected to consolidate into a single anti-socialist front.
 
 [? if kpd_party_leader = "Conciliators" : Given the failure of Thälmann's previous runs for president, and his declining stature in the party, the KPD will be running Willi Münzenberg, a controversial figure sometimes called the "Red millionaire". He is a media magnate who leads a number of Communist front organizations. ?]
 [? if kpd_party_leader != "Conciliators" : This will be Ernst Thälmann's third run for president as leader of the KPD. Despite his previous electoral defeats, he retains the loyalty of the party as well as Stalin's Soviet Union. ?]
 
-Many republicans of the Center, [+ ddp_name +], and SPD float the idea of running Hugo Eckener, a nationally renowed Zeppelin captain, as a unity candidate. While he has some nationalistic views, he is also ardently opposed to Nazism.
+Many republicans of the Müsavat Party, [+ ddp_name +], and RSDRP float the idea of running Vasily Maklakov, a nationally renowed lawyer, diplomat, activist, and Liberal Republican, as a unity candidate. While he has some conservative views, he is also ardently opposed to Solidarism.
 
-Barring that, the Center and [+ ddp_name +] are planning to run separate candidates in the first round if the SPD runs its own candidate. The Center is considering nominating Konrad Adenauer, mayor of Köln and member of the Prussian state legislature. He calls for an alliance of conservative Christian democrats that encompasses both Catholics and Protestants. The [+ ddp_name +] might nominate Otto Gessler, former defense minister, who has crossover appeal to conservatives in the DVP and other parties who dislike the DNVP-NSDAP front.
+Barring that, the Müsavat Party and [+ ddp_name +] are planning to run separate candidates in the first round if the RSDRP runs its own candidate. The Kadets are considering nominating Dr. Andrei Shingarev, a Duma member from Voronezh and member of the Kadet's right-wing. He calls for an alliance of Liberals and Conservatives that encompasses both Orthodox Democrats and Constitutional Monarchists. The Müsavat Party might nominate Mahammad Amin Rasulzade, their party leader, who has crossover appeal to Muslims and other regionalist parties who dislike the Solidarist front.
 
-As for the SPD, we could support a joint Weimar Coalition candidate or run our own.
+As for the RSDRP, we could support a joint Weimar Coalition candidate or run our own.
 [? if braun_campaign : Otto Braun is tired. He ran and failed in the previous two presidential elections, and no longer wishes to run. His wife is ill enough that he wishes to stay by her side. ?][? if braun_campaign = 0 and not spd_prussia: Otto Braun is tired. After being deposed in Prussia, he has largely retired from politics, and is devoting his time to caring for his dying wife. ?][? if braun_campaign = 0 and spd_prussia : Otto Braun is tired. He does not wish to run, but he is willing to be convinced that he is needed at this moment. His wife is terminally ill, and he does not want more responsibilities. ?]
 Kurt Schumacher is an ambitious rising star in the party, and would be all too willing to run. He was a hero in the Great War, but his relatively young age might be relevant.
 [? if womens_rights >= 6 and family_law >= 2 and womens_work >= 2 and welfare > 0: Or, perhaps it is time for a woman to become president. Germany and the SPD have been leading on women's rights for years, and it is only fitting that we should elect the world's first female president. Perhaps Marie Juchacz could be seen as the "mother of the nation" for her work in social welfare. However, her divorce 28 years ago might make it difficult for the Catholics to support her. ?]
