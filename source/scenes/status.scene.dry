@@ -16,9 +16,9 @@ if (Q.economic_growth) {
 
 = Status
 
-
+image: img/russianflag.png
 [+ month : month +] [+ year +]
-face-image: img/russianflag.png
+
 Resources available: [+ resources +]
 
 RSDRP(O) position: [? if spd_toleration : toleration ?][? if spd_in_government : in government - ?][? if spd_toleration == 0 and spd_in_government == 0 and spd_caretaker == 0 : opposition ?][? if spd_caretaker : caretaker government ?]
@@ -31,8 +31,8 @@ RSDRP(O) position: [? if spd_toleration : toleration ?][? if spd_in_government :
 Internal dissent: [+ dissent_percent : dissent +]
 
 = Government
-face-image: img/russianeagle.png
 
+image: img/russianeagle.png
 President: [+ president +]
 
 Chancellor: [+ chancellor +] ([+ chancellor_party +])
@@ -62,8 +62,8 @@ Others: [+ other_r +]%
 Next election: [+ next_election_month : month +] [+ next_election_year +]
 
 = Economics
-face-image: img/bank.jpg
 
+image: img/bank.jpg
 Inflation: [+ inflation_2 +]%
 
 [? if black_thursday_seen = 1 : Unemployment: [+ unemployed_2 +]% ?]
@@ -75,11 +75,11 @@ Economic growth: [+ economic_growth_2 +]%
 # = Public Opinion
 
 @politics
-face-image: img/electionposters.jpg
+
 
 = Inter-party Relations
 
-
+image: img/electionposters.jpg
 {!<span class="tooltip-text" title="Center Party">Z</span>!}: [+ z_relation : relationships +]
 
 {!<span class="tooltip-text" title="German Democratic Party">!}[? if not ddp_name: DDP?][? if ddp_name != 0 : [+ ddp_name +]?]{!</span>!}: [+ ddp_relation : relationships +]
@@ -106,7 +106,7 @@ face-image: img/electionposters.jpg
 
 
 @paramilitaries
-face-image: img/soyuzfevralya.jpg
+image: img/soyuzfevralya.jpg
 on-arrival: {!
 if (Q.rb_strength) {
     Q.rb_strength_2 = Q.rb_strength.toFixed(1);
@@ -153,7 +153,7 @@ Prussian police loyalty: [+ prussian_police_loyalty : loyalty +]
 [? if spd_in_government : Interior police loyalty: [+ interior_police_loyalty : loyalty +] ?]
 
 @polls
-face-image: img/duma.jpg
+image: img/duma.jpg
 on-arrival: {!
 Q.pro_republic_disp = Math.round(Q.pro_republic);
 Q.nationalism_disp = Math.round(Q.nationalism);
