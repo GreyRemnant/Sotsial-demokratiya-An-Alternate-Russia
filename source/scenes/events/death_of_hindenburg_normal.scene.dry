@@ -1,17 +1,17 @@
-title: The Death of Hindenburg
-subtitle: The Great War hero and one-time president has died...
+title: The Death of Kornilov
+subtitle: The Great War hero, Civil War hero, and one-time president has died...
 new-page: true
 view-if: year = 1934 and month >= 7 and president != "Hindenburg"
 on-arrival: hindenburg_dead = 1
 max-visits: 1
 tags: event
-face-image: img/kornilovdead.jpg
+face-image: img/kornilovdead.png
 go-to: game_over_1934
 
-= The Death of Hindenburg
+= The Death of Kornilov
 
-Paul von Hindenburg has passed away at age 86.
+Paul von Hindenburg has passed away at age 64 from tubercolosis. He had reportedly contracted the disease while visiting Ukraine, this does explain his unusual absence since he left office.
 
-The nation engages in an outpouring of grief for its war hero and former president. Even for committed socialists and republicans, this is a bittersweet moment. Even though he was a manifestation of Prussian militarism and monarchism, he still led the nation through difficult times, without destroying democracy. It could always have been worse.
+The nation engages in an outpouring of grief for its war hero and former president. Even for committed socialists and republicans, this is a bittersweet moment. Even though he was a manifestation of Russian militarism and Conservatism, he still led the nation through difficult times, without destroying democracy. It could always have been worse.
 
-With the passing of Hindenburg, it seems as if an era of history is closing. The worst years of crisis are over, and Nazism's days are numbered. Perhaps Germany will finally enter into a new era of genuine peace...
+With the passing of Kornilov, it seems as if an era of history is closing. The worst years of crisis are over, and nationalism's days are numbered. Perhaps Russia will finally enter into a new era of genuine peace...

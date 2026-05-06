@@ -2,16 +2,16 @@ title: The Death of Hindenburg
 subtitle: The President has died...
 new-page: true
 view-if: year = 1934 and month >= 7 and president = "Kornilov"
-on-arrival: round = 0; hindenburg_dead = 1; president = "Bumke (acting)"; president = "Großmann (acting)" if judicial_reform >= 4; spd_candidate = "Eckener"; kpd_candidate = "Thälmann"; kpd_candidate = "Münzenberg" if kpd_party_leader = "Conciliators"; z_candidate = "Adenauer"; ddp_candidate = "Gessler"; nsdap_candidate = "Hitler"; nsdap_candidate = "Göring" if hitler_deported; dnvp_candidate = "Seldte"; dvp_candidate = "Gessler"; other_candidate = "Seldte"; is_unity_candidate = 0; sapd_candidate = kpd_candidate;
+on-arrival: round = 0; kornilov_dead = 1; president = "Bumke (acting)"; president = "Großmann (acting)" if judicial_reform >= 4; spd_candidate = "Eckener"; kpd_candidate = "Thälmann"; kpd_candidate = "Münzenberg" if kpd_party_leader = "Conciliators"; z_candidate = "Adenauer"; ddp_candidate = "Gessler"; nsdap_candidate = "Hitler"; nsdap_candidate = "Göring" if hitler_deported; dnvp_candidate = "Seldte"; dvp_candidate = "Gessler"; other_candidate = "Seldte"; is_unity_candidate = 0; sapd_candidate = kpd_candidate;
 max-visits: 1
-face-image: img/kornilov.jpg
+face-image: img/kornilovdead.png
 tags: event
 
 = The Death of Hindenburg
 
-President Paul von Hindenburg has passed away at age 86. An era of history is closing, and the future remains to be seen.
+President Lavr Kornilov has passed away at age 65. An era of history is closing, and the future remains to be seen. He had reportedly contracted tubercolosis while visiting Ukraine, this does explain his unusual absence since he left office.
 
-The nation engages in an outpouring of grief for its war hero and president, with even some sympathy among committed republicans and socialists. After all, Hindenburg steered the republic through some of its most challenging times, without giving in to extremists on the far right. Perhaps he is one reason democracy remains alive.
+The nation engages in an outpouring of grief for its war hero and president, with even some sympathy among committed republicans and socialists. After all, Kornilov steered the republic through some of its most challenging times, without giving in to extremists on the far right. Perhaps he is one reason democracy remains alive.
 
 New presidential elections are to be held as soon as possible. The German political landscape is wide open, with contenders from all over the political space. In the meantime, Supreme Court chief justice [? if judicial_reform < 4 : Erwin Bumke ?][? if judicial_reform >= 4 : Hermann Großmann ?] serves as the acting president.
 
