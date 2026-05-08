@@ -1199,7 +1199,7 @@ This is highly unexpected, and many in the left and center of our party are crit
 title: Let Viktor Chernov of the <span style="color: #b4121a;">**Socialist-Revolutionaries**</span> be Government Chairman.
 view-if: z_party_leader == "Joos"
 subtitle: Chernov is on the Marxist wing of the <span style="color: #b4121a;">**PSR**</span>. This may give us a better position in negotiating for other cabinet positions.
-on-arrival: left_dissent += 2; z_relation += 6; ddp_relation += 3; kpd_relation -= 5; in_grand_coalition = 1 if in_austria_coalition == 0; chancellor = "Chernov"; chancellor_party = "<span style="color: #b4121a;">**PSR**</span>"; spd_in_government = 1; leverage += 5
+on-arrival: left_dissent += 2; z_relation += 6; ddp_relation += 3; kpd_relation -= 5; in_grand_coalition = 1 if in_austria_coalition == 0; chancellor = "Chernov"; chancellor_party = "Z"; spd_in_government = 1; leverage += 5
 go-to: ministries
 
 
