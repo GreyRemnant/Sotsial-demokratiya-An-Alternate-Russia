@@ -35,7 +35,7 @@ Many republicans of the Müsavat Party, [+ ddp_name +], and RSDRP float the idea
 
 Barring that, the Müsavat Party and [+ ddp_name +] are planning to run separate candidates in the first round if the RSDRP runs its own candidate. The Kadets are considering nominating Dr. Andrei Shingarev, a Duma member from Voronezh and member of the Kadet's right-wing. He calls for an alliance of Liberals and Conservatives that encompasses both Orthodox Democrats and Constitutional Monarchists. The Müsavat Party might nominate Mahammad Amin Rasulzade, their party leader, who has crossover appeal to Muslims and other regionalist parties who dislike the Solidarist front.
 
-As for the RSDRP, we could support a joint Weimar Coalition candidate or run our own.
+As for the RSDRP, we could support a joint Austria Coalition candidate or run our own.
 [? if braun_campaign : Otto Braun is tired. He ran and failed in the previous two presidential elections, and no longer wishes to run. His wife is ill enough that he wishes to stay by her side. ?][? if braun_campaign = 0 and not spd_prussia: Otto Braun is tired. After being deposed in Prussia, he has largely retired from politics, and is devoting his time to caring for his dying wife. ?][? if braun_campaign = 0 and spd_prussia : Otto Braun is tired. He does not wish to run, but he is willing to be convinced that he is needed at this moment. His wife is terminally ill, and he does not want more responsibilities. ?]
 Kurt Schumacher is an ambitious rising star in the party, and would be all too willing to run. He was a hero in the Great War, but his relatively young age might be relevant.
 [? if womens_rights >= 6 and family_law >= 2 and womens_work >= 2 and welfare > 0: Or, perhaps it is time for a woman to become president. Germany and the SPD have been leading on women's rights for years, and it is only fitting that we should elect the world's first female president. Perhaps Marie Juchacz could be seen as the "mother of the nation" for her work in social welfare. However, her divorce 28 years ago might make it difficult for the Catholics to support her. ?]
@@ -50,7 +50,7 @@ Kurt Schumacher is an ambitious rising star in the party, and would be all too w
 
 @candidate_menu
 
-- @eckener_r1: Support Hugo Eckener as a joint Weimar Coalition candidate.
+- @eckener_r1: Support Hugo Eckener as a joint Austria Coalition candidate.
 - @adenauer_r1: Support Konrad Adenauer of the Center Party.
 - @gessler_r1: Support Otto Gessler of the [+ ddp_name +].
 - @thalmann_r1: Support Ernst Thälmann of the KPD.
@@ -67,7 +67,7 @@ choose-if: resources >= 1
 on-arrival: spd_candidate = "Eckener"; is_unity_candidate = 1
 go-to: r1_menu
 
-We have convinced Hugo Eckener to run on behalf of the SPD, and hopefully the rest of the Weimar Coalition as well.
+We have convinced Hugo Eckener to run on behalf of the SPD, and hopefully the rest of the Austria Coalition as well.
 
 
 @adenauer_r1
@@ -223,7 +223,7 @@ max-visits: 1
 go-to: z_failed if z_support_braun = 0 or (z_support_braun == 2 and historical_mode); z_success if z_support_braun = 1; z_partial if z_support_braun = 2 and not historical_mode
 
 # use the same supports as the Center Party in 1932
-We implore the Center Party to support [+ spd_candidate +] as a unity candidate against fascism, arguing that together, the Weimar Coalition can defeat the Nazis. [? if z_relation >= 50 : We also remind them of the history of cooperation between our parties, dating back to 1918. ?]
+We implore the Center Party to support [+ spd_candidate +] as a unity candidate against fascism, arguing that together, the Austria Coalition can defeat the Nazis. [? if z_relation >= 50 : We also remind them of the history of cooperation between our parties, dating back to 1918. ?]
 
 
 # convincing Z to support an SPD candidate
@@ -297,7 +297,7 @@ go-to: r1_menu if round = 0; r2_campaigning if round > 0
 max-visits: 1
 
 [? if ddp_candidate = spd_candidate: The [+ ddp_name +] is easily persuaded to support [+ spd_candidate +]! ?]
-[? if ddp_candidate != spd_candidate: Unfortunately, the [+ ddp_name +] is unwilling to support [+ spd_candidate +]. The Weimar Coalition seems to be fracturing. ?]
+[? if ddp_candidate != spd_candidate: Unfortunately, the [+ ddp_name +] is unwilling to support [+ spd_candidate +]. The Austria Coalition seems to be fracturing. ?]
 
 
 @convince_ddp_spd
@@ -593,7 +593,7 @@ We have endorsed Otto Gessler, independent formerly of the DDP.
 
 
 @r2_endorse_eckener
-title: Convince the Weimar Coalition parties to unite behind Hugo Eckener.
+title: Convince the Austria Coalition parties to unite behind Hugo Eckener.
 subtitle: -2 resources
 unavailable-subtitle: [? if resources < 2 : -2 resources - Not enough resources. ?]
 choose-if: resources >= 2 and ((z_relation >= 50 and z_leader = "Kaas") or (z_relation >= 30 and z_leader = "Joos")) and ddp_relation >= 40
@@ -601,7 +601,7 @@ view-if: z_candidate = "Adenauer" and ddp_candidate = "Gessler" and spd_candidat
 on-arrival: kpd_candidate = "Thälmann" if kpd_candidate == spd_candidate and kpd_party_leader != "Conciliators"; kpd_candidate = "Münzenberg" if kpd_candidate == spd_candidate and kpd_party_leader == "Conciliators"; sapd_candidate = kpd_candidate; spd_candidate = "Eckener"; z_candidate = "Eckener"; ddp_candidate = "Eckener"; resources -= 2; is_unity_candidate = 1
 go-to: r2_campaigning
 
-We have successfully united all of the parties of the Weimar Coalition behind Hugo Eckener!
+We have successfully united all of the parties of the Austria Coalition behind Hugo Eckener!
 
 
 
