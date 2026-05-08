@@ -938,6 +938,7 @@ Who should be the chancellor?
 - @braun
 - @breitscheid_coalition_chancellor
 - @kamenev
+- @peshekhonov
 - @z_chancellor
 - @z_chancellor_wirth
 
@@ -1154,6 +1155,14 @@ go-to: ministries
 Lev Kamenev's appointment as chancellor is, with lots of convincing, approved by our potential allies.
 
 //to-do: make Kamenev reduce coaliton unity and relations. He is a former bolshevik after all.
+
+@peshekhonov
+title: Hand the position of Government Chairman to a minor Labor party.
+subtitle: We *could* push for Alexey Peshekhonov of the Labourist Popular-Socialist Party, a non-Marxist, Narodist party that split from the Esers over their views on land nationalization. This has been floated as a "compromise", though it leaves just about everyone unhappy.
+on-arrival: left_dissent += 5; center_dissent += 5; labor_dissent += 5; z_relation -= 5; dvp_relation += 5; kpd_relation -= 5; in_grand_coalition = 1 if in_austria_coalition == 0; chancellor = "Peshekhonov"; chancellor_party = "TNSP"; spd_in_government = 1; leverage += 5
+go-to: ministries
+
+Alexey Peshekhonov has been appointed Government Chairman, much to the dismay of our coalition partners and our party members. Oh well, you chose this after all.
 
 @braun
 title: Otto Braun for Chancellor
