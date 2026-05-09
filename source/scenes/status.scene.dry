@@ -97,21 +97,21 @@ Economic growth: [+ economic_growth_2 +]%
 
 = Party Leaders & ideologies
 
-{!<span class="tooltip-text" title="Russian Social Democratic Labor Party (United)"><span style="color: #ED1B34;">**RSDRP(O)**</span></span>!}: Orthodox Marxism (Martov/Axelrod)
+{!<span class="tooltip-text" title="Russian Social Democratic Labor Party (United)"><span style="color: #ED1B34;">RSDRP(O)</span></span>!}: Orthodox Marxism (Martov/Axelrod)
 
-[? if sapd_formed: {!<span class="tooltip-text" title="Russian Social Democratic Labor Party of Internationalists"><span style="color: #d84c4c;">**RSDRPI**</span></span>!}: Center Marxism (Abramovitch) ?]
+[? if sapd_formed: {!<span class="tooltip-text" title="Russian Social Democratic Labor Party of Internationalists"><span style="color: #d84c4c;">RSDRPI</span></span>!}: Center Marxism (Abramovitch) ?]
 
-{!<span class="tooltip-text" title="Party of Socialist-Revolutionaries"><span style="color: #b4121a;">**PSR**</span></span>!}: Narodism (Avksentyev)
+{!<span class="tooltip-text" title="Party of Socialist-Revolutionaries"><span style="color: #b4121a;">PSR</span></span>!}: Narodism (Avksentyev)
 
-{!<span class="tooltip-text" title="Constitutional-Democratic Party"><span style="color: #0087dc;">**K-D**</span></span>!}: Conservative Liberalism (Prince Dolgorukov)
+{!<span class="tooltip-text" title="Constitutional-Democratic Party"><span style="color: #0087dc;">K-D</span></span>!}: Conservative Liberalism (Prince Dolgorukov)
 
-{!<span class="tooltip-text" title="Müsavat Party"><span style="color: #3bb9ff;">**Müsavat**</span></span>!}: Jadidism (Mahammad Amin Rasulzade)
+{!<span class="tooltip-text" title="Müsavat Party"><span style="color: #3bb9ff;">Müsavat</span></span>!}: Jadidism/Left Muslim Democracy (Mahammad Amin Rasulzade)
 
-{!<span class="tooltip-text" title="Party of Left-Socialist-Revolutionaries-Internationalists"><span style="color: #990000;">**PLSRI**</span></span>!}: Revolutionary Narodism (Kamkov)
+{!<span class="tooltip-text" title="Party of Left-Socialist-Revolutionaries-Internationalists"><span style="color: #990000;">PLSRI</span></span>!}: Revolutionary Narodism (Kamkov)
 
-{!<span class="tooltip-text" title="All-Russian Union"><span style="color: #004090;">**VS**</span></span>!}: Liberal-Conservatism (Alexander Guchkov)
+{!<span class="tooltip-text" title="All-Russian Union"><span style="color: #004090;">VS</span></span>!}: Liberal-Conservatism (Alexander Guchkov)
 
-{!<span class="tooltip-text" title="National Alliance of Russian Solidarists (Solidarists)"><span style="color: #F9DA00;">**NTS**</span></span>!}: Solidarism (Leuchtenberg)
+{!<span class="tooltip-text" title="National Alliance of Russian Solidarists (Solidarists)"><span style="color: #F9DA00;">NTS</span></span>!}: Solidarism (Leuchtenberg)
 
 = Internal Factions of the SPD
 
