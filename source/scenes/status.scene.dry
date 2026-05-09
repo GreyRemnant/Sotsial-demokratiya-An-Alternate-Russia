@@ -39,6 +39,7 @@ Chancellor: [+ chancellor +] ([+ chancellor_party +])
 
 Reichstag composition:
 
+
 # 1928: 30, 1930: 25, 1932: 22
 {!<span class="tooltip-text" title="Social Democratic Party of Germany">SPD</span>!}: [+ spd_r +]%
 [? if sapd_formed and sapd_r > 0: SAPD: [+ sapd_r +]% ?]
@@ -79,6 +80,23 @@ Economic growth: [+ economic_growth_2 +]%
 
 = Inter-party Relations
 
+{!<span class="tooltip-text" title="Russian Social Democratic Labor Party (United)"><span style="color: #ED1B34;">**RSDRP(O)**</span></span>!}: Orthodox Marxism (Martov/Axelrod)
+
+[? if sapd_formed: {!<span class="tooltip-text" title="Russian Social Democratic Labor Party of Internationalists"><span style="color: #d84c4c;">**RSDRPI**</span></span>!}: Center Marxism (Abramovitch) ]
+
+{!<span class="tooltip-text" title="Party of Socialist-Revolutionaries"><span style="color: #b4121a;">**PSR**</span></span>!}: Narodism (Avksentyev)
+
+{!<span class="tooltip-text" title="Constitutional-Democratic Party"><span style="color: #0087dc;">**K-D**</span></span>!}: Conservative Liberalism (Prince Dolgorukov)
+
+{!<span class="tooltip-text" title="Müsavat Party"><span style="color: #3bb9ff;">**Müsavat**</span></span>!}: Jadidism (Mahammad Amin Rasulzade)
+
+{!<span class="tooltip-text" title="Party of Left-Socialist-Revolutionaries-Internationalists"><span style="color: #990000;">**PLSRI**</span></span>!}: Revolutionary Narodism (Kamkov)
+
+{!<span class="tooltip-text" title="All-Russian Union"><span style="color: #004090;">**VS**</span></span>!}: Liberal-Conservatism (Alexander Guchkov)
+
+{!<span class="tooltip-text" title="National Alliance of Russian Solidarists (Solidarists)"><span style="color: #F9DA00;">**NTS**</span></span>!}: Solidarism (Leuchtenberg)
+
+= Party Leaders & ideologies
 
 {!<span class="tooltip-text" title="Center Party">Z</span>!}: [+ z_relation : relationships +]
 
@@ -91,6 +109,7 @@ Economic growth: [+ economic_growth_2 +]%
 {!<span class="tooltip-text" title="German National People's Party">DNVP</span>!}: [+ dnvp_relation : relationships +]
 
 {!<span class="tooltip-text" title="National-Socialist German Worker's Party (Nazis)">NSDAP</span>!}: [+ nsdap_relation : relationships +]
+
 
 = Internal Factions of the SPD
 
@@ -123,6 +142,7 @@ if (Q.sa_strength) {
 !}
 
 = Paramilitaries
+
 
 {!<span class="tooltip-text" title="The Reichsbanner Schwarz-Rot-Gold is a popular organization for defending democracy, mostly affiliated with the SPD.">Reichsbanner</span>!} Strength: [+ rb_strength_2 +] thousand
 
