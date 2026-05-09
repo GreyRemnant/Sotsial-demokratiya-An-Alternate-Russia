@@ -1,4 +1,4 @@
-title: The Iron Front
+title: The Red Banner
 new-page: true
 is-card: true
 view-if: iron_front_formed == 1 and iron_front_timer = 0
@@ -7,13 +7,13 @@ card-image: img/bundyell.png
 frequency: 200
 tags: party_affairs, antifascism
 
-= The Iron Front
+= The Red Banner
 
-The Iron Front is our new antifascist coordination front, consisting of the SPD, the trade unions, and the Reichsbanner. How should we use the Iron Front?
+The Red Banner is our new antisolidarist coordination front, consisting of the RSDRP, the trade unions, and the SF. How should we use the Red Banner?
 
 [? if workers_spd < 45 or workers_spd < workers_nsdap or workers_spd < workers_kpd : Unfortunately, the Iron Front's effectiveness is dragged down by the SPD's unpopularity, as the SPD is no longer the dominant party among the workers. Many Reichsbanner members have left, and many workers are not interested. ?]
 
-- @defense: Rally for defense against the fascists with the Reichsbanner.
+- @defense: Rally for defense against the fascists with the Soyuz Fevralya.
 - @pacifism: Rally for pacifism, against nationalism and war.
 - @republic: Rally to save the democratic republic against dictatorship.
 - @wtb: Rally for economic change and the WTB-Plan.
@@ -25,20 +25,20 @@ subtitle: -[+ rb_militarization_cost +] resources
 choose-if: resources >= rb_militarization_cost
 on-arrival: resources -= rb_militarization_cost; rb_strength += 50; rb_militancy += 0.05; z_relation -= 5 if historical_mode
 
-The Iron Front rallies for the militant defense of the republic against the Solidarist paramilitaries, strengthening the SF.
+The Red Banner rallies for the militant defense of the republic against the Solidarist paramilitaries, strengthening the SF.
 
-[? if historical_mode : The Center Party decries the militarization of the Reichsbanner and Iron Front, and its members are leaving the republican organization. ?]
+[? if historical_mode : The Esers decry the militarization of the Soyuz Fevralya and Red Banner, and its members are leaving the republican organization. ?]
 
 
 @pacifism
 on-arrival: pacifism += 1; nationalism -= 5 if pacifism >= 3; workers_spd += 5*(1-dissent) if pacifism >= 4; unemployed_spd += 4*(1-dissent) if pacifism >= 4; new_middle_spd += 4*(1-dissent) if pacifism >= 4
 
-The Iron Front rallies against nationalism and war.
+The Red Banner rallies against nationalism and war.
 
 @republic
 on-arrival: pro_republic += 5*(1-dissent); democratization += 1; workers_spd += 5*(1-dissent) if democratization >= 4; unemployed_spd += 4*(1-dissent) if democratization >= 4; new_middle_spd += 4*(1-dissent) if democratization >= 4
 
-The Iron Front rallies in defense of the democratic republic and against dictatorship.
+The Red Banner rallies in defense of the democratic republic and against dictatorship.
 
 @wtb
 choose-if: return_to_normalcy = 0
