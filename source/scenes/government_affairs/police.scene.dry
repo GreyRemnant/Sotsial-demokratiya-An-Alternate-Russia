@@ -50,7 +50,7 @@ on-arrival: investigate_far_right += 1; sa_strength -= 20; workers_nsdap -= 3; n
 
 [? if investigate_far_right == 1 : We have discovered collusion between Aleksandr Konovalov, president of the Russian State Bank, and the Solidarists. This is very useful information. ?]
 [? if investigate_far_right == 2 : We have discovered illegal arms smuggling by the SRNM, the Solidarist's paramilitary. ?]
-[? if investigate_far_right == 3 : We have discovered a secret cache of documents from the NTS detailing their plan to violently take over the country if they enter into power. This is an anti-constitutional plot, and will be publicized and persecuted. ?]
+[? if investigate_far_right == 3 : We have discovered a secret cache of documents from the NTS detailing their plan to violently consolidate power if they enter into government. This is an anti-constitutional plot, and will be publicized and persecuted. ?]
 [? if investigate_far_right > 3 : Of course the Solidarists are doing crimes; everyone knows that. Now, we finally have proof. ?]
 
 [? if coup_progress >= 6: There are reports of an imminent coup by the far-right. We have attempted to disrupt some of these plans, but the threat is still present. ?]
