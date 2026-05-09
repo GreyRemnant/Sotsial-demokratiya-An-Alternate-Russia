@@ -82,7 +82,7 @@ Economic growth: [+ economic_growth_2 +]%
 
 {!<span class="tooltip-text" title="Russian Social Democratic Labor Party (United)"><span style="color: #ED1B34;">**RSDRP(O)**</span></span>!}: Orthodox Marxism (Martov/Axelrod)
 
-[? if sapd_formed: {!<span class="tooltip-text" title="Russian Social Democratic Labor Party of Internationalists"><span style="color: #d84c4c;">**RSDRPI**</span></span>!}: Center Marxism (Abramovitch) ]
+[? if sapd_formed: {!<span class="tooltip-text" title="Russian Social Democratic Labor Party of Internationalists"><span style="color: #d84c4c;">**RSDRPI**</span></span>!}: Center Marxism (Abramovitch)]
 
 {!<span class="tooltip-text" title="Party of Socialist-Revolutionaries"><span style="color: #b4121a;">**PSR**</span></span>!}: Narodism (Avksentyev)
 
