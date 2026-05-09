@@ -19,10 +19,10 @@ d3.linegraph = function(noTicks, noDots, parties, partyColors, partyNames, dataM
         parties = ['spd', 'kpd', 'ddp', 'z', 'dvp', 'dnvp', 'nsdap', 'other'];
     }
     if (!partyColors) {
-        partyColors = {'spd': '#ED1B34', 'kpd': '#990000', 'ddp': '#0087DC': '#DCCA4A', 'z': '#B4121A', 'dvp': '#3BB9FF', 'dnvp': '#0A347C', 'nsdap': '#000', 'other': '#a0a0a0'};
+        partyColors = {'spd': '#ED1B34', 'kpd': '#990000', 'ddp': '#0087DC': '#DCCA4A', 'z': '#B4121A', 'dvp': '#3BB9FF', 'dnvp': '#0A347C', 'nsdap': '#000', 'other': '#ff0000', 'otherleft': '#a0a0a0'};
     }
     if (!partyNames) {
-        partyNames = {'spd': 'SPD', 'kpd': 'KPD', 'ddp': 'DDP', 'z': 'Z + BVP', 'dvp': 'DVP', 'dnvp': 'DNVP', 'nsdap': 'NSDAP', 'other': 'Others'};
+        partyNames = {'spd': 'SPD', 'kpd': 'KPD', 'ddp': 'DDP', 'z': 'Z + BVP', 'dvp': 'DVP', 'dnvp': 'DNVP', 'nsdap': 'NSDAP', 'other': 'Others', 'otherleft': 'Other Leftists'};
     }
     if (!additionalMonths) {
         additionalMonths = 10;
