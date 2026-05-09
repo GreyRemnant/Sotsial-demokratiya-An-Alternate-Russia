@@ -100,7 +100,7 @@ if (Q.kpd_r >= Q.spd_r && Q.kpd_r >= Q.nsdap_r) {
 
 // coalitions
 Q.austria_coalition = Q.spd_r + Q.otherleft_r + Q.z_r - 3;
-Q.grand_coalition = Q.spd_r + Q.ddp_r + Q.z_r + Q.dvp_r;
+Q.vremennyy_coalition = Q.spd_r + Q.ddp_r + Q.z_r;
 Q.bourgeois_coalition = Q.ddp_r + Q.z_r + Q.dvp_r + Q.other_r;
 Q.center_right_coalition = Q.z_r + Q.ddp_r + Q.dvp_r + Q.other_r + Q.dnvp_r;
 Q.right_coalition = Q.z_r + Q.dvp_r + Q.other_r + Q.dnvp_r;
@@ -114,7 +114,7 @@ Q.neo_austria_coalition = Q.spd_r + Q.ddp_r + Q.z_r + Q.dvp_r + Q.other_r;
 // Hitler + Right-wing parties (only comes into effect if you've alienated Z too badly)
 Q.hitler_right_coalition = Q.z_r + Q.dnvp_r + Q.nsdap_r;
 // Progressive coalition isn't going to be implemented as a distinct coalition but it's the coalition that lets you pass improved women's rights/gay rights
-Q.progressive_coalition = Q.spd_r + Q.kpd_r + Q.ddp_r + Q.sapd_r;
+Q.progressive_coalition = Q.spd_r + Q.kpd_r + Q.otherleft_r + Q.sapd_r;
 Q.noway_coalition = Q.spd_r + Q.nsdap_r;
 
 if (Q.kpd_relation >= 30) {
@@ -123,13 +123,13 @@ if (Q.kpd_relation >= 30) {
 
 Q.leverage = Q.spd_r;
 
-Q.grand_coalition_failed = 0;
+Q.vremennyy_coalition_failed = 0;
 // Reset government and ministers... Based on Brüning's 1930 govt
 Q.coalition_dissent = 0;
 Q.kpd_coalition_dissent = 0;
 Q.spd_in_government = 0;
 Q.in_austria_coalition = 0;
-Q.in_grand_coalition = 0;
+Q.in_vremennyy_coalition = 0;
 Q.in_left_front = 0;
 Q.in_popular_front = 0;
 Q.in_emergency_government = 0;
@@ -307,7 +307,7 @@ go-to: coalition_menu
 
 Austria Coalition (SPD + Z + Other Leftists): [+ austria_coalition +]%
 
-Grand Coalition (SPD + Z + BVP + [+ ddp_name +] + DVP): [+ grand_coalition +]%
+Vremennyy Coalition (SPD + Z + BVP + [+ ddp_name +] + DVP): [+ vremennyy_coalition +]%
 
 Bourgeois Coalition (Z + BVP + [+ ddp_name +] + DVP + Others): [+ bourgeois_coalition +]%
 
@@ -323,8 +323,8 @@ There are some potential coalition arrangements.
 
 - @spd_majority
 - @austria_coalition
-- @grand_coalition
-- @new_grand_coalition
+- @vremennyy_coalition
+- @new_vremennyy_coalition
 - @unity_government
 - @far_right_coalition
 - @no_majority
@@ -383,14 +383,14 @@ go-to: popular_front_success
 
 @great_popular_front
 view-if: z_party_leader == "Joos" and kpd_party_leader == "Conciliators"
-on-arrival: spd_in_government = 1; in_popular_front = 1; chancellor = "Breitscheid"; chancellor_party = "SPD"; kpd_relation += 10; coup_progress += 2; in_left_front = 0; in_austria_coalition = 0; in_grand_coalition = 0; coalition_dissent = 0;
+on-arrival: spd_in_government = 1; in_popular_front = 1; chancellor = "Breitscheid"; chancellor_party = "SPD"; kpd_relation += 10; coup_progress += 2; in_left_front = 0; in_austria_coalition = 0; in_vremennyy_coalition = 0; coalition_dissent = 0;
 achievement: grosse_volksfront
 go-to: popular_front_civil_war if coup_progress >= 10; popular_front_no_civil_war if coup_progress < 10
 
 Somehow, the coalition is successfully formed! The conciliatory leadership of the Center Party and KPD helped make the negotiations possible. We still need a chancellor; the only acceptable choice among the parties was Rudolf Breitscheid of the SPD, acceptable to the Center and KPD [? if president == "Hindenburg" : as well as President Hindenburg, albeit extremely reluctantly ?].
 
 @popular_front_success
-on-arrival: spd_in_government = 1; in_popular_front = 1; chancellor = "Breitscheid"; chancellor_party = "SPD"; kpd_relation += 10; coup_progress += 2; in_left_front = 0; in_austria_coalition = 0; in_grand_coalition = 0; coalition_dissent = 0;
+on-arrival: spd_in_government = 1; in_popular_front = 1; chancellor = "Breitscheid"; chancellor_party = "SPD"; kpd_relation += 10; coup_progress += 2; in_left_front = 0; in_austria_coalition = 0; in_vremennyy_coalition = 0; coalition_dissent = 0;
 go-to: popular_front_civil_war if coup_progress >= 10; popular_front_no_civil_war if coup_progress < 10
 achievement: volksfront
 
@@ -515,7 +515,7 @@ go-to: left_coalition_success
 
 
 @left_coalition_success
-on-arrival: spd_in_government = 1; in_left_front = 1; chancellor = "Breitscheid"; chancellor_party = "SPD"; coup_progress += 3; capital_strike_progress += 2; in_popular_front = 0; in_grand_coalition = 0; in_austria_coalition = 0; kpd_relation += 10
+on-arrival: spd_in_government = 1; in_left_front = 1; chancellor = "Breitscheid"; chancellor_party = "SPD"; coup_progress += 3; capital_strike_progress += 2; in_popular_front = 0; in_vremennyy_coalition = 0; in_austria_coalition = 0; kpd_relation += 10
 go-to: left_coalition_civil_war if coup_progress >= 10; left_coalition_no_civil_war if coup_progress < 10
 achievement: einheitsfront
 
@@ -551,7 +551,7 @@ choose-if: year < 1929
 There are enough votes for a right-wing coalition of the Center (+ BVP), DVP, DNVP, and minor conservative parties. [? if largest_party == "SPD": However, this will be seen as abdicating responsibility for government, as we are the largest party. ?]
 
 - @right_coalition_sure: Yes, we will abdicate our responsibility for government formation, and let a right-wing coalition take power.
-- @grand_coalition: Actually, we wish to form a grand coalition after all.
+- @vremennyy_coalition: Actually, we wish to form a vremennyy coalition after all.
 
 @no_right_coalition
 go-to: no_majority
@@ -581,7 +581,7 @@ choose-if: nsdap_relation = 100
 
 @no_majority
 title: There is no clear governing majority.
-view-if: austria_coalition < 50 and (grand_coalition < 50 or grand_coalition_failed == 1) and president = "Hindenburg" and far_right_coalition < 50
+view-if: austria_coalition < 50 and (vremennyy_coalition < 50 or vremennyy_coalition_failed == 1) and president = "Hindenburg" and far_right_coalition < 50
 on-arrival: no_majority_elections += 1
 go-to: no_majority_bruning if chancellor = "Brüning" or chancellor = "Wirth"; no_majority_papen if chancellor = "Papen" and no_majority_papen_elections == 0; no_majority_papen_2 if chancellor == "Papen" and no_majority_papen_elections > 0; no_majority_schleicher if chancellor = "Schleicher"; no_majority_spd if chancellor_party = "SPD" or chancellor == "Marx"
 
@@ -595,7 +595,7 @@ on-arrival: chancellor = "Brüning"; chancellor_party = "Z"
 There is no path to an obviously workable majority. Since President Hindenburg is unwilling to work with a minority or caretaker SPD government, his preferred chancellor is Heinrich Brüning of the Center Party, who could lead a "presidential" government.
 
 - @toleration_bruning: We will tolerate Brüning.
-- @new_grand_coalition: We will try to form a new grand coalition.
+- @new_vremennyy_coalition: We will try to form a new vremennyy coalition.
 - @new_elections: We will have new elections.
 
 # - if NSDAP is the largest party and the 
@@ -618,20 +618,20 @@ on-arrival: no_majority_bruning_elections += 1
 
 There is no path to a majority government. One option would be to have a continuation of the current Brüning government; if we tolerate it, then it would retain a majority vote against no-confidence.
 
-Alternatively, we could try to form a "new grand coalition" of all constitutional parties except the NSDAP, KPD, and DNVP. The stumbling block are the minor conservative parties such as the "Economic Party of the Middle Class", who detest any hint of socialism and would ruin the country before working with Marxists.
+Alternatively, we could try to form a "new vremennyy coalition" of all constitutional parties except the NSDAP, KPD, and DNVP. The stumbling block are the minor conservative parties such as the "Economic Party of the Middle Class", who detest any hint of socialism and would ruin the country before working with Marxists.
 
 The third option is to have new elections.
 
 - @toleration_bruning: We will tolerate Brüning.
-- @new_grand_coalition: We will try to form a new grand coalition.
+- @new_vremennyy_coalition: We will try to form a new vremennyy coalition.
 - @new_elections: We will have new elections.
 - @unity_government
 
 
-@new_grand_coalition
-title: A "New Grand Coalition" of all the constitutional parties?
+@new_vremennyy_coalition
+title: A "New Vremennyy Coalition" of all the constitutional parties?
 subtitle: SPD + Z + BVP + [+ ddp_name +] + DVP + Others ([+ neo_austria_coalition +]%)
-view-if: neo_austria_coalition >= 50 and grand_coalition < 50
+view-if: neo_austria_coalition >= 50 and vremennyy_coalition < 50
 choose-if: z_relation >= 50 and dvp_relation >= 30
 unavailable-subtitle: SPD + Z + BVP + [+ ddp_name +] + DVP + Others ([+ neo_austria_coalition +]%) - [? if z_relation < 50 : We do not have adequate relations with the Center Party. ?][? if dvp_relation < 30 : We do not have adequate relations with the DVP. ?]
 
@@ -647,12 +647,12 @@ title: Use our resources to smooth over the creation of a coalition.
 subtitle: -2 resources
 unavailable-subtitle: Not enough resources (need 2).
 choose-if: resources >= 2
-on-arrival: resources -= 2; spd_in_government = 1; in_grand_coalition = 1; left_dissent += 4;
+on-arrival: resources -= 2; spd_in_government = 1; in_vremennyy_coalition = 1; left_dissent += 4;
 achievement: constitutional_coalition
 
 We transfer some of our campaign funds to our putative coalition partners. Some would call this corruption, but perhaps it is necessary to save our democracy.
 
-Now, we have a new grand coalition, a "Constitutional Coalition" of all the non-fascist and non-communist parties. Leftists in our party are somewhat skeptical of this arrangement. 
+Now, we have a new vremennyy coalition, a "Constitutional Coalition" of all the non-fascist and non-communist parties. Leftists in our party are somewhat skeptical of this arrangement. 
 
 
 Who should be chancellor?
@@ -681,7 +681,7 @@ The Center Party leader, Joseph Joos, clearly sees the threat from the ascension
 
 @unity_government_2
 title: Accept the offer!
-on-arrival: chancellor = "Wirth"; chancellor_party = "Z"; spd_in_government = 1; in_grand_coalition = 1; in_unity_government = 1; leverage = 15; z_relation += 5; dvp_relation += 4
+on-arrival: chancellor = "Wirth"; chancellor_party = "Z"; spd_in_government = 1; in_vremennyy_coalition = 1; in_unity_government = 1; leverage = 15; z_relation += 5; dvp_relation += 4
 achievement: constitutional_coalition
 go-to: ministries
 
@@ -786,13 +786,13 @@ Lev Kamenev has become chancellor of the RSDRP majority, Liberals and Conservati
 @brauns_dilemma
 title: There is no clear governing majority.
 subtitle: President Braun faces a dilemma.
-view-if: president == "Braun" and (grand_coalition < 50 or grand_coalition_failed == 1)
+view-if: president == "Braun" and (vremennyy_coalition < 50 or vremennyy_coalition_failed == 1)
 
 President Braun faces a dilemma. He desperately desires a socialist or at least democratic government, but the electoral results are not there for such. Article 48 has been used by Hindenburg to promulgate anti-democratic and anti-worker policies; can Article 48 be used for good as well as evil?
 
 - @emergency_braun: We will form an emergency government with Braun's support.
 - @new_elections: We will have new elections.
-- @new_grand_coalition
+- @new_vremennyy_coalition
 - @left_coalition
 - @popular_front_coalition
 - @far_right_coalition
@@ -958,22 +958,22 @@ go-to: ministries
 Rudolf Breitscheid has been appointed chancellor.
 
 
-@grand_coalition
-title: We can form a Grand Coalition.
-view-if: grand_coalition >= 50 and grand_coalition_failed == 0
-subtitle: SPD + Z + BVP + [+ ddp_name +] + DVP ([+ grand_coalition +]%)
-on-arrival: in_grand_coalition = 1; in_popular_front = 0; in_left_front = 0
-go-to: grand_coalition_spd_lead if (n_elections <= 1 and largest_party == "SPD") or (largest_party == "SPD" and spd_r >= 30) or president = "Braun"; grand_coalition_z_lead if president != "Braun" and ((n_elections > 1 and spd_r < 30) or (n_elections <= 1 and largest_party != "SPD"))
+@vremennyy_coalition
+title: We can form a Vremennyy Coalition.
+view-if: vremennyy_coalition >= 50 and vremennyy_coalition_failed == 0
+subtitle: SPD + Z + BVP + [+ ddp_name +] + DVP ([+ vremennyy_coalition +]%)
+on-arrival: in_vremennyy_coalition = 1; in_popular_front = 0; in_left_front = 0
+go-to: vremennyy_coalition_spd_lead if (n_elections <= 1 and largest_party == "SPD") or (largest_party == "SPD" and spd_r >= 30) or president = "Braun"; vremennyy_coalition_z_lead if president != "Braun" and ((n_elections > 1 and spd_r < 30) or (n_elections <= 1 and largest_party != "SPD"))
 
 
-@grand_coalition_z_lead
-go-to: grand_coalition_z_lead_2 if dvp_relation >= 30; grand_coalition_fail if dvp_relation < 30
+@vremennyy_coalition_z_lead
+go-to: vremennyy_coalition_z_lead_2 if dvp_relation >= 30; vremennyy_coalition_fail if dvp_relation < 30
 
 There are enough votes to form a majority coalition consisting of the SPD, Center (Z), Bavarian People's (BVP), Democratic ([+ ddp_name +]), and People's (DVP) parties. Given our rather weak electoral performance, [? if spd_no_confidence = 1 : and our previous vote of no confidence against the government, ?][? if no_confidence_against_spd = 1 : and the vote of no confidence against us, ?] President Kornilov has asked the Center Party to take the lead role in forming a government.
 
 # TODO: if the SPD participated in bringing down the previous government via a vote-of-no-confidence, or if we were essentially removed from government by our coalition partners, we should be more reluctant to participate in a new government.
 
-@grand_coalition_z_lead_2
+@vremennyy_coalition_z_lead_2
 
 The Center chancellor is likely to be Doctor Andrei Shingarev of the Kadet Party [? if chancellor = "Brüning" : again. ?][? if chancellor != "Brüning": . ?] He is known for his conservatism and sympathy for nationalism, being on the right wing of the Kadets. [? if austerity >= 2 : Due to the government's austerity policies, many of our members are reluctant to participate in this coalition again. Some support a "toleration" arrangement in which we will provide outside support to prevent the far-right from either entering government or calling a successful no-confidence vote. Others support entering into pure opposition, and letting the right do what it wishes. ?]
 
@@ -985,16 +985,16 @@ Brüning is not opposed to a coalition with us. Alternatively, we could enter a 
 - @unity_government
 
 @join_bruning
-view-if: grand_coalition >= 50 or neo_austria_coalition >= 50
-on-arrival: spd_in_government = 1; spd_toleration = 0; in_grand_coalition = 1; chancellor = "Brüning"; chancellor_party = "Z"; foreign_minister_party = "DVP"; interior_minister_party = "Z"; justice_minister_party = "Z"; labor_minister_party = "Z"; reichswehr_minister_party = "I"; economic_minister_party = "Z"; finance_minister_party = "Z"; agriculture_minister_party = "Z"; leverage = 25 if leverage >= 25;
+view-if: vremennyy_coalition >= 50 or neo_austria_coalition >= 50
+on-arrival: spd_in_government = 1; spd_toleration = 0; in_vremennyy_coalition = 1; chancellor = "Brüning"; chancellor_party = "Z"; foreign_minister_party = "DVP"; interior_minister_party = "Z"; justice_minister_party = "Z"; labor_minister_party = "Z"; reichswehr_minister_party = "I"; economic_minister_party = "Z"; finance_minister_party = "Z"; agriculture_minister_party = "Z"; leverage = 25 if leverage >= 25;
 go-to: ministries
 
 Heinrich Brüning welcomes us into his new cabinet. Now, we have our pick of ministries.
 
 @bruning_oppo
-on-arrival: spd_in_government = 0; spd_toleration = 0; chancellor = "Brüning"; chancellor_party = "Z"; foreign_minister_party = "DVP"; interior_minister_party = "Z"; justice_minister_party = "Z"; labor_minister_party = "Z"; reichswehr_minister_party = "I"; economic_minister_party = "Z"; finance_minister_party = "Z"; agriculture_minister_party = "Z"; grand_coalition_failed = 1
+on-arrival: spd_in_government = 0; spd_toleration = 0; chancellor = "Brüning"; chancellor_party = "Z"; foreign_minister_party = "DVP"; interior_minister_party = "Z"; justice_minister_party = "Z"; labor_minister_party = "Z"; reichswehr_minister_party = "I"; economic_minister_party = "Z"; finance_minister_party = "Z"; agriculture_minister_party = "Z"; vremennyy_coalition_failed = 1
 
-By refusing to join the grand coalition or tolerating it, we essentially throw the balance of government to the right wing. [? if right_coalition >= 50 : There are enough votes to form a right-wing coalition that includes the DNVP. However, the DNVP leader, Hugenberg, is opposed to a coalition with the "November criminals" of the Center Party. And of course, the NSDAP is not interested in coalition government. This means that there will not be enough votes to form a majority coalition. ?][? if right_coalition < 50 : There are not enough votes to form a right-wing coalition that includes the DNVP, and they are not interested in joining in a coalition with the "November criminals" of the Center Party, anyhow. And of course, the NSDAP is not interested in coalition government. This means that there is no route to a majority coalition. ?]
+By refusing to join the vremennyy coalition or tolerating it, we essentially throw the balance of government to the right wing. [? if right_coalition >= 50 : There are enough votes to form a right-wing coalition that includes the DNVP. However, the DNVP leader, Hugenberg, is opposed to a coalition with the "November criminals" of the Center Party. And of course, the NSDAP is not interested in coalition government. This means that there will not be enough votes to form a majority coalition. ?][? if right_coalition < 50 : There are not enough votes to form a right-wing coalition that includes the DNVP, and they are not interested in joining in a coalition with the "November criminals" of the Center Party, anyhow. And of course, the NSDAP is not interested in coalition government. This means that there is no route to a majority coalition. ?]
 
 If we do not at least "tolerate" the government, there will be new elections in a few months. In the meantime, the President and Chancellor may use the emergency powers granted by Article 48 of the constitution to essentially govern by decree. And it is not at all clear that we will do any better in the next election.
 
@@ -1073,10 +1073,10 @@ on-arrival: spd_in_government = 0; spd_toleration = 1; minority_government = 1; 
 
 We have decided to tolerate Brüning's government. This means that we will vote against no-confidence votes to make sure they fail, but also that we will not be directly participating as ministers in the government. Thus, we can prevent a new election and stop the far right from entering government.
 
-@grand_coalition_fail
-on-arrival: grand_coalition_failed = 1
+@vremennyy_coalition_fail
+on-arrival: vremennyy_coalition_failed = 1
 
-Unfortunately, the DVP and BVP are unwilling to enter into another coalition with the SPD, so the grand coalition is unable to be formed.
+Unfortunately, the DVP and BVP are unwilling to enter into another coalition with the SPD, so the vremennyy coalition is unable to be formed.
 
 - @no_majority: Thus, there is no clear majority.
 - @brauns_dilemma
@@ -1124,7 +1124,7 @@ As expected, the DVP is too set in their anti-democratic ways.
 
 
 
-@grand_coalition_spd_lead
+@vremennyy_coalition_spd_lead
 on-arrival: leverage -= 15 if dvp_relation < 20
 
 As expected, the SPD is the largest party, and this time, we are expected to take the lead role in the formation of the next government, including selecting the chancellor. President [+ president +] has asked us to form a majority coalition with the Center (Z), Bavarian People's (BVP), Democratic ([+ ddp_name +]), and People's (DVP) parties.
@@ -1145,7 +1145,7 @@ Who should be the chancellor?
 title: Pavel Axelrod for Chancellor
 view-if: axelrod_dead = 0
 subtitle: Axelrod is popular within the party, and is the preferred candidate of the Center and other parties.
-on-arrival: spd_in_government = 1; chancellor = "Axelrod"; chancellor_party = "SPD"; in_grand_coalition = 1 if in_austria_coalition == 0
+on-arrival: spd_in_government = 1; chancellor = "Axelrod"; chancellor_party = "SPD"; in_vremennyy_coalition = 1 if in_austria_coalition == 0
 go-to: ministries
 
 Axelrod's appointment as chancellor is approved by all our potential allies.
@@ -1155,7 +1155,7 @@ title: Lev Kamenev for Chancellor
 view-if: axelrod_dead = 1
 subtitle: Lev Kamenev is an Internationalist and former Bolshevik, but can he also be chancellor? *It will take a lot of convincing...* (-2 resources)
 choose-if: resources >= 2
-on-arrival: spd_in_government = 1; chancellor = "Kamenev"; chancellor_party = "SPD"; in_grand_coalition = 1 if in_austria_coalition == 0; resources -= 2
+on-arrival: spd_in_government = 1; chancellor = "Kamenev"; chancellor_party = "SPD"; in_vremennyy_coalition = 1 if in_austria_coalition == 0; resources -= 2
 go-to: ministries
 
 Lev Kamenev's appointment as chancellor is, with lots of convincing, approved by our potential allies.
@@ -1165,7 +1165,7 @@ Lev Kamenev's appointment as chancellor is, with lots of convincing, approved by
 @peshekhonov
 title: Hand the position of Government Chairman to a minor Labor party.
 subtitle: We *could* push for Alexey Peshekhonov of the Labourist Popular-Socialist Party, a non-Marxist, Narodist party that split from the Esers over their views on land nationalization. This has been floated as a "compromise", though it leaves just about everyone unhappy.
-on-arrival: left_dissent += 5; center_dissent += 5; labor_dissent += 5; z_relation -= 5; dvp_relation += 5; kpd_relation -= 5; in_grand_coalition = 1 if in_austria_coalition == 0; chancellor = "Peshekhonov"; chancellor_party = "TNSP"; spd_in_government = 1; leverage += 5
+on-arrival: left_dissent += 5; center_dissent += 5; labor_dissent += 5; z_relation -= 5; dvp_relation += 5; kpd_relation -= 5; in_vremennyy_coalition = 1 if in_austria_coalition == 0; chancellor = "Peshekhonov"; chancellor_party = "TNSP"; spd_in_government = 1; leverage += 5
 go-to: ministries
 
 Alexey Peshekhonov has been appointed Government Chairman, much to the dismay of our coalition partners and our party members. Oh well, you chose this after all.
@@ -1184,7 +1184,7 @@ The Center party has significant qualms about appointing Braun as chancellor, gi
 @braun_2
 subtitle: Otto Braun will be Chancellor.
 view-if: not historical_mode
-on-arrival: spd_in_government = 1; chancellor = "Braun"; chancellor_party = "SPD"; leverage -= 10; in_grand_coalition = 1 if in_austria_coalition == 0
+on-arrival: spd_in_government = 1; chancellor = "Braun"; chancellor_party = "SPD"; leverage -= 10; in_vremennyy_coalition = 1 if in_austria_coalition == 0
 go-to: ministries
 
 We have promised to let the Center have more influence in the government in response to the appointment of Braun as chancellor.
@@ -1193,7 +1193,7 @@ We have promised to let the Center have more influence in the government in resp
 @z_chancellor
 title: Let the Center Party have their chancellor.
 subtitle: Heinrich Brüning will be chancellor. This is unexpected and will cause internal dissent, but may give us a better position in negotiating for other cabinet positions.
-on-arrival: left_dissent += 5; center_dissent += 5; labor_dissent += 5; z_relation += 10; dvp_relation += 5; kpd_relation -= 5; in_grand_coalition = 1 if in_austria_coalition == 0; chancellor = "Brüning"; chancellor_party = "Z"; spd_in_government = 1; leverage += 5
+on-arrival: left_dissent += 5; center_dissent += 5; labor_dissent += 5; z_relation += 10; dvp_relation += 5; kpd_relation -= 5; in_vremennyy_coalition = 1 if in_austria_coalition == 0; chancellor = "Brüning"; chancellor_party = "Z"; spd_in_government = 1; leverage += 5
 go-to: ministries
 
 This is highly unexpected, and many in the left and center of our party are criticizing this decision.
@@ -1205,7 +1205,7 @@ This is highly unexpected, and many in the left and center of our party are crit
 title: Let Viktor Chernov of the <span style="color: #b4121a;">**Socialist-Revolutionaries**</span> be Government Chairman.
 view-if: z_party_leader == "Joos"
 subtitle: Chernov is on the Marxist wing of the <span style="color: #b4121a;">**PSR**</span>. This may give us a better position in negotiating for other cabinet positions.
-on-arrival: left_dissent += 2; z_relation += 6; ddp_relation += 3; kpd_relation -= 5; in_grand_coalition = 1 if in_austria_coalition == 0; chancellor = "Chernov"; chancellor_party = "Z"; spd_in_government = 1; leverage += 5
+on-arrival: left_dissent += 2; z_relation += 6; ddp_relation += 3; kpd_relation -= 5; in_vremennyy_coalition = 1 if in_austria_coalition == 0; chancellor = "Chernov"; chancellor_party = "Z"; spd_in_government = 1; leverage += 5
 go-to: ministries
 
 
@@ -1243,7 +1243,7 @@ go-to: no_govt_2
 
 
 @no_govt_2
-on-arrival: reformist_dissent += 25; center_dissent += 10; labor_dissent += 25; neorevisionist_dissent += 25; in_austria_coalition = 0; in_grand_coalition = 0; chancellor = "Brüning" if chancellor == "Marx"; spd_in_government = 0; grand_coalition_failed = 1
+on-arrival: reformist_dissent += 25; center_dissent += 10; labor_dissent += 25; neorevisionist_dissent += 25; in_austria_coalition = 0; in_vremennyy_coalition = 0; chancellor = "Brüning" if chancellor == "Marx"; spd_in_government = 0; vremennyy_coalition_failed = 1
 go-to: right_coalition_post_spd if right_coalition >= 50 and president != "Braun" and year < 1929; new_elections_spd if (right_coalition < 50 or year >= 1929) and president != "Braun"; brauns_dilemma if president == "Braun"
 
 
