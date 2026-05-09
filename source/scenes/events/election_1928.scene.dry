@@ -210,9 +210,10 @@ data = data.concat([
     {
         "id": "otherleft",
         "legend": "Other Leftists",
-        "name": "Minor Leftists",
+        "name": "Other Leftist Parties",
         "seats": Math.round(Q.otherleft_r*5),
     },
+    {
         "id": "ddp",
         "legend": Q.ddp_name,
         "name": Q.ddp_name,
