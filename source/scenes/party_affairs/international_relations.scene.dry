@@ -70,7 +70,7 @@ choose-if: resources >= 1
 unavailable-subtitle: Not enough resources.
 on-arrival: resources -= 1; kpd_relation += 5*(1-dissent); communist_coalition += 1 if comintern_seen == 0; comintern_seen += 1
 
-The scattered Leninists of the Communist International still insist on calling us "petty-bourgeois", suggesting that we social democrats are as bad or worse than the actual Bourgeoisie. Needless to say, this is not good for our relationship with the PLSRI, given their semi-Bolshevik nature. But, by observing the CI, we can better understand the Russian far-left, enabling us to potentially improve relations, or counter them if it may come to that.
+The Communist International, the unofficial successor to Lenin's Third International, and those associated still insist on calling us "petty-bourgeois", suggesting that we social democrats are as bad or worse than the actual Bourgeoisie. Needless to say, this is not good for our relationship with the PLSRI, given their semi-Bolshevik nature. But, by observing the CI, we can better understand the Russian far-left, enabling us to potentially improve relations, or counter them if it may come to that.
 
 @america
 subtitle: -1 resources
