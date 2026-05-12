@@ -42,30 +42,46 @@ go-to: menu
 
 = Grey's Notes
 
-**Hello**
-
-Thanks for playing, or just testing this mod, it's my first time ever doing anything like *this*. I, admittedly, have no idea what the FUCK I am doing, so bear with me.
+**Hello there!** Thanks for playing, or just testing this mod, it's my first time ever doing anything like *this*. I, admittedly, have no idea what the FUCK I am doing, so bear with me.
 
 Current things to fix:
+
 - State Duma Chart just not showing for some reason???
+
 - Sometimes card/event images don't show, some consistently, others not.
+
 - Fuck ass music still won't play and I didn't even change that code.
+
 - Status tab showing code for some reason.
 
 Things I would like to add (once I, you know, learn how to *do* things):
+
 - Party Congresses for the RSDRP and other Parties (**dynamic** parties)
+
 - New coalitions in the Duma
+
 - Events/Cards related to the Bund
+
 - Diplomatic conflicts with Russia's Western Neighbors
+
 - Hitler's rise to (or fall from, if you play right) power in Germany
+
 - Second Bolshevik Party that can spawn
+
 - Kadet party split (some sort of reverse LVP situation?)
+
 - RSDRP right-wing party split (Social Republican Party of Russia?)
+
 - Revamp the UI to make it nicer, pleasing, and unique.
+
 - More advisors
+
 - ~~social-solidarism~~ **no.**
+
 - Local elections
+
 - I might try to make time work differently, on a week-to-week basis. Maybe.
+
 - Make some sort of tab on the right, like the status tab, but with different info. Not sure what yet, but ideas are ideas.
 
 @russia_timeline
