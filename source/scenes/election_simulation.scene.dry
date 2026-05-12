@@ -248,7 +248,7 @@ Q.catholics_dnvp = 5;
 Q.catholics_nsdap = 10;
 Q.catholics_other = 5;
 
-Q.spd_r = 20;
+Q.spd_r     = 20;
 Q.otherleft_r = 10;
 Q.kpd_r = 5;
 Q.z_r = 15;
