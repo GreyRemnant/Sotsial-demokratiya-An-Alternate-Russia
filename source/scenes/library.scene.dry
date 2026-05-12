@@ -19,8 +19,9 @@ Herein contains relevant information about the government and politics of the Ru
 - @paramilitaries: Paramilitary groups
 - @factions: Internal factions
 - @figures: Figures and charts
-- @backSpecialScene: Exit library.
 - @devnote: My Notes, Idea List, and the like.
+- @backSpecialScene: Exit library.
+
 
 @government
 go-to: menu
@@ -76,7 +77,7 @@ Revamp the UI to make it nicer, pleasing, and unique.
 
 More advisors
 
-~~social-solidarism~~ **no.**
+~ ~ social-solidarism ~ ~ **no.**
 
 Local elections
 
