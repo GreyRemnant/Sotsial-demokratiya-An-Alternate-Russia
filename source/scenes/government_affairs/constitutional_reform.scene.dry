@@ -29,7 +29,7 @@ A constitutional reform requires either a two-thirds supermajority in the Reichs
 - @as_is: Do not pursue constitutional reform.
 - @easy_discard
 - @cancel_advisor_action
-#- @constitutional_bans: Allow the banning of anti-constitutional parties.
+- @constitutional_bans: Allow the banning of anti-constitutional parties.
 
 @vote_threshold
 subtitle: Change the vote threshold to 5% for parties to be represented in the Reichstag.
@@ -53,7 +53,7 @@ Some political thinkers believe that the proliferation of minor parties is respo
 
 The smaller parties will obviously oppose this reform. [? if z_relation > 30 : The Center Party supports this reform, while their BVP partners oppose it. ?] [? if kpd_relation > 50 and kpd_normalized >= 0.1 : Perhaps surprisingly, the KPD supports this reform. ?] [? if nsdap_normalized >= 0.2 : The NSDAP supports this reform, as they believe they have something to gain. ?]
 
-The SPD Left opposes this change, as they believe it to be anti-democratic.
+The RSDRP Left oppose this change, as they believe it to be anti-democratic.
 
 - @vote_threshold_2: Call a constitutional referendum to pass the reform!
 - @reforms_menu: See other reform options.
@@ -67,7 +67,7 @@ achievement: verfassungsreform
 
 # this should result in a redistribution of votes - other parties should not get so many votes anymore. maybe ddp and dvp get a recovery of middle-class votes? or maybe they flow to the others.
 
-We have passed a constitutional amendment to increase the electoral threshold to 5%. This is likely to benefit the larger parties and harm the smaller ones.
+We have passed a constitutional amendment to increase the electoral threshold to 5%. This is likely to benefit the larger parties and harm the smaller ones. Hopefully our efforts do not undermine minority representation.
 
 
 
@@ -98,7 +98,7 @@ achievement: verfassungsreform
 We have successfully passed a constitutional amendment to ban votes of no confidence when a new government cannot be formed. Hopefully this increases the stability of our governments.
 
 @presidential_powers
-subtitle: The president can no longer dissolve the Reichstag at will, or call a *Reichsexekution* on state governments.
+subtitle: The president can no longer dissolve the Duma at will, or call a *róspusk* on state governments.
 on-arrival: {!
 Q.reform_support = Q.spd_normalized + Q.ddp_normalized + Q.kpd_normalized;
 if (Q.z_relation > 49 && (Q.president == "Hindenburg" || Q.president == "Eckener")) {
@@ -127,8 +127,9 @@ We have successfully passed a constitutional amendment to limit presidential pow
 
 
 @constitutional_bans
-
-# Temporarily disable this for now - how would this interact with the already-extant law for the protection of the republic? This 
+choose-if: reform_support >= pass_threshold; budget = 9999
+unavailable-subtitle: Tovarishch Martov, this sort of thinking isn't put together yet. Perhaps you should sleep on it?
+on-arrival: budget -= 1
 
 
 @as_is
