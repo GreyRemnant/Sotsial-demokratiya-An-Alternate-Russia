@@ -127,7 +127,7 @@ We have successfully passed a constitutional amendment to limit presidential pow
 
 
 @constitutional_bans
-choose-if: reform_support >= pass_threshold; budget = 9999
+choose-if: reform_support >= pass_threshold and budget >= 9999
 unavailable-subtitle: Tovarishch Martov, this sort of thinking isn't put together yet. Perhaps you should sleep on it?
 on-arrival: budget -= 1
 
