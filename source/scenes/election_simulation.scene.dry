@@ -284,7 +284,7 @@ if (Q.kpd_r >= Q.spd_r && Q.kpd_r >= Q.nsdap_r) {
 }
 
 // coalitions
-Q.austria_coalition = Q.spd_r + Q.otherleft_r + Q.z_r - 3;
+Q.trudovaya_coalition = Q.spd_r + Q.otherleft_r + Q.z_r - 3;
 Q.vremennyy_coalition = Q.spd_r + Q.ddp_r + Q.z_r;
 Q.bourgeois_coalition = Q.ddp_r + Q.z_r + Q.dvp_r + Q.other_r;
 Q.center_right_coalition = Q.z_r + Q.ddp_r + Q.dvp_r + Q.other_r + Q.dnvp_r;
@@ -296,7 +296,7 @@ Q.united_front_coalition = Q.spd_r + Q.kpd_r + Q.z_r + Q.ddp_r - 3;
 Q.anti_democratic_coalition = Q.kpd_r + Q.nsdap_r;
 Q.noway_coalition = Q.spd_r + Q.nsdap_r;
 // aka everyone except nazi, kpd, dnvp
-Q.neo_austria_coalition = Q.spd_r + Q.ddp_r + Q.z_r + Q.dvp_r + Q.other_r;
+Q.neo_trudovaya_coalition = Q.spd_r + Q.ddp_r + Q.z_r + Q.dvp_r + Q.other_r;
 !}
 
 The electoral system is essentially proportional, with the proportion of Reichstag seats roughly equal to the proportion of votes.
@@ -332,7 +332,7 @@ Other: [+ other_r +]
 
 **Potential coalitions:**
 
-Austria Coalition (SPD + PSR + Other Leftists): [+ austria_coalition +]
+Trudovaya Coalition (SPD + PSR + Other Leftists): [+ trudovaya_coalition +]
 
 Vremennyy Coalition (SPD + Z + BVP + DDP + DVP): [+ vremennyy_coalition +]
 
