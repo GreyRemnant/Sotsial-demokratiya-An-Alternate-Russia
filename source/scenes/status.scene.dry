@@ -97,6 +97,8 @@ Economic growth: [+ economic_growth_2 +]%
 
 = Party Leaders & ideologies
 
+{!<span class="tooltip-text" title="Russian Communist Party (Bolsheviks)"><span style="color: #D40000;">RKP(B)</span></span>!}: Leninism (Zinoviev)
+
 {!<span class="tooltip-text" title="Party of Left-Socialist-Revolutionaries-Internationalists"><span style="color: #990000;">PLSRI</span></span>!}: Revolutionary Narodism (Kamkov)
 
 [? if sapd_formed: {!<span class="tooltip-text" title="Socialist Worker's Party"><span style="color: #d84c4c;">SRPR</span></span>!}: Center Marxism (Abramovitch) ?]
