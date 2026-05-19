@@ -34,13 +34,13 @@ tags: remove_advisor
 
 
 @remove_hilferding
-title: Remove Hilferding
+title: Remove Strumilin
 view-if: hilferding_advisor = 1
 on-arrival: hilferding_advisor = 0; center_dissent += 5; n_advisors -= 1
 tags: remove_advisor
 go-to: rm_main
 
-Hilferding has been removed as an advisor. The Centrist faction disapproves.
+Strumilin has been removed as an advisor. The Centrist faction disapproves.
 
 @remove_wels
 title: Remove Martov
@@ -131,13 +131,13 @@ go-to: rm_main
 Kremer has been removed as an advisor. The Labor faction disapproves.
 
 @remove_wissell
-title: Remove Wissell
+title: Remove Liber
 view-if: wissell_advisor = 1
 tags: remove_advisor
 on-arrival: wissell_advisor = 0; labor_dissent += 3; n_advisors -= 1
 go-to: rm_main
 
-Wissell has been removed as an advisor. The Labor faction disapproves.
+Liber has been removed as an advisor. The Labor faction disapproves.
 
 
 @remove_Voitinsky
@@ -330,16 +330,16 @@ view-if: n_advisors < 3
 - #nonfactional_advisor
 
 @add_hilferding
-title: Rudolf Hilferding
-subtitle: Rudolf Hilferding is an economist and one of our chief Marxist theoreticians. {!<br><br>!}[? if difficulty < 0 : Actions - Against Right and Left, Defending Toleration, Fiscal Policy, Economic Democracy ?]
+title: Stanislav Strumilin
+subtitle: Rudolf Hilferding is a statistician and our go-to economist. {!<br><br>!}[? if difficulty < 0 : Actions - Against Right and Left, Defending Toleration, Fiscal Policy, Economic Democracy ?]
 is-card: true
-card-image: img/portraits/HilferdingRudolf.jpg
+card-image: img/portraits/Strumilin.jpg
 tags: center_advisor
 view-if: hilferding_advisor = 0 and n_advisors < 3 and centrists_resign = 0
 on-arrival: hilferding_advisor = 1; n_advisors += 1
 go-to: advisor_menu
 
-Rudolf Hilferding is now an advisor.
+Stanislav Strumilin is now an advisor.
 
 @add_wels
 title: Yuliy Martov
@@ -521,16 +521,16 @@ go-to: advisor_menu
 Arkadi Kremer is now an advisor.
 
 @add_wissell
-title: Rudolf Wissell
-subtitle: Rudolf Wissell is an economist who has been the Labor Minister, and is an advocate for the interests of labor within the government. {!<br><br>!}[? if difficulty < 0 : Actions - Union-Party Coordination, Labor Rights ?]
+title: Mikhail Liber
+subtitle: Liber is a Bundist economist working for the RSDRP and has been a labor minister on multiple occasions. His priority is to improve conditions for organized workers. {!<br><br>!}[? if difficulty < 0 : Actions - Union-Party Coordination, Labor Rights, Organize Jewish Workers ?]
 is-card: true
-card-image: img/portraits/WissellRudolf.jpg
+card-image: img/portraits/liber.jpg
 tags: labor_advisor
 view-if: wissell_advisor = 0 and n_advisors < 3 and unions_independent = 0
 on-arrival: wissell_advisor = 1; n_advisors += 1; labor_strength += 3
 go-to: advisor_menu
 
-Rudolf Wissell is now an advisor.
+Mikhail Liber is now an advisor.
 
 
 @add_Voitinsky

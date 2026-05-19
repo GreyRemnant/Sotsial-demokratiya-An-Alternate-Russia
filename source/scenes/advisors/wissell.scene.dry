@@ -1,16 +1,17 @@
-title: Rudolf Wissell
+title: Mikhail Liber
 is-pinned-card: true
 tags: advisor, labor
-card-image: img/portraits/WissellRudolf.jpg
+card-image: img/portraits/liber.jpg
 view-if: wissell_advisor = 1
 new-page: true 
 
-= Rudolf Wissell
+= Mikhail Liber
 
-Wissell is a labor economist working for the ADGB, the federation of free trade unions, and has been a labor minister on multiple occasions. His priority is to improve conditions for organized workers.
+Liber is a Bundist economist working for the RSDRP and has been a labor minister on multiple occasions. His priority is to improve conditions for organized workers.
 
 - @labor_rights_
 - @union_unity
+- @jewish_workers
 - @root: Return to main
 
 @labor_rights_
@@ -24,10 +25,19 @@ go-to: labor_rights
 
 @union_unity
 title: Union-party coordination
-subtitle: Reduce dissent among the unions.
+subtitle: Reduce dissent among the Bund.
 choose-if: advisor_action_timer <= 0
 unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?]
 on-arrival: advisor_action_timer = 6; labor_dissent -= 5; labor_strength += 5
 
 We have reduced tensions with the Labor faction, and increased its strength in the party.
+
+@jewish_workers
+title: Organize Jewish workers
+subtitle: Organize among Jewish workers.
+choose-if: advisor_action_timer <= 0; resources <=999
+unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?] Apologies, Comrade Martov, the Bund is too busy to do this right now. Perhaps we can try another time?
+on-arrival: advisor_action_timer = 6; labor_dissent -= 5; labor_strength += 5
+
+We have worked with the Bund to organize among Jewish workers, increasing their support for the party.
 
