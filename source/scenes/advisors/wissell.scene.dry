@@ -35,7 +35,7 @@ We have reduced tensions with the Labor faction, and increased its strength in t
 @jewish_workers
 title: Organize Jewish workers
 subtitle: Organize among Jewish workers.
-choose-if: advisor_action_timer <= 0; resources >= 999
+choose-if: advisor_action_timer <= 0 and resources >= 999
 unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?] Apologies, Comrade Martov, the Bund is too busy to do this right now. Perhaps we can try another time?
 on-arrival: advisor_action_timer = 6; labor_dissent -= 5; labor_strength += 5
 
