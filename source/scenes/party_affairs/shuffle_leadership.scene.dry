@@ -62,34 +62,34 @@ Axelrod has been removed as an advisor. The Centrist faction disapproves.
 
 
 @remove_breitscheid
-title: Remove Breitscheid
+title: Remove Maisky
 view-if: breitscheid_advisor = 1
 tags: remove_advisor
 on-arrival: breitscheid_advisor = 0; center_dissent += 5; n_advisors -= 1
 go-to: rm_main
 
-Breitscheid has been removed as an advisor. The Centrist faction disapproves.
+Maisky has been removed as an advisor. The Centrist faction disapproves.
 
 # reformists
 
 
 @remove_severing
-title: Remove Severing
+title: Remove Potresov
 view-if: severing_advisor = 1
 tags: remove_advisor
 on-arrival: severing_advisor = 0; reformist_dissent += 5; n_advisors -= 1
 go-to: rm_main
 
-Severing has been removed as an advisor. The Reformist faction disapproves.
+Potresov has been removed as an advisor. The Reformist faction disapproves.
 
 @remove_braun
-title: Remove Braun
+title: Remove Dan
 view-if: braun_advisor = 1
 tags: remove_advisor
 on-arrival: braun_advisor = 0; reformist_dissent += 5; n_advisors -= 1
 go-to: rm_main
 
-Braun has been removed as an advisor. The Reformist faction disapproves.
+Dan has been removed as an advisor. The Reformist faction disapproves.
 
 @remove_juchacz
 title: Remove Juchacz
@@ -122,13 +122,13 @@ go-to: rm_main
 Leipart has been removed as an advisor. The Labor faction disapproves.
 
 @remove_aufhauser
-title: Remove Aufhäuser
+title: Remove Kremer
 view-if: aufhauser_advisor = 1
 tags: remove_advisor
 on-arrival: aufhauser_advisor = 0; labor_dissent += 5; n_advisors -= 1
 go-to: rm_main
 
-Aufhäuser has been removed as an advisor. The Labor faction disapproves.
+Kremer has been removed as an advisor. The Labor faction disapproves.
 
 @remove_wissell
 title: Remove Wissell
@@ -234,13 +234,13 @@ Schumacher has been removed as an advisor. The Neorevisionist faction disapprove
 # tbh I'm not sure if Baade should be a reformist or nonfactional. same for stampfer. they were vaguely reformist-aligned but had pretty different ideas from the other reformists here. so they're non-factional.
 
 @remove_baade
-title: Remove Baade
+title: Remove Maslov
 view-if: baade_advisor = 1
 tags: remove_advisor
 on-arrival: baade_advisor = 0; n_advisors -= 1
 go-to: rm_main
 
-Baade has been removed as an advisor.
+Maslov has been removed as an advisor.
 
 #The Reformist faction disapproves.
 
@@ -366,43 +366,43 @@ go-to: advisor_menu
 Pavel Axelrod is now an advisor.
 
 @add_breitscheid
-title: Rudolf Breitscheid
-subtitle: Rudolf Breitscheid comes from a well-educated background and is one of our foreign policy leaders. {!<br><br>!}[? if difficulty < 0 : Actions - International Relations, Foreign Policy, Party Discipline ?]
+title: Ivan Maisky
+subtitle: Ivan Maisky comes from a well-educated background and is one of our foreign policy leaders. {!<br><br>!}[? if difficulty < 0 : Actions - International Relations, Foreign Policy, Party Discipline ?]
 is-card: true
-card-image: img/portraits/BreitscheidRudolf.jpg
+card-image: img/portraits/maisky.jpg
 view-if: breitscheid_advisor = 0 and n_advisors < 3
 on-arrival: breitscheid_advisor = 1; n_advisors += 1
 go-to: advisor_menu
 tags: center_advisor
 
-Rudolf Breitscheid is now an advisor.
+Ivan Maisky is now an advisor.
 
 # reformist
 
 
 @add_severing
-title: Carl Severing
-subtitle: Carl Severing is a one-time Prussian interior minister and police reformer. {!<br><br>!}[? if difficulty < 0 : Actions - Prussian Bulwark, Police Affairs ?]
+title: Aleksandr Potresov
+subtitle: Potresov has been a Social Democrat since the Emancipation of Labor group was founded. A long-time editor of Iskra, and now Novaya Zhizn, he is a die-hard reformist and anti-Bolshevik. {!<br><br>!}[? if difficulty < 0 : Actions - Prussian Bulwark, Police Affairs ?]
 is-card: true
-card-image: img/portraits/SeveringCarl.jpg
+card-image: img/portraits/potresov.jpg
 tags: reformist_advisor
 view-if: severing_advisor = 0 and n_advisors < 3
 on-arrival: severing_advisor = 1; n_advisors += 1; reformist_strength += 5
 go-to: advisor_menu
 
-Carl Severing is now an advisor.
+Aleksandr Potresov is now an advisor.
 
 @add_braun
-title: Otto Braun
-subtitle: Otto Braun is the Minister-President of Prussia, and one of the most recognizable and well-known Social Democratic leaders. {!<br><br>!}[? if difficulty < 0 : Actions - Prussian Bulwark, Negotiating with the Coalition ?]
+title: Fyodor Dan
+subtitle: Fyodor Dan is a leading reformist theorist and one of the most recognizable and well-known Social Democratic leaders. {!<br><br>!}[? if difficulty < 0 : Actions - Prussian Bulwark, Negotiating with the Coalition ?]
 is-card: true
-card-image: img/portraits/BraunOtto.jpg
+card-image: img/portraits/dan.jpg
 tags: reformist_advisor
 view-if: braun_advisor = 0 and n_advisors < 3
 on-arrival: braun_advisor = 1; n_advisors += 1; reformist_strength += 5
 go-to: advisor_menu
 
-Otto Braun is now an advisor.
+Fyodor Dan is now an advisor.
 
 @add_juchacz
 title: Marie Juchacz
@@ -509,16 +509,16 @@ go-to: advisor_menu
 Theodor Leipart is now an advisor.
 
 @add_aufhauser
-title: Siegfried Aufhäuser
-subtitle: Siegfried Aufhäuser is the leader of the AfA-Bund, the white-collar trade union federation. {!<br><br>!}[? if difficulty < 0 : Actions - Organizing White-Collar Workers, Union-Party Coordination, Addressing the Economic Crisis ?]
+title: Arkadi Kremer
+subtitle: Kremer is a leader of the General Jewish Labour Bund, the federation of Jewish socialists. {!<br><br>!}[? if difficulty < 0 : Actions - Organizing White-Collar Workers, Union-Party Coordination, Addressing the Economic Crisis ?]
 is-card: true
-card-image: img/portraits/AufhäuserSiegfried.jpg
+card-image: img/portraits/kremer.jpg
 tags: labor_advisor
 view-if: aufhauser_advisor = 0 and n_advisors < 3
 on-arrival: aufhauser_advisor = 1; n_advisors += 1; labor_strength += 5
 go-to: advisor_menu
 
-Siegfried Aufhäuser is now an advisor.
+Arkadi Kremer is now an advisor.
 
 @add_wissell
 title: Rudolf Wissell
@@ -588,15 +588,15 @@ Julius Leber is now an advisor.
 
 @add_baade
 title: Fritz Baade
-subtitle: Fritz Baade is one of the few agricultural policy experts in the SPD. {!<br><br>!}[? if difficulty < 0 : Actions - Agricultural Policy, Rural Campaigning, Addressing the Economic Crisis ?]
+subtitle: Fritz Maslov is one of the few agricultural policy experts in the SPD. {!<br><br>!}[? if difficulty < 0 : Actions - Agricultural Policy, Rural Campaigning, Addressing the Economic Crisis ?]
 is-card: true
-card-image: img/portraits/BaadeFritz.jpg
+card-image: img/portraits/maslov.jpg
 view-if: baade_advisor = 0 and n_advisors < 3
 on-arrival: baade_advisor = 1; n_advisors += 1
 go-to: advisor_menu
 tags: nonfactional_advisor
 
-Fritz Baade is now an advisor.
+Pyotr Maslov is now an advisor.
 
 
 @add_hirschfeld
