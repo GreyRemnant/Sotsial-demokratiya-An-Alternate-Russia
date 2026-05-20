@@ -1,10 +1,10 @@
 
 # loyalty for police + reichswehr
-(..0.06) completely disloyal
-(0.06..0.19) very disloyal
-(0.19..0.31) generally disloyal
-(0.31..0.41) mostly disloyal
-(0.41..0.54) divided
-(0.54..0.71) mostly loyal
-(0.71..0.95) generally loyal
-(0.95..) completely loyal
+(..0.06) <span style="color: #ce2029 ;">**Staunchly Reactionary**</span>
+(0.06..0.19) <span style="color: #ce2029 ;">**Reactionary**</span>
+(0.19..0.31) <span style="color: #FF7900 ;">**Conservative**</span>
+(0.31..0.41) <span style="color: #FF7900 ;">**Reactionary Lean**</span>
+(0.41..0.54) <span style="color: #E9D502 ;">**Divided**</span>
+(0.54..0.71) <span style="color: #80FF00 ;">**Republican Lean**</span>
+(0.71..0.95) <span style="color: #34b233 ;">**Republican**</span>
+(0.95..) <span style="color: #34b233 ;">**Proudly Republican**</span>

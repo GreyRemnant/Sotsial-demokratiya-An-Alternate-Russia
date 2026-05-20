@@ -1,10 +1,10 @@
 
-(..-6) extremely low
-(-5..-4) very low
-(-3..-2) low
-(-1..-1) below baseline
-(0..0) moderate
-(1..1) above baseline
-(2..3) high
-(4..5) very high
-(6..) extremely high
+(..-6) <span style="color: #34b233 ;">**Extremely Low**</span>
+(-5..-4) <span style="color: #34b233 ;">**Very Low**</span>
+(-3..-2) <span style="color: #80FF00 ;">**Low**</span>
+(-1..-1) <span style="color: #E9D502 ;">**Below Baseline**</span>
+(0..0) <span style="color: #E9D502 ;">**Moderate**</span>
+(1..1) <span style="color: #E9D502 ;">**Above Baseline**</span>
+(2..3) <span style="color: #FF7900 ;">**High**</span>
+(4..5) <span style="color: #ce2029 ;">**Very high**</span>
+(6..) <span style="color: #ce2029 ;">**Extremely high**</span>
