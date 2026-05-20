@@ -1,20 +1,18 @@
-title: Theodor Leipart
+title: Matvey Skobelev
 is-pinned-card: true
 tags: advisor, labor
-card-image: img/portraits/LeipartTheodor.jpg
+card-image: img/portraits/Skobelev.jpg
 view-if: leipart_advisor = 1
 new-page: true 
 
-= Theodor Leipart
+= Matvey Skobelev
 
-Leipart is a leader of the ADGB, the largest federation of socialist trade unions.
+Skobelev is a leader of the VSS, the All-Russian Congress of Soviets, which serves as the largest labor federation in Russia.
 
 - @organizing
 - @depression
+- @union_unity
 - @root: Return to main
-
-# leipart was one of the people who argued for union independence
-#- @union_unity
 
 @organizing
 title: Organizing workers
@@ -32,7 +30,7 @@ choose-if: advisor_action_timer <= 0 and wtb_adopted = 0 and black_thursday_seen
 unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?][? if black_thursday_seen == 0 : We are not currently in an economic crisis. ?][? if wtb_adopted > 0 : We have already adopted the WTB-Plan. ?]
 on-arrival: advisor_action_timer = 6; wtb_support += 2; center_dissent += 10; labor_strength += 1
 
-The WTB-Plan, standing for its primary supporters Voitinsky, Tarnow, and Baade, has been adopted as the unions' plan for getting us out of the depression. Leipart canvasses in favor of this policy throughout the party and the unions.
+The WTB-Plan, standing for its primary supporters Voitinsky, Groman, and Skobelev, has been adopted as the unions' plan for getting us out of the depression. Leipart canvasses in favor of this policy throughout the party and the unions.
 
 @union_unity
 title: Union-party coordination

@@ -74,22 +74,22 @@ Maisky has been removed as an advisor. The Centrist faction disapproves.
 
 
 @remove_severing
-title: Remove Potresov
+title: Remove Nikitin
 view-if: severing_advisor = 1
 tags: remove_advisor
 on-arrival: severing_advisor = 0; reformist_dissent += 5; n_advisors -= 1
 go-to: rm_main
 
-Potresov has been removed as an advisor. The Reformist faction disapproves.
+Nikitin has been removed as an advisor. The Reformist faction disapproves.
 
 @remove_braun
-title: Remove Dan
+title: Remove Potresov
 view-if: braun_advisor = 1
 tags: remove_advisor
 on-arrival: braun_advisor = 0; reformist_dissent += 5; n_advisors -= 1
 go-to: rm_main
 
-Dan has been removed as an advisor. The Reformist faction disapproves.
+Potresov has been removed as an advisor. The Reformist faction disapproves.
 
 @remove_juchacz
 title: Remove Juchacz
@@ -113,13 +113,13 @@ Pfülf has been removed as an advisor. The Reformist faction disapproves.
 # labor
 
 @remove_leipart
-title: Remove Leipart
+title: Remove Skobelev
 view-if: leipart_advisor = 1
 tags: remove_advisor
 on-arrival: leipart_advisor = 0; labor_dissent += 5; n_advisors -= 1
 go-to: rm_main
 
-Leipart has been removed as an advisor. The Labor faction disapproves.
+Skobelev has been removed as an advisor. The Labor faction disapproves.
 
 @remove_aufhauser
 title: Remove Kremer
@@ -152,13 +152,13 @@ Voitinsky has been removed as an advisor. The Labor faction disapproves.
 # left
 
 @remove_levi
-title: Remove Levi
+title: Remove Dan
 view-if: levi_advisor = 1
 tags: remove_advisor
 on-arrival: levi_advisor = 0; left_dissent += 5; n_advisors -= 1
 go-to: rm_main
 
-Levi has been removed as an advisor. The Leftist faction disapproves.
+Dan has been removed as an advisor. The Leftist faction disapproves.
 
 @remove_sender
 title: Remove Sender
@@ -354,7 +354,7 @@ go-to: advisor_menu
 Yuliy Martov is now an advisor.
 
 @add_muller
-title: Hermann Müller
+title: Pavel Axelrod
 subtitle: Pavel Axelrod is the last Social Democratic Chancellor. {!<br><br>!}[? if difficulty < 0 : Actions - Negotiating with the Coalition, Defending Toleration ?]
 is-card: true
 card-image: img/portraits/Axelrod.jpg
@@ -381,28 +381,28 @@ Ivan Maisky is now an advisor.
 
 
 @add_severing
-title: Aleksandr Potresov
-subtitle: Potresov has been a Social Democrat since the Emancipation of Labor group was founded. A long-time editor of Iskra, and now Novaya Zhizn, he is a die-hard reformist and anti-Bolshevik. {!<br><br>!}[? if difficulty < 0 : Actions - Prussian Bulwark, Police Affairs ?]
+title: Aleksey Nikitin
+subtitle: Aleksey Nikitin is a lawyer, former Police Chief, and reformist-Menshevik. He advocated for harsh anti-Bolshevik measures during the Civil War. {!<br><br>!}[? if difficulty < 0 : Actions - Prussian Bulwark, Police Affairs ?]
 is-card: true
-card-image: img/portraits/potresov.jpg
+card-image: img/portraits/nikitin.jpg
 tags: reformist_advisor
 view-if: severing_advisor = 0 and n_advisors < 3
 on-arrival: severing_advisor = 1; n_advisors += 1; reformist_strength += 5
 go-to: advisor_menu
 
-Aleksandr Potresov is now an advisor.
+Aleksey Nikitin is now an advisor.
 
 @add_braun
-title: Fyodor Dan
-subtitle: Fyodor Dan is a leading reformist theorist and one of the most recognizable and well-known Social Democratic leaders. {!<br><br>!}[? if difficulty < 0 : Actions - Prussian Bulwark, Negotiating with the Coalition ?]
+title: Aleksandr Potresov
+subtitle: Potresov has been a Social Democrat since the Emancipation of Labor group was founded. A long-time editor of Iskra, and now Novaya Zhizn, he is a die-hard reformist and anti-Bolshevik. {!<br><br>!}[? if difficulty < 0 : Actions - Prussian Bulwark, Negotiating with the Coalition ?]
 is-card: true
-card-image: img/portraits/dan.jpg
+card-image: img/portraits/potresov.jpg
 tags: reformist_advisor
 view-if: braun_advisor = 0 and n_advisors < 3
 on-arrival: braun_advisor = 1; n_advisors += 1; reformist_strength += 5
 go-to: advisor_menu
 
-Fyodor Dan is now an advisor.
+Aleksandr Potresov is now an advisor.
 
 @add_juchacz
 title: Marie Juchacz
@@ -433,16 +433,16 @@ Antonie Pfülf is now an advisor.
 # left
 
 @add_levi
-title: Paul Levi
-subtitle: Paul Levi is a former KPD leader who was purged for criticizing Communist policies. {!<br><br>!}[? if difficulty < 0 : Actions - Building the Left, Cooperation with the KPD ?]
+title: Fyodor Dan
+subtitle: Fyodor Dan is a theorist of the Internationalists and advocate for leftist unity. {!<br><br>!}[? if difficulty < 0 : Actions - Building the Left, Cooperation with the KPD ?]
 is-card: true
-card-image: img/portraits/LeviPaul.jpg
+card-image: img/portraits/dan.jpg
 view-if: levi_advisor = 0 and levi_dead = 0 and n_advisors < 3 and left_split = 0
 on-arrival: levi_advisor = 1; n_advisors += 1; left_strength += 5
 go-to: advisor_menu
 tags: left_advisor
 
-Paul Levi is now an advisor.
+Fyodor Dan is now an advisor.
 
 @add_sender
 title: Toni Sender
@@ -497,16 +497,16 @@ Eva Broido is now an advisor.
 # labor
 
 @add_leipart
-title: Theodor Leipart
-subtitle: Theodor Leipart is the leader of the ADGB, the German Trade Union Federation. {!<br><br>!}[? if difficulty < 0 : Actions - Organizing Workers, Addressing the Economic Crisis ?]
+title: Matvey Skobelev
+subtitle: Matvey Skobelev is the leader of the VSS, the All-Russian Congress of Soviets. {!<br><br>!}[? if difficulty < 0 : Actions - Organizing Workers, Addressing the Economic Crisis, Union Unity ?]
 is-card: true
-card-image: img/portraits/LeipartTheodor.jpg
+card-image: img/portraits/Skobelev.jpg
 tags: labor_advisor
 view-if: leipart_advisor = 0 and n_advisors < 3 and unions_independent = 0
 on-arrival: leipart_advisor = 1; n_advisors += 1; labor_strength += 5
 go-to: advisor_menu
 
-Theodor Leipart is now an advisor.
+Matvey Skobelev is now an advisor.
 
 @add_aufhauser
 title: Arkadi Kremer
