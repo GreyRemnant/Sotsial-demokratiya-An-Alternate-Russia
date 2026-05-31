@@ -95,9 +95,9 @@ Economic growth: [+ economic_growth_2 +]%
 
 {!<span class="tooltip-text" title="National Alliance of Russian Solidarists (Solidarists)"><span style="color: #F9DA00;">NTS</span></span>!}: [+ nsdap_relation : relationships +]
 
-{!<span class="tooltip-text" title="Other Center-Left to Left-wing Parties"><span style="color: #ff0000;">Other Leftists</span></span>!}: <span style="color: #80FF00 ;">**Friendly**</span>
+{!<span class="tooltip-text" title="Other Center-Left to Left-wing Parties"><span style="color: #ff0000;">L</span></span>!}: <span style="color: #80FF00 ;">**Friendly**</span>
 
-{!<span class="tooltip-text" title="Other Center-Right to Right-wing Parties"><span style="color: #F48100;">Other Rightists</span></span>!}: <span style="color: #FF7900 ;">**Frigid**</span>
+{!<span class="tooltip-text" title="Other Center-Right to Right-wing Parties"><span style="color: #F48100;">P</span></span>!}: <span style="color: #FF7900 ;">**Frigid**</span>
 
 = Party Leaders & ideologies
 
