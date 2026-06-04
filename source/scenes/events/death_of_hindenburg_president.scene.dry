@@ -26,7 +26,7 @@ go-to: candidate_menu
 [? if hitler_deported : With Hitler deported, the Nazis will be running Hermann Göring as their candidate. ?]
 This might be the Nazis' last hurrah; the party's internal contradictions are heightening, and it is in desperate shortage of funds.
 
-The VS will nominate Michael Alexandrovich Romanov, the brother of Nicholas II who refused the throne. He will be endorsed by many of Kornilovs's Monarchist and Conservative supporters. They are working more closely with the Ultranationalists than before, and in the second round, the far-right parties are expected to consolidate into a single anti-socialist front.
+The VS will nominate Michael Alexandrovich Romanov, the brother of Nicholas II who refused the throne. He will be endorsed by many of Kornilovs's Monarchist and Conservative supporters. They are working more closely with the Right-Liberals than before, and in the second round, the far-right parties are expected to consolidate into a single anti-socialist front.
 
 [? if kpd_party_leader = "Conciliators" : Given the failure of Thälmann's previous runs for president, and his declining stature in the party, the KPD will be running Willi Münzenberg, a controversial figure sometimes called the "Red millionaire". He is a media magnate who leads a number of Communist front organizations. ?]
 [? if kpd_party_leader != "Conciliators" : This will be Ernst Thälmann's third run for president as leader of the KPD. Despite his previous electoral defeats, he retains the loyalty of the party as well as Stalin's Soviet Union. ?]
