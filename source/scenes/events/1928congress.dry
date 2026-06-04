@@ -1,0 +1,63 @@
+title: 1928 RSDRP Party Congress
+subtitle: The long-awaited 1928 Party Congress has finally arrived.
+face-image: img/programme.jpg
+on-arrival: old_ideology = ideology; ideology_timer = 18
+
+tags: event
+view-if: year = 1928 and month = 1
+priority: 2
+max-visits: 1
+
+- @class_struggle: Class struggle and preparing the proletariat for the revolution are our primary goals.
+- @centrist: The Center Marxism of Karl Kautsky and Menshevism of Yuliy Martov remains the best way to resolve our internal contradictions.
+- @labor: We should work with the trade unions and soviets to improve the lives of workers immediately, focusing on real, tangible results.
+- @reform: Following the Liquidationists, we should work for ethical socialism, strengthen democracy, and expand the party's electorate.
+
+@class_struggle
+on-arrival: {!
+if (Q.ideology && Q.ideology != "left") {
+    Q.changed = 1;
+}
+!}
+go-to: changed if changed = 1
+on-departure: ideology = "left"; left_strength += 10; communist_coalition += 1; left_dissent -= 5; z_relation -= 3; dvp_relation -= 5; nationalization_support += 1; kpd_relation += 3
+
+The Internationalist left of the party supports a course of class struggle, and potentially a reconcilliation with the Far-Left.
+
+@centrist
+on-arrival: {!
+if (Q.ideology && Q.ideology != "centrist") {
+    Q.changed = 1;
+}
+!}
+go-to: changed if changed = 1
+on-departure: ideology = "centrist"; center_strength += 10; center_dissent -= 10; left_dissent -= 5; reformist_dissent -= 5
+
+The Center Marxists, represented by Martov and Axelrod, support a middle course of preparing for revolution while building up the consciousness of the working class.
+
+@labor
+on-arrival: {!
+if (Q.ideology && Q.ideology != "labor") {
+    Q.changed = 1;
+}
+!}
+go-to: changed if changed = 1
+on-departure: ideology = "labor"; labor_strength += 10; wtb_support += 1; labor_dissent -= 5; kpd_relation -= 3
+
+The labor wing of the party supports continued particpation in government in order to provide benefits to the workers, and the creation of public works programs for employment.
+
+@reform
+on-arrival: {!
+if (Q.ideology && Q.ideology != "reformist") {
+    Q.changed = 1;
+}
+!}
+go-to: changed if changed = 1
+on-departure: ideology = "reformist"; reformist_strength += 10; democratization += 1; reformist_dissent -= 5; z_relation += 5; dvp_relation += 5; kpd_relation -= 8; moderate_plan_support += 1
+
+The Liquidationist wing of the party seeks to preserve the Republic and the democratic system of government, and is most supportive of coalitions with the other pro-democracy parties.
+
+@changed
+on-arrival: left_dissent += 5; center_dissent += 5; labor_dissent += 5; reformist_dissent += 5
+
+We have changed ideologies. Many in the party feel unmoored.
