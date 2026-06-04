@@ -1,17 +1,21 @@
 title: 1928 RSDRP Party Congress
 subtitle: The long-awaited 1928 Party Congress has finally arrived.
 face-image: img/programme.jpg
-on-arrival: old_ideology = ideology; ideology_timer = 18
+on-arrival: ideology_timer = 18
 
 tags: event
 view-if: year = 1928 and month = 2
 priority: 2
 max-visits: 1
 
-- @class_struggle: Class struggle and preparing the proletariat for the revolution are our primary goals.
-- @centrist: The Center Marxism of Karl Kautsky and Menshevism of Yuliy Martov remains the best way to resolve our internal contradictions.
-- @labor: We should work with the trade unions and soviets to improve the lives of workers immediately, focusing on real, tangible results.
-- @reform: Following the Liquidationists, we should work for ethical socialism, strengthen democracy, and expand the party's electorate.
+= 1928 Party Congress of the Russian Social Democratic Labor Party
+
+the Bi-Annual Party Congress has finally arrived! For the past few days, our members have bickered, debated, and voted on the party programme that will serve us for the next two years.
+
+- @class_struggle: With the support of the Labor Left and sympathetic Centrists, the Internationalists have managed to sway the Programme towards Class Struggle and Proletarian Internationalism.
+- @centrist: Supported by most of the Left and Right, the Menshevik Center passes their Programme, hopefully their moderation of the Party Left and Right can resolve our internal divisions.
+- @labor: The Labor-wing, managing to sway sympathetic leftists and rightists, pass their economic-focused Programme of focusing on Soviet-Government cooperation, Labor Reform, and results.
+- @reform: Rallying the Laborites and sympathetic Centrists, the Liquidationists have shockingly come out on top, removing most mentions of revolution from the Programme and replacing them with democratic, reformist, and ethical socialist language.
 
 @class_struggle
 on-arrival: {!
@@ -22,7 +26,7 @@ if (Q.ideology && Q.ideology != "left") {
 go-to: changed if changed = 1
 on-departure: ideology = "left"; left_strength += 10; communist_coalition += 1; left_dissent -= 5; z_relation -= 3; dvp_relation -= 5; nationalization_support += 1; kpd_relation += 3
 
-The Internationalist left of the party supports a course of class struggle, and potentially a reconcilliation with the Far-Left.
+With the support of the Labor Left and sympathetic Centrists, the Internationalists have managed to sway the Programme towards Class Struggle and Proletarian Internationalism.
 
 @centrist
 on-arrival: {!
@@ -33,7 +37,7 @@ if (Q.ideology && Q.ideology != "centrist") {
 go-to: changed if changed = 1
 on-departure: ideology = "centrist"; center_strength += 10; center_dissent -= 10; left_dissent -= 5; reformist_dissent -= 5
 
-The Center Marxists, represented by Martov and Axelrod, support a middle course of preparing for revolution while building up the consciousness of the working class.
+Supported by most of the Left and Right, the Menshevik Center passes their Programme, hopefully their moderation of the Party Left and Right can resolve our internal divisions.
 
 @labor
 on-arrival: {!
@@ -44,7 +48,7 @@ if (Q.ideology && Q.ideology != "labor") {
 go-to: changed if changed = 1
 on-departure: ideology = "labor"; labor_strength += 10; wtb_support += 1; labor_dissent -= 5; kpd_relation -= 3
 
-The labor wing of the party supports continued particpation in government in order to provide benefits to the workers, and the creation of public works programs for employment.
+The Labor-wing, managing to sway sympathetic leftists and rightists, pass their economic-focused Programme of focusing on Soviet-Government cooperation, Labor Reform, and results.
 
 @reform
 on-arrival: {!
@@ -55,9 +59,9 @@ if (Q.ideology && Q.ideology != "reformist") {
 go-to: changed if changed = 1
 on-departure: ideology = "reformist"; reformist_strength += 10; democratization += 1; reformist_dissent -= 5; z_relation += 5; dvp_relation += 5; kpd_relation -= 8; moderate_plan_support += 1
 
-The Liquidationist wing of the party seeks to preserve the Republic and the democratic system of government, and is most supportive of coalitions with the other pro-democracy parties.
+Rallying the Laborites and sympathetic Centrists, the Liquidationists have shockingly come out on top, removing most mentions of revolution from the Programme and replacing them with democratic, reformist, and ethical socialist language.
 
 @changed
-on-arrival: left_dissent += 5; center_dissent += 5; labor_dissent += 5; reformist_dissent += 5
+on-arrival: left_dissent -= 5; center_dissent -= 5; labor_dissent -= 5; reformist_dissent -= 5
 
-We have changed ideologies. Many in the party feel unmoored.
+We have concluded the Congress. Many in the party are excited for the future, but some are saddened by the party programme.
