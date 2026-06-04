@@ -2,8 +2,10 @@ title: 1928 RSDRP Party Congress
 subtitle: The long-awaited 1928 Party Congress has finally arrived.
 new-page: true
 face-image: img/programme.jpg
-on-arrival: ideology_timer = 18
+on-arrival: {!
+ideology = "centrist";
 
+!}
 tags: event
 view-if: year == 1928 and month == 2
 priority: 2
