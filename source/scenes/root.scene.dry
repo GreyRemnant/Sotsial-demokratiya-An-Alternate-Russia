@@ -9,6 +9,8 @@ go-to: start_menu_2
 = Sotsial-demokratiya: An Alternate History
 
 @start_menu_2
+on-arrival: {!
+ideology = "centrist"}
 
 - @start: Start game
 - @election_simulation: Election simulation
@@ -25,7 +27,6 @@ Q.year = 1928;
 Q.month = 1;
 // how many actions have been taken this month?
 Q.month_actions = 0;
-ideology = "centrist";
 
 // 0 = normal difficulty, 1 = hard mode, 2 = hard mode no saves
 Q.difficulty = 0;
