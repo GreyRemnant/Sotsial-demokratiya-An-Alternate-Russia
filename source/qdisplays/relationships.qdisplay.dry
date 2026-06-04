@@ -1,9 +1,9 @@
 
-(..5) <span style="color: #ce2029 ;">**Hostile**</span>
-(5..14.9) <span style="color: #FF7900 ;">**Frigid**</span>
+(..5) <span style="color: #ce2029 ;">**Very Hostile**</span>
+(5..14.9) <span style="color: #ce2029 ;">**Hostile**</span>
 (14.9..29.9) <span style="color: #FF7900 ;">**Cold**</span>
 (29.9..39.9) <span style="color: #E9D502 ;">**Cool**</span>
 (39.9..54.9) <span style="color: #E9D502 ;">**Neutral**</span>
 (54.9..64.9) <span style="color: #80FF00 ;">**Warm**</span>
-(64.9..74.9) <span style="color: #80FF00 ;">**Friendly**</span>
+(64.9..74.9) <span style="color: #34b233 ;">**Friendly**</span>
 (74.9..) <span style="color: #34b233 ;">**Very Friendly**</span>
