@@ -3,9 +3,8 @@ subtitle: The 1928 Party Congress has finally arrived. We will choose our Party 
 new-page: true
 view-if: year = 1928 and month = 1
 face-image: img/programme.jpg
-on-arrival: ideology = "centrist";
-tags: event
-priority: 2
+on-arrival: ideology = "centrist"
+priority: 1
 max-visits: 1
 
 = 1928 Party Congress of the Russian Social Democratic Labor Party
