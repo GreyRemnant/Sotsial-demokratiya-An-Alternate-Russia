@@ -21,6 +21,7 @@ the Bi-Annual Party Congress has finally arrived! For the past few days, our mem
 - @reform: Rallying the Laborites and sympathetic Centrists, the Liquidationists have shockingly come out on top, removing most mentions of revolution from the Programme and replacing them with democratic, reformist, and ethical socialist language.
 
 @class_struggle
+choose-if: left_strength + center_strength >= reformist_strength
 on-arrival: {!
 if (Q.ideology && Q.ideology != "left") {
     Q.changed = 1;
@@ -32,6 +33,7 @@ on-departure: ideology = "left"; left_strength += 10; communist_coalition += 1; 
 With the support of the Labor Left and sympathetic Centrists, the Internationalists have managed to sway the Programme towards Class Struggle and Proletarian Internationalism.
 
 @centrist
+choose-if: labor_strength + center_strength + left_strength + reformist_strength >= 50
 on-arrival: {!
 if (Q.ideology && Q.ideology != "centrist") {
     Q.changed = 1;
@@ -40,9 +42,10 @@ if (Q.ideology && Q.ideology != "centrist") {
 go-to: changed if changed = 1
 on-departure: ideology = "centrist"; center_strength += 10; center_dissent -= 10; left_dissent -= 5; reformist_dissent -= 5
 
-Supported by most of the Left and Right, the Menshevik Center passes their Programme, hopefully their moderation of the Party Left and Right can resolve our internal divisions.
+Supported by most of the Party, the Menshevik Center passes their Orthodox Programme. Hopefully their moderation of the Party Left and Right can resolve our internal divisions.
 
 @labor
+choose-if: labor_strength >= left_strength
 on-arrival: {!
 if (Q.ideology && Q.ideology != "labor") {
     Q.changed = 1;
@@ -51,9 +54,10 @@ if (Q.ideology && Q.ideology != "labor") {
 go-to: changed if changed = 1
 on-departure: ideology = "labor"; labor_strength += 10; wtb_support += 1; labor_dissent -= 5; kpd_relation -= 3
 
-The Labor-wing, managing to sway sympathetic leftists and rightists, pass their economic-focused Programme of focusing on Soviet-Government cooperation, Labor Reform, and results.
+The Labor-wing, managing to sway sympathetic Centrists and Rightists, pass their economic-focused Programme of focusing on Soviet-Government cooperation, Labor Reform, and pragmatism.
 
 @reform
+choose-if: reformist_strength + labor_strength >= left_strength
 on-arrival: {!
 if (Q.ideology && Q.ideology != "reformist") {
     Q.changed = 1;
