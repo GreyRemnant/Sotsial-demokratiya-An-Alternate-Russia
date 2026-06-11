@@ -1,22 +1,22 @@
 title: 1928 RSDRP Party Congress
 subtitle: The 1928 Party Congress has finally arrived. We will choose our Party Programme for the coming election, and for the next two-years.
-new-page: true
-view-if: year = 1928 and month = 1
+tags: event
+view-if: year = 1928 and month == 1
+max-visits: 1
 face-image: img/programme.jpg
 on-arrival: ideology = "centrist"
-priority: 1
-max-visits: 1
+new-page: true
 
 = 1928 Party Congress of the Russian Social Democratic Labor Party
 
 the Bi-Annual Party Congress has finally arrived! For the past few days, our members have bickered, debated, and voted on the party programme that will serve us for the next two years.
 
-- @class_struggle: With the support of the Labor Left and sympathetic Centrists, the Internationalists have managed to sway the Programme towards Class Struggle and Proletarian Internationalism.
+- @left: With the support of the Labor Left and sympathetic Centrists, the Internationalists have managed to sway the Programme towards Class Struggle and Proletarian Internationalism.
 - @centrist: Supported by most of the Left and Right, the Menshevik Center passes their Programme, hopefully their moderation of the Party Left and Right can resolve our internal divisions.
 - @labor: The Labor-wing, managing to sway sympathetic leftists and rightists, pass their economic-focused Programme of focusing on Soviet-Government cooperation, Labor Reform, and results.
 - @reform: Rallying the Laborites and sympathetic Centrists, the Liquidationists have shockingly come out on top, removing most mentions of revolution from the Programme and replacing them with democratic, reformist, and ethical socialist language.
 
-@class_struggle
+@left
 choose-if: left_strength + center_strength >= reformist_strength
 on-arrival: {!
 if (Q.ideology && Q.ideology != "left") {
