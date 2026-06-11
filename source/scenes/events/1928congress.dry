@@ -1,7 +1,7 @@
 title: 1928 RSDRP Party Congress
 subtitle: The 1928 Party Congress has finally arrived. We will choose our Party Programme for the coming election, and for the next two-years.
 tags: event
-view-if: year = 1928 and month == 1
+view-if: year = 1928 and month == 2
 max-visits: 1
 face-image: img/programme.jpg
 on-arrival: ideology = "centrist"
