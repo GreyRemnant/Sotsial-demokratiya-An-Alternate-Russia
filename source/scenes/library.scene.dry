@@ -28,13 +28,13 @@ go-to: menu
 face-image: img/russianeagle.png
 set-bg: img/russianflag.png
 
-The <span style="color: #888888;">**Ru**</span><span style="color: #0032A0;">**ss**</span><span style="color: #DA291C;">**ian**</span> Republic, called by some of our detractors as "Keresnky's Republic", is a parliamentary republic with a somewhat weak president and a strong parliament, called the Duma. The Duma is responsible for governing, while the President has a largely ceremonial role but also has some important governing responsibilities.
+The <span style="color: #888888;">**Ru**</span><span style="color: #0032A0;">**ss**</span><span style="color: #DA291C;">**ian**</span> Republic, called by some of our detractors as "Kerensky's Republic", is a parliamentary republic with a somewhat weak president and a strong parliament, called the Duma. The Duma is responsible for governing, while the President has a somewhat ceremonial role but also has important governing responsibilities.
 
 The Duma is elected based on a party-list proportional system, giving parties seats roughly proportional to their vote share in each electoral district. The Duma then elects the Chairman and the cabinet by a majority vote, who are responsible for government. A majority vote-of-no-confidence can remove the current government.
 
 The President is elected by a national direct vote, in two rounds. The second round is used if the first round does not result in a majority for one candidate; the candidate who receives a plurality in the second round becomes President. The role of the President is mostly to represent Russia, but he also has some crucial governing powers. The President and Chariman can together use emergency decrees to govern, bypassing the Duma. The President can also appoint or remove a Chairman when a parliamentary majority is unable to be established, and can thus influence the formation of a government.
 
-Russia is divided into a number of *oblasts*, each of which have their own governments with some responsibilities. By far the most populated state is Petrograd.
+Russia is divided into a number of *oblasts*, each of which have their own governments with some responsibilities. By far the most populated state is Moskva, followed by Petrograd, our capital.
 
 @devnote
 face-image: img/bermondt.jpg
