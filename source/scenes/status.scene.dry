@@ -108,7 +108,7 @@ Economic growth: [+ economic_growth_2 +]%
 
 [? if sapd_formed = 1: {!<span class="tooltip-text" title="The Socialist Worker's Party, our old Internationalist wing. Socialist, Marxist, and opposed to Liberal cooperation."><span style="color: #d84c4c;">SRPR</span></span>!}: Center Marxism (Abramovitch) ?]
 
-{!<span class="tooltip-text" title="The Russian Social Democratic Labor Party (United), this is us, Socialist, Marxist, and United."><span style="color: #ED1B34;">RSDRP(O)</span></span>!}: [? if ideology = "centrist": Menshevism (Martov/Axelrod) ?] [? if ideology = "left" and sapd_formed = 0: Orthodocx Marxism (Martov/Abramovitch) ?]  [? if ideology = "reformist": Ethical Socialism (Martov/Potresov) ?] [? if ideology = "labor": Labor Menshevism (Martov/Voitinsky) ?]
+{!<span class="tooltip-text" title="The Russian Social Democratic Labor Party (United), this is us, Socialist, Marxist, and United."><span style="color: #ED1B34;">RSDRP(O)</span></span>!}: [? if ideology = "none": Social Democracy (Interim Collective Leadership) ?] [? if ideology = "centrist": Menshevism (Martov/Axelrod) ?] [? if ideology = "left" and sapd_formed = 0: Orthodocx Marxism (Martov/Abramovitch) ?]  [? if ideology = "reformist": Ethical Socialism (Martov/Potresov) ?] [? if ideology = "labor": Labor Menshevism (Martov/Voitinsky) ?]
 
 {!<span class="tooltip-text" title="The informal grouping of many small, minority-focused, or regionalist Socialist and Narodist parties."><span style="color: #ff0000;">Other Leftists</span></span>!}: Socialism (Various)
 

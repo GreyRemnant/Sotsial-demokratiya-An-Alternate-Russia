@@ -4,7 +4,7 @@ tags: event
 on-arrival: ideology = "centrist"
 new-page: true
 face-image: img/programme.jpg
-view-if: ideology = " "
+view-if: ideology = "none"
 max-visits: 1
 
 
