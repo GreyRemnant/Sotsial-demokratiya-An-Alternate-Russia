@@ -104,15 +104,15 @@ Economic growth: [+ economic_growth_2 +]%
 
 {!<span class="tooltip-text" title="The Russian Communist Party (Bolsheviks), our old rivals composed of Lenin's cadre and radical hardliners."><span style="color: #D40000;">RKP(B)</span></span>!}: Bolshevism (Zinoviev)
 
-{!<span class="tooltip-text" title="The Party of Left-Socialist-Revolutionaries-Internationalists, revolutionaries who split from the PSR to work with the Bolsheviks."><span style="color: #990000;">PLSRI</span></span>!}: Revolutionary Narodism (Kamkov)
+{!<span class="tooltip-text" title="The Party of Left-Socialist-Revolutionaries-Internationalists, revolutionaries who split from the PSR to work with the Bolsheviks."><span style="color: #990000;">PLSRI</span></span>!}: Revolutionary Narodism (Spiridonova/Kamkov)
 
 [? if sapd_formed = 1: {!<span class="tooltip-text" title="The Socialist Worker's Party, our old Internationalist wing. Socialist, Marxist, and opposed to Liberal cooperation."><span style="color: #d84c4c;">SRPR</span></span>!}: Center Marxism (Abramovitch) ?]
 
-{!<span class="tooltip-text" title="The Russian Social Democratic Labor Party (United), this is us, Socialist, Marxist, and United."><span style="color: #ED1B34;">RSDRP(O)</span></span>!}: [? if ideology = "centrist": Orthodox Menshevism (Martov/Axelrod) ?] [? if ideology = "left" and sapd_formed = 0: Center Marxism (Martov/Abramovitch) ?]  [? if ideology = "reformist": Ethical Menshevism (Martov/Potresov) ?] [? if ideology = "labor": Broad Menshevism (Martov/Voitinsky) ?]
+{!<span class="tooltip-text" title="The Russian Social Democratic Labor Party (United), this is us, Socialist, Marxist, and United."><span style="color: #ED1B34;">RSDRP(O)</span></span>!}: [? if ideology = "centrist": Menshevism (Martov/Axelrod) ?] [? if ideology = "left" and sapd_formed = 0: Orthodocx Marxism (Martov/Abramovitch) ?]  [? if ideology = "reformist": Ethical Socialism (Martov/Potresov) ?] [? if ideology = "labor": Labor Menshevism (Martov/Voitinsky) ?]
 
 {!<span class="tooltip-text" title="The informal grouping of many small, minority-focused, or regionalist Socialist and Narodist parties."><span style="color: #ff0000;">Other Leftists</span></span>!}: Socialism (Various)
 
-{!<span class="tooltip-text" title="The Party of Socialist-Revolutionaries, Narodists focused on Agrarian Socialism, they've taken a Marxist turn in recent years."><span style="color: #b4121a;">PSR</span></span>!}: Center Narodism (Avksentyev)
+{!<span class="tooltip-text" title="The Party of Socialist-Revolutionaries, Narodists focused on Agrarian Socialism, they've taken a Marxist turn in recent years."><span style="color: #b4121a;">PSR</span></span>!}: Narodism (Avksentyev)
 
 {!<span class="tooltip-text" title="The Constitutional-Democratic Party, often called Kadets, the conglomeration of many Liberal groups, left and right."><span style="color: #0087dc;">K-D</span></span>!}: Liberal Constitutionalism (Prince Dolgorukov)
 
@@ -120,7 +120,7 @@ Economic growth: [+ economic_growth_2 +]%
 
 {!<span class="tooltip-text" title="The informal grouping of many small, minority-focused, or regionalist Liberal and Conservative parties."><span style="color: #F48100;">Other Rightists</span></span>!}: Market Liberalism (Various)
 
-{!<span class="tooltip-text" title="The All-Russian Union, a Nationalist, Conservative, Monarchist, and often antisemitic party."><span style="color: #004090;">VS</span></span>!}: Agrarian Conservatism (Guchkov)
+{!<span class="tooltip-text" title="The All-Russian Union, a Nationalist, Conservative, Monarchist, and often antisemitic party."><span style="color: #004090;">VS</span></span>!}: Conservative Liberalism (Guchkov)
 
 {!<span class="tooltip-text" title="The National Alliance of Russian Solidarists (Solidarists), antisemitic, ultranationalist, corporatist, extremists who can't let go of the past."><span style="color: #F9DA00;">NTS</span></span>!}: Solidarism (Leuchtenberg)
 
@@ -177,15 +177,15 @@ SA Militarization: [+ sa_militancy : militancy +]
 
 = Official military/paramilitaries
 
-Reichswehr: [+ reichswehr_strength +] thousand troops.
+Russkaya armiya: [+ reichswehr_strength +] thousand troops.
 
-Reichswehr Loyalty: [+ reichswehr_loyalty : loyalty +]
+Russkaya armiya Loyalty: [+ reichswehr_loyalty : loyalty +]
 
-Prussian police: [+ prussian_police_strength +] thousand members.
+Worker's Militsiya: [+ prussian_police_strength +] thousand members.
 
-Prussian police loyalty: [+ prussian_police_loyalty : loyalty +]
+Worker's Militsiya loyalty: [+ prussian_police_loyalty : loyalty +]
 
-[? if spd_in_government : Interior police loyalty: [+ interior_police_loyalty : loyalty +] ?]
+[? if spd_in_government : State Police loyalty: [+ interior_police_loyalty : loyalty +] ?]
 
 @polls
 

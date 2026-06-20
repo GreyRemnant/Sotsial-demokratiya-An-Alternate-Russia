@@ -47,15 +47,17 @@ go-to: menu
 
 **Current things to fix or add**:
 
+Fuckass rudimentary Party Congress event not showing
+
 State Duma Chart just not showing for some reason.
 
 Sometimes card/event images don't show, some consistently, others not.
 
 Unveil the esoteric secrets of the election code
 
-**Things I would like to add when I find out how**:
+**Things I would like to add when I find out how or am too lazy to do right now**:
 
-Figure how in the **FUCK** the election code works so I can make my brain not explode (or, more likely, explode trying to comprehend coding)
+Figure how in the **FUCK** the election code works so I can make my brain explode
 
 Party Congresses for the RSDRP and other Parties ({!<span class="tooltip-text" title="is that a dynamic social democracy reference?!?!?">Dynamic</span>!} parties)
 
@@ -71,19 +73,19 @@ Second Bolshevik Party that can spawn
 
 Kadet party split (some sort of reverse LVP situation?)
 
-RSDRP right-wing party split (Social-Republican Party of Russia?)
+RSDRP right-wing split
 
-Revamp the UI to make it nicer, pleasing, and unique.
+Savinkov says fuck you and does fascism for fun
+
+Revamp the UI to make it nicer, pleasing, and unique. pfffft yeah right, thats too complicated
 
 More advisors
 
-Custom advisor actions
+Custom advisor actions?
 
 Local elections
 
-I might try to make time work differently, on a week-to-week basis. Maybe.
-
-Remove the "internal factions" from the left status bar and make a right status bar thats dedicated to intra-party factionalism. Featuring the Bund, associated Unions, Party Factions, sub-factions that make up a faction if I'm feeling bougie and not suicidal, and important party figures + what faction they belong to.
+Remove the "internal factions" from the left status bar and make a right status bar thats dedicated to intra-party factionalism. Featuring the Bund, associated Unions, Party Factions, and important party figures + what faction they belong to.
 
 @russia_timeline
 face-image: img/foraunitedrussia.jpg
