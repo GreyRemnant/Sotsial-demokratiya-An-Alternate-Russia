@@ -106,7 +106,7 @@ Economic growth: [+ economic_growth_2 +]%
 
 {!<span class="tooltip-text" title="The Party of Left-Socialist-Revolutionaries-Internationalists, revolutionaries who split from the PSR to work with the Bolsheviks."><span style="color: #990000;">PLSRI</span></span>!}: Revolutionary Narodism (Spiridonova/Kamkov)
 
-[? if sapd_formed = 1: {!<span class="tooltip-text" title="The Socialist Worker's Party, our old Internationalist wing. Socialist, Marxist, and opposed to Liberal cooperation."><span style="color: #d84c4c;">SRPR</span></span>!}: Center Marxism (Abramovitch) ?]
+[? if sapd_formed = 1: {!<span class="tooltip-text" title="The Socialist Worker's Party, our old Internationalist wing. Socialist, Marxist, and opposed to Liberal cooperation."><span style="color: #d84c4c;">SRPR</span></span>!}: Orthodox Marxism (Abramovitch) ?]
 
 {!<span class="tooltip-text" title="The Russian Social Democratic Labor Party (United), this is us, Socialist, Marxist, and United."><span style="color: #ED1B34;">RSDRP(O)</span></span>!}: [? if ideology = 0: Social Democracy (Interim Collective Leadership) ?] [? if ideology = "centrist": Menshevism (Martov/Axelrod) ?] [? if ideology = "left" and sapd_formed = 0: Orthodocx Marxism (Martov/Abramovitch) ?]  [? if ideology = "reformist": Ethical Socialism (Martov/Potresov) ?] [? if ideology = "labor": Labor Menshevism (Martov/Voitinsky) ?]
 
