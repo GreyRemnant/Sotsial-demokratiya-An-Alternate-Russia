@@ -946,7 +946,7 @@ Who should be the chancellor?
 - @braun
 - @breitscheid_coalition_chancellor
 - @kamenev
-- @peshekhonov
+- @minorparty
 - @z_chancellor
 - @z_chancellor_wirth
 
@@ -1164,13 +1164,37 @@ Lev Kamenev's appointment as chancellor is, with lots of convincing, approved by
 
 //to-do: make Kamenev reduce coaliton unity and relations. He is a former bolshevik after all.
 
+@minorparty
+
+- @peshekhonov
+- @poalei_zion
+- @gaidarov
+- @kajaznuni
+
 @peshekhonov
-title: Hand the position of Government Chairman to a minor Labor party.
+title: Hand the position of Government Chairman to Alexey Peshekhonov.
 subtitle: We *could* push for Alexey Peshekhonov of the Labourist Popular-Socialist Party, a non-Marxist, Narodist party that split from the Esers over their views on land nationalization. This has been floated as a "compromise", though it leaves just about everyone unhappy.
 on-arrival: left_dissent += 5; center_dissent += 5; labor_dissent += 5; z_relation -= 5; dvp_relation += 5; kpd_relation -= 5; in_vremennyy_coalition = 1 if in_trudovaya_coalition == 0; chancellor = "Peshekhonov"; chancellor_party = "TNSP"; spd_in_government = 1; leverage += 5
 go-to: ministries
 
 Alexey Peshekhonov has been appointed Government Chairman, much to the dismay of our coalition partners and our party members. Oh well, you chose this after all.
+
+@poalei_zion
+title: Hand the position of Government Chairman to a Yitzhak Ben-Zvi.
+unavailable-subtitle: Sorry, Tovarisch Martov, but the Bundists in our party would revolt if we supported a Zionist for Chairman, there is also next to no support for Ben-Zvi among the Coalition, so this is entirely off the table.
+
+@gaidarov
+title: Hand the position of Government Chairman to Ibrahim-bek Gaidarov.
+subtitle: We *could* push for Ibrahim-bek Gaidarov, a Muslim-Socialist and Independent, but there will be those in our Party who have qualms about this.
+on-arrival: left_dissent += 5; center_dissent += 2; reformist_dissent += 2; in_vremennyy_coalition = 1 if in_trudovaya_coalition == 0; chancellor = "Gaidarov"; chancellor_party = "I"; spd_in_government = 1; leverage += 5
+go-to: ministries
+
+@kajaznuni
+title: Hand the position of Government Chairman to Hovhannes Kajaznuni.
+subtitle: We *could* push for Hovhannes Kajaznuni, a member of the Armenian socialist and nationalist Dashnaktsutyun, but there will be those in our Party who have qualms about this. This decision would serve to improve relations with the Dashnaktsutyun, perhaps netting us some leverage in Transcaucasia while we're at it.
+on-arrival: left_dissent += 5; center_dissent += 2; reformist_dissent += 2; in_vremennyy_coalition = 1 if in_trudovaya_coalition == 0; chancellor = "Gaidarov"; chancellor_party = "ARF-D"; spd_in_government = 1; leverage += 5
+go-to: ministries
+
 
 @braun
 title: Otto Braun for Chancellor
