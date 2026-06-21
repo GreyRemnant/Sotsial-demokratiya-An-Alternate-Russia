@@ -1183,6 +1183,7 @@ Alexey Peshekhonov has been appointed Government Chairman, much to the dismay of
 @poalei_zion
 title: Hand the position of Government Chairman to a Yitzhak Ben Zvi.
 unavailable-subtitle: Sorry, Tovarisch Martov, but the Bundists in our party would revolt if we supported a Zionist for Chairman, there is also next to no support for Ben-Zvi among the Coalition, so this is entirely off the table.
+choose-if: resources = 1854
 
 @gaidarov
 title: Hand the position of Government Chairman to Ibrahim-bek Gaidarov.
