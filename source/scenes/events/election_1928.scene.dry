@@ -1175,7 +1175,7 @@ title: Both we and the PSR desire the Chairman to be from our respective parties
 @peshekhonov
 title: Hand the position of Government Chairman to Alexey Peshekhonov.
 subtitle: We *could* push for Alexey Peshekhonov of the Labourist Popular-Socialist Party, a non-Marxist, Narodist party that split from the Esers over their views on land nationalization. This has been floated as a "compromise", though it leaves our left-wing unhappy.
-on-arrival: left_dissent += 5; kpd_relation -= 5; in_vremennyy_coalition = 1 if in_trudovaya_coalition == 0; chancellor = "Peshekhonov"; chancellor_party = "<span style="color: #008000;">TNSP</span>"; spd_in_government = 1; leverage += 5
+on-arrival: left_dissent += 5; kpd_relation -= 5; in_vremennyy_coalition = 1 if in_trudovaya_coalition == 0; chancellor = "Peshekhonov"; chancellor_party = "TNSP"; spd_in_government = 1; leverage += 5
 go-to: ministries
 
 Alexey Peshekhonov has been appointed Government Chairman, much to the dismay of our coalition partners and our party members. Oh well, you chose this after all.
@@ -1183,7 +1183,7 @@ Alexey Peshekhonov has been appointed Government Chairman, much to the dismay of
 @poalei_zion
 title: Hand the position of Government Chairman to a Yitzhak Ben Zvi.
 unavailable-subtitle: Sorry, Tovarisch Martov, but the Bundists in our party would revolt if we supported a Zionist for Chairman, there is also next to no support for Ben-Zvi among the Coalition, so this is entirely off the table.
-choose-if: resources = 1854
+choose-if: resources = 1854 and budget = 1854
 
 @gaidarov
 title: Hand the position of Government Chairman to Ibrahim-bek Gaidarov.
