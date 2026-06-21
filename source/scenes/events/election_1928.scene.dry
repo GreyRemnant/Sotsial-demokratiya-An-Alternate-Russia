@@ -1188,13 +1188,13 @@ choose-if: resources = 1854 and budget = 1854
 @gaidarov
 title: Hand the position of Government Chairman to Ibrahim-bek Gaidarov.
 subtitle: We *could* push for Ibrahim-bek Gaidarov, a Muslim-Socialist and Independent, but there will be those in our Party who have qualms about this.
-on-arrival: left_dissent += 5; center_dissent += 2; reformist_dissent += 2; in_vremennyy_coalition = 1 if in_trudovaya_coalition == 0; chancellor = "Gaidarov"; chancellor_party = "<span style="color: #ff0000;">I</span>"; spd_in_government = 1; leverage += 5
+on-arrival: left_dissent += 5; center_dissent += 2; reformist_dissent += 2; in_vremennyy_coalition = 1 if in_trudovaya_coalition == 0; chancellor = "Gaidarov"; chancellor_party = "I"; spd_in_government = 1; leverage += 5
 go-to: ministries
 
 @kajaznuni
 title: Hand the position of Government Chairman to Hovhannes Kajaznuni.
 subtitle: We *could* push for Hovhannes Kajaznuni, a member of the Armenian socialist and nationalist Dashnaktsutyun, but there will be those in our Party who have qualms about this. This decision would serve to improve relations with the Dashnaktsutyun, perhaps netting us some leverage in Transcaucasia while we're at it.
-on-arrival: left_dissent += 5; center_dissent += 2; reformist_dissent += 2; in_vremennyy_coalition = 1 if in_trudovaya_coalition == 0; chancellor = "Gaidarov"; chancellor_party = "<span style="color: #AA0000;">ARF-D</span>"; spd_in_government = 1; leverage += 5
+on-arrival: left_dissent += 5; center_dissent += 2; reformist_dissent += 2; in_vremennyy_coalition = 1 if in_trudovaya_coalition == 0; chancellor = "Gaidarov"; chancellor_party = "ARF-D"; spd_in_government = 1; leverage += 5
 go-to: ministries
 
 
