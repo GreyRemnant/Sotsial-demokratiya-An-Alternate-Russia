@@ -433,14 +433,14 @@ data = [
         "id": "rkp",
         "legend": "RKP",
         "name": "RKP",
-        "seats": Q.rkp_r*5,
+        "seats": Q.rkp_r*7.67,
     }];
 if (Q.sapd_formed && Q.sapd_r) {
     data.push({
             "id": "sapd",
             "legend": "SAPD",
             "name": "SAPD",
-            "seats": Math.round(Q.sapd_r*5),
+            "seats": Math.round(Q.sapd_r*7.67),
             });
 }
 data = data.concat([
@@ -448,55 +448,55 @@ data = data.concat([
         "id": "rsdrp",
         "legend": "RSDRP",
         "name": "RSDRP",
-        "seats": Q.rsdrp_r*5,
+        "seats": Q.rsdrp_r*7.67,
     },
     {
         "id": "plsr",
         "legend": "PLSRI",
         "name": "PLSRI",
-        "seats": Q.plsr_r*5,
+        "seats": Q.plsr_r*7.67,
     },
     {
         "id": "musavat",
         "legend": "Müsavat",
         "name": "Müsavat",
-        "seats": Q.musavat_r*5,
+        "seats": Q.musavat_r*7.67,
     },
     {
         "id": "psr",
         "legend": "PSR",
         "name": "PSR",
-        "seats": Q.psr_r*5,
+        "seats": Q.psr_r*7.67,
     },
     {
         "id": "kadets",
         "legend": "K-D",
         "name": "K-D",
-        "seats": Q.kadets_r*5,
+        "seats": Q.kadets_r*7.67,
     },
     {
         "id": "other",
         "legend": "Other Rightists",
         "name": "Other Rightists",
-        "seats": Q.other_r*5,
+        "seats": Q.other_r*7.67,
     },
     {
         "id": "otherleft",
         "legend": "Other Leftists",
         "name": "Other Leftists",
-        "seats": Q.otherleft_r*5,
+        "seats": Q.otherleft_r*7.67,
     },
     {
         "id": "vs",
         "legend": "VS",
         "name": "VS",
-        "seats": Q.vs_r*5,
+        "seats": Q.vs_r*7.67,
     },
     {
         "id": "nts",
         "legend": "NTS",
         "name": "NTS",
-        "seats": Q.nts_r*5,
+        "seats": Q.nts_r*7.67,
     },
 ]);
 if (d3 && window) {

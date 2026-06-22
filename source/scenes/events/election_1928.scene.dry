@@ -187,7 +187,7 @@ data = [
         "id": "rkp",
         "legend": "RKP(B)",
         "name": "RKP(B)",
-        "seats": Math.round(Q.rkp_r*5),
+        "seats": Math.round(Q.rkp_r*7.67),
     }
 ];
 if (Q.sapd_formed && Q.sapd_r) {
@@ -195,7 +195,7 @@ if (Q.sapd_formed && Q.sapd_r) {
             "id": "sapd",
             "legend": "SAPD",
             "name": "SAPD",
-            "seats": Math.round(Q.sapd_r*5),
+            "seats": Math.round(Q.sapd_r*7.67),
             });
 }
 data = data.concat([
@@ -203,55 +203,55 @@ data = data.concat([
         "id": "plsr",
         "legend": "PLSRI",
         "name": "PLSRI",
-        "seats": Math.round(Q.plsr_r*5),
+        "seats": Math.round(Q.plsr_r*7.67),
     },
     {
         "id": "rsdrp",
         "legend": "RSDRP",
         "name": "RSDRP",
-        "seats": Math.round(Q.rsdrp_r*5),
+        "seats": Math.round(Q.rsdrp_r*7.67),
     },
     {
         "id": "psr",
         "legend": "PSR",
         "name": "PSR",
-        "seats": Math.round(Q.psr_r*5),
+        "seats": Math.round(Q.psr_r*7.67),
     },
     {
         "id": "otherleft",
         "legend": "Other Leftists",
         "name": "Other Leftist Parties",
-        "seats": Math.round(Q.otherleft_r*5),
+        "seats": Math.round(Q.otherleft_r*7.67),
     },
     {
         "id": "musavat",
         "legend": Q.musavat_name,
         "name": Q.musavat_name,
-        "seats": Math.round(Q.musavat_r*5),
+        "seats": Math.round(Q.musavat_r*7.67),
     },
     {
         "id": "other",
         "legend": "Other Rightists",
         "name": "Other Rightist Parties",
-        "seats": Math.round(Q.other_r*5),
+        "seats": Math.round(Q.other_r*7.67),
     },
     {
         "id": "kadets",
         "legend": "K-D",
         "name": "K-D",
-        "seats": Math.round(Q.kadets_r*5),
+        "seats": Math.round(Q.kadets_r*7.67),
     },
     {
         "id": "vs",
         "legend": "VS",
         "name": "VS",
-        "seats": Math.round(Q.vs_r*5),
+        "seats": Math.round(Q.vs_r*7.67),
     },
     {
         "id": "nts",
         "legend": "NTS",
         "name": "NTS",
-        "seats": Math.round(Q.nts_r*5),
+        "seats": Math.round(Q.nts_r*7.67),
     },
 ]);
 
