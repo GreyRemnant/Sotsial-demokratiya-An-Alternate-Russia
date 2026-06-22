@@ -47,7 +47,7 @@ d3.parliament = function() {
             d.forEach(function(p) { nSeats += (typeof p.seats === 'number') ? Math.floor(p.seats) : p.seats.length; });
 
             var nRows = 0;
-            var maxSeatNumber = 0;
+            var maxSeatNumber = 767;
             var b = 0.5;
             (function() {
                 var a = innerRadiusCoef / (1 - innerRadiusCoef);
