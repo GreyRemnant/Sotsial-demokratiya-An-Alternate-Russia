@@ -257,7 +257,7 @@ PLSRI: [+ plsr_votes +]%
 [+ musavat_name +]: [+ musavat_votes +]%
 
 # 1928: 9, 1930: 5
-DVP: [+ kadets_votes +]%
+K-D: [+ kadets_votes +]%
 
 # 1928: 14, 1930: 7
 VS: [+ vs_votes +]%
@@ -272,17 +272,17 @@ Other Leftists: [+ otherleft_votes +]%
 
 **Detailed results for each demographic**
 
-Workers: RSDRP: [+ workers_rsdrp_display +]%, PSR: [+ workers_psr_display +]%, RKP: [+ workers_rkp_display +]%, [+ musavat_name +]: [+ workers_musavat_display +]%, DVP: [+ workers_kadets_display +]%; VS: [+ workers_vs_display +]%, NTS: [+ workers_nts_display +]%, Other Leftists: [+ workers_otherleft_display +]%, Others: [+ workers_other_display +]% [? if sapd_formed: SAPD: [+ workers_sapd_display +]% ?], PLSRI: [+ workers_plsr_display +]%
+Workers: RSDRP: [+ workers_rsdrp_display +]%, PSR: [+ workers_psr_display +]%, RKP: [+ workers_rkp_display +]%, [+ musavat_name +]: [+ workers_musavat_display +]%, K-D: [+ workers_kadets_display +]%; VS: [+ workers_vs_display +]%, NTS: [+ workers_nts_display +]%, Other Leftists: [+ workers_otherleft_display +]%, Others: [+ workers_other_display +]% [? if sapd_formed: SAPD: [+ workers_sapd_display +]% ?], PLSRI: [+ workers_plsr_display +]%
 
-New Middle Class: RSDRP: [+ new_middle_rsdrp_display +]%, PSR: [+ new_middle_psr_display +]%, RKP: [+ new_middle_rkp_display +]%, [+ musavat_name +]: [+ new_middle_musavat_display +]%, DVP: [+ new_middle_kadets_display +]%; VS: [+ new_middle_vs_display +]%, NTS: [+ new_middle_nts_display +]%, Other Leftists: [+ new_middle_otherleft_display +]%, Others: [+ new_middle_other_display +]% [? if sapd_formed: SAPD: [+ new_middle_sapd_display +]% ?], PLSRI: [+ new_middle_plsr_display +]%
+New Middle Class: RSDRP: [+ new_middle_rsdrp_display +]%, PSR: [+ new_middle_psr_display +]%, RKP: [+ new_middle_rkp_display +]%, [+ musavat_name +]: [+ new_middle_musavat_display +]%, K-D: [+ new_middle_kadets_display +]%; VS: [+ new_middle_vs_display +]%, NTS: [+ new_middle_nts_display +]%, Other Leftists: [+ new_middle_otherleft_display +]%, Others: [+ new_middle_other_display +]% [? if sapd_formed: SAPD: [+ new_middle_sapd_display +]% ?], PLSRI: [+ new_middle_plsr_display +]%
 
-Old Middle Class: RSDRP: [+ old_middle_rsdrp_display +]%, PSR: [+ old_middle_psr_display +]%, RKP: [+ old_middle_rkp_display +]%, [+ musavat_name +]: [+ old_middle_musavat_display +]%, DVP: [+ old_middle_kadets_display +]%; VS: [+ old_middle_vs_display +]%, NTS: [+ old_middle_nts_display +]%, Other Leftists: [+ old_middle_otherleft_display +]%, Others: [+ old_middle_other_display +]% [? if sapd_formed: SAPD: [+ old_middle_sapd_display +]% ?], PLSRI: [+ old_middle_plsr_display +]%
+Old Middle Class: RSDRP: [+ old_middle_rsdrp_display +]%, PSR: [+ old_middle_psr_display +]%, RKP: [+ old_middle_rkp_display +]%, [+ musavat_name +]: [+ old_middle_musavat_display +]%, K-D: [+ old_middle_kadets_display +]%; VS: [+ old_middle_vs_display +]%, NTS: [+ old_middle_nts_display +]%, Other Leftists: [+ old_middle_otherleft_display +]%, Others: [+ old_middle_other_display +]% [? if sapd_formed: SAPD: [+ old_middle_sapd_display +]% ?], PLSRI: [+ old_middle_plsr_display +]%
 
-Rural: RSDRP: [+ rural_rsdrp_display +]%, PSR: [+ rural_psr_display +]%, RKP: [+ rural_rkp_display +]%, [+ musavat_name +]: [+ rural_musavat_display +]%, DVP: [+ rural_kadets_display +]%; VS: [+ rural_vs_display +]%, NTS: [+ rural_nts_display +]%, Other Leftists: [+ rural_otherleft_display +]%, Others: [+ rural_other_display +]% [? if sapd_formed: SAPD: [+ rural_sapd_display +]% ?], PLSRI: [+ rural_plsr_display +]%
+Rural: RSDRP: [+ rural_rsdrp_display +]%, PSR: [+ rural_psr_display +]%, RKP: [+ rural_rkp_display +]%, [+ musavat_name +]: [+ rural_musavat_display +]%, K-D: [+ rural_kadets_display +]%; VS: [+ rural_vs_display +]%, NTS: [+ rural_nts_display +]%, Other Leftists: [+ rural_otherleft_display +]%, Others: [+ rural_other_display +]% [? if sapd_formed: SAPD: [+ rural_sapd_display +]% ?], PLSRI: [+ rural_plsr_display +]%
 
-Unemployed: RSDRP: [+ unemployed_rsdrp_display +]%, PSR: [+ unemployed_psr_display +]%, RKP: [+ unemployed_rkp_display +]%, [+ musavat_name +]: [+ unemployed_musavat_display +]%, DVP: [+ unemployed_kadets_display +]%; VS: [+ unemployed_vs_display +]%, NTS: [+ unemployed_nts_display +]%, Other Leftists: [+ unemployed_otherleft_display +]%, Others: [+ unemployed_other_display +]% [? if sapd_formed: SAPD: [+ unemployed_sapd_display +]% ?], PLSRI: [+ unemployed_plsr_display +]%
+Unemployed: RSDRP: [+ unemployed_rsdrp_display +]%, PSR: [+ unemployed_psr_display +]%, RKP: [+ unemployed_rkp_display +]%, [+ musavat_name +]: [+ unemployed_musavat_display +]%, K-D: [+ unemployed_kadets_display +]%; VS: [+ unemployed_vs_display +]%, NTS: [+ unemployed_nts_display +]%, Other Leftists: [+ unemployed_otherleft_display +]%, Others: [+ unemployed_other_display +]% [? if sapd_formed: SAPD: [+ unemployed_sapd_display +]% ?], PLSRI: [+ unemployed_plsr_display +]%
 
-Catholics: RSDRP: [+ catholics_rsdrp_display +]%, PSR: [+ catholics_psr_display +]%, RKP: [+ catholics_rkp_display +]%, [+ musavat_name +]: [+ catholics_musavat_display +]%, DVP: [+ catholics_kadets_display +]%; VS: [+ catholics_vs_display +]%, NTS: [+ catholics_nts_display +]%, Other Leftists: [+ catholics_otherleft_display +]%, Others: [+ catholics_other_display +]% [? if sapd_formed: SAPD: [+ catholics_sapd_display +]% ?], PLSRI: [+ catholics_plsr_display +]%
+Catholics: RSDRP: [+ catholics_rsdrp_display +]%, PSR: [+ catholics_psr_display +]%, RKP: [+ catholics_rkp_display +]%, [+ musavat_name +]: [+ catholics_musavat_display +]%, K-D: [+ catholics_kadets_display +]%; VS: [+ catholics_vs_display +]%, NTS: [+ catholics_nts_display +]%, Other Leftists: [+ catholics_otherleft_display +]%, Others: [+ catholics_other_display +]% [? if sapd_formed: SAPD: [+ catholics_sapd_display +]% ?], PLSRI: [+ catholics_plsr_display +]%
 
 @parties
 go-to: menu

@@ -22,7 +22,7 @@ d3.linegraph = function(noTicks, noDots, parties, partyColors, partyNames, dataM
         partyColors = {'rsdrp(o)': '#ED1B34', 'plsr': '#990000', 'rkp(b)': '#D40000', 'musavat': '#3bb9ff': '#DCCA4A', 'psr': '#B4121A', 'kadets': '#0087dc', 'vs': '#0A347C', 'nts': '#F9DA00', 'otherleft': '#ff0000', 'other': '#F48100'};
     }
     if (!partyNames) {
-        partyNames = {'rsdrp': 'RSDRP(o)', 'plsr': 'PLSR', 'rkp': 'RKP(b)', 'musavat': 'Müsavat', 'psr': 'PSR', 'kadets': 'K-D', 'vs': 'VS', 'nts': 'NTS', 'other': 'Others', 'otherleft': 'Other Leftists'};
+        partyNames = {'rsdrp': 'RSDRP(o)', 'plsr': 'PLSRI', 'rkp': 'RKP(b)', 'musavat': 'Müsavat', 'psr': 'PSR', 'kadets': 'K-D', 'vs': 'VS', 'nts': 'NTS', 'other': 'Others', 'otherleft': 'Other Leftists'};
     }
     if (!additionalMonths) {
         additionalMonths = 10;
