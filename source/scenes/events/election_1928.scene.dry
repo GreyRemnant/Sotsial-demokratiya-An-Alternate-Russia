@@ -556,7 +556,7 @@ There are enough votes for a right-wing coalition of the Center (+ BVP), K-D, VS
 @no_right_coalition
 go-to: no_majority
 
-However, the VS and its leader Hugenberg is refusing to partake in a coalition with the "November criminals" in the Center Party. Thus, there is no clear path towards a State Duma majority.
+However, the VS and its leader Hugenberg is refusing to partake in a coalition with the "November criminals" in the Center Party. Thus, there is no clear path towards a Duma majority.
 
 @right_coalition_sure
 subtitle: This will be extremely unpopular within our party.
@@ -1061,7 +1061,7 @@ if (Q.far_right_coalition >= 50) {
 }
 !}
 
-There is no path to a workable State Duma majority or minority government. The next elections are set for [+ next_election_month : month +] [+ next_election_year +].
+There is no path to a workable Duma majority or minority government. The next elections are set for [+ next_election_month : month +] [+ next_election_year +].
 
 The people's faith in democracy is shaken by this ordeal. Of course, the Nazis are exploiting the instability to claim that democracy is unworkable, and that Germany needs a strong leader.
 

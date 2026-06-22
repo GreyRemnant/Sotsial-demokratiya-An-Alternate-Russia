@@ -206,9 +206,9 @@ Q.workers_otherleft = 10;
 Q.workers_rkp = 20;
 Q.workers_psr = 5;
 Q.workers_plsr = 5;
-Q.workers_musavat = 0;
-Q.workers_kadets = 0;
-Q.workers_vs = 0;
+Q.workers_musavat = 2;
+Q.workers_kadets = 1;
+Q.workers_vs = 1;
 Q.workers_nts = 15;
 Q.workers_other = 5;
 
