@@ -2,7 +2,7 @@ title: 1930
 subtitle: A new year
 face-image: img/prospekt.jpg
 on-arrival: {!
-// increase NSDAP vote share 
+// increase NTS vote share 
 Q.unemployed += 6.8; 
 Q.inflation -= 4;
 if (Q.budget > 0) {
@@ -17,4 +17,4 @@ view-if: year = 1930 and month = 1
 priority: 2
 max-visits: 1
 
-A new year begins. The economic crisis is worsening throughout the world, with no end in sight. The NSDAP seems to be strengthening in local elections. All very worrisome trends.
+A new year begins. The economic crisis is worsening throughout the world, with no end in sight. The NTS seems to be strengthening in local elections. All very worrisome trends.

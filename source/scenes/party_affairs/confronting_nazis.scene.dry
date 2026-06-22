@@ -1,7 +1,7 @@
 title: Confronting the Nazis
 new-page: true
 is-card: true
-view-if: (nsdap_r >= 10 and nazi_urgency > 1) and confronting_nazis_timer == 0 and iron_front_formed == 0
+view-if: (nts_r >= 10 and nazi_urgency > 1) and confronting_nazis_timer == 0 and iron_front_formed == 0
 on-arrival: confronting_nazis_seen += 1; confronting_nazis_timer = 5; month_actions += 1
 card-image: img/streetfighting2.png
 tags: party_affairs; antifascism
@@ -39,7 +39,7 @@ The Solidarists are one of the foremost threats to the Russian Republic. However
 title: Form the Red Banner!
 subtitle: The Red Banner consists of the RSDRP, the trade unions, and the SF.
 view-if: nazi_urgency >= 3 and iron_front_formed == 0
-on-arrival: iron_front_formed = 1; radicalization += 1; nazi_urgency += 1; workers_spd += 5*(1-dissent); pro_republic += 5*(1-dissent); left_dissent -= 8; neorevisionist_dissent -= 10; neorevisionist_strength += 5
+on-arrival: iron_front_formed = 1; radicalization += 1; nazi_urgency += 1; workers_rsdrp += 5*(1-dissent); pro_republic += 5*(1-dissent); left_dissent -= 8; neorevisionist_dissent -= 10; neorevisionist_strength += 5
 achievement: eiserne_front
 
 The Solidarists threat can no longer be ignored. We must build a new organization to confront them - the Red Banner - consisting of the RSDRP, Socialist Trade Unions, and the *Soyuz Fevralya*. Taking inspiration from the German *Iron Front*, we will adopt a new logo for our branding - the Three Arrows, pointing down towards the left.

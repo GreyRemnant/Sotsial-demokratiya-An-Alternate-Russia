@@ -16,13 +16,13 @@ function addMonths(date, months) {
 d3.linegraph = function(noTicks, noDots, parties, partyColors, partyNames, dataMax, dataMin, additionalMonths) {
     /* params */
     if (!parties) {
-        parties = ['spd', 'kpd', 'ddp', 'z', 'dvp', 'dnvp', 'nsdap', 'other', 'otherleft'];
+        parties = ['rsdrp', 'plsr', 'rkp', 'musavat', 'psr', 'kadets', 'vs', 'nts', 'other', 'otherleft'];
     }
     if (!partyColors) {
-        partyColors = {'spd': '#ED1B34', 'kpd': '#990000', 'ddp': '#0087DC': '#DCCA4A', 'z': '#B4121A', 'dvp': '#3BB9FF', 'dnvp': '#0A347C', 'nsdap': '#000', 'otherleft': '#ff0000', 'other': '#a0a0a0'};
+        partyColors = {'rsdrp(o)': '#ED1B34', 'plsr': '#990000', 'rkp(b)': '#D40000', 'musavat': '#3bb9ff': '#DCCA4A', 'psr': '#B4121A', 'kadets': '#0087dc', 'vs': '#0A347C', 'nts': '#F9DA00', 'otherleft': '#ff0000', 'other': '#F48100'};
     }
     if (!partyNames) {
-        partyNames = {'spd': 'SPD', 'kpd': 'KPD', 'ddp': 'DDP', 'z': 'Z + BVP', 'dvp': 'DVP', 'dnvp': 'DNVP', 'nsdap': 'NSDAP', 'other': 'Others', 'otherleft': 'Other Leftists'};
+        partyNames = {'rsdrp': 'RSDRP(o)', 'plsr': 'PLSR', 'rkp': 'RKP(b)', 'musavat': 'Müsavat', 'psr': 'PSR', 'kadets': 'K-D', 'vs': 'VS', 'nts': 'NTS', 'other': 'Others', 'otherleft': 'Other Leftists'};
     }
     if (!additionalMonths) {
         additionalMonths = 10;
@@ -59,9 +59,9 @@ d3.linegraph = function(noTicks, noDots, parties, partyColors, partyNames, dataM
 
       // Declare the y (vertical position) scale.
       if (!dataMax) {
-          const maxSPD = d3.max(data, d => d.spd);
-          const maxNSDAP = d3.max(data, d => d.nsdap);
-          dataMax = maxSPD >= maxNSDAP ? maxSPD + 10 : maxNSDAP + 10;
+          const maxRSDRP = d3.max(data, d => d.rsdrp);
+          const maxNTS = d3.max(data, d => d.nts);
+          dataMax = maxRSDRP >= maxNTS ? maxRSDRP + 10 : maxNTS + 10;
           dataMin = 0;
       }
       const yScale = d3.scaleLinear([dataMin, dataMax], [height - marginBottom, marginTop]);

@@ -12,7 +12,7 @@ At the Labor and Socialist International, we can forge contacts with our fratern
 
 - @fr_uk: Build relationships with the French SFIO and British Labour Party to move their governments in Germany's favor.
 - @east: Let's reach out to the Socialist Parties of Poland, Ukraine, and the Baltics to repair relations with our neighbors.
-- @ger: Extending a hand to our Orthodox Marxist comrades of the SPD relations could turn their foreign ministry toward us; if they are in government.
+- @ger: Extending a hand to our Orthodox Marxist comrades of the RSDRP relations could turn their foreign ministry toward us; if they are in government.
 - @austria: Learn organization and street fighting from the Austrian SDAPÖ.
 - @scandi: Learn the path of economics and reform from the Scandinavian social democrats.
 - @comintern: Forget the second international - embed a spy in the Comintern's conference.
@@ -43,7 +43,7 @@ choose-if: resources >= 999
 unavailable-subtitle: WIP, sorry loser, maybe I'll get to this soon, maybe not. We'll see.
 on-arrival: resources -= 1; west_relation += 1; reformist_strength += 5; pacifism += 1; moderate_plan_support += 1
 
-The SPD has been the largest party in most German elections, and a natural ally for us to support as their particpation in governance helps us stay on friendly terms with Germany. [? if year > 1930: With the "National-Socialist" threat growing in Germany, an expansionist and hostile government seems more and more likely, hopefully our financial support can prevent that. ?]
+The RSDRP has been the largest party in most German elections, and a natural ally for us to support as their particpation in governance helps us stay on friendly terms with Germany. [? if year > 1930: With the "National-Socialist" threat growing in Germany, an expansionist and hostile government seems more and more likely, hopefully our financial support can prevent that. ?]
 
 @austria
 subtitle: -1 resources [? if austrian_parliament_seen and not austrian_civil_war_seen: - We will also help the Austrians oppose their dictatorship. ?]
@@ -68,7 +68,7 @@ The programs of the Nordic socialists involve active government intervention in 
 subtitle: -1 resources
 choose-if: resources >= 1
 unavailable-subtitle: Not enough resources.
-on-arrival: resources -= 1; kpd_relation += 5*(1-dissent); communist_coalition += 1 if comintern_seen == 0; comintern_seen += 1
+on-arrival: resources -= 1; rkp_relation += 5*(1-dissent); communist_coalition += 1 if comintern_seen == 0; comintern_seen += 1
 
 The Communist International, the unofficial successor to Lenin's Third International, and those associated still insist on calling us "petty-bourgeois", suggesting that we social democrats are as bad or worse than the actual Bourgeoisie. Needless to say, this is not good for our relationship with the PLSRI, given their semi-Bolshevik nature. But, by observing the CI, we can better understand the Russian far-left, enabling us to potentially improve relations, or counter them if it may come to that.
 

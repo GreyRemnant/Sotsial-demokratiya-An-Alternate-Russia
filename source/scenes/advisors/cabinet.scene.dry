@@ -2,13 +2,13 @@ title: Cabinet
 is-pinned-card: true
 tags: advisor
 card-image: img/menshevikcabinet.jpg
-view-if: difficulty < 0 and spd_in_government and chancellor_party = "SPD"
+view-if: difficulty < 0 and rsdrp_in_government and chancellor_party = "RSDRP"
 on-arrival: last_cabinet_action = 1
 new-page: true 
 
 = Cabinet
 
-With an SPD chancellor and SPD cabinet members, we can direct the affairs of the national government.
+With an RSDRP chancellor and RSDRP cabinet members, we can direct the affairs of the national government.
 
 - #cabinet
 - @back: Return to main

@@ -21,12 +21,12 @@ if (Q.economic_growth) {
 
 Resources available: [+ resources +]
 
-RSDRP(O) position: [? if spd_toleration : toleration ?][? if spd_in_government : in government - ?][? if spd_toleration == 0 and spd_in_government == 0 and spd_caretaker == 0 : opposition ?][? if spd_caretaker : caretaker government ?]
-[? if in_weimar_coalition and spd_in_government: Weimar Coalition ?][? if in_vremennyy_coalition and spd_in_government: Vremennyy Coalition ?][? if in_popular_front and spd_in_government: Popular Front ?][? if in_left_front and spd_in_government: Left Front ?][? if in_spd_majority and spd_in_government: SPD majority ?][? if in_minority_government and spd_in_government: minority government ?][? if in_emergency_government and spd_in_government: emergency government ?]
+RSDRP(O) position: [? if rsdrp_toleration : toleration ?][? if rsdrp_in_government : in government - ?][? if rsdrp_toleration == 0 and rsdrp_in_government == 0 and rsdrp_caretaker == 0 : opposition ?][? if rsdrp_caretaker : caretaker government ?]
+[? if in_weimar_coalition and rsdrp_in_government: Weimar Coalition ?][? if in_vremennyy_coalition and rsdrp_in_government: Vremennyy Coalition ?][? if in_popular_front and rsdrp_in_government: Popular Front ?][? if in_left_front and rsdrp_in_government: Left Front ?][? if in_rsdrp_majority and rsdrp_in_government: RSDRP majority ?][? if in_minority_government and rsdrp_in_government: minority government ?][? if in_emergency_government and rsdrp_in_government: emergency government ?]
 
-[? if spd_in_government and not in_spd_majority and not in_left_front : Coalition dissent: [+ coalition_dissent : coalition_dissent +] ?]
+[? if rsdrp_in_government and not in_rsdrp_majority and not in_left_front : Coalition dissent: [+ coalition_dissent : coalition_dissent +] ?]
 
-[? if spd_in_government and (in_left_front or in_popular_front): KPD coalition dissent: [+ kpd_coalition_dissent : coalition_dissent +] ?]
+[? if rsdrp_in_government and (in_left_front or in_popular_front): RKP coalition dissent: [+ rkp_coalition_dissent : coalition_dissent +] ?]
 
 Internal dissent: [+ dissent_percent : dissent +]
 
@@ -41,25 +41,27 @@ Reichstag composition:
 
 
 # 1928: 30, 1930: 25, 1932: 22
-{!<span class="tooltip-text" title="Social Democratic Party of Germany">SPD</span>!}: [+ spd_r +]%
+{!<span class="tooltip-text" title="Social Democratic Labor Party of Russia (United)">RSDRP(o)</span>!}: [+ rsdrp_r +]%
 [? if sapd_formed and sapd_r > 0: SAPD: [+ sapd_r +]% ?]
 # 1928: 15, 1930: 15, 1932: 
-{!<span class="tooltip-text" title="Center Party + Bavarian People's Party">Z + BVP</span>!}: [+ z_r +]%
+{!<span class="tooltip-text" title="Party of Socialist-Revolutionaries">PSR</span>!}: [+ psr_r +]%
 # 1928: 10, 1930: 13
-{!<span class="tooltip-text" title="Communist Party of Germany">KPD</span>!}: [+ kpd_r +]%
-# 1928: 5, 1930: 4 (as DstP)
-{!<span class="tooltip-text" title="German Democratic Party">!}[? if not ddp_name: DDP?][? if ddp_name != 0 : [+ ddp_name +]?]{!</span>!}: [+ ddp_r +]%
+{!<span class="tooltip-text" title="Russian Communist Party (Bolsheviks)">RKP</span>!}: [+ rkp_r +]%
+# 1928: 5, 1930: 4
+{!<span class="tooltip-text" title="Party of Left Socialist-Revolutionaries-Internationalists">PLSRI</span>!}: [+ plsr_r +]%
+# 1928: 5, 1930: 4
+{!<span class="tooltip-text" title="Müsavat Party"></span>!}: [+ musavat_r +]%
 # 1928: 9, 1930: 5
-{!<span class="tooltip-text" title="German People's Party">DVP</span>!}: [+ dvp_r +]%
+{!<span class="tooltip-text" title="Party of People's Freedom (Constitutional-Democratic Party)">K-D (Kadets)</span>!}: [+ kadets_r +]%
 # 1928: 14, 1930: 7
-{!<span class="tooltip-text" title="German National People's Party">DNVP</span>!}: [+ dnvp_r +]%
+{!<span class="tooltip-text" title="All-Russian Union">VS</span>!}: [+ vs_r +]%
 # 1928: 3, 1930: 18
-{!<span class="tooltip-text" title="National-Socialist German Worker's Party (Nazis)">NSDAP</span>!}: [+ nsdap_r +]%
+{!<span class="tooltip-text" title="National Alliance of Russian Solidarists (Solidarists)">NTS</span>!}: [+ nts_r +]%
 # 1928: 9, 1930: 10
 Others Rightists: [+ other_r +]%
 Other Leftists: [+ otherleft_r +]%
 
-[? if spd_in_government = 1 : Budget: [+ budget +] ?]
+[? if rsdrp_in_government = 1 : Budget: [+ budget +] ?]
 
 Next election: [+ next_election_month : month +] [+ next_election_year +]
 
@@ -82,19 +84,19 @@ Economic growth: [+ economic_growth_2 +]%
 
 = Inter-party Relations
 
-{!<span class="tooltip-text" title="Party of Socialist-Revolutionaries"><span style="color: #b4121a;">PSR</span></span>!}: [+ z_relation : relationships +]
+{!<span class="tooltip-text" title="Party of Socialist-Revolutionaries"><span style="color: #b4121a;">PSR</span></span>!}: [+ psr_relation : relationships +]
 
-{!<span class="tooltip-text" title="Müsavat Party"><span style="color: #3bb9ff;">Müsavat</span></span>!}: [+ ddp_relation : relationships +]
+{!<span class="tooltip-text" title="Müsavat Party"><span style="color: #3bb9ff;">Müsavat</span></span>!}: [+ musavat_relation : relationships +]
 
-{!<span class="tooltip-text" title="Constitutional-Democratic Party"><span style="color: #0087dc;">K-D</span></span>!}: [+ dvp_relation : relationships +]
+{!<span class="tooltip-text" title="Constitutional-Democratic Party"><span style="color: #0087dc;">K-D</span></span>!}: [+ kadets_relation : relationships +]
 
-{!<span class="tooltip-text" title="Party of Left-Socialist-Revolutionaries-Internationalists"><span style="color: #990000;">PLSRI</span></span>!}: [+ kpd_relation : relationships +]
+{!<span class="tooltip-text" title="Party of Left-Socialist-Revolutionaries-Internationalists"><span style="color: #990000;">PLSRI</span></span>!}: [+ plsr_relation : relationships +]
 
-{!<span class="tooltip-text" title="Russian Communist Party (Bolsheviks)"><span style="color: #D40000;">RKP(B)</span></span>!}: [+ kpd_relation : relationships +]
+{!<span class="tooltip-text" title="Russian Communist Party (Bolsheviks)"><span style="color: #D40000;">RKP(B)</span></span>!}: [+ rkp_relation : relationships +]
 
-{!<span class="tooltip-text" title="All-Russian Union"><span style="color: #004090;">VS</span></span>!}: [+ dnvp_relation : relationships +]
+{!<span class="tooltip-text" title="All-Russian Union"><span style="color: #004090;">VS</span></span>!}: [+ vs_relation : relationships +]
 
-{!<span class="tooltip-text" title="National Alliance of Russian Solidarists (Solidarists)"><span style="color: #F9DA00;">NTS</span></span>!}: [+ nsdap_relation : relationships +]
+{!<span class="tooltip-text" title="National Alliance of Russian Solidarists (Solidarists)"><span style="color: #F9DA00;">NTS</span></span>!}: [+ nts_relation : relationships +]
 
 {!<span class="tooltip-text" title="Other Center-Left to Left-wing Parties"><span style="color: #ff0000;">L</span></span>!}: <span style="color: #80FF00 ;">**Friendly**</span>
 
@@ -104,7 +106,7 @@ Economic growth: [+ economic_growth_2 +]%
 
 {!<span class="tooltip-text" title="The Russian Communist Party (Bolsheviks), our old rivals composed of Lenin's cadre and radical hardliners."><span style="color: #D40000;">RKP(B)</span></span>!}: Bolshevism (Zinoviev)
 
-{!<span class="tooltip-text" title="The Party of Left-Socialist-Revolutionaries-Internationalists, revolutionaries who split from the PSR to work with the Bolsheviks."><span style="color: #990000;">PLSRI</span></span>!}: Revolutionary Narodism (Spiridonova/Kamkov)
+{!<span class="tooltip-text" title="The Party of Left-Socialist-Revolutionaries-Internationalists, revolutionaries who split from the PSR to work with the Bolsheviks."><span style="color: #990000;">PLSRI</span></span>!}: Revolutionary Narodism (Kamkov)
 
 [? if sapd_formed = 1: {!<span class="tooltip-text" title="The Socialist Worker's Party, our old Internationalist wing. Socialist, Marxist, and opposed to Liberal cooperation."><span style="color: #d84c4c;">SRPR</span></span>!}: Orthodox Marxism (Abramovitch) ?]
 
@@ -141,7 +143,6 @@ Economic growth: [+ economic_growth_2 +]%
 
 
 @paramilitaries
-
 on-arrival: {!
 if (Q.rb_strength) {
     Q.rb_strength_2 = Q.rb_strength.toFixed(1);
@@ -159,15 +160,15 @@ if (Q.sa_strength) {
 
 = Paramilitaries
 
-{!<span class="tooltip-text" title="The Reichsbanner Schwarz-Rot-Gold is a popular organization for defending democracy, mostly affiliated with the SPD.">Reichsbanner</span>!} Strength: [+ rb_strength_2 +] thousand
+{!<span class="tooltip-text" title="The Reichsbanner Schwarz-Rot-Gold is a popular organization for defending democracy, mostly affiliated with the RSDRP.">Reichsbanner</span>!} Strength: [+ rb_strength_2 +] thousand
 
 Reichsbanner Militarization: [+ rb_militancy : militancy +]
 
-{!<span class="tooltip-text" title="The RFB (Rotfrontkämpferbund) is a communist group associated with the KPD.">RFB</span>!} Strength: [+ rfb_strength_2 +] thousand
+{!<span class="tooltip-text" title="The RFB (Rotfrontkämpferbund) is a communist group associated with the RKP.">RFB</span>!} Strength: [+ rfb_strength_2 +] thousand
 
 RFB Militarization: [+ rfb_militancy : militancy +]
 
-{!<span class="tooltip-text" title="The Stahlhelm is a right-wing organization of war veterans associated with the DNVP.">Stahlhelm</span>!} Strength: [+ sh_strength_2 +] thousand
+{!<span class="tooltip-text" title="The Stahlhelm is a right-wing organization of war veterans associated with the VS.">Stahlhelm</span>!} Strength: [+ sh_strength_2 +] thousand
 
 Stahlhelm Militarization: [+ sh_militancy : militancy +]
 
@@ -185,10 +186,9 @@ Worker's Militsiya: [+ prussian_police_strength +] thousand members.
 
 Worker's Militsiya loyalty: [+ prussian_police_loyalty : loyalty +]
 
-[? if spd_in_government : State Police loyalty: [+ interior_police_loyalty : loyalty +] ?]
+[? if rsdrp_in_government : State Police loyalty: [+ interior_police_loyalty : loyalty +] ?]
 
 @polls
-
 on-arrival: {!
 Q.pro_republic_disp = Math.round(Q.pro_republic);
 Q.nationalism_disp = Math.round(Q.nationalism);
@@ -199,21 +199,25 @@ Projected election results
 
 (if the election were to be held now):
 
-RSDRP(O): [+ spd_votes +]%
+RSDRP(O): [+ rsdrp_votes +]%
 
 [? if sapd_formed: SRP: [+ sapd_votes +]% ?]
 
-Müsavat: [+ z_votes +]%
+Müsavat: [+ musavat_votes +]%
 
-PLSRI/RKP(B): [+ kpd_votes +]%
+RKP(B): [+ rkp_votes +]%
 
-[? if not ddp_name: DDP?][? if ddp_name != 0 : [+ ddp_name +]?]: [+ ddp_votes +]%
+PLSRI: [+ plsr_votes +]%
 
-Kadets: [+ dvp_votes +]%
+PSR: [+ psr_votes +]%
 
-VS: [+ dnvp_votes +]%
+[? if not musavat_name: Müsavat?][? if musavat_name != 0 : [+ musavat_name +]?]: [+ musavat_votes +]%
 
-NTS: [+ nsdap_votes +]%
+Kadets: [+ kadets_votes +]%
+
+VS: [+ vs_votes +]%
+
+NTS: [+ nts_votes +]%
 
 Others Rightists: [+ other_votes +]%
 
@@ -221,16 +225,16 @@ Others Leftists: [+ otherleft_votes +]%
 
 **Detailed results for each demographic**
 
-Workers: RSDRP(O): [+ workers_spd_display +]%, Z: [+ workers_z_display +]%, KPD: [+ workers_kpd_display +]%, [? if not ddp_name: DDP?][? if ddp_name != 0 : [+ ddp_name +]?]: [+ workers_ddp_display +]%, DVP: [+ workers_dvp_display +]%; DNVP: [+ workers_dnvp_display +]%, NSDAP: [+ workers_nsdap_display +]%, Other Leftists: [+ workers_otherleft_display +]%, Others: [+ workers_other_display +]% [? if sapd_formed: SAPD: [+ workers_sapd_display +]% ?]
+Workers: RSDRP(O): [+ workers_rsdrp_display +]%, PSR: [+ workers_psr_display +]%, RKP: [+ workers_rkp_display +]%, [? if not musavat_name: Müsavat?][? if musavat_name != 0 : [+ musavat_name +]?]: [+ workers_musavat_display +]%, K-D: [+ workers_kadets_display +]%; VS: [+ workers_vs_display +]%, NTS: [+ workers_nts_display +]%, Other Leftists: [+ workers_otherleft_display +]%, Others: [+ workers_other_display +]%, [? if sapd_formed: SAPD: [+ workers_sapd_display +]% ?] PLSRI: [+ workers_plsr_display +]%
 
-New Middle Class: RSDRP(O): [+ new_middle_spd_display +]%, Z: [+ new_middle_z_display +]%, KPD: [+ new_middle_kpd_display +]%, [? if not ddp_name: DDP?][? if ddp_name != 0 : [+ ddp_name +]?]: [+ new_middle_ddp_display +]%, DVP: [+ new_middle_dvp_display +]%; DNVP: [+ new_middle_dnvp_display +]%, NSDAP: [+ new_middle_nsdap_display +]%, Other Leftists: [+ new_middle_otherleft_display +]%, Others: [+ new_middle_other_display +]% [? if sapd_formed: SAPD: [+ new_middle_sapd_display +]% ?]
+New Middle Class: RSDRP(O): [+ new_middle_rsdrp_display +]%, PSR: [+ new_middle_psr_display +]%, RKP: [+ new_middle_rkp_display +]%, [? if not musavat_name: Müsavat?][? if musavat_name != 0 : [+ musavat_name +]?]: [+ new_middle_musavat_display +]%, K-D: [+ new_middle_kadets_display +]%; VS: [+ new_middle_vs_display +]%, NTS: [+ new_middle_nts_display +]%, Other Leftists: [+ new_middle_otherleft_display +]%, Others: [+ new_middle_other_display +]%, [? if sapd_formed: SAPD: [+ new_middle_sapd_display +]% ?] PLSRI: [+ new_middle_plsr_display +]%
 
-Old Middle Class: RSDRP(O): [+ old_middle_spd_display +]%, Z: [+ old_middle_z_display +]%, KPD: [+ old_middle_kpd_display +]%, [? if not ddp_name: DDP?][? if ddp_name != 0 : [+ ddp_name +]?]: [+ old_middle_ddp_display +]%, DVP: [+ old_middle_dvp_display +]%; DNVP: [+ old_middle_dnvp_display +]%, NSDAP: [+ old_middle_nsdap_display +]%, Other Leftists: [+ old_middle_otherleft_display +]%, Others: [+ old_middle_other_display +]% [? if sapd_formed: SAPD: [+ old_middle_sapd_display +]% ?]
+Old Middle Class: RSDRP(O): [+ old_middle_rsdrp_display +]%, PSR: [+ old_middle_psr_display +]%, RKP: [+ old_middle_rkp_display +]%, [? if not musavat_name: Müsavat?][? if musavat_name != 0 : [+ musavat_name +]?]: [+ old_middle_musavat_display +]%, K-D: [+ old_middle_kadets_display +]%; VS: [+ old_middle_vs_display +]%, NTS: [+ old_middle_nts_display +]%, Other Leftists: [+ old_middle_otherleft_display +]%, Others: [+ old_middle_other_display +]%, [? if sapd_formed: SAPD: [+ old_middle_sapd_display +]% ?] PLSRI: [+ old_middle_plsr_display +]%
 
-Rural: RSDRP(O): [+ rural_spd_display +]%, Z: [+ rural_z_display +]%, KPD: [+ rural_kpd_display +]%, [? if not ddp_name: DDP?][? if ddp_name != 0 : [+ ddp_name +]?]: [+ rural_ddp_display +]%, DVP: [+ rural_dvp_display +]%; DNVP: [+ rural_dnvp_display +]%, NSDAP: [+ rural_nsdap_display +]%, Other Leftists: [+ rural_otherleft_display +]%, Others: [+ rural_other_display +]% [? if sapd_formed: SAPD: [+ rural_sapd_display +]% ?]
+Rural: RSDRP(O): [+ rural_rsdrp_display +]%, PSR: [+ rural_psr_display +]%, RKP: [+ rural_rkp_display +]%, [? if not musavat_name: Müsavat?][? if musavat_name != 0 : [+ musavat_name +]?]: [+ rural_musavat_display +]%, K-D: [+ rural_kadets_display +]%; VS: [+ rural_vs_display +]%, NTS: [+ rural_nts_display +]%, Other Leftists: [+ rural_otherleft_display +]%, Others: [+ rural_other_display +]%, [? if sapd_formed: SAPD: [+ rural_sapd_display +]% ?] PLSRI: [+ rural_plsr_display +]%
 
-Unemployed: RSDRP(O): [+ unemployed_spd_display +]%, Z: [+ unemployed_z_display +]%, KPD: [+ unemployed_kpd_display +]%, [? if not ddp_name: DDP?][? if ddp_name != 0 : [+ ddp_name +]?]: [+ unemployed_ddp_display +]%, DVP: [+ unemployed_dvp_display +]%; DNVP: [+ unemployed_dnvp_display +]%, NSDAP: [+ unemployed_nsdap_display +]%, Other Leftists: [+ unemployed_otherleft_display +]%, Others: [+ unemployed_other_display +]% [? if sapd_formed: SAPD: [+ unemployed_sapd_display +]% ?]
+Unemployed: RSDRP(O): [+ unemployed_rsdrp_display +]%, PSR: [+ unemployed_psr_display +]%, RKP: [+ unemployed_rkp_display +]%, [? if not musavat_name: Müsavat?][? if musavat_name != 0 : [+ musavat_name +]?]: [+ unemployed_musavat_display +]%, K-D: [+ unemployed_kadets_display +]%; VS: [+ unemployed_vs_display +]%, NTS: [+ unemployed_nts_display +]%, Other Leftists: [+ unemployed_otherleft_display +]%, Others: [+ unemployed_other_display +]%, [? if sapd_formed: SAPD: [+ unemployed_sapd_display +]% ?] PLSRI: [+ unemployed_plsr_display +]%
 
-Catholics: RSDRP(O): [+ catholics_spd_display +]%, Z: [+ catholics_z_display +]%, KPD: [+ catholics_kpd_display +]%, [? if not ddp_name: DDP?][? if ddp_name != 0 : [+ ddp_name +]?]: [+ catholics_ddp_display +]%, DVP: [+ catholics_dvp_display +]%; DNVP: [+ catholics_dnvp_display +]%, NSDAP: [+ catholics_nsdap_display +]%, Other Leftists: [+ catholics_otherleft_display +]%, Others: [+ catholics_other_display +]% [? if sapd_formed: SAPD: [+ catholics_sapd_display +]% ?]
+Catholics: RSDRP(O): [+ catholics_rsdrp_display +]%, PSR: [+ catholics_psr_display +]%, RKP: [+ catholics_rkp_display +]%, [? if not musavat_name: Müsavat?][? if musavat_name != 0 : [+ musavat_name +]?]: [+ catholics_musavat_display +]%, K-D: [+ catholics_kadets_display +]%; VS: [+ catholics_vs_display +]%, NTS: [+ catholics_nts_display +]%, Other Leftists: [+ catholics_otherleft_display +]%, Others: [+ catholics_other_display +]%, [? if sapd_formed: SAPD: [+ catholics_sapd_display +]% ?] PLSRI: [+ catholics_plsr_display +]%
 
 Support for the Republic: [+ pro_republic_disp +]%
