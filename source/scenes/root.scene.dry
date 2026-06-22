@@ -270,15 +270,15 @@ Q.new_middle_other = 15;
 Q.new_middle_otherleft = 8;
 Q.new_middle_plsr = 2;
 
-Q.rural_rsdrp = 5;
+Q.rural_rsdrp = 7;
 Q.rural_rkp = 0;
-Q.rural_psr = 45;
+Q.rural_psr = 50;
 Q.rural_musavat= 5;
 Q.rural_kadets = 15;
-Q.rural_vs = 45;
+Q.rural_vs = 35;
 Q.rural_nts = 5;
 Q.rural_other = 10;
-Q.rural_otherleft = 13;
+Q.rural_otherleft = 16;
 Q.rural_plsr = 10;
 
 Q.unemployed_rsdrp = 25;
