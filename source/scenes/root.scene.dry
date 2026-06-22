@@ -270,19 +270,19 @@ Q.new_middle_other = 15;
 Q.new_middle_otherleft = 8;
 Q.new_middle_plsr = 2;
 
-Q.rural_rsdrp = 7;
+Q.rural_rsdrp = 15;
 Q.rural_rkp = 0;
 Q.rural_psr = 50;
 Q.rural_musavat= 5;
 Q.rural_kadets = 15;
-Q.rural_vs = 35;
+Q.rural_vs = 25;
 Q.rural_nts = 5;
 Q.rural_other = 10;
 Q.rural_otherleft = 16;
 Q.rural_plsr = 10;
 
-Q.unemployed_rsdrp = 25;
-Q.unemployed_rkp = 55;
+Q.unemployed_rsdrp = 45;
+Q.unemployed_rkp = 25;
 Q.unemployed_psr = 2;
 Q.unemployed_musavat = 1;
 Q.unemployed_kadets = 2;
@@ -290,7 +290,7 @@ Q.unemployed_vs = 5;
 Q.unemployed_nts = 20;
 Q.unemployed_other = 9;
 Q.unemployed_otherleft = 12;
-Q.unemployed_plsr = 55;
+Q.unemployed_plsr = 25;
 
 Q.catholics_rsdrp = 15;
 Q.catholics_rkp = 2;
@@ -310,7 +310,7 @@ Q.catholics_plsr = 5;
 // note: the Z figures also include the BVP (Bavarian people's party)
 // since they were ideologically similar, but they were separate parties.
 // They did not have a CDU/CSU-style relationship.
-Q.rsdrp_r = 28;
+Q.rsdrp_r = 20;
 Q.rkp_r = 3;
 Q.psr_r = 31;
 Q.musavat_r = 4;
