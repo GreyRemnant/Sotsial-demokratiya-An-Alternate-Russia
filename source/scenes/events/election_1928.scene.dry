@@ -185,8 +185,8 @@ on-display: {!
 data = [
     {
         "id": "rkp",
-        "legend": "RKP",
-        "name": "RKP",
+        "legend": "RKP(B)",
+        "name": "RKP(B)",
         "seats": Math.round(Q.rkp_r*5),
     }
 ];
@@ -212,6 +212,12 @@ data = data.concat([
         "seats": Math.round(Q.rsdrp_r*5),
     },
     {
+        "id": "psr",
+        "legend": "PSR",
+        "name": "PSR",
+        "seats": Math.round(Q.psr_r*5),
+    },
+    {
         "id": "otherleft",
         "legend": "Other Leftists",
         "name": "Other Leftist Parties",
@@ -224,15 +230,9 @@ data = data.concat([
         "seats": Math.round(Q.musavat_r*5),
     },
     {
-        "id": "psr",
-        "legend": "PSR",
-        "name": "PSR",
-        "seats": Math.round(Q.psr_r*5),
-    },
-    {
         "id": "other",
-        "legend": "Other",
-        "name": "Other",
+        "legend": "Other Rightists",
+        "name": "Other Rightist Parties",
         "seats": Math.round(Q.other_r*5),
     },
     {
@@ -241,7 +241,6 @@ data = data.concat([
         "name": "K-D",
         "seats": Math.round(Q.kadets_r*5),
     },
-    
     {
         "id": "vs",
         "legend": "VS",
