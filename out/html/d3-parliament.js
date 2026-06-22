@@ -43,11 +43,11 @@ d3.parliament = function() {
 
             /***
              * compute number of seats and rows of the parliament */
-            var nSeats = 767;
+            var nSeats = 0;
             d.forEach(function(p) { nSeats += (typeof p.seats === 'number') ? Math.floor(p.seats) : p.seats.length; });
 
             var nRows = 15;
-            var maxSeatNumber = 0;
+            var maxSeatNumber = 767;
             var b = 0.5;
             (function() {
                 var a = innerRadiusCoef / (1 - innerRadiusCoef);
