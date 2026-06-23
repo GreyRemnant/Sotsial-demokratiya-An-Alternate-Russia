@@ -14,13 +14,14 @@ The RSDRP(O) is torn between many different ideological currents. What should be
 
 [? if ideology != 0 : We have previously chosen a [+ ideology +] ideology. Changing it will likely have drawbacks. ?]
 
-- [? if rsrpi_formed = 0: @class_struggle: Class struggle and preparing the proletariat for the revolution are our primary goals. ?]
+- @class_struggle: Class struggle and preparing the proletariat for the revolution are our primary goals.
 - @centrist: The Center Marxism of Karl Kautsky and Menshevism of Yuliy Martov remains the best way to resolve our internal contradictions.
 - @labor: We should work with the trade unions and soviets to improve the lives of workers immediately, focusing on real, tangible results.
-- [? if rdp_formed = 0: @reform: Following the Liquidationists, we should work for ethical socialism, strengthen democracy, and expand the party's electorate. ?]
+- @reform: Following the Liquidationists, we should work for ethical socialism, strengthen democracy, and expand the party's electorate.
 - @easy_discard
 
 @class_struggle
+choose-if: if rsrpi_formed = 0
 on-arrival: {!
 if (Q.ideology && Q.ideology != "left") {
     Q.changed = 1;
@@ -54,6 +55,7 @@ on-departure: ideology = "labor"; labor_strength += 10; wtb_support += 1; labor_
 The labor wing of the party supports continued particpation in government in order to provide benefits to the workers, and the creation of public works programs for employment.
 
 @reform
+choose-if: if rdp_formed = 0
 on-arrival: {!
 if (Q.ideology && Q.ideology != "reformist") {
     Q.changed = 1;
