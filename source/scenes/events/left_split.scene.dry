@@ -4,7 +4,6 @@ subtitle: The Left's disagreements with our policies have grown too severe.
 tags: event
 view-if: left_dissent >= 60
 on-arrival: left_split = 1; left_strength = left_strength/2; workers_rsdrp -= 5; unemployed_rsdrp -= 5; workers_other += 5; workers_rkp += 3; n_advisors -= 1 if levi_advisor == 1; levi_advisor = 0; rb_strength -= 300; rkp_relation -= 5; rb_militancy -= 0.05 if rb_militancy >= 0.1; n_advisors -= 1 if seydewitz_advisor == 1; seydewitz_advisor = 0; n_advisors -= 1 if rosenfeld_advisor == 1; rosenfeld_advisor = 0; n_advisors -= 1 if siemsen_advisor == 1; siemsen_advisor = 0
-go-to: rsrpi_formed if centrists_resign = 1 and not rsrpi_formed
 max-visits: 1
 
 = Left-wing members split
@@ -20,18 +19,22 @@ Our policy choices have greatly offended the left, and many of their leaders hav
 choose-if: centrists_resign = 0
 unavailable-subtitle: Our Centrist wing has since left the party.
 on-arrival: ideology = "centrist"; center_strength += 10; center_dissent -= 10; left_dissent -= 5; reformist_dissent -= 5
+go-to: rsrpi_formed if centrists_resign = 1 and not rsrpi_formed
 
 @labor
 choose-if: unions_independent = 0
 on-arrival: ideology = "labor"; labor_strength += 10; wtb_support += 1; labor_dissent -= 5; rkp_relation -= 3
+go-to: rsrpi_formed if centrists_resign = 1 and not rsrpi_formed
 
 @reform
 choose-if: rdp_formed = 0
 unavailable-subtitle: Our reformist wing has since left the party.
 on-arrival: ideology = "reformist"; reformist_strength += 10; democratization += 1; reformist_dissent -= 5; z_relation += 5; kadets_relation += 5; rkp_relation -= 8; moderate_plan_support += 1
+go-to: rsrpi_formed if centrists_resign = 1 and not rsrpi_formed
 
 @HowDidYouGetHereBro
 subtitle: Using the power of Enlightened Centrism, Kautskyism, and the sheer willpower of the few remaining in our party, Martov summons the Spirit of Karl Marx himself to save Russian Socialism.
 unavailable-subtitle: There has to be at least one faction in the Party that can still lead us, right? Right, Tovarisch Martov? Tovarisch Martov... are you there?
 choose-if: rdp_formed = 1 and unions_independent = 1 and centrists_resign = 1
 on-arrival: ideology = "partydeath"
+go-to: rsrpi_formed if centrists_resign = 1 and not rsrpi_formed
