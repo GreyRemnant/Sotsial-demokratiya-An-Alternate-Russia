@@ -105,20 +105,20 @@ Q.bourgeois_coalition = Q.musavat_r + Q.psr_r + Q.kadets_r + Q.other_r;
 Q.center_right_coalition = Q.psr_r + Q.musavat_r + Q.kadets_r + Q.other_r + Q.vs_r;
 Q.right_coalition = Q.psr_r + Q.kadets_r + Q.other_r + Q.vs_r;
 Q.far_right_coalition = Q.vs_r + Q.nts_r;
-Q.left_coalition = Q.rsdrp_r + Q.rkp_r + Q.sapd_r;
+Q.left_coalition = Q.rsdrp_r + Q.rkp_r + Q.rsrpi_r;
 // this is an absurd concept lol
-Q.popular_front_coalition = Q.rsdrp_r + Q.rkp_r + Q.psr_r + Q.musavat_r - 3 + Q.sapd_r;
+Q.popular_front_coalition = Q.rsdrp_r + Q.rkp_r + Q.psr_r + Q.musavat_r - 3 + Q.rsrpi_r;
 Q.anti_democratic_coalition = Q.rkp_r + Q.nts_r + Q.vs_r + Q.plsr_r;
 // aka everyone except nazi, rkp, vs
 Q.neo_trudovaya_coalition = Q.rsdrp_r + Q.musavat_r + Q.psr_r + Q.kadets_r + Q.other_r;
 // Hitler + Right-wing parties (only comes into effect if you've alienated Z too badly)
 Q.hitler_right_coalition = Q.psr_r + Q.vs_r + Q.nts_r;
 // Progressive coalition isn't going to be implemented as a distinct coalition but it's the coalition that lets you pass improved women's rights/gay rights
-Q.progressive_coalition = Q.rsdrp_r + Q.rkp_r + Q.otherleft_r + Q.sapd_r;
+Q.progressive_coalition = Q.rsdrp_r + Q.rkp_r + Q.otherleft_r + Q.rsrpi_r;
 Q.noway_coalition = Q.rsdrp_r + Q.nts_r;
 
 if (Q.rkp_relation >= 30) {
-    Q.trudovaya_coalition += Q.sapd_r;
+    Q.trudovaya_coalition += Q.rsrpi_r;
 }
 
 Q.leverage = Q.rsdrp_r;
@@ -190,12 +190,12 @@ data = [
         "seats": Math.round(Q.rkp_r*7.67),
     }
 ];
-if (Q.sapd_formed && Q.sapd_r) {
+if (Q.rsrpi_formed && Q.rsrpi_r) {
     data.push({
-            "id": "sapd",
-            "legend": "SAPD",
-            "name": "SAPD",
-            "seats": Math.round(Q.sapd_r*7.67),
+            "id": "rsrpi",
+            "legend": "RSRPI",
+            "name": "RSRPI",
+            "seats": Math.round(Q.rsrpi_r*7.67),
             });
 }
 data = data.concat([
@@ -282,7 +282,7 @@ go-to: coalition_menu
 {!<tr><td>Party</td><td>Vote share</td><td>% Change</td></tr>!}
 {!<tr><td><div class="box" style='background-color:#ED1B34; outline: 2px; outline-style: solid;'> </div> !} **RSDRP:** {!</td><td>!} **[+ rsdrp_r +]%** {!</td><td>!} **[+ str_change_rsdrp +]** {!</td></tr>!}
 
-[? if sapd_formed : {!<tr><td><div class="box" style='background-color:#C40000'> </div> !}SAPD: {!</td><td>!} [+ sapd_r +]% {!</td><td>!} [+ str_change_sapd +] {!</td></tr>!} ?]
+[? if rsrpi_formed : {!<tr><td><div class="box" style='background-color:#C40000'> </div> !}RSRPI: {!</td><td>!} [+ rsrpi_r +]% {!</td><td>!} [+ str_change_rsrpi +] {!</td></tr>!} ?]
 
 {!<tr><td><div class="box" style='background-color:#ff0000'> </div> !} Other Leftists: {!</td><td>!} [+ otherleft_r +]% {!</td><td>!} [+ str_change_otherleft +] {!</td></tr>!}
 
@@ -339,8 +339,8 @@ There are some potential coalition arrangements.
 
 @popular_front_coalition
 title: A new "Popular Front" coalition?
-subtitle: RSDRP + RKP + PSR + [+ musavat_name +]  [? if sapd_formed: + SAPD ?]([+ popular_front_coalition +]%)
-unavailable-subtitle: RSDRP + RKP + PSR + [+ musavat_name +] [? if sapd_formed: + SAPD ?]([+ popular_front_coalition +]%) - [? if ((rkp_relation < 65 and rkp_party_leader == "Thälmann") or (rkp_relation < 45 and rkp_party_leader == "Conciliators")): We do not have good enough relations with the RKP. ?][? if (psr_relation < 45 and psr_party_leader == "Joos") or (psr_relation < 65 and psr_party_leader != "Joos" and rkp_party_leader != "Conciliators") or (psr_relation < 55 and psr_party_leader != "Joos" and rkp_party_leader == "Conciliators"): We do not have good enough relations with the PSR. ?][? if communist_coalition < 3 : The Communists are unwilling to compromise at all. ?]
+subtitle: RSDRP + RKP + PSR + [+ musavat_name +]  [? if rsrpi_formed: + RSRPI ?]([+ popular_front_coalition +]%)
+unavailable-subtitle: RSDRP + RKP + PSR + [+ musavat_name +] [? if rsrpi_formed: + RSRPI ?]([+ popular_front_coalition +]%) - [? if ((rkp_relation < 65 and rkp_party_leader == "Thälmann") or (rkp_relation < 45 and rkp_party_leader == "Conciliators")): We do not have good enough relations with the RKP. ?][? if (psr_relation < 45 and psr_party_leader == "Joos") or (psr_relation < 65 and psr_party_leader != "Joos" and rkp_party_leader != "Conciliators") or (psr_relation < 55 and psr_party_leader != "Joos" and rkp_party_leader == "Conciliators"): We do not have good enough relations with the PSR. ?][? if communist_coalition < 3 : The Communists are unwilling to compromise at all. ?]
 view-if: popular_front_coalition >= 50
 choose-if: (((rkp_relation >= 65 and rkp_party_leader == "Thälmann") or (rkp_relation >= 45 and rkp_party_leader == "Conciliators")) and ((psr_relation >= 45 and psr_party_leader == "Joos") or (psr_relation >= 65 and psr_party_leader != "Joos" and rkp_party_leader != "Conciliators") or (psr_relation >= 55 and psr_party_leader != "Joos" and rkp_party_leader == "Conciliators")) and musavat_relation >= 50 and communist_coalition >= 3) or (psr_party_leader == "Joos" and rkp_party_leader == "Conciliators" and psr_relation >= 30 and rkp_relation >= 30)
 
@@ -458,8 +458,8 @@ Alternatively, Braun could use the emergency powers of the presidency. Article 4
 
 @left_coalition
 title: Is a United Left coalition possible?
-subtitle: RSDRP + RKP [? if sapd_formed: + SAPD ?] ([+ left_coalition +]%)
-unavailable-subtitle: RSDRP + RKP [? if sapd_formed: + SAPD ?] ([+ left_coalition +]%). [? if rkp_relation < 50 : We do not have adequate relations with the RKP. ?][? if communist_coalition < 3 : The Communists are too committed to their radical ways to partake in government. ?]
+subtitle: RSDRP + RKP [? if rsrpi_formed: + RSRPI ?] ([+ left_coalition +]%)
+unavailable-subtitle: RSDRP + RKP [? if rsrpi_formed: + RSRPI ?] ([+ left_coalition +]%). [? if rkp_relation < 50 : We do not have adequate relations with the RKP. ?][? if communist_coalition < 3 : The Communists are too committed to their radical ways to partake in government. ?]
 view-if: left_coalition >= 50
 choose-if: (rkp_relation >= 50 or (rkp_party_leader == "Conciliators" and rkp_relation >= 40)) and communist_coalition >= 3
 
@@ -548,7 +548,7 @@ unavailable-subtitle: The VS is not interested in a coalition with the Center.
 view-if: right_coalition >= 50
 choose-if: year < 1929
 
-There are enough votes for a right-wing coalition of the Center (+ BVP), K-D, VS, and minor conservative parties. [? if largest_party == "RSDRP": However, this will be seen as abdicating responsibility for government, as we are the largest party. ?]
+There are enough votes for a right-wing coalition of the Center , K-D, VS, and minor conservative parties. [? if largest_party == "RSDRP": However, this will be seen as abdicating responsibility for government, as we are the largest party. ?]
 
 - @right_coalition_sure: Yes, we will abdicate our responsibility for government formation, and let a right-wing coalition take power.
 - @vremennyy_coalition: Actually, we wish to form a vremennyy coalition after all.
@@ -931,7 +931,7 @@ We have won the vote of no confidence, and are currently ruling under an RSDRP m
 
 @trudovaya_coalition
 title: We can form an <span style="color: #DA291C;">**Trudovaya**</span> Coalition.
-subtitle: RSDRP + PSR + Other Leftists [? if sapd_formed and rkp_relation >= 30 : + SAPD toleration ?] ([+ trudovaya_coalition +]%)
+subtitle: RSDRP + PSR + Other Leftists [? if rsrpi_formed and rkp_relation >= 30 : + RSRPI toleration ?] ([+ trudovaya_coalition +]%)
 view-if: trudovaya_coalition >= 50
 on-arrival: leverage += 5; leverage += 5 if psr_party_leader == "Joos"; in_trudovaya_coalition = 1; rsdrp_in_government = 1; in_popular_front = 0; in_left_front = 0; foreign_minister_party = "PSR"; interior_minister_party = "PSR"; justice_minister_party = musavat_name; labor_minister_party = "PSR"; reichswehr_minister_party = "I"; economic_minister_party = musavat_name; finance_minister_party = "PSR"; agriculture_minister_party = "PSR"; foreign_minister = "Wirth"; interior_minister = "Wirth"; justice_minister = "Koch-Weser"; labor_minister = "Stegerwald"; reichswehr_minister = "Groener"; economic_minister = "Dietrich"; finance_minister = "Köhler"; agriculture_minister = "Hermes";
 achievement: trudovaya_coalition
@@ -969,7 +969,7 @@ go-to: vremennyy_coalition_rsdrp_lead if (n_elections <= 1 and largest_party == 
 @vremennyy_coalition_psr_lead
 go-to: vremennyy_coalition_psr_lead_2 if kadets_relation >= 30; vremennyy_coalition_fail if kadets_relation < 30
 
-There are enough votes to form a majority coalition consisting of the RSDRP, Center (Z), Bavarian People's (BVP), Democratic ([+ musavat_name +]), and People's (K-D) parties. Given our rather weak electoral performance, [? if rsdrp_no_confidence = 1 : and our previous vote of no confidence against the government, ?][? if no_confidence_against_rsdrp = 1 : and the vote of no confidence against us, ?] President Kornilov has asked the Center Party to take the lead role in forming a government.
+There are enough votes to form a majority coalition consisting of the RSDRP, Center (Z), Democratic ([+ musavat_name +]), and People's (K-D) parties. Given our rather weak electoral performance, [? if rsdrp_no_confidence = 1 : and our previous vote of no confidence against the government, ?][? if no_confidence_against_rsdrp = 1 : and the vote of no confidence against us, ?] President Kornilov has asked the Center Party to take the lead role in forming a government.
 
 # TODO: if the RSDRP participated in bringing down the previous government via a vote-of-no-confidence, or if we were essentially removed from government by our coalition partners, we should be more reluctant to participate in a new government.
 
@@ -1076,7 +1076,7 @@ We have decided to tolerate Brüning's government. This means that we will vote 
 @vremennyy_coalition_fail
 on-arrival: vremennyy_coalition_failed = 1
 
-Unfortunately, the K-D and BVP are unwilling to enter into another coalition with the RSDRP, so the vremennyy coalition is unable to be formed.
+Unfortunately, the K-D are unwilling to enter into another coalition with the RSDRP, so the vremennyy coalition is unable to be formed.
 
 - @no_majority: Thus, there is no clear majority.
 - @brauns_dilemma
@@ -1093,7 +1093,7 @@ go-to: kadets_conservative if stresemann_dead == 1; kadets_majority if streseman
 @kadets_majority
 go-to: join_bruning
 
-Under the influence of Gustav Stresemann, the K-D agrees to allow us into the coalition, and so does the BVP.
+Under the influence of Gustav Stresemann, the K-D agrees to allow us into the coalition.
 
 
 @kadets_conservative
@@ -1127,7 +1127,7 @@ As expected, the K-D is too set in their anti-democratic ways.
 @vremennyy_coalition_rsdrp_lead
 on-arrival: leverage -= 15 if kadets_relation < 20
 
-As expected, the RSDRP is the largest party, and this time, we are expected to take the lead role in the formation of the next government, including selecting the chancellor. President [+ president +] has asked us to form a majority coalition with the Center (Z), Bavarian People's (BVP), Democratic ([+ musavat_name +]), and People's (K-D) parties.
+As expected, the RSDRP is the largest party, and this time, we are expected to take the lead role in the formation of the next government, including selecting the chancellor. President [+ president +] has asked us to form a majority coalition with the Center (Z), Democratic ([+ musavat_name +]), and People's (K-D) parties.
 
 [? if kadets_relation < 20 : As our relation with the K-D is poor, they are demanding more minister posts in order to remain part of the coalition. ?]
 

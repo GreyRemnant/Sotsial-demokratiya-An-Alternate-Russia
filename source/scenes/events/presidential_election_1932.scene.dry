@@ -13,7 +13,7 @@ face-image: img/presidentkornilov.jpg
 @pres_election
 
 The presidential election is coming up soon. [? if rsdrp_in_government = 0 : While the position of Chancellor is typically more important, recent governments have depended on the president's emergency decree powers, making the office vital. ?] [? if hitler_deported==0 : The Nazis will run Hitler, while the RKP will run Thälmann. A victory for Hitler would mean the end of parliamentary democracy, and the beginning of an era of unspeakable horrors. ?][? if hitler_deported==1 : Since Hitler has been deported, the Nazis will run Hermann Göring in his stead. He is widely seen as a proxy for Hitler, who, despite his legal persecution, retains a popular base who wishes to see him returned to Germany. Meanwhile, the RKP will run Ernst Thälmann. ?]
-[? if sapd_formed: The SAPD, our former leftists, are supporting Thälmann of the RKP, and will likely share an endorsement with the Communists. ?]
+[? if rsrpi_formed: The RSRPI, our former leftists, are supporting Thälmann of the RKP, and will likely share an endorsement with the Communists. ?]
 
 # if hitler is deported, who would nts run? Duesterberg? or Goering?
 # Goering runs, essentially as a proxy for Hitler, who is now stateless.
@@ -193,13 +193,13 @@ if (Q.martov_campaign) {
     }
     if (Q.rkp_support_martov) {
         Q.martov_votes += Q.rkp_normalized;
-        if (Q.sapd_formed && Q.sapd_votes) {
-            Q.martov_votes += Q.sapd_normalized;
+        if (Q.rsrpi_formed && Q.rsrpi_votes) {
+            Q.martov_votes += Q.rsrpi_normalized;
         }
     } else {
         Q.thalmann_votes += Q.rkp_normalized;
-        if (Q.sapd_formed && Q.sapd_votes) {
-            Q.thalmann_votes += Q.sapd_normalized;
+        if (Q.rsrpi_formed && Q.rsrpi_votes) {
+            Q.thalmann_votes += Q.rsrpi_normalized;
         }
     }
     if (Q.kadets_support_martov) {

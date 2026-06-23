@@ -3,7 +3,7 @@ subtitle: The German Democratic Party is becoming the German State Party.
 view-if: year == 1930 and month >= 6
 new-page: true
 max-visits: 1
-on-arrival: musavat_name = "DStP"; musavat_dstp_seen = 1; new_middle_musavat -= 5; old_middle_musavat -= 3; rural_musavat -= 3; musavat_relation -= 5
+on-arrival: musavat_name = "Müsavat"; musavat_dstp_seen = 1; new_middle_musavat -= 5; old_middle_musavat -= 3; rural_musavat -= 3; musavat_relation -= 5
 tags: event
 
 = Müsavat Reformation

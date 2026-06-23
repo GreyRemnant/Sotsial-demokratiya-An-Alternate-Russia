@@ -543,16 +543,19 @@ table {
 .seat.plsr {
     fill: #8B0000;
 }
+.seat.rspri {
+    fill: #BE3075;
+}
 .seat.rsdrp {
     fill: #E3000F;
     stroke: var(--border-color);
     stroke-width: 1.5px;
 }
+.seat.rdp {
+    fill: #F0456A;
+}
 .seat.psr {
     fill: #b4121a;
-}
-.seat.bvp {
-    fill: #69A2BE;
 }
 .seat.musavat {
     fill: #3bb9ff;
@@ -572,7 +575,7 @@ table {
 .seat.nts {
     fill: #F9DA00;
 }
-.seat.sapd {
+.seat.rsrpi {
     fill: #C40000;
 }
 

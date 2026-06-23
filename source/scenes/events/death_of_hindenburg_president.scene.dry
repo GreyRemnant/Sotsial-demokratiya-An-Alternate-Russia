@@ -2,7 +2,7 @@ title: The Death of Kornilov
 subtitle: The President has died...
 new-page: true
 view-if: year = 1934 and month >= 7 and president = "Kornilov"
-on-arrival: round = 0; kornilov_dead = 1; president = "Bumke (acting)"; president = "Großmann (acting)" if judicial_reform >= 4; rsdrp_candidate = "Eckener"; rkp_candidate = "Thälmann"; rkp_candidate = "Münzenberg" if rkp_party_leader = "Conciliators"; z_candidate = "Adenauer"; musavat_candidate = "Gessler"; nts_candidate = "Hitler"; nts_candidate = "Göring" if hitler_deported; vs_candidate = "Seldte"; kadets_candidate = "Gessler"; other_candidate = "Seldte"; is_unity_candidate = 0; sapd_candidate = rkp_candidate;
+on-arrival: round = 0; kornilov_dead = 1; president = "Bumke (acting)"; president = "Großmann (acting)" if judicial_reform >= 4; rsdrp_candidate = "Eckener"; rkp_candidate = "Thälmann"; rkp_candidate = "Münzenberg" if rkp_party_leader = "Conciliators"; z_candidate = "Adenauer"; musavat_candidate = "Gessler"; nts_candidate = "Hitler"; nts_candidate = "Göring" if hitler_deported; vs_candidate = "Seldte"; kadets_candidate = "Gessler"; other_candidate = "Seldte"; is_unity_candidate = 0; rsrpi_candidate = rkp_candidate;
 max-visits: 1
 face-image: img/kornilovdead.png
 tags: event
@@ -329,7 +329,7 @@ view-if: rkp_relation >= 50 and not historical_mode
 choose-if: resources >= 3
 subtitle: -3 resources
 unavailable-subtitle: Not enough resources (need 3).
-on-arrival: resources -= 3; rkp_candidate = rsdrp_candidate; sapd_candidate = rsdrp_candidate;
+on-arrival: resources -= 3; rkp_candidate = rsdrp_candidate; rsrpi_candidate = rsdrp_candidate;
 go-to: r1_menu if round = 0; r2_campaigning if round > 0
 
 The RKP now endorses [+ rsdrp_candidate +] in the presidential election! We ask them to keep their support low-key, so as to not alienate the bourgeois voters.
@@ -337,7 +337,7 @@ The RKP now endorses [+ rsdrp_candidate +] in the presidential election! We ask 
 @rkp_relations
 view-if: rkp_relation >= 60 or (rkp_party_leader == "Conciliators" and rkp_relation >= 45)
 unavailable-subtitle: Our relations are not good enough.
-on-arrival: rkp_candidate = rsdrp_candidate; sapd_candidate = rsdrp_candidate;
+on-arrival: rkp_candidate = rsdrp_candidate; rsrpi_candidate = rsdrp_candidate;
 go-to: r1_menu if round = 0; r2_campaigning if round > 0
 
 The RKP now endorses [+ rsdrp_candidate +] in the presidential election! We ask them to keep their support low-key, so as to not alienate the bourgeois voters.
@@ -568,7 +568,7 @@ We have switched our endorsement to Willi Münzenberg of the RKP. [? if z_candid
 @r2_endorse_adenauer
 title: Switch our support to Konrad Adenauer of the Center Party.
 view-if: z_candidate = "Adenauer" and rsdrp_candidate != z_candidate
-on-departure: rkp_candidate = "Thälmann" if rkp_candidate == rsdrp_candidate and rkp_party_leader != "Conciliators"; rkp_candidate = "Münzenberg" if rkp_candidate == rsdrp_candidate and rkp_party_leader == "Conciliators"; sapd_candidate = rkp_candidate; rsdrp_candidate = "Adenauer"; z_relation += 4; Adenauer_bonus -= 2.5 if z_relation < 40; Seldte_bonus += 2.5 if z_relation < 40; is_unity_candidate = 1
+on-departure: rkp_candidate = "Thälmann" if rkp_candidate == rsdrp_candidate and rkp_party_leader != "Conciliators"; rkp_candidate = "Münzenberg" if rkp_candidate == rsdrp_candidate and rkp_party_leader == "Conciliators"; rsrpi_candidate = rkp_candidate; rsdrp_candidate = "Adenauer"; z_relation += 4; Adenauer_bonus -= 2.5 if z_relation < 40; Seldte_bonus += 2.5 if z_relation < 40; is_unity_candidate = 1
 go-to: r2_campaigning
 
 We have endorsed Konrad Adenauer of the Center Party.
@@ -581,7 +581,7 @@ We have endorsed Konrad Adenauer of the Center Party.
 @r2_endorse_gessler
 title: Switch our support to Otto Gessler.
 view-if: musavat_candidate = "Gessler" and rsdrp_candidate != musavat_candidate
-on-departure: rkp_candidate = "Thälmann" if rkp_candidate == rsdrp_candidate and rkp_party_leader != "Conciliators"; rkp_candidate = "Münzenberg" if rkp_candidate == rsdrp_candidate and rkp_party_leader == "Conciliators"; sapd_candidate = rkp_candidate; rsdrp_candidate = "Gessler"; musavat_relation += 4; kadets_candidate = "Seldte" if kadets_relation < 40; is_unity_candidate = 1
+on-departure: rkp_candidate = "Thälmann" if rkp_candidate == rsdrp_candidate and rkp_party_leader != "Conciliators"; rkp_candidate = "Münzenberg" if rkp_candidate == rsdrp_candidate and rkp_party_leader == "Conciliators"; rsrpi_candidate = rkp_candidate; rsdrp_candidate = "Gessler"; musavat_relation += 4; kadets_candidate = "Seldte" if kadets_relation < 40; is_unity_candidate = 1
 go-to: r2_campaigning
 
 We have endorsed Otto Gessler, independent formerly of the Müsavat.
@@ -598,7 +598,7 @@ subtitle: -2 resources
 unavailable-subtitle: [? if resources < 2 : -2 resources - Not enough resources. ?]
 choose-if: resources >= 2 and ((z_relation >= 50 and z_leader = "Kaas") or (z_relation >= 30 and z_leader = "Joos")) and musavat_relation >= 40
 view-if: z_candidate = "Adenauer" and musavat_candidate = "Gessler" and rsdrp_candidate != "Eckener"
-on-arrival: rkp_candidate = "Thälmann" if rkp_candidate == rsdrp_candidate and rkp_party_leader != "Conciliators"; rkp_candidate = "Münzenberg" if rkp_candidate == rsdrp_candidate and rkp_party_leader == "Conciliators"; sapd_candidate = rkp_candidate; rsdrp_candidate = "Eckener"; z_candidate = "Eckener"; musavat_candidate = "Eckener"; resources -= 2; is_unity_candidate = 1
+on-arrival: rkp_candidate = "Thälmann" if rkp_candidate == rsdrp_candidate and rkp_party_leader != "Conciliators"; rkp_candidate = "Münzenberg" if rkp_candidate == rsdrp_candidate and rkp_party_leader == "Conciliators"; rsrpi_candidate = rkp_candidate; rsdrp_candidate = "Eckener"; z_candidate = "Eckener"; musavat_candidate = "Eckener"; resources -= 2; is_unity_candidate = 1
 go-to: r2_campaigning
 
 We have successfully united all of the parties of the Austria Coalition behind Hugo Eckener!

@@ -42,7 +42,7 @@ State Duma composition:
 
 # 1928: 30, 1930: 25, 1932: 22
 {!<span class="tooltip-text" title="Social Democratic Labor Party of Russia (United)">RSDRP(o)</span>!}: [+ rsdrp_r +]%
-[? if sapd_formed and sapd_r > 0: SAPD: [+ sapd_r +]% ?]
+[? if rsrpi_formed and rsrpi_r > 0: RSRPI: [+ rsrpi_r +]% ?]
 # 1928: 15, 1930: 15, 1932: 
 {!<span class="tooltip-text" title="Party of Socialist-Revolutionaries">PSR</span>!}: [+ psr_r +]%
 # 1928: 10, 1930: 13
@@ -84,6 +84,8 @@ Economic growth: [+ economic_growth_2 +]%
 
 = Inter-party Relations
 
+[? if rsrpi_formed = 1: {!<span class="tooltip-text" title="The Socialist Worker's Party, our old Internationalist wing. Socialist, Marxist, and opposed to Liberal cooperation."><span style="color: #d84c4c;">SRPR</span></span>!}: <span style="color: #80FF00 ;">**Warm**</span> ?]
+
 {!<span class="tooltip-text" title="Party of Socialist-Revolutionaries"><span style="color: #b4121a;">PSR</span></span>!}: [+ psr_relation : relationships +]
 
 {!<span class="tooltip-text" title="Müsavat Party"><span style="color: #3bb9ff;">Müsavat</span></span>!}: [+ musavat_relation : relationships +]
@@ -108,9 +110,11 @@ Economic growth: [+ economic_growth_2 +]%
 
 {!<span class="tooltip-text" title="The Party of Left-Socialist-Revolutionaries-Internationalists, revolutionaries who split from the PSR to work with the Bolsheviks."><span style="color: #990000;">PLSRI</span></span>!}: Revolutionary Narodism (Kamkov)
 
-[? if sapd_formed = 1: {!<span class="tooltip-text" title="The Socialist Worker's Party, our old Internationalist wing. Socialist, Marxist, and opposed to Liberal cooperation."><span style="color: #d84c4c;">SRPR</span></span>!}: Orthodox Marxism (Abramovitch) ?]
+[? if rsrpi_formed = 1: {!<span class="tooltip-text" title="The Socialist Worker's Party of Internationalists, our old left-wing. Socialist, Marxist, and opposed to cooperation with the bourgeoisie, they represent the ideologies between us and the Bolsheviks."><span style="color: #d84c4c;">RSPRI</span></span>!}: Orthodox Marxism (Abramovitch) ?]
 
-{!<span class="tooltip-text" title="The Russian Social Democratic Labor Party (United), this is us, Socialist, Marxist, and United."><span style="color: #ED1B34;">RSDRP(O)</span></span>!}: [? if ideology = 0: Social Democracy (Interim Collective Leadership) ?] [? if ideology = "centrist": Menshevism (Martov/Axelrod) ?] [? if ideology = "left" and sapd_formed = 0: Orthodocx Marxism (Martov/Abramovitch) ?]  [? if ideology = "reformist": Ethical Socialism (Martov/Potresov) ?] [? if ideology = "labor": Labor Menshevism (Martov/Voitinsky) ?]
+{!<span class="tooltip-text" title="The Russian Social Democratic Labor Party (United), this is us, Socialist, Marxist, and United."><span style="color: #ED1B34;">RSDRP(O)</span></span>!}: [? if ideology = 0: Social Democracy (Interim Collective Leadership) ?] [? if ideology = "centrist": Menshevism (Martov/Axelrod) ?] [? if ideology = "left" and rsrpi_formed = 0: Orthodox Marxism (Martov/Abramovitch) ?]  [? if ideology = "reformist": Ethical Socialism (Martov/Potresov) ?] [? if ideology = "labor": Labor Menshevism (Martov/Voitinsky) ?]
+
+[? if rdp_formed = 1: {!<span class="tooltip-text" title="The Radical-Democratic Party, our old right-wing. Social Democratic, Laborist, and firmly against cooperation with radicals, left or right. Their existence has had the effect of turning the Kadets rightwards, as disgruntled Left-Kadets have been defecting to the RDP."><span style="color: #F0456A;">RDp</span></span>!}: Liberal Socialism (Struve) ?]
 
 {!<span class="tooltip-text" title="The informal grouping of many small, minority-focused, or regionalist Socialist and Narodist parties."><span style="color: #ff0000;">Other Leftists</span></span>!}: Socialism (Various)
 
@@ -201,7 +205,7 @@ Projected election results
 
 RSDRP(O): [+ rsdrp_votes +]%
 
-[? if sapd_formed: SRP: [+ sapd_votes +]% ?]
+[? if rsrpi_formed: SRP: [+ rsrpi_votes +]% ?]
 
 Müsavat: [+ musavat_votes +]%
 
@@ -225,16 +229,16 @@ Others Leftists: [+ otherleft_votes +]%
 
 **Detailed results for each demographic**
 
-Workers: RSDRP(O): [+ workers_rsdrp_display +]%, PSR: [+ workers_psr_display +]%, RKP: [+ workers_rkp_display +]%, [? if not musavat_name: Müsavat?][? if musavat_name != 0 : [+ musavat_name +]?]: [+ workers_musavat_display +]%, K-D: [+ workers_kadets_display +]%; VS: [+ workers_vs_display +]%, NTS: [+ workers_nts_display +]%, Other Leftists: [+ workers_otherleft_display +]%, Others: [+ workers_other_display +]%, [? if sapd_formed: SAPD: [+ workers_sapd_display +]% ?] PLSRI: [+ workers_plsr_display +]%
+Workers: RSDRP(O): [+ workers_rsdrp_display +]%, PSR: [+ workers_psr_display +]%, RKP: [+ workers_rkp_display +]%, [? if not musavat_name: Müsavat?][? if musavat_name != 0 : [+ musavat_name +]?]: [+ workers_musavat_display +]%, K-D: [+ workers_kadets_display +]%; VS: [+ workers_vs_display +]%, NTS: [+ workers_nts_display +]%, Other Leftists: [+ workers_otherleft_display +]%, Others: [+ workers_other_display +]%, [? if rsrpi_formed: RSRPI: [+ workers_rsrpi_display +]% ?] PLSRI: [+ workers_plsr_display +]%
 
-New Middle Class: RSDRP(O): [+ new_middle_rsdrp_display +]%, PSR: [+ new_middle_psr_display +]%, RKP: [+ new_middle_rkp_display +]%, [? if not musavat_name: Müsavat?][? if musavat_name != 0 : [+ musavat_name +]?]: [+ new_middle_musavat_display +]%, K-D: [+ new_middle_kadets_display +]%; VS: [+ new_middle_vs_display +]%, NTS: [+ new_middle_nts_display +]%, Other Leftists: [+ new_middle_otherleft_display +]%, Others: [+ new_middle_other_display +]%, [? if sapd_formed: SAPD: [+ new_middle_sapd_display +]% ?] PLSRI: [+ new_middle_plsr_display +]%
+New Middle Class: RSDRP(O): [+ new_middle_rsdrp_display +]%, PSR: [+ new_middle_psr_display +]%, RKP: [+ new_middle_rkp_display +]%, [? if not musavat_name: Müsavat?][? if musavat_name != 0 : [+ musavat_name +]?]: [+ new_middle_musavat_display +]%, K-D: [+ new_middle_kadets_display +]%; VS: [+ new_middle_vs_display +]%, NTS: [+ new_middle_nts_display +]%, Other Leftists: [+ new_middle_otherleft_display +]%, Others: [+ new_middle_other_display +]%, [? if rsrpi_formed: RSRPI: [+ new_middle_rsrpi_display +]% ?] PLSRI: [+ new_middle_plsr_display +]%
 
-Old Middle Class: RSDRP(O): [+ old_middle_rsdrp_display +]%, PSR: [+ old_middle_psr_display +]%, RKP: [+ old_middle_rkp_display +]%, [? if not musavat_name: Müsavat?][? if musavat_name != 0 : [+ musavat_name +]?]: [+ old_middle_musavat_display +]%, K-D: [+ old_middle_kadets_display +]%; VS: [+ old_middle_vs_display +]%, NTS: [+ old_middle_nts_display +]%, Other Leftists: [+ old_middle_otherleft_display +]%, Others: [+ old_middle_other_display +]%, [? if sapd_formed: SAPD: [+ old_middle_sapd_display +]% ?] PLSRI: [+ old_middle_plsr_display +]%
+Old Middle Class: RSDRP(O): [+ old_middle_rsdrp_display +]%, PSR: [+ old_middle_psr_display +]%, RKP: [+ old_middle_rkp_display +]%, [? if not musavat_name: Müsavat?][? if musavat_name != 0 : [+ musavat_name +]?]: [+ old_middle_musavat_display +]%, K-D: [+ old_middle_kadets_display +]%; VS: [+ old_middle_vs_display +]%, NTS: [+ old_middle_nts_display +]%, Other Leftists: [+ old_middle_otherleft_display +]%, Others: [+ old_middle_other_display +]%, [? if rsrpi_formed: RSRPI: [+ old_middle_rsrpi_display +]% ?] PLSRI: [+ old_middle_plsr_display +]%
 
-Rural: RSDRP(O): [+ rural_rsdrp_display +]%, PSR: [+ rural_psr_display +]%, RKP: [+ rural_rkp_display +]%, [? if not musavat_name: Müsavat?][? if musavat_name != 0 : [+ musavat_name +]?]: [+ rural_musavat_display +]%, K-D: [+ rural_kadets_display +]%; VS: [+ rural_vs_display +]%, NTS: [+ rural_nts_display +]%, Other Leftists: [+ rural_otherleft_display +]%, Others: [+ rural_other_display +]%, [? if sapd_formed: SAPD: [+ rural_sapd_display +]% ?] PLSRI: [+ rural_plsr_display +]%
+Rural: RSDRP(O): [+ rural_rsdrp_display +]%, PSR: [+ rural_psr_display +]%, RKP: [+ rural_rkp_display +]%, [? if not musavat_name: Müsavat?][? if musavat_name != 0 : [+ musavat_name +]?]: [+ rural_musavat_display +]%, K-D: [+ rural_kadets_display +]%; VS: [+ rural_vs_display +]%, NTS: [+ rural_nts_display +]%, Other Leftists: [+ rural_otherleft_display +]%, Others: [+ rural_other_display +]%, [? if rsrpi_formed: RSRPI: [+ rural_rsrpi_display +]% ?] PLSRI: [+ rural_plsr_display +]%
 
-Unemployed: RSDRP(O): [+ unemployed_rsdrp_display +]%, PSR: [+ unemployed_psr_display +]%, RKP: [+ unemployed_rkp_display +]%, [? if not musavat_name: Müsavat?][? if musavat_name != 0 : [+ musavat_name +]?]: [+ unemployed_musavat_display +]%, K-D: [+ unemployed_kadets_display +]%; VS: [+ unemployed_vs_display +]%, NTS: [+ unemployed_nts_display +]%, Other Leftists: [+ unemployed_otherleft_display +]%, Others: [+ unemployed_other_display +]%, [? if sapd_formed: SAPD: [+ unemployed_sapd_display +]% ?] PLSRI: [+ unemployed_plsr_display +]%
+Unemployed: RSDRP(O): [+ unemployed_rsdrp_display +]%, PSR: [+ unemployed_psr_display +]%, RKP: [+ unemployed_rkp_display +]%, [? if not musavat_name: Müsavat?][? if musavat_name != 0 : [+ musavat_name +]?]: [+ unemployed_musavat_display +]%, K-D: [+ unemployed_kadets_display +]%; VS: [+ unemployed_vs_display +]%, NTS: [+ unemployed_nts_display +]%, Other Leftists: [+ unemployed_otherleft_display +]%, Others: [+ unemployed_other_display +]%, [? if rsrpi_formed: RSRPI: [+ unemployed_rsrpi_display +]% ?] PLSRI: [+ unemployed_plsr_display +]%
 
-Catholics: RSDRP(O): [+ catholics_rsdrp_display +]%, PSR: [+ catholics_psr_display +]%, RKP: [+ catholics_rkp_display +]%, [? if not musavat_name: Müsavat?][? if musavat_name != 0 : [+ musavat_name +]?]: [+ catholics_musavat_display +]%, K-D: [+ catholics_kadets_display +]%; VS: [+ catholics_vs_display +]%, NTS: [+ catholics_nts_display +]%, Other Leftists: [+ catholics_otherleft_display +]%, Others: [+ catholics_other_display +]%, [? if sapd_formed: SAPD: [+ catholics_sapd_display +]% ?] PLSRI: [+ catholics_plsr_display +]%
+Catholics: RSDRP(O): [+ catholics_rsdrp_display +]%, PSR: [+ catholics_psr_display +]%, RKP: [+ catholics_rkp_display +]%, [? if not musavat_name: Müsavat?][? if musavat_name != 0 : [+ musavat_name +]?]: [+ catholics_musavat_display +]%, K-D: [+ catholics_kadets_display +]%; VS: [+ catholics_vs_display +]%, NTS: [+ catholics_nts_display +]%, Other Leftists: [+ catholics_otherleft_display +]%, Others: [+ catholics_other_display +]%, [? if rsrpi_formed: RSRPI: [+ catholics_rsrpi_display +]% ?] PLSRI: [+ catholics_plsr_display +]%
 
 Support for the Republic: [+ pro_republic_disp +]%
