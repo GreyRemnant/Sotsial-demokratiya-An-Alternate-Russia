@@ -11,9 +11,9 @@ max-visits: 1
 
 Our policy choices have greatly offended the left, and many of their leaders have split to form a new party, the RSRPI, or the Socialist Worker's Party of Internationalists. They do not count a huge section of our membership, so this should be survivable. [? If ideology = "left" : Our formerly Internationalist rhetoric will have to be changed, as the party right has become more confident. ?]
 
-[? if ideology = "left" : - @centrist: The Center Marxism of Karl Kautsky and Menshevism of Yuliy Martov remains the best way to resolve our internal contradictions.
-- @labor: We should work with the trade unions and soviets to improve the lives of workers immediately, focusing on real, tangible results.
-[? if rdp_formed = 0: - @reform: Following the Liquidationists, we should work for ethical socialism, strengthen democracy, and expand the party's electorate. ?] ?]
+[? if ideology = "left" : - @centrist: The Center Marxism of Karl Kautsky and Menshevism of Yuliy Martov remains the best way to resolve our internal contradictions. ?]
+[? if ideology = "left" : - @labor: We should work with the trade unions and soviets to improve the lives of workers immediately, focusing on real, tangible results. ?]
+[? if rdp_formed = 0 and ideology = "left" : - @reform: Following the Liquidationists, we should work for ethical socialism, strengthen democracy, and expand the party's electorate. ?]
 
 [? if centrists_resign = 1 : Many former Centrist Marxists have joined with the RSRPI, the party formed by dissident leftists. They have brought their support base and organization skills to the party, leading to its growth as a nascent rival to the RSDRP for the support of the working class. ?]
 
