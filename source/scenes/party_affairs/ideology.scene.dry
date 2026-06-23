@@ -62,7 +62,7 @@ The labor wing of the party supports continued particpation in government in ord
 
 @reform
 unavailable-subtitle: The Party Right has split.
-choose-if: rdp_formed = 0
+choose-if: reformists_resign = 0
 on-arrival: {!
 if (Q.ideology && Q.ideology != "reformist") {
     Q.changed = 1;
