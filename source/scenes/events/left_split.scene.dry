@@ -31,7 +31,7 @@ go-to: rsrpi_formed if centrists_resign = 1 and not rsrpi_formed
 We have adopted Labor-centric rhetoric.
 
 @reform
-choose-if: rdp_formed = 0
+choose-if: reformists_resign = 0
 unavailable-subtitle: Our reformist wing has since left the party.
 on-arrival: ideology = "reformist"; reformist_strength += 10; democratization += 1; reformist_dissent -= 5; z_relation += 5; kadets_relation += 5; rkp_relation -= 8; moderate_plan_support += 1
 go-to: rsrpi_formed if centrists_resign = 1 and not rsrpi_formed
