@@ -232,8 +232,9 @@ Q.new_middle_qol = 100;
 Q.classes = ['workers', 'old_middle', 'new_middle', 'rural', 'unemployed', 'catholics'];
 Q.parties = ['rsdrp', 'rkp', 'plsr', 'psr', 'musavat', 'kadets', 'vs', 'nts', 'other', 'otherleft'];
 
-// TODO: add 'rsrpi' later on
+// splinters
 Q.rsrpi_formed = 0;
+Q.rdp_formed = 0;
 
 // Support for party by social group
 // they don't have to sum to 100 since the electoral calculations will be normalized.
@@ -336,6 +337,9 @@ Q.old_plsr_r = 8;
 // rsrpi isn't formed yet, but it may be formed
 Q.rsrpi_r = 0;
 Q.old_rsrpi_r = 0;
+Q.rdp_r = 0;
+Q.old_rdp_r = 0;
+
 
 // for changing the Müsavat's name to the DStP
 Q.musavat_name = "Müsavat";
