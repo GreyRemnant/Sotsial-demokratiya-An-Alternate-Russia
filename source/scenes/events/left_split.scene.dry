@@ -11,9 +11,40 @@ max-visits: 1
 
 Our policy choices have greatly offended the left, and many of their leaders have split to form a new party, the RSRPI, or the Socialist Worker's Party of Internationalists. They do not count a huge section of our membership, so this should be survivable. [? If ideology = "left" : Our formerly Internationalist rhetoric will have to be changed, as the party right has become more confident. ?]
 
-[? if ideology = "left" : - @centrist: The Center Marxism of Karl Kautsky and Menshevism of Yuliy Martov remains the best way to resolve our internal contradictions. ?]
-[? if ideology = "left" : - @labor: We should work with the trade unions and soviets to improve the lives of workers immediately, focusing on real, tangible results. ?]
-[? if rdp_formed = 0 and ideology = "left" : - @reform: Following the Liquidationists, we should work for ethical socialism, strengthen democracy, and expand the party's electorate. ?]
+- [? if ideology = "left" : @centrist ?]
+- [? if ideology = "left" : @labor ?]
+- [? if rdp_formed = 0 and ideology = "left" : @reform ?]
 
 [? if centrists_resign = 1 : Many former Centrist Marxists have joined with the RSRPI, the party formed by dissident leftists. They have brought their support base and organization skills to the party, leading to its growth as a nascent rival to the RSDRP for the support of the working class. ?]
 
+@centrist
+on-arrival: {!
+if (Q.ideology && Q.ideology != "centrist") {
+    Q.changed = 1;
+}
+!}
+go-to: changed if changed = 1
+on-departure: ideology = "centrist"; center_strength += 10; center_dissent -= 10; left_dissent -= 5; reformist_dissent -= 5
+
+The Center, represented by Martov and Axelrod, win out once again, perhaps their message of compromise and unity will keep the party from fracturing further.
+@labor
+on-arrival: {!
+if (Q.ideology && Q.ideology != "labor") {
+    Q.changed = 1;
+}
+!}
+go-to: changed if changed = 1
+on-departure: ideology = "labor"; labor_strength += 10; wtb_support += 1; labor_dissent -= 5; rkp_relation -= 3
+
+The Unions emerge victorious, their practical, worker-focused messaging will surely win back lost voters!
+
+@reform
+on-arrival: {!
+if (Q.ideology && Q.ideology != "reformist") {
+    Q.changed = 1;
+}
+!}
+go-to: changed if changed = 1
+on-departure: ideology = "reformist"; reformist_strength += 10; democratization += 1; reformist_dissent -= 5; z_relation += 5; kadets_relation += 5; rkp_relation -= 8; moderate_plan_support += 1
+
+With no counterweight to hold them back, the Reformists and Liquidationists of the Party manage to exert their influence, calling for the preservation the Republic against monarchist and radical voices, expanding the party's electorate, and expanded cooperation with democratic parties, bourgeois or otherwise.
