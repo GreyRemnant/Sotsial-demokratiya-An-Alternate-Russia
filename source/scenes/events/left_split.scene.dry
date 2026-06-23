@@ -41,7 +41,7 @@ We have adopted Reformist rhetoric.
 @marxghost
 subtitle: Using the power of Enlightened Centrism, Kautskyism, and the sheer willpower of the few remaining in our party, Martov summons the Spirit of Karl Marx himself to save Russian Socialism.
 unavailable-subtitle: There has to be at least one faction in the Party that can still lead us, right? Right, Tovarisch Martov? Tovarisch Martov... are you there?
-choose-if: rdp_formed = 1 and unions_independent = 1 and centrists_resign = 1
+view-if: reformists_resign = 1 and unions_independent = 1 and centrists_resign = 1
 on-arrival: ideology = "partydeath"
 go-to: rsrpi_formed if centrists_resign = 1 and not rsrpi_formed
 
