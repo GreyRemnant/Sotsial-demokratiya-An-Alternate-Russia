@@ -143,6 +143,8 @@ State Duma composition:
 RSDRP: [+ rsdrp_r +]%
 [? if rsrpi_formed and rsrpi_r > 0: RSRPI: [+ rsrpi_r +]% ?]
 # 1928: 15, 1930: 15, 1932: 
+[? if rdp_formed and rdp_r > 0: RDP: [+ rdp_r +]% ?]
+# 1928: 15, 1930: 15, 1932: 
 PSR: [+ psr_r +]%
 # 1928: 10, 1930: 13
 RKP: [+ rkp_r +]%
@@ -244,6 +246,8 @@ RSDRP: [+ rsdrp_votes +]%
 
 [? if rsrpi_formed: RSRPI: [+ rsrpi_votes +]% ?]
 
+[? if rdp_formed: RDP: [+ rdp_votes +]% ?]
+
 # 1928: 15, 1930: 15, 1932: 
 PSR: [+ psr_votes +]%
 
@@ -272,17 +276,17 @@ Other Leftists: [+ otherleft_votes +]%
 
 **Detailed results for each demographic**
 
-Workers: RSDRP: [+ workers_rsdrp_display +]%, PSR: [+ workers_psr_display +]%, RKP: [+ workers_rkp_display +]%, [+ musavat_name +]: [+ workers_musavat_display +]%, K-D: [+ workers_kadets_display +]%; VS: [+ workers_vs_display +]%, NTS: [+ workers_nts_display +]%, Other Leftists: [+ workers_otherleft_display +]%, Others: [+ workers_other_display +]% [? if rsrpi_formed: RSRPI: [+ workers_rsrpi_display +]% ?], PLSRI: [+ workers_plsr_display +]%
+Workers: RSDRP(O): [+ workers_rsdrp_display +]%, PSR: [+ workers_psr_display +]%, RKP: [+ workers_rkp_display +]%, [? if not musavat_name: Müsavat?][? if musavat_name != 0 : [+ musavat_name +]?]: [+ workers_musavat_display +]%, K-D: [+ workers_kadets_display +]%; VS: [+ workers_vs_display +]%, NTS: [+ workers_nts_display +]%, Other Leftists: [+ workers_otherleft_display +]%, Others: [+ workers_other_display +]%, [? if rsrpi_formed: RSRPI: [+ workers_rsrpi_display +]%, ?] [? if rdp_formed: RDP: [+ workers_rdp_display +]%, ?] PLSRI: [+ workers_plsr_display +]%
 
-New Middle Class: RSDRP: [+ new_middle_rsdrp_display +]%, PSR: [+ new_middle_psr_display +]%, RKP: [+ new_middle_rkp_display +]%, [+ musavat_name +]: [+ new_middle_musavat_display +]%, K-D: [+ new_middle_kadets_display +]%; VS: [+ new_middle_vs_display +]%, NTS: [+ new_middle_nts_display +]%, Other Leftists: [+ new_middle_otherleft_display +]%, Others: [+ new_middle_other_display +]% [? if rsrpi_formed: RSRPI: [+ new_middle_rsrpi_display +]% ?], PLSRI: [+ new_middle_plsr_display +]%
+New Middle Class: RSDRP(O): [+ new_middle_rsdrp_display +]%, PSR: [+ new_middle_psr_display +]%, RKP: [+ new_middle_rkp_display +]%, [? if not musavat_name: Müsavat?][? if musavat_name != 0 : [+ musavat_name +]?]: [+ new_middle_musavat_display +]%, K-D: [+ new_middle_kadets_display +]%; VS: [+ new_middle_vs_display +]%, NTS: [+ new_middle_nts_display +]%, Other Leftists: [+ new_middle_otherleft_display +]%, Others: [+ new_middle_other_display +]%, [? if rsrpi_formed: RSRPI: [+ new_middle_rsrpi_display +]%, ?] [? if rdp_formed: RDP: [+ new_middle_rdp_display +]%, ?]  PLSRI: [+ new_middle_plsr_display +]%
 
-Old Middle Class: RSDRP: [+ old_middle_rsdrp_display +]%, PSR: [+ old_middle_psr_display +]%, RKP: [+ old_middle_rkp_display +]%, [+ musavat_name +]: [+ old_middle_musavat_display +]%, K-D: [+ old_middle_kadets_display +]%; VS: [+ old_middle_vs_display +]%, NTS: [+ old_middle_nts_display +]%, Other Leftists: [+ old_middle_otherleft_display +]%, Others: [+ old_middle_other_display +]% [? if rsrpi_formed: RSRPI: [+ old_middle_rsrpi_display +]% ?], PLSRI: [+ old_middle_plsr_display +]%
+Old Middle Class: RSDRP(O): [+ old_middle_rsdrp_display +]%, PSR: [+ old_middle_psr_display +]%, RKP: [+ old_middle_rkp_display +]%, [? if not musavat_name: Müsavat?][? if musavat_name != 0 : [+ musavat_name +]?]: [+ old_middle_musavat_display +]%, K-D: [+ old_middle_kadets_display +]%; VS: [+ old_middle_vs_display +]%, NTS: [+ old_middle_nts_display +]%, Other Leftists: [+ old_middle_otherleft_display +]%, Others: [+ old_middle_other_display +]%, [? if rsrpi_formed: RSRPI: [+ old_middle_rsrpi_display +]%, ?] [? if rdp_formed: RDP: [+ old_middle_rdp_display +]%, ?] PLSRI: [+ old_middle_plsr_display +]%
 
-Rural: RSDRP: [+ rural_rsdrp_display +]%, PSR: [+ rural_psr_display +]%, RKP: [+ rural_rkp_display +]%, [+ musavat_name +]: [+ rural_musavat_display +]%, K-D: [+ rural_kadets_display +]%; VS: [+ rural_vs_display +]%, NTS: [+ rural_nts_display +]%, Other Leftists: [+ rural_otherleft_display +]%, Others: [+ rural_other_display +]% [? if rsrpi_formed: RSRPI: [+ rural_rsrpi_display +]% ?], PLSRI: [+ rural_plsr_display +]%
+Rural: RSDRP(O): [+ rural_rsdrp_display +]%, PSR: [+ rural_psr_display +]%, RKP: [+ rural_rkp_display +]%, [? if not musavat_name: Müsavat?][? if musavat_name != 0 : [+ musavat_name +]?]: [+ rural_musavat_display +]%, K-D: [+ rural_kadets_display +]%; VS: [+ rural_vs_display +]%, NTS: [+ rural_nts_display +]%, Other Leftists: [+ rural_otherleft_display +]%, Others: [+ rural_other_display +]%, [? if rsrpi_formed: RSRPI: [+ rural_rsrpi_display +]%, ?] [? if rdp_formed: RDP: [+ rural_rdp_display +]%, ?] PLSRI: [+ rural_plsr_display +]%
 
-Unemployed: RSDRP: [+ unemployed_rsdrp_display +]%, PSR: [+ unemployed_psr_display +]%, RKP: [+ unemployed_rkp_display +]%, [+ musavat_name +]: [+ unemployed_musavat_display +]%, K-D: [+ unemployed_kadets_display +]%; VS: [+ unemployed_vs_display +]%, NTS: [+ unemployed_nts_display +]%, Other Leftists: [+ unemployed_otherleft_display +]%, Others: [+ unemployed_other_display +]% [? if rsrpi_formed: RSRPI: [+ unemployed_rsrpi_display +]% ?], PLSRI: [+ unemployed_plsr_display +]%
+Unemployed: RSDRP(O): [+ unemployed_rsdrp_display +]%, PSR: [+ unemployed_psr_display +]%, RKP: [+ unemployed_rkp_display +]%, [? if not musavat_name: Müsavat?][? if musavat_name != 0 : [+ musavat_name +]?]: [+ unemployed_musavat_display +]%, K-D: [+ unemployed_kadets_display +]%; VS: [+ unemployed_vs_display +]%, NTS: [+ unemployed_nts_display +]%, Other Leftists: [+ unemployed_otherleft_display +]%, Others: [+ unemployed_other_display +]%, [? if rsrpi_formed: RSRPI: [+ unemployed_rsrpi_display +]%, ?] [? if rdp_formed: RDP: [+ unemployed_rdp_display +]%, ?] PLSRI: [+ unemployed_plsr_display +]%
 
-Catholics: RSDRP: [+ catholics_rsdrp_display +]%, PSR: [+ catholics_psr_display +]%, RKP: [+ catholics_rkp_display +]%, [+ musavat_name +]: [+ catholics_musavat_display +]%, K-D: [+ catholics_kadets_display +]%; VS: [+ catholics_vs_display +]%, NTS: [+ catholics_nts_display +]%, Other Leftists: [+ catholics_otherleft_display +]%, Others: [+ catholics_other_display +]% [? if rsrpi_formed: RSRPI: [+ catholics_rsrpi_display +]% ?], PLSRI: [+ catholics_plsr_display +]%
+Catholics: RSDRP(O): [+ catholics_rsdrp_display +]%, PSR: [+ catholics_psr_display +]%, RKP: [+ catholics_rkp_display +]%, [? if not musavat_name: Müsavat?][? if musavat_name != 0 : [+ musavat_name +]?]: [+ catholics_musavat_display +]%, K-D: [+ catholics_kadets_display +]%; VS: [+ catholics_vs_display +]%, NTS: [+ catholics_nts_display +]%, Other Leftists: [+ catholics_otherleft_display +]%, Others: [+ catholics_other_display +]%, [? if rsrpi_formed: RSRPI: [+ catholics_rsrpi_display +]%, ?] [? if rdp_formed: RDP: [+ catholics_rdpi_display +]%, ?] PLSRI: [+ catholics_plsr_display +]%
 
 @parties
 go-to: menu
@@ -315,7 +319,7 @@ Current relations: [+ plsri_relation : relationships +]
 
 Current relations: [+ rkp_relation : relationships +]
 
-[? if rsrpi_formed: <span style="color: #d84c4c;">**SRPR**</span> - *Sotsialisticheskaya Rabočaja partiya* (Socialist Labor Party of Russia) - a party recently formed in a split from the RSDRP(O), the SRPR is essentially an agglomeration of various left-wing splinter groups between the RSRDP(O) and PLSRI. ?]
+[? if rsrpi_formed: <span style="color: #d84c4c;">**rsrpi**</span> - *Rossiyskaya Sotsialisticheskaya Rabočaja Partiya Internatsionalistov* (Russian Socialist Labor Party of Internationalists) - a party recently formed in a split from the RSDRP(O), the RSRPI is essentially an agglomeration of various left-wing splinter groups between the RSRDP(O) and RKP(B), but is mainly composed of our old Left-wing. ?]
 
 <span style="color: #F9DA00;">**NTS**</span> - *Narodno-trudovoy Soyuz Rossiyskikh Solidaristov* - (National Alliance of Russian Solidarists, or Solidarists) - a far-right ultranationalist, corporatist, and reactionary party. Led by Duke Sergei Nikolaevich Leuchtenberg, many of their members and leaders supported monarchist and nationalist groups in the Civil War.
 
