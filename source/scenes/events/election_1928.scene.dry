@@ -109,10 +109,10 @@ Q.left_coalition = Q.rsdrp_r + Q.rkp_r + Q.rsrpi_r;
 // this is an absurd concept lol
 Q.popular_front_coalition = Q.rsdrp_r + Q.rkp_r + Q.psr_r + Q.musavat_r - 3 + Q.rsrpi_r;
 Q.anti_democratic_coalition = Q.rkp_r + Q.nts_r + Q.vs_r + Q.plsr_r;
-// aka everyone except nazi, rkp, vs
+// aka everyone except solidarist, rkp, vs
 Q.neo_trudovaya_coalition = Q.rsdrp_r + Q.musavat_r + Q.psr_r + Q.kadets_r + Q.other_r;
-// Hitler + Right-wing parties (only comes into effect if you've alienated Z too badly)
-Q.hitler_right_coalition = Q.psr_r + Q.vs_r + Q.nts_r;
+// Leuchtenberg + Right-wing parties (only comes into effect if you've alienated Z too badly)
+Q.leuchtenberg_right_coalition = Q.psr_r + Q.vs_r + Q.nts_r;
 // Progressive coalition isn't going to be implemented as a distinct coalition but it's the coalition that lets you pass improved women's rights/gay rights
 Q.progressive_coalition = Q.rsdrp_r + Q.rkp_r + Q.otherleft_r + Q.rsrpi_r;
 Q.noway_coalition = Q.rsdrp_r + Q.nts_r;
@@ -410,7 +410,7 @@ The RKP has taken an abstentionist position with regards to ministries. They cla
 @popular_front_civil_war
 on-arrival: rkp_relation = 80; reichswehr_loyalty += 0.25;
 
-In response to the RKP's entrance into the government, the right-wing immediately launches a coup attempt. Troops of the Stahlhelm and Nazi SA enter Berlin and immediately begin clashing with our supporters! Reactionary officers within the Reichswehr have taken their troops out of the barracks and joined them with the Stahlhelm to stop us from taking power.
+In response to the RKP's entrance into the government, the right-wing immediately launches a coup attempt. Troops of the Stahlhelm and Solidarist SA enter Berlin and immediately begin clashing with our supporters! Reactionary officers within the Reichswehr have taken their troops out of the barracks and joined them with the Stahlhelm to stop us from taking power.
 
 The Center manages to diffuse some of the hostility from the Reichswehr and the Stahlhelm, but fail to prevent the outbreak of fighting. We are forced to fight on the same side as the RKP, whether we want to or not.
 
@@ -425,35 +425,35 @@ view-if: far_right_coalition >= 50
 go-to: far_right_win if (year >= 1932 or nts_r >= 44) and president != "Braun"; far_right_fail if (year < 1932 and nts_r < 44) and president != "Braun"; far_right_braun if president == "Braun"
 priority: 2
 
-There are enough votes for the Nazis and the VS to form a coalition. [+ nts_leader +] has made his participation in government contingent on being appointed chancellor. It is up to President [+ president +] to decide.
+There are enough votes for the Solidarists and the VS to form a coalition. [+ nts_leader +] has made his participation in government contingent on being appointed chancellor. It is up to President [+ president +] to decide.
 
 @far_right_win
 on-arrival: chancellor = nts_leader; chancellor_party = "NTS"
 
 [? if president == "Hindenburg" : President Hindenburg's camarilla ?][? if president == "Braun" : President Braun somehow ?] has decided that [+ nts_leader +] must be chancellor [? if president == "Hindenburg": , and the aging president accepts their recommendations. ?][? if president == "Braun" : because it is what the constitution would stipulate. ?]
 
-- @hitler_takes_power: What do we do now?
+- @leuchtenberg_takes_power: What do we do now?
 
 
 @far_right_fail
 on-arrival: chancellor = "Schleicher"; chancellor_party = "I"; pro_republic -= 10; next_election_time = time+5; next_election_month = month + 5; next_election_year = year; next_election_year += 1 if next_election_month > 12; next_election_month -= 12 if next_election_month > 12;
 
-The reactionary establishment is still very skeptical of the Nazis, so instead, [+ president +] appoints Kurt von Schleicher, a former general, as chancellor, to try to "tame" the Nazis.
+The reactionary establishment is still very skeptical of the Solidarists, so instead, [+ president +] appoints Kurt von Schleicher, a former general, as chancellor, to try to "tame" the Solidarists.
 
-Schleicher's government is deeply unpopular among all parties of the State Duma. Despite his support for a coalition with the NTS, the Nazis want power all to themselves, without Schleicher.
+Schleicher's government is deeply unpopular among all parties of the State Duma. Despite his support for a coalition with the NTS, the Solidarists want power all to themselves, without Schleicher.
 
 New elections have been set for [+ next_election_month : month +] [+ next_election_year +].
 
 @far_right_braun
 on-arrival: coup_progress += 2
 
-President Braun faces a dilemma. Is it "democratic" to let democracy be destroyed, if the majority of voters have willed it so? Some, even on the left, suggest that the Nazis would not *truly* be as horrific as their platform suggests, and that giving them power would let them discredit themselves in the eyes of the public.
+President Braun faces a dilemma. Is it "democratic" to let democracy be destroyed, if the majority of voters have willed it so? Some, even on the left, suggest that the Solidarists would not *truly* be as horrific as their platform suggests, and that giving them power would let them discredit themselves in the eyes of the public.
 
 Alternatively, Braun could use the emergency powers of the presidency. Article 48 has been used by Hindenburg to promulgate anti-democratic and anti-worker policies; can Article 48 be used for good as well as evil?
 
 - @emergency_braun: We will form an emergency government with Braun's support.
 - @new_elections: We will have new elections.
-- @far_right_win: Let the Nazis form their government.
+- @far_right_win: Let the Solidarists form their government.
 
 
 @left_coalition
@@ -494,7 +494,7 @@ With great reluctance, President [+ president +] appoints [+ chancellor +] as ch
 
 Immediately, [+ chancellor +] goes to work building a "Soviet Germany": consolidating as much power as possible in the RKP, purging state institutions of anti-communists, and sending street fighters against the "enemies of the people".
 
-In response to [+ chancellor +] being appointed Chancellor, the right-wing forces launches almost immediately launch an attempted coup. Troops of the Stahlhelm and Nazi SA enter Berlin and immediately begin clashing with our supporters! Reactionary officers within the Reichswehr have taken their troops out of the barracks and joined them with the Stahlhelm to stop the RKP from taking power. We are forced to be on the same side as the RKP, whether we want to or not.
+In response to [+ chancellor +] being appointed Chancellor, the right-wing forces launches almost immediately launch an attempted coup. Troops of the Stahlhelm and Solidarist SA enter Berlin and immediately begin clashing with our supporters! Reactionary officers within the Reichswehr have taken their troops out of the barracks and joined them with the Stahlhelm to stop the RKP from taking power. We are forced to be on the same side as the RKP, whether we want to or not.
 
 - @civil_war
 
@@ -535,7 +535,7 @@ Whatever their reasoning is, the RSDRP has control over the ministries of govern
 @left_coalition_civil_war
 on-arrival: reichswehr_loyalty += 0.1
 
-In response to the RKP's entrance into the government, the right-wing immediately launches a coup attempt. Troops of the Stahlhelm and Nazi SA enter Berlin and begin clashing with our supporters. Reactionary officers within the Reichswehr have taken their troops out of the barracks and joined them with the Stahlhelm to stop us from taking power.
+In response to the RKP's entrance into the government, the right-wing immediately launches a coup attempt. Troops of the Stahlhelm and Solidarist SA enter Berlin and begin clashing with our supporters. Reactionary officers within the Reichswehr have taken their troops out of the barracks and joined them with the Stahlhelm to stop us from taking power.
 
 - @civil_war: A civil war, then.
 
@@ -587,7 +587,7 @@ go-to: no_majority_bruning if chancellor = "Brüning" or chancellor = "Wirth"; n
 
 # TODO: if there is an anti-democratic coalition majority, you should appoint Papen.
 
-# either new elections, or Hindenburg appoints either Brüning, Papen, Schleicher, or Hitler.
+# either new elections, or Hindenburg appoints either Brüning, Papen, Schleicher, or Leuchtenberg.
 
 @no_majority_rsdrp
 on-arrival: chancellor = "Brüning"; chancellor_party = "PSR"
@@ -722,25 +722,25 @@ on-arrival: chancellor = "Schleicher"; pro_republic -= 10; next_election_time = 
 
 There is no path to a majority government. Hindenburg is displeased with Papen, and calls on him to resign. Now, former army general Kurt von Schleicher has been appointed chancellor, again as part of a presidential government.
 
-Schleicher's government is deeply unpopular among all parties of the State Duma. Despite his support for a coalition with the NTS, the Nazis want power all to themselves, without Schleicher.
+Schleicher's government is deeply unpopular among all parties of the State Duma. Despite his support for a coalition with the NTS, the Solidarists want power all to themselves, without Schleicher.
 
 New elections have been set for [+ next_election_month : month +] [+ next_election_year +].
 
 
 @no_majority_schleicher
-go-to: hitler_chancellor
+go-to: leuchtenberg_chancellor
 
 # TODO: there should be a second Schleicher option if the NTS isn't the strongest
 
 
-@hitler_chancellor
-on-arrival: chancellor = "Hitler"; chancellor_party = "NTS"
+@leuchtenberg_chancellor
+on-arrival: chancellor = "Leuchtenberg"; chancellor_party = "NTS"
 
-There is no path to a majority government for now. The scheming around President Hindenburg is leading to only one path - that of Chancellor Adolf Hitler. [? if largest_party == "NTS" : Since they are the largest party, it is not exactly contrary to parliamentary procedure, so it is difficult to raise objections solely on procedural grounds. ?] [? if hitler_deported: Despite his earlier deportation, the Nazi leaders and their reactionary allies have connived for the president to give him German citizenship after all. ?]
+There is no path to a majority government for now. The scheming around President Hindenburg is leading to only one path - that of Chancellor Sergey Leuchtenberg. [? if largest_party == "NTS" : Since they are the largest party, it is not exactly contrary to parliamentary procedure, so it is difficult to raise objections solely on procedural grounds. ?] [? if leuchtenberg_deported: Despite his earlier deportation, the Solidarist leaders and their reactionary allies have connived for the president to give him German citizenship after all. ?]
 
-- @hitler_takes_power: What now?
+- @leuchtenberg_takes_power: What now?
 
-# if NTS is largest party and Hindenburg is president, then Hindenburg appoints Hitler chancellor.
+# if NTS is largest party and Hindenburg is president, then Hindenburg appoints Leuchtenberg chancellor.
 
 @rsdrp_majority
 title: RSDRP majority alone
@@ -821,7 +821,7 @@ Our experts have checked the constitution, and have discovered that there is no 
 Thus, we have Chancellor-President Otto Braun. He claims that he will resign as soon as the economic-political crisis is over. The right-wing parties, who were once clamoring to replace parliamentary rule with dictatorship or monarchy, are now clamoring for the restoration of democracy.
 
 - @far_right_coup
-- @emergency_no_confidence: The Nazis immediately call a no-confidence vote against us...
+- @emergency_no_confidence: The Solidarists immediately call a no-confidence vote against us...
 
 @breitscheid_emergency_chancellor
 subtitle: The Communists are warming to him...
@@ -865,7 +865,7 @@ Their numbers are bolstered by the many government workers who are against the p
 
 
 @emergency_no_confidence
-title: The Nazis immediately call a no-confidence vote against us...
+title: The Solidarists immediately call a no-confidence vote against us...
 view-if: far_right_coalition < 45
 on-arrival: psr_no_confidence = 1 if psr_relation < 45; rkp_no_confidence = 1 if rkp_relation < 45; other_no_confidence = 1 if (psr_relation + kadets_relation)/2 < 45; kadets_no_confidence = 1 if kadets_relation < 45; sa_strength += 200; sh_strength += 200; no_confidence_votes = nts_r + vs_r; no_confidence_votes += psr_r if psr_no_confidence; no_confidence_votes += kadets_r if kadets_no_confidence; no_confidence_votes += rkp_r if rkp_no_confidence; no_confidence_votes += other_r if other_no_confidence; no_confidence_succeeds = 1 if no_confidence_votes > 50
 
@@ -1039,7 +1039,7 @@ if (Q.pro_republic < 45 && Q.pro_republic >= 36) {
     Q.workers_rsdrp -= 6;
 }
 if (Q.pro_republic < 36) {
-    // TODO: if you pursue a consistently revolutionary course, you might avoid this? But you might also cause a coalition between Hitler and the Center.
+    // TODO: if you pursue a consistently revolutionary course, you might avoid this? But you might also cause a coalition between Leuchtenberg and the Center.
     Q.psr_relation -= 5;
     Q.kadets_relation -= 5;
     Q.workers_rsdrp *= 0.85;
@@ -1063,7 +1063,7 @@ if (Q.far_right_coalition >= 50) {
 
 There is no path to a workable Duma majority or minority government. The next elections are set for [+ next_election_month : month +] [+ next_election_year +].
 
-The people's faith in democracy is shaken by this ordeal. Of course, the Nazis are exploiting the instability to claim that democracy is unworkable, and that Germany needs a strong leader.
+The people's faith in democracy is shaken by this ordeal. Of course, the Solidarists are exploiting the instability to claim that democracy is unworkable, and that Germany needs a strong leader.
 
 
 @toleration_bruning
