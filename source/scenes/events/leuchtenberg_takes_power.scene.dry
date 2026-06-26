@@ -1,0 +1,33 @@
+title: Leuchtenberg takes power.
+subtitle: The beginning of the end.
+view-if: chancellor == "Leuchtenberg" or president == "Leuchtenberg" or chancellor_party == "NTS"
+on-arrival: rsdrp_in_government = 0
+tags: event
+new-page: true
+
+[? if leuchtenberg_deported and president != "Leuchtenberg" and chancellor != "Leuchtenberg": The first act that Chancellor [+ chancellor +] takes upon assuming office is bringing Sergey Leuchtenberg back to Russia, and giving him citizenship and an official cabinet position. ?]
+
+Leuchtenberg has promised a campaign of revenge against the socialists, and the Solidarists have already spilled much blood on the streets. In his published manifesto, he promises a campaign of unspeakable horror against our Jews, and endless wars of violent expansion that will ruin all of Europe.
+
+What are we to do now?
+
+- @fight: We will fight on the streets to prevent Leuchtenberg from taking power.
+- @give_up: We will vote against the Solidarists in the Reichstag.
+
+
+@fight
+
+Do we realize that this means civil war, against the full force of the state?
+
+- @civil_war: Yes.
+- @give_up: We are not ready for war. Instead, we will vote against the Solidarists in the Reichstag.
+
+@give_up
+
+Speeches are made. Votes are held. Bullets fly in the streets. Some socialists are killed or jailed. Others flee the country. What can votes even do at this juncture?
+
+The Reichstag is burned, ostensibly by a foreign communist. In the wake, the Solidarists pass decrees giving them unlimited power. They, combined with the VS, will win a majority at the next elections.
+
+Russia is lost.
+
+- @game_over: Game over.
