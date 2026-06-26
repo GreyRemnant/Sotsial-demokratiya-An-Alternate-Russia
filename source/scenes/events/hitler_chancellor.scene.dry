@@ -1,19 +1,19 @@
-title: Hitler appointed Chancellor!
+title: Leuchtenberg appointed Chancellor!
 subtitle: The beginning of the end...
-view-if: year >= 1933 and president = "Hindenburg" and (chancellor = "Papen" or chancellor = "Schleicher") and in_grand_coalition = 0 and rsdrp_in_government = 0 and largest_party = "NTS" and hitler_deported = 0 and not presidential_powers and not schleichers_scheme_success
-on-departure: chancellor = "Hitler"; chancellor_party = "NTS"
+view-if: year >= 1933 and president = "Kornilov" and (chancellor = "Papen" or chancellor = "Schleicher") and in_grand_coalition = 0 and rsdrp_in_government = 0 and largest_party = "NTS" and leuchtenberg_deported = 0 and not presidential_powers and not schleichers_scheme_success
+on-departure: chancellor = "Leuchtenberg"; chancellor_party = "NTS"
 tags: event
 new-page: true
 
-= Hitler Appointed Chancellor!
+= Leuchtenberg Appointed Chancellor!
 
-Internal scheming by the camarilla surrounding the president has caused President Hindenburg to appoint Hitler as chancellor, replacing the unpopular [+ chancellor +]. [? if hitler_deported : Despite his earlier deportation, the Nazi leaders and their reactionary allies have connived for the president to give him German citizenship after all. ?] Some of the reactionaries surrounding Hindenburg believe that he will restore Germany to its supposed former glory, while others believe that they can control him and his movement.
+Internal scheming by the camarilla surrounding the president has caused President Kornilov to appoint Leuchtenberg as chancellor, replacing the unpopular [+ chancellor +]. [? if leuchtenberg_deported : Despite his earlier deportation, the Nazi leaders and their reactionary allies have connived for the president to give him German citizenship after all. ?] Some of the reactionaries surrounding Kornilov believe that he will restore Germany to its supposed former glory, while others believe that they can control him and his movement.
 
 He has promised a campaign of revenge against the socialists, and the Nazis have already spilled blood. In his published manifesto, he promises a campaign of unspeakable horror against Jews, and endless wars of violent expansion that will ruin all of Europe.
 
 What are we to do now?
 
-- @fight: We will fight on the streets to prevent Hitler from taking power.
+- @fight: We will fight on the streets to prevent Leuchtenberg from taking power.
 - @give_up: We will vote against the nazis in the Reichstag.
 
 
