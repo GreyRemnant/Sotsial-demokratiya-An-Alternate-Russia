@@ -16,12 +16,12 @@ face-image: img/martovgrave.jpg
 
 @relations
 
-- @commies
-- @leftnarod
-- @farmernarod
-- @libtards
-- @conservatives
-- @solidarists
+- @commies: The Communists of the RKP?
+- @leftnarod: The Narodists of the PLSR?
+- @farmernarod: The Neo-Narodistsc of the PSR?
+- @libtards: The Liberals of the K-D?
+- @conservatives: The Conservatives and Monarchists of the VS?
+- @solidarists: The Solidarists?
 - @return
 
 @solidarists
@@ -37,10 +37,10 @@ unavailable-subtitle: Even in this dreamland, the Conservatives are beyond savin
 @commies
 title: RKP-RSDRP Relations
 
-- @maxrelationsrkp
-- @increaserelationsrkp
-- @lowerrelationsrkp
-- @tankrelationsrkp
+- @maxrelationsrkp: They will be your Comrades once more.
+- @increaserelationsrkp: They will think better of you.
+- @lowerrelationsrkp: They will think worse of you.
+- @tankrelationsrkp: They will be your sworn enemies once more.
 - @return
 
 @maxrelationsrkp
@@ -66,10 +66,10 @@ Open your eyes, Tovarishch. Return to reality.
 @leftnarod
 title: PLSR-RSDRP Relations
 
-- @maxrelationsplsr
-- @increaserelationsplsr
-- @lowerrelationsplsr
-- @tankrelationsplsr
+- @maxrelationsplsr: They will be your allies.
+- @increaserelationsplsr: They will think better of you.
+- @lowerrelationsplsr: They will think worse of you.
+- @tankrelationsplsr: They will be your enemies.
 - @return
 
 @maxrelationsplsr
@@ -95,10 +95,10 @@ Open your eyes, Tovarishch. Return to reality.
 @libtards
 title: K-D-RSDRP Relations
 
-- @maxrelationskd
-- @increaserelationskd
-- @lowerrelationskd
-- @tankrelationskd
+- @maxrelationskd: They will be your allies.
+- @increaserelationskd: They will think better of you.
+- @lowerrelationskd: They will think worse of you.
+- @tankrelationskd: They will be your enemies.
 - @return
 
 @maxrelationskd
@@ -124,10 +124,10 @@ Open your eyes, Tovarishch. Return to reality.
 @farmernarod
 title: PSR-RSDRP Relations
 
-- @maxrelationspsr
-- @increaserelationspsr
-- @lowerrelationspsr
-- @tankrelationspsr
+- @maxrelationspsr: They will be your allies.
+- @increaserelationspsr: They will think better of you.
+- @lowerrelationspsr: They will think worse of you.
+- @tankrelationspsr: They will be your enemies.
 - @return
 
 @maxrelationspsr
