@@ -112,13 +112,13 @@ Q.kadets_relation = 35;
 Q.VS_relation = 10;
 Q.NTS_relation = 0;
 
-Q.rkp_leader = "Thälmann";
+Q.rkp_leader = "Zinoviev";
 // alternative is the Conciliators as party leader
-Q.rkp_party_leader = "Thälmann";
-Q.psr_leader = "Brüning";
-// party leader - can be Ludwig Kaas, Joseph Joos, or Adam Stegerwald after the 1928 December conference. Joos will be most friendly to the RSDRP.
-Q.psr_party_leader = "Marx";
-Q.nts_leader = "Hitler";
+Q.rkp_party_leader = "Zinoviev";
+Q.psr_leader = "Chernov";
+// party leader - can be Alexander Kerensky, Nikolay Avksentyev, or Adam Stegerwald after the 1928 December conference. Avksentyev will be most friendly to the RSDRP.
+Q.psr_party_leader = "Chernov";
+Q.nts_leader = "Leuchtenberg";
 
 // hmm... maybe we can play nice with Kornilov???
 Q.kornilov_relation = 25;
@@ -128,7 +128,7 @@ Q.kornilov_enabled = 0;
 
 // Does the RSDRP lead in Prussia?
 Q.rsdrp_prussia = 1;
-// Options: rsdrp, z, vs, papen, nts
+// Options: rsdrp, psr, vs, papen, nts
 Q.prussian_government = "RSDRP";
 
 // The array of forces - paramilitary groups
@@ -605,7 +605,7 @@ new-page: true
 
 > *"Such a general development cannot be attributed to the false tactics of any single party or to the mistakes of individual leaders. On the contrary, the conduct of individual leaders is determined largely by the sentiments of the people as a whole. It would be erroneous, however, to regard the sentiments of the moment as reflecting the natural make-up and character of the people. They are merely the consequence of the special circumstances which have brought about this profound degradation of the entire nation."*
 
- - Karl Kautsky, *Hitlerism and Social Democracy*, 1934
+ - Karl Kautsky, *Leuchtenbergism and Social Democracy*, 1934
 
 This is a game of alternate history. While historical accuracy is a major concern, keep in mind that this is a *game*, and that any divergence from actual events will necessarily have to involve some element of make-believe. Nevertheless, please let the author know if there are any glaring mistakes.
 

@@ -1,40 +1,46 @@
-title: Center Party Conference
-subtitle: The Center Party chooses their new leader...
-view-if: year = 1928 and month = 12 and z_party_leader = "Marx"
+title: Eser Party Conference
+subtitle: The PSR chooses their new leader...
+view-if: year = 1928 and month = 12 and psr_party_leader = "Chernov"
 max-visits: 1
+face-image: img/psrcongress.png
 tags: event
 new-page: true
 
-= Center Party Conference
+= PSR Conference
 
-# reference: Evans, Ellen L. “Adam Stegerwald and the Role of the Christian Trade Unions in the Weimar Republic.” The Catholic Historical Review 59, no. 4 (1974): 602–26.
+The Party of Socialist-Revolutionaries is holding their quadrennial party congress, this year's congress is expected to be divisive, with the various Narodist factions bickering more than ever after Chernov's decision to step down.
 
-Wilhelm Marx, former Center Party chancellor and presidential candidate, has chosen to resign from leadership of the Center Party. Now, the party holds a conference to replace him.
+The candidate championed by many Liberal-Narodists and sympathetic Centrists is Alexander Kerensky, the former Government Chairman. His election would mark a turn towards a liberalized form of Narodism, something he has been slowly leaning towards since the Eser's turned to the Liberals for governance.
 
-The consensus candidate on the right is Ludwig Kaas, a Catholic priest who represents the party's traditionalists. On the other hand, there is Joseph Joos, a leader of the Catholic trade unions, who has been more supportive of cooperation with the RSDRP than most of the Center Party.
+- @kerensky: Alexander Kerensky is elected as party chair.
+- @avksentyev: Nikolay Avksentyev is elected as party chair.
+- @odinets: Dmitry Odinets is, shockingly, elected as party chair.
+- @savinkov: Boris Savinkov is, somehow, elected as party chair.
 
-- @kaas: The Center Party elects Ludwig Kaas as the party chair.
-- @joos: Influence the Center Party to select Joseph Joos as the party chair.
-- @joos_campaign: We must hold a campaign in support of Joseph Joos as party chair.
+@kerensky
+choose-if: psr_right >=  psr_left and psr_relation >=35
+on-arrival: psr_party_leader = "Kerensky"; psr_relation -= 5
+face-image: img/kerenskywin.jpg
 
-@kaas
-on-arrival: z_party_leader = "Kaas"; z_relation -= 5
+Alexander Kerensky has been selected as the chairman of the Party of Socialist-Revolutionaries. He seems to represent a rightward turn from Chernov, with his history of liberal sympathies. He will preside over a Narodist Party less inclined to compromise with Socialists and more inclined to compromise with the Liberal parties.
 
-Ludwig Kaas has been selected as the chairman of the Center Party. He seems to represent a rightward turn from Marx, and will preside over a Center Party less inclined to compromise with the left.
+@avksentyev
+choose-if:psr_right <=  psr_left and psr_relation <=65
+on-arrival: psr_party_leader = "Avksentyev"; rural_rsdrp += 5; workers_psr += 3; psr_relation += 5
+face-image:img/avkwin.jpg
 
-@joos
-unavailable-subtitle: Our relations are not good enough.
-subtitle: Joos is likely to be friendlier to us than Kaas.
-choose-if: z_relation >= 70
-on-arrival: z_party_leader = "Joos"; catholics_rsdrp += 5; workers_z += 3
+Nikolay Avksentyev has emerged victorious in the Congress, and is the new SR Chairman! Avksentyev is a "Heidelberg Eser", and has been influenced by Marxism in the past, the feelings of goodwill between Socialists and Narodists appears to be renewed!
 
-With our grassroots connections, we have been able to influence the Center delegates to support Joseph Joos as the new Center chairman. He has long been a friend of the RSDRP, and will be more inclined to collaborate with us compared to Kaas. He also increases the appeal of the Center Party to the working class.
+@savinkov
+choose-if: psr_right = 10 and psr_relation >=10
+on-arrival: psr_party_leader = "Savinkov"; psr_relation -= 25
+face-image:img/SAVVY.jpg
 
-@joos_campaign
-choose-if: z_relation >= 62 and resources >= 1 
-view-if: z_relation < 70
-unavailable-subtitle: [? if z_relation <= 62 : Our relations are not good enough. ?] [? if resources < 1 : We do not have enough resources. ?]
-subtitle: -1 resource. Joos is likely to be friendlier to us than Kaas.
-on-arrival: resources -= 1; z_party_leader = "Joos"; catholics_rsdrp += 5; workers_z += 3
+To the shock and dismay of every democratic party, Boris Savinkov, the champion of Conservative, Nationalist, and anti-Democratic Narodism, has been elected Chariman of the PSR in an upset! The Party of Socialist-Revolutionaries is expected to split in half soon, now split between Savinkov's supporters and his many detractors. We should watch his "National-Narodism" closely...
 
-With our grassroots connections as well as a professional campaign, we have been able to influence the Center delegates to support Joseph Joos as the new Center chairman. He has long been a friend of the RSDRP, and will be more inclined to collaborate with us compared to Kaas. He also increases the appeal of the Center Party to the working class.
+@odinets
+choose-if: psr_right = 10 and psr_relation >=10
+on-arrival: psr_party_leader = "Odinets"; psr_relation -= 25
+face-image: img/odinets.jpg
+
+It appears the Conservatives of the PSR have emerged triumphant, as Dmitry Odinets, a Russian Nationalist and Narodist, has been elected party chairman. This is horrible for our relations, as Odinets is a known irredentist and nationalist.
