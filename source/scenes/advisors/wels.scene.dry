@@ -14,7 +14,7 @@ Martov is the long-time chairman of the RSDRP(O). He is a gifted organizer, orat
 - @emergency_fundraising
 - @snap_election
 - @root: Return to main
-- @dev: Enter my cheat menu.
+- @dev: *Enter the dreamland, Tovarishch Martov...*
 
 @clear_agenda
 title: Clear the agenda
@@ -65,4 +65,4 @@ We have called for new elections, set for [+ next_election_month : month +] [+ n
 title: Developer Cheat Menu
 subtitle: Comrade Martov, are you okay? Can you hear me?
 view-if: devmode = 1
-go-to: dev_scene
+go-to: source/scenes/events/dev_scene.dry
