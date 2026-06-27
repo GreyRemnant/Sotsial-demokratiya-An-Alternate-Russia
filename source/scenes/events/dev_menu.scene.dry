@@ -1,6 +1,5 @@
 title: The Dreamland
 tags: event
-new-page: true
 set-bg: img/dreams.png
 face-image: img/martovgrave.jpg
 
@@ -12,13 +11,13 @@ face-image: img/martovgrave.jpg
 - @money: Party Resources, Government Budget, and Economic Plans.
 - @support: Party Support.
 - @paramilitary: Paramilitary and Government Troops.
-- @return: Wake up, Tovarishch Martov, Russia needs you.
+- @return: Open your eyes, Tovarishch. Return to reality.
 
 @relations
 
 - @commies: The Communists of the RKP?
 - @leftnarod: The Narodists of the PLSR?
-- @farmernarod: The Neo-Narodistsc of the PSR?
+- @farmernarod: The Neo-Narodists of the PSR?
 - @libtards: The Liberals of the K-D?
 - @conservatives: The Conservatives and Monarchists of the VS?
 - @solidarists: The Solidarists?
@@ -46,22 +45,22 @@ title: RKP-RSDRP Relations
 @maxrelationsrkp
 on-arrival: rkp_relation += 500
 
-Open your eyes, Tovarishch. Return to reality.
+What else lies beyond the veil?
 
 @increaserelationsrkp
 on-arrival: rkp_relation += 25
 
-Open your eyes, Tovarishch. Return to reality.
+What else lies beyond the veil?
 
 @lowerrelationsrkp
 on-arrival: rkp_relation -= 25
 
-Open your eyes, Tovarishch. Return to reality.
+What else lies beyond the veil?
 
 @tankrelationsrkp
 on-arrival: rkp_relation -= 500
 
-Open your eyes, Tovarishch. Return to reality.
+What else lies beyond the veil?
 
 @leftnarod
 title: PLSR-RSDRP Relations
@@ -75,22 +74,22 @@ title: PLSR-RSDRP Relations
 @maxrelationsplsr
 on-arrival: plsr_relation += 500
 
-Open your eyes, Tovarishch. Return to reality.
+What else lies beyond the veil?
 
 @increaserelationsplsr
 on-arrival: plsr_relation += 25
 
-Open your eyes, Tovarishch. Return to reality.
+What else lies beyond the veil?
 
 @lowerrelationsplsr
 on-arrival: plsr_relation -= 25
 
-Open your eyes, Tovarishch. Return to reality.
+What else lies beyond the veil?
 
 @tankrelationsplsr
 on-arrival: plsr_relation -= 500
 
-Open your eyes, Tovarishch. Return to reality.
+What else lies beyond the veil?
 
 @libtards
 title: K-D-RSDRP Relations
@@ -104,22 +103,22 @@ title: K-D-RSDRP Relations
 @maxrelationskd
 on-arrival: kadets_relation += 500
 
-Open your eyes, Tovarishch. Return to reality.
+What else lies beyond the veil?
 
 @increaserelationskd
 on-arrival: kadets_relation += 25
 
-Open your eyes, Tovarishch. Return to reality.
+What else lies beyond the veil?
 
 @lowerrelationskd
 on-arrival: kadets_relation -= 25
 
-Open your eyes, Tovarishch. Return to reality.
+What else lies beyond the veil?
 
 @tankrelationskd
 on-arrival: kadets_relation -= 500
 
-Open your eyes, Tovarishch. Return to reality.
+What else lies beyond the veil?
 
 @farmernarod
 title: PSR-RSDRP Relations
@@ -133,22 +132,22 @@ title: PSR-RSDRP Relations
 @maxrelationspsr
 on-arrival: psr_relation += 500
 
-Open your eyes, Tovarishch. Return to reality.
+What else lies beyond the veil?
 
 @increaserelationspsr
 on-arrival: psr_relation += 25
 
-Open your eyes, Tovarishch. Return to reality.
+What else lies beyond the veil?
 
 @lowerrelationspsr
 on-arrival: psr_relation -= 25
 
-Open your eyes, Tovarishch. Return to reality.
+What else lies beyond the veil?
 
 @tankrelationspsr
 on-arrival: psr_relation -= 500
 
-Open your eyes, Tovarishch. Return to reality.
+What else lies beyond the veil?
 
 @money
 
@@ -177,24 +176,24 @@ title: You need support for a plan, hm?
 title: Socialization is your goal?
 on-arrival: nationalization_adopted = 1;
 
-Open your eyes, Tovarishch. Return to reality.
+What else lies beyond the veil?
 
 @reformistplan
 title: Moderation is your goal?
 on-arrival: moderate_plan_adopted = 1;
 
-Open your eyes, Tovarishch. Return to reality.
+What else lies beyond the veil?
 
 @laborplan
 title: Public Works are your goal?
 on-arrival: wtb_adopted = 1;
 
-Open your eyes, Tovarishch. Return to reality.
+What else lies beyond the veil?
 
 @paramilitary
-unavailable-subtitle: This path is cloudy and blocked.
+unavailable-subtitle: The path forwards is cloudy and blocked.
 choose-if: difficulty = -2
 
 @support
-unavailable-subtitle: This path is cloudy and blocked.
+unavailable-subtitle: The path forwards is cloudy and blocked.
 choose-if: difficulty = -2
