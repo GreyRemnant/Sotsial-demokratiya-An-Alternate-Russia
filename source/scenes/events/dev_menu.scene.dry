@@ -193,8 +193,8 @@ Open your eyes, Tovarishch. Return to reality.
 
 @paramilitary
 unavailable-subtitle: This path is cloudy and blocked.
-choose-if: game_over = 1;
+choose-if: difficulty = -2
 
 @support
 unavailable-subtitle: This path is cloudy and blocked.
-choose-if: game_over = 1;
+choose-if: difficulty = -2
