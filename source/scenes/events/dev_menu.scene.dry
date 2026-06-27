@@ -1,7 +1,9 @@
 title: The Dreamland
+subtitle: Are you okay, Tovarishch Martov?
 set-bg: img/dreams.png
 face-image: img/martovgrave.jpg
-view-if: difficulty = surreal
+view-if: difficulty = surreal and devmode = 1
+new-page: true
 
 = You feel strange.
 
