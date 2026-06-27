@@ -70,8 +70,6 @@ title: PSR-RSDRP Relations
 - @tankrelationspsr
 - @return
 
-//eser
-
 @maxrelationspsr
 on-arrival: psr_relation += 500
 
@@ -91,8 +89,6 @@ Open your eyes, Tovarishch. Return to reality.
 on-arrival: psr_relation -= 500
 
 Open your eyes, Tovarishch. Return to reality.
-
-//kd
 
 @maxrelationskd
 on-arrival: kadets_relation += 500
@@ -114,8 +110,6 @@ on-arrival: kadets_relation -= 500
 
 Open your eyes, Tovarishch. Return to reality.
 
-//plsr
-
 @maxrelationsplsr
 on-arrival: plsr_relation += 500
 
@@ -136,8 +130,6 @@ on-arrival: plsr_relation -= 500
 
 Open your eyes, Tovarishch. Return to reality.
 
-//rkp
-
 @maxrelationsrkp
 on-arrival: rkp_relation += 500
 
@@ -157,8 +149,6 @@ Open your eyes, Tovarishch. Return to reality.
 on-arrival: rkp_relation -= 500
 
 Open your eyes, Tovarishch. Return to reality.
-
-//money stuff
 
 @money
 
@@ -201,13 +191,9 @@ on-arrival: wtb_adopted = 1;
 
 Open your eyes, Tovarishch. Return to reality.
 
-//paramilitaries
-
 @paramilitary
 unavailable-subtitle: This path is cloudy and blocked.
 choose-if: game_over = 1;
-
-//support
 
 @support
 unavailable-subtitle: This path is cloudy and blocked.
