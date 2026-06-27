@@ -47,6 +47,26 @@ Q.dissent = 0.05;
 Q.dissent_percent = 5;
 Q.ideology = 0;
 
+// other parties
+Q.psr_right = 0;
+Q.psr_left = 0;
+Q.psr_savvy = 0;
+
+Q.kd_right = 0;
+Q.kd_left = 0;
+
+Q.vs_right = 0;
+Q.vs_left = 0;
+
+Q.mus_right = 0;
+Q.mus_left = 0;
+
+Q.rkp_concil = 0;
+Q.rkp_hardline = 0;
+
+Q.plsr_concil = 0;
+Q.plsr_hardline = 0;
+
 // factions
 Q.factions = ['left', 'center', 'labor', 'reformist', 'neorevisionist'];
 // should this be normalized to 100%?

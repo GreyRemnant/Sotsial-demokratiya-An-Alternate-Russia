@@ -12,9 +12,9 @@ max-visits: 12
 
 The RSDRP cannot govern by itself yet. Because we do not have an electoral majority, we need the support of other parties. Recently, our governments have consisted of the Weimar Coalition of the RSDRP, Center, and Democratic parties. We can reach out and build additional connections with these parties, or perhaps we can stand alone.
 
-- @liberals: Strengthen our bonds with the left-liberal German Democratic Party and conservative-liberal German People's Party.
-- @center: Strengthen our bonds with the Catholic Center Party.
-- @rkp: Work towards repairing relationships with the Communist Party.
+- @liberals: Strengthen our bonds with the Liberal Müsavat and Kadet Parties.
+- @eser: Strengthen our bonds with the Narodist PSR.
+- @rkp: Work towards repairing relationships with the Communists and Left Narodists.
 - @rsdrp_alone: The RSDRP can stand alone for now.
 - @easy_discard
 
@@ -27,7 +27,7 @@ on-arrival: resources -= 1; rkp_inter_party_seen += 1
 go-to: rkp_blutmai if blutmai = 1; rkp_1 if blutmai = 0 and rkp_coalition_success = 0 and (rkp_relation < 40 or rkp_rectified_history = 1); rkp_rectification_of_history if rkp_relation >= 40 and rkp_rectified_history = 0; rkp_2 if rkp_coalition_success = 1 and rkp_rectified_history = 1
 
 @rkp_1
-on-arrival: rkp_relation += 6*(1 - dissent); communist_coalition += 1 if rkp_inter_party_seen <= 1; reformist_dissent += 2; z_relation -= 2; kadets_relation -= 3
+on-arrival: rkp_relation += 6*(1 - dissent); communist_coalition += 1 if rkp_inter_party_seen <= 1; reformist_dissent += 2; psr_relation -= 2; kadets_relation -= 3
 
 The Left Esers are suspicious of our overtures, especially their Bolshevik faction, who persist in calling us "petty-bourgeois". However, connections are made at the grassroots and local levels.
 
@@ -41,7 +41,7 @@ For further improvements in PLSRI relations, it might be necessary to condemn th
 - @no_history: No, we have no need to apologize.
 
 @yes_history
-on-arrival: reformist_dissent += 12; reformist_strength -= 2; neorevisionist_dissent += 5; left_dissent -= 6; left_strength += 5; rkp_rectified_history = 1; z_relation -= 6; kadets_relation -= 6; musavat_relation -= 4; rkp_relation += 8*(1-dissent); coalition_dissent += 1
+on-arrival: reformist_dissent += 12; reformist_strength -= 2; neorevisionist_dissent += 5; left_dissent -= 6; left_strength += 5; rkp_rectified_history = 1; psr_relation -= 6; kadets_relation -= 6; musavat_relation -= 4; rkp_relation += 8*(1-dissent); coalition_dissent += 1
 
 As part of normalizing relations with the PLSRI, we have to acknowledge the wrongdoings of our past. We have condemned the army, and have held public commemorations for those killed by troops during the uprisings.
 
@@ -54,7 +54,7 @@ We have no need to apologize for the actions of the army and police; it is their
 
 
 @rkp_2
-on-arrival: rkp_relation += 8*(1 - dissent); communist_coalition += 1 if rkp_inter_party_seen <= 1; reformist_dissent += 2; z_relation -= 3; kadets_relation -= 3
+on-arrival: rkp_relation += 8*(1 - dissent); communist_coalition += 1 if rkp_inter_party_seen <= 1; reformist_dissent += 2; psr_relation -= 3; kadets_relation -= 3
 
 After the success of the coalition government with the PLSRI, they are much more amenable to us.
 
@@ -63,25 +63,25 @@ on-arrival: rkp_relation += 3*(1 - dissent); reformist_dissent += 1
 
 After the events of *Red Tuesday*, reconciling with the Communists is difficult, if not impossible. Nevertheless, we must try.
 
-@center
+@eser
 subtitle: -1 resources
 choose-if: resources >= 1
 unavailable-subtitle: Not enough resources.
-on-arrival: resources -= 1; z_relation += 2 if z_party_leader == "Joos"
-go-to: center_op if z_in_government = 1 and rsdrp_in_government = 0 and chancellor != "Brüning"; center_coalition if rsdrp_in_government = 1 and z_in_government = 1; center_bruning if chancellor = "Brüning"
+on-arrival: resources -= 1; psr_relation += 2 if psr_party_leader == "Avksentyev"
+go-to: center_op if psr_in_government = 1 and rsdrp_in_government = 0 and chancellor != "Brüning"; center_coalition if rsdrp_in_government = 1 and psr_in_government = 1; center_bruning if chancellor = "Brüning"
 
 @center_op
-on-arrival: z_relation += 5*(1 - dissent)
+on-arrival: psr_relation += 5*(1 - dissent)
 
 We are currently in opposition to the PSR-led government, but that does not preclude the general building of feelings of good will.
 
 @center_coalition
-on-arrival: z_relation += 8*(1 - dissent)
+on-arrival: psr_relation += 8*(1 - dissent)
 
 We are currently coalition partners with them, so improving relations comes naturally.
 
 @center_bruning
-on-arrival: z_relation += 5*(1 - dissent)
+on-arrival: psr_relation += 5*(1 - dissent)
 
 The semi-autocratic and conservative-leaning regime of Savinkov makes building friendly relations difficult, but not impossible.
 
