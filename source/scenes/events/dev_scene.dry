@@ -1,19 +1,18 @@
-title: Cheat Menu
+title: The Dreamland
+tags: event
 new-page: true
-on-arrival: month_actions += 1; media_timer += 6;
-card-image: img/NovayaZhizn.jpg
-#subtitle: Setting the direction for our newspapers and radio.
 set-bg: img/dreams.png
+face-image: img/martovgrave.jpg
 
-= Dev Cheat Menu
+= You feel strange.
 
-*Martov? Tovarishch? Can you hear me?
+*Tovarishch? Martov? Can you hear me?*
 
 - @relations: Party and International Relations.
 - @money: Party Resources, Government Budget, and Economic Plans.
 - @support: Party Support.
 - @paramilitary: Paramilitary and Government Troops.
-- @return: Wake up, Comrade Martov, *Russia needs you.*
+- @return: Wake up, Tovarishch Martov, Russia needs you.
 
 @relations
 
