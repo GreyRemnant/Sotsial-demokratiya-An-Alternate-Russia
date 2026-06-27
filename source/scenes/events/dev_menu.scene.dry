@@ -1,7 +1,7 @@
 title: The Dreamland
-tags: event
 set-bg: img/dreams.png
 face-image: img/martovgrave.jpg
+view-if: difficulty = surreal
 
 = You feel strange.
 
@@ -11,7 +11,7 @@ face-image: img/martovgrave.jpg
 - @money: Party Resources, Government Budget, and Economic Plans.
 - @support: Party Support.
 - @paramilitary: Paramilitary and Government Troops.
-- @return: Open your eyes, Tovarishch. Return to reality.
+- @root: Open your eyes, Tovarishch. Return to reality.
 
 @relations
 
@@ -35,6 +35,8 @@ unavailable-subtitle: Even in this dreamland, the Conservatives are beyond savin
 
 @commies
 title: RKP-RSDRP Relations
+
+The strings of reality lay before you.
 
 - @maxrelationsrkp: They will be your Comrades once more.
 - @increaserelationsrkp: They will think better of you.
@@ -65,6 +67,8 @@ What else lies beyond the veil?
 @leftnarod
 title: PLSR-RSDRP Relations
 
+The strings of reality lay before you.
+
 - @maxrelationsplsr: They will be your allies.
 - @increaserelationsplsr: They will think better of you.
 - @lowerrelationsplsr: They will think worse of you.
@@ -93,6 +97,8 @@ What else lies beyond the veil?
 
 @libtards
 title: K-D-RSDRP Relations
+
+The strings of reality lay before you.
 
 - @maxrelationskd: They will be your allies.
 - @increaserelationskd: They will think better of you.
@@ -123,6 +129,8 @@ What else lies beyond the veil?
 @farmernarod
 title: PSR-RSDRP Relations
 
+The strings of reality lay before you.
+
 - @maxrelationspsr: They will be your allies.
 - @increaserelationspsr: They will think better of you.
 - @lowerrelationspsr: They will think worse of you.
@@ -151,21 +159,29 @@ What else lies beyond the veil?
 
 @money
 
+The strings of reality lay before you.
+
 - @partycash
 - @govcash
 - @planning
 - @return
 
 @partycash
-title: You need wealth for the party, hm?
+title: Greed is a sin, Tovarishch, remember that.
 on-arrival: resources += 9999
 
+What else lies beyond the veil?
+
 @govcash
-title: You need wealth for the state, hm?
+title: Greed is a sin, Tovarishch, remember that.
 on-arrival: budget += 9999
 
+What else lies beyond the veil?
+
 @planning
-title: You need support for a plan, hm?
+title: Every crisis has a solution.
+
+The strings of reality lay before you.
 
 - @leftplan
 - @reformistplan
