@@ -5,14 +5,14 @@ on-arrival: {!
 Q.game_over = 1;
 // Achievements:
 // Große Koalition - form a grand coalition
-// Eiserne Front - Form the Iron Front.
+// Krasnoye Znamya - Form the Red Banner.
 this.achieve('game_completed');
 
 // Roter Zar von Preußen - At the end of the game, Otto Braun is president, chancellor, and minister-president of prussia at the same time.
 if (Q.president == 'Braun' && Q.chancellor == 'Braun' && Q.rsdrp_prussia) {
     this.achieve('red_tzar_of_prussia');
 }
-// Bürgerkrieg - enter a long civil war.
+// Grazhdanskaya voyna - enter a long civil war.
 if (Q.long_war) {
     this.achieve('civil_war');
 }
@@ -322,9 +322,9 @@ go-to: eg_menu if started == 1; root.start_menu_2 if started == 0
 = Completed Achievements in this Playthrough
 
 
-[? if game_achievement_eiserne_front : **Eiserne Front** - form the Iron Front. ?]
+[? if game_achievement_eiserne_front : **Krasnoye Znamya** - form the Red Banner. ?]
 
-[? if game_achievement_civil_war : **Bürgerkrieg** - enter a long civil war. ?]
+[? if game_achievement_civil_war : **Grazhdanskaya voyna** - enter a long civil war. ?]
 
 [? if game_achievement_einigkeit : **Einigkeit** - reach the end of the game without a civil war on easy. ?]
 
@@ -431,116 +431,116 @@ go-to: eg_menu if started == 1; root.start_menu_2 if started == 0
 = Completed Achievements Overall
 
 
-[? if achievement_eiserne_front : **Eiserne Front** - form the Iron Front. ?]
+[? if achievement_eiserne_front : **Krasnoye Znamya** - form the Red Banner. ?]
 
-[? if achievement_civil_war : **Bürgerkrieg** - enter a long civil war. ?]
+[? if achievement_civil_war : **Grazhdanskaya voyna** - enter a long civil war. ?]
 
-[? if achievement_einigkeit : **Einigkeit** - reach the end of the game without a civil war on easy. ?]
+[? if achievement_einigkeit : **Sotsial-demokratiya torzhestvuyet** - reach the end of the game without a civil war on easy. ?]
 
-[? if achievement_einigkeit_und_recht : **Einigkeit und Recht** - reach the end of the game without a civil war on normal. ?]
+[? if achievement_einigkeit_und_recht : **Trud i zemlya** - reach the end of the game without a civil war on normal. ?]
 
-[? if achievement_einigkeit_und_recht_und_freiheit : **Einigkeit und Recht und Freiheit** - reach the end of the game without a civil war on hard. ?]
+[? if achievement_einigkeit_und_recht_und_freiheit : **Simŭ pobědiši!** - reach the end of the game without a civil war on hard. ?]
 
-[? if achievement_schwarz_rot_gold : **Schwarz-Rot-Gold** - reach the end of the game without a civil war on historical mode. ?]
+[? if achievement_schwarz_rot_gold : **Belo-sine-krasnyy** - reach the end of the game without a civil war on historical mode. ?]
 
-[? if achievement_victory_for_the_republic: **Sieg für die Republik** - win the civil war. ?]
+[? if achievement_victory_for_the_republic: **Pobeda Respubliki** - win the civil war. ?]
 
-[? if achievement_bollwerk_der_demokratie: **Bollwerk der Demokratie** - Resist the Prussian Coup and win. ?]
+[? if achievement_bollwerk_der_demokratie: **Strazhi Demokratii** - Resist the Prussian Coup and win. ?]
 
-[? if achievement_red_tzar_of_prussia : **Roter Zar von Preußen** - Otto Braun is President, Chancellor, and Minister-President. ?]
+[? if achievement_red_tzar_of_prussia : **Diktatura sotsial-demokratii** - Otto Braun is President, Chancellor, and Minister-President. ?]
 
-[? if achievement_einheitsfront: **Einheitsfront** - Form a government consisting of the RSDRP and RKP. ?]
+[? if achievement_einheitsfront: **Ob"yedinennyy front** - Form a government consisting of the RSDRP and RKP. ?]
 
-[? if achievement_einheitsfront_2: **Sieg für die Einheitsfront** - Form a Left Front that survives the RKP demands. ?]
+[? if achievement_einheitsfront_2: **Pobeda Ob"yedinennogo fronta** - Form a Left Front that survives the RKP demands. ?]
 
-[? if achievement_volksfront: **Volksfront** - Form a government consisting of the RSDRP, RKP, Z, and Müsavat. ?]
+[? if achievement_volksfront: **Narodnyy front** - Form a government consisting of the RSDRP, RKP, Z, and Müsavat. ?]
 
-[? if achievement_grosse_volksfront: **Große Volksfront** - With Joos leading the Center Party and the Conciliators leading the RKP, form a government consisting of the RSDRP, RKP, Z, and Müsavat. ?]
+[? if achievement_grosse_volksfront: **Velikiy narodnyy front** - With Joos leading the Center Party and the Conciliators leading the RKP, form a government consisting of the RSDRP, RKP, Z, and Müsavat. ?]
 
-[? if achievement_volksfront_2: **Sieg für die Volksfront** - Form a Popular Front that survives the RKP demands. ?]
+[? if achievement_volksfront_2: **Triumf Narodnogo fronta** - Form a Popular Front that survives the RKP demands. ?]
 
-[? if achievement_constitutional_coalition: **Verfassungskoalition** - form a "constitutional coalition". ?]
+[? if achievement_constitutional_coalition: **Fevral'skaya koalitsiya** - form a "constitutional coalition". ?]
 
-[? if achievement_weimar_coalition: **Weimarer Koalition** - form a Weimar coalition. ?]
+[? if achievement_weimar_coalition: **Trudovaya koalitsiya** - form a Labor coalition. ?]
 
-[? if achievement_majority_party: **Mehrheitspartei** - form an RSDRP-only majority government. ?]
+[? if achievement_majority_party: **Demokratiya proletariata** - form an RSDRP-only majority government. ?]
 
-[? if achievement_minderheitsregierung: **Minderheitsregierung** - form an RSDRP minority government. ?]
+[? if achievement_minderheitsregierung: **Diktatura men'shinstva** - form an RSDRP minority government. ?]
 
-[? if achievement_volkspartei: **Volkspartei** - the RSDRP is a People's Party. ?]
+[? if achievement_volkspartei: **Bol'shaya palatka** - the RSDRP is a People's Party. ?]
 
-[? if achievement_sohn_seiner_klasse: **Sohn seiner Klasse** - Ernst Thälmann is either president or chancellor. ?]
+[? if achievement_sohn_seiner_klasse: **Bludnyy syn** - Ernst Thälmann is either president or chancellor. ?]
 
-[? if achievement_rote_millionar: **Der rote Millionär** - Willi Münzenberg is president. ?]
+[? if achievement_rote_millionar: **Primiritel'** - Vladimir Milyutin is president. ?]
 
-[? if achievement_versohnler: **Versöhnler** - the Conciliators lead the RKP. ?]
+[? if achievement_versohnler: **Osvobozhdeniye truda** - the Conciliators lead the RKP. ?]
 
-[? if achievement_deport_hitler : **Der österreichische Gefreite** - deported Hitler ?]
+[? if achievement_deport_hitler : **Politicheskiy zaklyuchennyy** - arrested Leuchtenberg ?]
 
-[? if achievement_wirtschaftspolitik: **Wirtschaftspolitik** - enact an economic plan. ?]
+[? if achievement_wirtschaftspolitik: **Ekonomicheskoye planirovaniye** - enact an economic plan. ?]
 
-[? if achievement_wirtschaftswunder: **Wirtschaftswunder** - After 1932, have unemployment less than in 1928, inflation below 5%, and a budget surplus. ?]
+[? if achievement_wirtschaftswunder: **Ekonomicheskoye chudo** - After 1932, have unemployment less than in 1928, inflation below 5%, and a budget surplus. ?]
 
-[? if achievement_wirtschaftsexperiment: **Wirtschaftsexperiment** - enact two different economic plans. ?]
+[? if achievement_wirtschaftsexperiment: **Odin plan, dva plana** - enact two different economic plans. ?]
 
-[? if achievement_freie_marktwirtschaft: **Freie Marktwirtschaft** - survive to the end of the game without adopting an economic plan. ?]
+[? if achievement_freie_marktwirtschaft: **Prosveshchennyy tsentrizm** - survive to the end of the game without adopting an economic plan. ?]
 
-[? if achievement_equality: **Gleichheit** - pass reforms for women's rights. ?]
+[? if achievement_equality: **Zhenskoye ravnopraviye** - pass reforms for women's rights. ?]
 
-[? if achievement_hirschfeld: **Hirschfeld** - pass reforms for homosexual rights. ?]
+[? if achievement_hirschfeld: **Progressivizm** - pass reforms for homosexual rights. ?]
 
-[? if achievement_women_reichsbanner: **Mädchen in Uniform** - a woman's place is in the Reichsbanner. ?]
+[? if achievement_women_reichsbanner: **Ledi Smert'** - a woman's place is in the Reichsbanner. ?]
 
-[? if achievement_anders_als_die_andern: **Anders als die Andern** - sexual minorities will defend the Republic. ?]
+[? if achievement_anders_als_die_andern: **Prava transgenderov — eto prava cheloveka.** - sexual minorities will defend the Republic. ?]
 
-[? if achievement_bruder_zur_sonne: **Brüder, zur Sonne, zur Freiheit** - reduce unemployment, pause reparations, increase women's rights, elect an RSDRP president, and deport Hitler in one playthrough on at least normal difficulty. ?]
+[? if achievement_bruder_zur_sonne: **Smelo, tovarishchi, v nogu!** - reduce unemployment, pause reparations, increase women's rights, elect an RSDRP president, and deport Hitler in one playthrough on at least normal difficulty. ?]
 
-[? if achievement_die_rote_fahne: **Die Rote Fahne** - join the RKP in their May Day march. ?]
+[? if achievement_die_rote_fahne: **Klassovaya voyna** - join the RKP in their May Day march. ?]
 
-[? if achievement_panik_im_mittelstand: **Panik im Mittelstand** - RSDRP new middle class support is at least 50%. ?]
+[? if achievement_panik_im_mittelstand: **Panika sredi intelligentsii** - RSDRP new middle class support is at least 50%. ?]
 
-[? if achievement_bauernrevolution: **Bauernrevolution** - RSDRP rural support is at least 50%. ?]
+[? if achievement_bauernrevolution: **Narodnichestvo** - RSDRP rural support is at least 50%. ?]
 
-[? if achievement_katholischer_sozialismus: **Katholischer Sozialismus** - RSDRP Catholic support is at least 50%. ?]
+[? if achievement_katholischer_sozialismus: **Khristianskiy Sotsializm** - RSDRP Catholic support is at least 50%. ?]
 
-[? if achievement_grosse_volkspartei: **Große Volkspartei** - All classes have at least 40% RSDRP support. ?]
+[? if achievement_grosse_volkspartei: **Ot men'shinstva k bol'shinstvu** - All classes have at least 40% RSDRP support. ?]
 
-[? if achievement_klassenkampf: **Klassenkampf** - RSDRP worker support is at least 80%, while middle-class and rural supports are less than 20%. ?]
+[? if achievement_klassenkampf: **Klassovaya bor'ba** - RSDRP worker support is at least 80%, while middle-class and rural supports are less than 20%. ?]
 
-[? if achievement_raterepublik: **Räterepublik** - begin the transformation to a socialist economy. ?]
+[? if achievement_raterepublik: **Sotsialisticheskaya Respublika** - begin the transformation to a socialist economy. ?]
 
-[? if achievement_polykrise: **Polykrise** - survive a capital strike and a fascist coup. ?]
+[? if achievement_polykrise: **Polikrizis** - survive a capital strike and a fascist coup. ?]
 
-[? if achievement_syndikalismus: **Syndikalismus** - support factory takeovers by the workers. ?]
+[? if achievement_syndikalismus: **Sindikalizm** - support factory takeovers by the workers. ?]
 
-[? if achievement_drei_pfeile: **Drei Pfeile** - defeat a coup without a civil war. ?]
+[? if achievement_drei_pfeile: **Padshiy oktyabr;** - defeat a coup without a civil war. ?]
 
-[? if achievement_ausnahmezustand: **Ausnahmezustand** - use emergency powers to cancel elections. ?]
+[? if achievement_ausnahmezustand: **Diktatura partii** - use emergency powers to cancel elections. ?]
 
-[? if achievement_eu: **Vereinigte Staaten von Europa** - form a "European Union". ?]
+[? if achievement_eu: **Sodruzhestvo Nezavisimykh Gosudarstv** - form a "Eurasian Union". ?]
 
-[? if achievement_heidelberger_programm: **Heidelberger Programm** - achieve the goals of the RSDRP's Heidelberg Program: social welfare, judicial reform, women's rights in the workplace and family, progressive taxation, works councils, and the formation of a European Union. ?]
+[? if achievement_heidelberger_programm: **Volgogradskaya programma** - achieve the goals of the RSDRP's Heidelberg Program: social welfare, judicial reform, women's rights in the workplace and family, progressive taxation, works councils, and the formation of a European Union. ?]
 
-[? if achievement_verfassungsreform: **Verfassungsreform** - pass a constitutional amendment. ?]
+[? if achievement_verfassungsreform: **Konstitutsionnaya reforma** - pass a constitutional amendment. ?]
 
 [? if achievement_zeppelin_kapitan : **Zeppelinkapitän** - Hugo Eckener has been elected president. ?]
 
 [? if achievement_wahlrechts : **Wahlrechts für Frauen** - Marie Juchacz has been elected president. ?]
 
-[? if achievement_bundesrepublik : **Bundesrepublik** - Konrad Adenauer or Kurt Schumacher has been elected president, and constitutional reforms have reduced presidential power. ?]
+[? if achievement_bundesrepublik : **Demokraticheskaya Federativnaya Respublika** - Konrad Adenauer or Kurt Schumacher has been elected president, and constitutional reforms have reduced presidential power. ?]
 
 [? if achievement_republik_der_wissenschaft : **Republik der Wissenschaft** - Albert Einstein has been elected president. ?]
 
-[? if achievement_arbeiter_von_wien : **Arbeiter von Wien** - SDAPÖ victory in Austria. ?]
+[? if achievement_arbeiter_von_wien : **Arbeiter von Europa** - Social Democracy survives in Germany and Austria. ?]
 
-[? if achievement_stolperstein: **Stolperstein** - we lost, but history might memorialize us... ?]
+[? if achievement_stolperstein: **Na svalku istorii!** - we lost, but history might memorialize us... ?]
 
 
 = Incomplete Achievements
 
-[? if not achievement_eiserne_front : **Eiserne Front** - form the Iron Front. ?]
+[? if not achievement_eiserne_front : **Krasnoye Znamya** - form the Red Banner. ?]
 
-[? if not achievement_civil_war : **Bürgerkrieg** - enter a long civil war. ?]
+[? if not achievement_civil_war : **Grazhdanskaya voyna** - enter a long civil war. ?]
 
 [? if not achievement_einigkeit : **Einigkeit** - reach the end of the game without a civil war on easy. ?]
 
