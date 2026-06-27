@@ -43,6 +43,26 @@ title: RKP-RSDRP Relations
 - @tankrelationsrkp
 - @return
 
+@maxrelationsrkp
+on-arrival: rkp_relation += 500
+
+Open your eyes, Tovarishch. Return to reality.
+
+@increaserelationsrkp
+on-arrival: rkp_relation += 25
+
+Open your eyes, Tovarishch. Return to reality.
+
+@lowerrelationsrkp
+on-arrival: rkp_relation -= 25
+
+Open your eyes, Tovarishch. Return to reality.
+
+@tankrelationsrkp
+on-arrival: rkp_relation -= 500
+
+Open your eyes, Tovarishch. Return to reality.
+
 @leftnarod
 title: PLSR-RSDRP Relations
 
@@ -52,6 +72,26 @@ title: PLSR-RSDRP Relations
 - @tankrelationsplsr
 - @return
 
+@maxrelationsplsr
+on-arrival: plsr_relation += 500
+
+Open your eyes, Tovarishch. Return to reality.
+
+@increaserelationsplsr
+on-arrival: plsr_relation += 25
+
+Open your eyes, Tovarishch. Return to reality.
+
+@lowerrelationsplsr
+on-arrival: plsr_relation -= 25
+
+Open your eyes, Tovarishch. Return to reality.
+
+@tankrelationsplsr
+on-arrival: plsr_relation -= 500
+
+Open your eyes, Tovarishch. Return to reality.
+
 @libtards
 title: K-D-RSDRP Relations
 
@@ -60,6 +100,26 @@ title: K-D-RSDRP Relations
 - @lowerrelationskd
 - @tankrelationskd
 - @return
+
+@maxrelationskd
+on-arrival: kadets_relation += 500
+
+Open your eyes, Tovarishch. Return to reality.
+
+@increaserelationskd
+on-arrival: kadets_relation += 25
+
+Open your eyes, Tovarishch. Return to reality.
+
+@lowerrelationskd
+on-arrival: kadets_relation -= 25
+
+Open your eyes, Tovarishch. Return to reality.
+
+@tankrelationskd
+on-arrival: kadets_relation -= 500
+
+Open your eyes, Tovarishch. Return to reality.
 
 @farmernarod
 title: PSR-RSDRP Relations
@@ -87,66 +147,6 @@ Open your eyes, Tovarishch. Return to reality.
 
 @tankrelationspsr
 on-arrival: psr_relation -= 500
-
-Open your eyes, Tovarishch. Return to reality.
-
-@maxrelationskd
-on-arrival: kadets_relation += 500
-
-Open your eyes, Tovarishch. Return to reality.
-
-@increaserelationskd
-on-arrival: kadets_relation += 25
-
-Open your eyes, Tovarishch. Return to reality.
-
-@lowerrelationskd
-on-arrival: kadets_relation -= 25
-
-Open your eyes, Tovarishch. Return to reality.
-
-@tankrelationskd
-on-arrival: kadets_relation -= 500
-
-Open your eyes, Tovarishch. Return to reality.
-
-@maxrelationsplsr
-on-arrival: plsr_relation += 500
-
-Open your eyes, Tovarishch. Return to reality.
-
-@increaserelationsplsr
-on-arrival: plsr_relation += 25
-
-Open your eyes, Tovarishch. Return to reality.
-
-@lowerrelationsplsr
-on-arrival: plsr_relation -= 25
-
-Open your eyes, Tovarishch. Return to reality.
-
-@tankrelationsplsr
-on-arrival: plsr_relation -= 500
-
-Open your eyes, Tovarishch. Return to reality.
-
-@maxrelationsrkp
-on-arrival: rkp_relation += 500
-
-Open your eyes, Tovarishch. Return to reality.
-
-@increaserelationsrkp
-on-arrival: rkp_relation += 25
-
-Open your eyes, Tovarishch. Return to reality.
-
-@lowerrelationsrkp
-on-arrival: rkp_relation -= 25
-
-Open your eyes, Tovarishch. Return to reality.
-
-@tankrelationsrkp
-on-arrival: rkp_relation -= 500
 
 Open your eyes, Tovarishch. Return to reality.
 
