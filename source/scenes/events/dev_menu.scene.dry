@@ -169,19 +169,22 @@ The strings of reality lay before you.
 - @return
 
 @partycash
-title: Greed is a sin, Tovarishch, remember that.
+title: Party Resources
+subtitle: Greed is a sin, Tovarishch, remember that.
 on-arrival: resources += 9999
 
 What else lies beyond the veil?
 
 @govcash
-title: Greed is a sin, Tovarishch, remember that.
+title: Government Budget
+subtitle: Greed is a sin, Tovarishch, remember that.
 on-arrival: budget += 9999
 
 What else lies beyond the veil?
 
 @planning
-title: Every crisis has a solution.
+title: Economic Plans
+subtitle: Every crisis has a solution.
 
 The strings of reality lay before you.
 
