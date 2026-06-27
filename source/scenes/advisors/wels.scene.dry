@@ -65,4 +65,4 @@ We have called for new elections, set for [+ next_election_month : month +] [+ n
 title: Developer Cheat Menu
 subtitle: Comrade Martov, are you awake? Can you hear me?
 view-if: devmode = 1
-go-to: devscene.dry
+go-to: source/scenes/events/dev_scene.dry
