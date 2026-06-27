@@ -1,0 +1,215 @@
+title: Cheat Menu
+new-page: true
+on-arrival: month_actions += 1; media_timer += 6;
+card-image: img/NovayaZhizn.jpg
+#subtitle: Setting the direction for our newspapers and radio.
+set-bg: img/dreams.png
+
+= Dev Cheat Menu
+
+*Martov? Tovarishch? Can you hear me?
+
+- @relations: Party and International Relations.
+- @money: Party Resources, Government Budget, and Economic Plans.
+- @support: Party Support.
+- @paramilitary: Paramilitary and Government Troops.
+- @return: Wake up, Comrade Martov, *Russia needs you.*
+
+@relations
+
+- @commies
+- @leftnarod
+- @farmernarod
+- @libtards
+- @conservatives
+- @solidarists
+- @return
+
+@solidarists
+title: NTS-RSDRP Relations
+choose-if: ideology = "partydeath"
+unavailable-subtitle: Even in this dreamland, the Solidarists are beyond saving.
+
+@conservatives
+title: VS-RSDRP Relations
+choose-if: ideology = "partydeath"
+unavailable-subtitle: Even in this dreamland, the Conservatives are beyond saving.
+
+@commies
+title: RKP-RSDRP Relations
+
+- @maxrelationsrkp
+- @increaserelationsrkp
+- @lowerrelationsrkp
+- @tankrelationsrkp
+- @return
+
+@leftnarod
+title: PLSR-RSDRP Relations
+
+- @maxrelationsplsr
+- @increaserelationsplsr
+- @lowerrelationsplsr
+- @tankrelationsplsr
+- @return
+
+@libtards
+title: K-D-RSDRP Relations
+
+- @maxrelationskd
+- @increaserelationskd
+- @lowerrelationskd
+- @tankrelationskd
+- @return
+
+@farmernarod
+title: PSR-RSDRP Relations
+
+- @maxrelationspsr
+- @increaserelationspsr
+- @lowerrelationspsr
+- @tankrelationspsr
+- @return
+
+//eser
+
+@maxrelationspsr
+on-arrival: psr_relation += 500
+
+Open your eyes, Tovarishch. Return to reality.
+
+@increaserelationspsr
+on-arrival: psr_relation += 25
+
+Open your eyes, Tovarishch. Return to reality.
+
+@lowerrelationspsr
+on-arrival: psr_relation -= 25
+
+Open your eyes, Tovarishch. Return to reality.
+
+@tankrelationspsr
+on-arrival: psr_relation -= 500
+
+Open your eyes, Tovarishch. Return to reality.
+
+//kd
+
+@maxrelationskd
+on-arrival: kadets_relation += 500
+
+Open your eyes, Tovarishch. Return to reality.
+
+@increaserelationskd
+on-arrival: kadets_relation += 25
+
+Open your eyes, Tovarishch. Return to reality.
+
+@lowerrelationskd
+on-arrival: kadets_relation -= 25
+
+Open your eyes, Tovarishch. Return to reality.
+
+@tankrelationskd
+on-arrival: kadets_relation -= 500
+
+Open your eyes, Tovarishch. Return to reality.
+
+//plsr
+
+@maxrelationsplsr
+on-arrival: plsr_relation += 500
+
+Open your eyes, Tovarishch. Return to reality.
+
+@increaserelationsplsr
+on-arrival: plsr_relation += 25
+
+Open your eyes, Tovarishch. Return to reality.
+
+@lowerrelationsplsr
+on-arrival: plsr_relation -= 25
+
+Open your eyes, Tovarishch. Return to reality.
+
+@tankrelationsplsr
+on-arrival: plsr_relation -= 500
+
+Open your eyes, Tovarishch. Return to reality.
+
+//rkp
+
+@maxrelationsrkp
+on-arrival: rkp_relation += 500
+
+Open your eyes, Tovarishch. Return to reality.
+
+@increaserelationsrkp
+on-arrival: rkp_relation += 25
+
+Open your eyes, Tovarishch. Return to reality.
+
+@lowerrelationsrkp
+on-arrival: rkp_relation -= 25
+
+Open your eyes, Tovarishch. Return to reality.
+
+@tankrelationsrkp
+on-arrival: rkp_relation -= 500
+
+Open your eyes, Tovarishch. Return to reality.
+
+//money stuff
+
+@money
+
+- @partycash
+- @govcash
+- @planning
+- @return
+
+@partycash
+title: You need wealth for the party, hm?
+on-arrival: resources += 9999
+
+@govcash
+title: You need wealth for the state, hm?
+on-arrival: budget += 9999
+
+@planning
+title: You need support for a plan, hm?
+
+- @leftplan
+- @reformistplan
+- @laborplan
+- @return
+
+@leftplan
+title: Socialization is your goal?
+on-arrival: nationalization_adopted = 1;
+
+Open your eyes, Tovarishch. Return to reality.
+
+@reformistplan
+title: Moderation is your goal?
+on-arrival: moderate_plan_adopted = 1;
+
+Open your eyes, Tovarishch. Return to reality.
+
+@laborplan
+title: Public Works are your goal?
+on-arrival: wtb_adopted = 1;
+
+Open your eyes, Tovarishch. Return to reality.
+
+//paramilitaries
+
+@paramilitary
+unavailable-subtitle: This path is cloudy and blocked.
+choose-if: game_over = 1;
+
+//support
+
+@support
+unavailable-subtitle: This path is cloudy and blocked.
+choose-if: game_over = 1;

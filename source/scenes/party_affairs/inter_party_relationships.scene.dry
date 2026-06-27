@@ -54,7 +54,7 @@ We have no need to apologize for the actions of the army and police; it is their
 
 
 @rkp_2
-on-arrival: rkp_relation += 8*(1 - dissent); communist_coalition += 1 if rkp_inter_party_seen <= 1; reformist_dissent += 2; psr_relation -= 3; kadets_relation -= 3
+on-arrival: rkp_relation += 8*(1 - dissent); communist_coalition += 1 if rkp_inter_party_seen <= 1; reformist_dissent += 2; v; kadets_relation -= 3
 
 After the success of the coalition government with the PLSRI, they are much more amenable to us.
 
