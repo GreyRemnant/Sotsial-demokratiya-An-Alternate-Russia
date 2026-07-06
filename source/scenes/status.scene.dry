@@ -21,7 +21,7 @@ if (Q.economic_growth) {
 
 Resources available: [+ resources +]
 
-RSDRP(O) position: [? if rsdrp_toleration : toleration ?][? if rsdrp_in_government : in government - ?][? if rsdrp_toleration == 0 and rsdrp_in_government == 0 and rsdrp_caretaker == 0 : opposition ?][? if rsdrp_caretaker : caretaker government ?]
+{!<span class="tooltip-text" title="The Russian Social Democratic Labor Party (United)"><span style="color: #ED1B34;">RSDRP(O)</span></span>!} position: [? if rsdrp_toleration : toleration ?][? if rsdrp_in_government : in government - ?][? if rsdrp_toleration == 0 and rsdrp_in_government == 0 and rsdrp_caretaker == 0 : opposition ?][? if rsdrp_caretaker : caretaker government ?]
 [? if in_weimar_coalition and rsdrp_in_government: Weimar Coalition ?][? if in_vremennyy_coalition and rsdrp_in_government: Vremennyy Coalition ?][? if in_popular_front and rsdrp_in_government: Popular Front ?][? if in_left_front and rsdrp_in_government: Left Front ?][? if in_rsdrp_majority and rsdrp_in_government: RSDRP majority ?][? if in_minority_government and rsdrp_in_government: minority government ?][? if in_emergency_government and rsdrp_in_government: emergency government ?]
 
 [? if rsdrp_in_government and not in_rsdrp_majority and not in_left_front : Coalition dissent: [+ coalition_dissent : coalition_dissent +] ?]
@@ -66,15 +66,13 @@ Other Leftists: [+ otherleft_r +]%
 
 Next election: [+ next_election_month : month +] [+ next_election_year +]
 
-= Economics
+= {!<span class="tooltip-text" title="Stock Exchange News">Birzhevyie Vedomosti</span>!}
 
 Inflation: [+ inflation_2 +]%
 
 [? if black_thursday_seen = 1 : Unemployment: [+ unemployed_2 +]% ?]
 
-Economic growth: [+ economic_growth_2 +]%
-
-
+Economic Growth: [+ economic_growth_2 +]%
 
 # = Public Opinion
 
@@ -201,7 +199,7 @@ Q.nationalism_disp = Math.round(Q.nationalism);
 Q.socialism_disp = Math.round(Q.socialism);
 !}
 
-Projected election results
+**{!<span class="tooltip-text" title="Government Gazette Election Polling">Pravitel'stvennyy Byulleten Election Polling</span>!}**
 
 (if the election were to be held now):
 
@@ -229,7 +227,15 @@ Projected election results
 
 {!<span class="tooltip-text" title="Other Center-Left to Left-wing Parties"><span style="color: #ff0000;">L</span></span>!}: [+ otherleft_votes +]%
 
-**Detailed results for each demographic**
+**{!<span class="tooltip-text" title="Government Gazette National Polling">Pravitel'stvennyy Byulleten National Polling</span>!}**
+
+Support for Republicanism: [+ pro_republic_disp +]%
+
+Support for Russian Nationalism: [+ nationalism_disp +]%
+
+Support for Socialism: [+ socialism_disp +]%
+
+**{!<span class="tooltip-text" title="Government Gazette Demographic Polling">Pravitel'stvennyy Byulleten Demographic Polling</span>!}**
 
 Workers: RSDRP(O): [+ workers_rsdrp_display +]%, PSR: [+ workers_psr_display +]%, RKP: [+ workers_rkp_display +]%, [? if not musavat_name: Müsavat?][? if musavat_name != 0 : [+ musavat_name +]?]: [+ workers_musavat_display +]%, K-D: [+ workers_kadets_display +]%; VS: [+ workers_vs_display +]%, NTS: [+ workers_nts_display +]%, Other Leftists: [+ workers_otherleft_display +]%, Others: [+ workers_other_display +]%, [? if rsrpi_formed: RSRPI: [+ workers_rsrpi_display +]%, ?] [? if rdp_formed: RDP: [+ workers_rdp_display +]%, ?] PLSRI: [+ workers_plsr_display +]%
 
@@ -243,8 +249,3 @@ Unemployed: RSDRP(O): [+ unemployed_rsdrp_display +]%, PSR: [+ unemployed_psr_di
 
 Catholics: RSDRP(O): [+ catholics_rsdrp_display +]%, PSR: [+ catholics_psr_display +]%, RKP: [+ catholics_rkp_display +]%, [? if not musavat_name: Müsavat?][? if musavat_name != 0 : [+ musavat_name +]?]: [+ catholics_musavat_display +]%, K-D: [+ catholics_kadets_display +]%; VS: [+ catholics_vs_display +]%, NTS: [+ catholics_nts_display +]%, Other Leftists: [+ catholics_otherleft_display +]%, Others: [+ catholics_other_display +]%, [? if rsrpi_formed: RSRPI: [+ catholics_rsrpi_display +]%, ?] [? if rdp_formed: RDP: [+ catholics_rdpi_display +]%, ?] PLSRI: [+ catholics_plsr_display +]%
 
-Support for Republicanism: [+ pro_republic_disp +]%
-
-Support for Russian Nationalism: [+ nationalism_disp +]%
-
-Support for Socialism: [+ socialism_disp +]%
