@@ -68,7 +68,6 @@ Next election: [+ next_election_month : month +] [+ next_election_year +]
 
 = Economics
 
-
 Inflation: [+ inflation_2 +]%
 
 [? if black_thursday_seen = 1 : Unemployment: [+ unemployed_2 +]% ?]
@@ -85,9 +84,9 @@ Economic growth: [+ economic_growth_2 +]%
 
 = Inter-party Relations
 
-[? if rsrpi_formed = 1: {!<span class="tooltip-text" title="The Russian Socialist Worker's Party of Internationalists, our old Internationalist wing. Socialist, Marxist, and opposed to Liberal cooperation."><span style="color: #d84c4c;">SRPR</span></span>!}: <span style="color: #80FF00 ;">**Warm**</span> ?]
+[? if rsrpi_formed = 1: {!<span class="tooltip-text" title="The Russian Socialist Worker's Party of Internationalists, our old Internationalist wing. Socialist, Marxist, and opposed to Liberal cooperation."><span style="color: #d84c4c;">RSRPI</span></span>!}: <span style="color: #80FF00 ;">**Warm**</span> ?]
 
-[? if rdp_formed = 1: {!<span class="tooltip-text" title="The Radical-Democratic Party, our old Right wing. Socialist, Marxist, and opposed to Liberal cooperation."><span style="color: #d84c4c;">SRPR</span></span>!}: <span style="color: #80FF00 ;">**Warm**</span> ?]
+[? if rdp_formed = 1: {!<span class="tooltip-text" title="The Radical-Democratic Party, our old Right wing. Socialist, Marxist, and opposed to Liberal cooperation."><span style="color: #d84c4c;">RDP</span></span>!}: <span style="color: #80FF00 ;">**Warm**</span> ?]
 
 {!<span class="tooltip-text" title="Party of Socialist-Revolutionaries"><span style="color: #b4121a;">PSR</span></span>!}: [+ psr_relation : relationships +]
 
@@ -101,7 +100,7 @@ Economic growth: [+ economic_growth_2 +]%
 
 {!<span class="tooltip-text" title="All-Russian Union"><span style="color: #004090;">VS</span></span>!}: [+ vs_relation : relationships +]
 
-{!<span class="tooltip-text" title="National Alliance of Russian Solidarists (Solidarists)"><span style="color: #F9DA00;">NTS</span></span>!}: [+ nts_relation : relationships +]
+{!<span class="tooltip-text" title="National Alliance of Russian Solidarists "><span style="color: #F9DA00;">NTS</span></span>!}: [+ nts_relation : relationships +]
 
 {!<span class="tooltip-text" title="Other Center-Left to Left-wing Parties"><span style="color: #ff0000;">L</span></span>!}: <span style="color: #80FF00 ;">**Friendly**</span>
 
@@ -117,7 +116,7 @@ Economic growth: [+ economic_growth_2 +]%
 
 {!<span class="tooltip-text" title="The Russian Social Democratic Labor Party (United), this is us, Socialist, Marxist, and United."><span style="color: #ED1B34;">RSDRP(O)</span></span>!}: [? if ideology = 0: Social Democracy (Interim Collective Leadership) ?] [? if ideology = "centrist": Menshevism (Martov/Axelrod) ?] [? if ideology = "left" : Orthodox Marxism (Martov/Abramovitch) ?]  [? if ideology = "reformist": Ethical Socialism (Martov/Potresov) ?] [? if ideology = "labor": Labor Menshevism (Martov/Voitinsky) ?] [? if ideology = "partydeath": Classical Marxism (The Ghost of Karl Marx) ?]
 
-[? if rdp_formed = 1: {!<span class="tooltip-text" title="The Radical-Democratic Party, our old right-wing. Social Democratic, Laborist, and firmly against cooperation with radicals, left or right. Their existence has had the effect of turning the Kadets rightwards, as disgruntled Left-Kadets have been defecting to the RDP."><span style="color: #F0456A;">RDp</span></span>!}: Liberal Socialism (Struve) ?]
+[? if rdp_formed = 1: {!<span class="tooltip-text" title="The Radical-Democratic Party, our old right-wing. Social Democratic, Laborist, and firmly against cooperation with radicals, left or right. Their existence has had the effect of turning the Kadets rightwards, as disgruntled Left-Kadets have been defecting to the RDP."><span style="color: #F0456A;">RDP</span></span>!}: Liberal Socialism (Struve) ?]
 
 {!<span class="tooltip-text" title="The informal grouping of many small, minority-focused, or regionalist Socialist and Narodist parties."><span style="color: #ff0000;">Other Leftists</span></span>!}: Socialism (Various)
 
@@ -208,29 +207,27 @@ Projected election results
 
 RSDRP(O): [+ rsdrp_votes +]%
 
-[? if rsrpi_formed: RSRPI: [+ rsrpi_votes +]% ?]
+[? if rsrpi_formed: {!<span class="tooltip-text" title="The Russian Socialist Worker's Party of Internationalists"><span style="color: #d84c4c;">RSRPI</span></span>!}: [+ rsrpi_votes +]% ?]
 
-[? if rdp_formed: RDP: [+ rdp_votes +]% ?]
+[? if rdp_formed: {!<span class="tooltip-text" title="The Radical-Democratic Party"><span style="color: #d84c4c;">RDP</span></span>!}: [+ rdp_votes +]% ?]
 
-Müsavat: [+ musavat_votes +]%
+{!<span class="tooltip-text" title="Müsavat Party"><span style="color: #3bb9ff;">Müsavat</span></span>!}: [+ musavat_votes +]%
 
-RKP(B): [+ rkp_votes +]%
+{!<span class="tooltip-text" title="Russian Communist Party (Bolsheviks)"><span style="color: #D40000;">RKP(B)</span></span>!}: [+ rkp_votes +]%
 
-PLSRI: [+ plsr_votes +]%
+{!<span class="tooltip-text" title="Party of Left-Socialist-Revolutionaries-Internationalists"><span style="color: #990000;">PLSRI</span></span>!}: [+ plsr_votes +]%
 
-PSR: [+ psr_votes +]%
+{!<span class="tooltip-text" title="Party of Socialist-Revolutionaries"><span style="color: #b4121a;">PSR</span></span>!}: [+ psr_votes +]%
 
-[? if not musavat_name: Müsavat?][? if musavat_name != 0 : [+ musavat_name +]?]: [+ musavat_votes +]%
+{!<span class="tooltip-text" title="Constitutional-Democratic Party"><span style="color: #0087dc;">K-D</span></span>!}: [+ kadets_votes +]%
 
-Kadets: [+ kadets_votes +]%
+{!<span class="tooltip-text" title="All-Russian Union"><span style="color: #004090;">VS</span></span>!}: [+ vs_votes +]%
 
-VS: [+ vs_votes +]%
+{!<span class="tooltip-text" title="National Alliance of Russian Solidarists"><span style="color: #F9DA00;">NTS</span></span>!}:: [+ nts_votes +]%
 
-NTS: [+ nts_votes +]%
+{!<span class="tooltip-text" title="Other Center-Right to Right-wing Parties"><span style="color: #F48100;">P</span></span>!}: [+ other_votes +]%
 
-Others Rightists: [+ other_votes +]%
-
-Others Leftists: [+ otherleft_votes +]%
+{!<span class="tooltip-text" title="Other Center-Left to Left-wing Parties"><span style="color: #ff0000;">L</span></span>!}: [+ otherleft_votes +]%
 
 **Detailed results for each demographic**
 
@@ -246,4 +243,8 @@ Unemployed: RSDRP(O): [+ unemployed_rsdrp_display +]%, PSR: [+ unemployed_psr_di
 
 Catholics: RSDRP(O): [+ catholics_rsdrp_display +]%, PSR: [+ catholics_psr_display +]%, RKP: [+ catholics_rkp_display +]%, [? if not musavat_name: Müsavat?][? if musavat_name != 0 : [+ musavat_name +]?]: [+ catholics_musavat_display +]%, K-D: [+ catholics_kadets_display +]%; VS: [+ catholics_vs_display +]%, NTS: [+ catholics_nts_display +]%, Other Leftists: [+ catholics_otherleft_display +]%, Others: [+ catholics_other_display +]%, [? if rsrpi_formed: RSRPI: [+ catholics_rsrpi_display +]%, ?] [? if rdp_formed: RDP: [+ catholics_rdpi_display +]%, ?] PLSRI: [+ catholics_plsr_display +]%
 
-Support for the Republic: [+ pro_republic_disp +]%
+Support for Republicanism: [+ pro_republic_disp +]%
+
+Support for Russian Nationalism: [+ nationalism_disp +]%
+
+Support for Socialism: [+ socialism_disp +]%

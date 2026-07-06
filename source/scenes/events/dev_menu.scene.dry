@@ -28,17 +28,18 @@ new-page: true
 @solidarists
 title: NTS-RSDRP Relations
 choose-if: ideology = "partydeath"
-unavailable-subtitle: Even in this dreamland, the Solidarists are beyond saving.
+unavailable-subtitle: **They** cannot hear you.
 
 @conservatives
 title: VS-RSDRP Relations
 choose-if: ideology = "partydeath"
-unavailable-subtitle: Even in this dreamland, the Conservatives are beyond saving.
+unavailable-subtitle: **They** cannot hear you.
 
 @commies
 title: RKP-RSDRP Relations
+subtitle: You wish to warp your old Comrades?
 
-The strings of reality lay before you.
+**The strings of reality lay before you...*..*
 
 - @maxrelationsrkp: They will be your Comrades once more.
 - @increaserelationsrkp: They will think better of you.
@@ -47,7 +48,7 @@ The strings of reality lay before you.
 - @return
 
 @maxrelationsrkp
-on-arrival: rkp_relation += 500
+on-arrival: rkp_relation += 100
 
 What else lies beyond the veil?
 
@@ -62,14 +63,15 @@ on-arrival: rkp_relation -= 25
 What else lies beyond the veil?
 
 @tankrelationsrkp
-on-arrival: rkp_relation -= 500
+on-arrival: rkp_relation -= 100
 
 What else lies beyond the veil?
 
 @leftnarod
 title: PLSR-RSDRP Relations
+subtitle: You wish to warp the Left-Narodists?
 
-The strings of reality lay before you.
+*The strings of reality lay before you...*
 
 - @maxrelationsplsr: They will be your allies.
 - @increaserelationsplsr: They will think better of you.
@@ -78,7 +80,7 @@ The strings of reality lay before you.
 - @return
 
 @maxrelationsplsr
-on-arrival: plsr_relation += 500
+on-arrival: plsr_relation += 100
 
 What else lies beyond the veil?
 
@@ -93,14 +95,15 @@ on-arrival: plsr_relation -= 25
 What else lies beyond the veil?
 
 @tankrelationsplsr
-on-arrival: plsr_relation -= 500
+on-arrival: plsr_relation -= 100
 
 What else lies beyond the veil?
 
 @libtards
+subtitle: You wish to warp the Liberals?
 title: K-D-RSDRP Relations
 
-The strings of reality lay before you.
+*The strings of reality lay before you...*
 
 - @maxrelationskd: They will be your allies.
 - @increaserelationskd: They will think better of you.
@@ -109,7 +112,7 @@ The strings of reality lay before you.
 - @return
 
 @maxrelationskd
-on-arrival: kadets_relation += 500
+on-arrival: kadets_relation += 100
 
 What else lies beyond the veil?
 
@@ -124,14 +127,15 @@ on-arrival: kadets_relation -= 25
 What else lies beyond the veil?
 
 @tankrelationskd
-on-arrival: kadets_relation -= 500
+on-arrival: kadets_relation -= 100
 
 What else lies beyond the veil?
 
 @farmernarod
+subtitle: You wish to warp your greatest ally?
 title: PSR-RSDRP Relations
 
-The strings of reality lay before you.
+*The strings of reality lay before you...*
 
 - @maxrelationspsr: They will be your allies.
 - @increaserelationspsr: They will think better of you.
@@ -140,7 +144,7 @@ The strings of reality lay before you.
 - @return
 
 @maxrelationspsr
-on-arrival: psr_relation += 500
+on-arrival: psr_relation += 100
 
 What else lies beyond the veil?
 
@@ -155,13 +159,13 @@ on-arrival: psr_relation -= 25
 What else lies beyond the veil?
 
 @tankrelationspsr
-on-arrival: psr_relation -= 500
+on-arrival: psr_relation -= 100
 
 What else lies beyond the veil?
 
 @money
 
-The strings of reality lay before you.
+*The strings of reality lay before you...*
 
 - @partycash
 - @govcash
@@ -170,15 +174,15 @@ The strings of reality lay before you.
 
 @partycash
 title: Party Resources
-subtitle: Greed is a sin, Tovarishch, remember that.
-on-arrival: resources += 9999
+subtitle: Greed is a sin, Tovarishch, remember that. +999 Resources.
+on-arrival: resources += 999
 
 What else lies beyond the veil?
 
 @govcash
 title: Government Budget
-subtitle: Greed is a sin, Tovarishch, remember that.
-on-arrival: budget += 9999
+subtitle: Greed is a sin, Tovarishch, remember that. +999 Budget.
+on-arrival: budget += 999
 
 What else lies beyond the veil?
 
@@ -186,7 +190,7 @@ What else lies beyond the veil?
 title: Economic Plans
 subtitle: Every crisis has a solution.
 
-The strings of reality lay before you.
+*The strings of reality lay before you...*
 
 - @leftplan
 - @reformistplan
@@ -195,18 +199,21 @@ The strings of reality lay before you.
 
 @leftplan
 title: Socialization is your goal?
+subtitle: Adopt the Left Plan.
 on-arrival: nationalization_adopted = 1;
 
 What else lies beyond the veil?
 
 @reformistplan
 title: Moderation is your goal?
+subtitle: Adopt the Reformist Plan.
 on-arrival: moderate_plan_adopted = 1;
 
 What else lies beyond the veil?
 
 @laborplan
 title: Public Works are your goal?
+subtitle: Adopt the Labor Plan.
 on-arrival: wtb_adopted = 1;
 
 What else lies beyond the veil?
