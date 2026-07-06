@@ -205,7 +205,7 @@ Projected election results
 
 (if the election were to be held now):
 
-RSDRP(O): [+ rsdrp_votes +]%
+{!<span class="tooltip-text" title="The Russian Social Democratic Labor Party (United)"><span style="color: #ED1B34;">RSDRP(O)</span></span>!}: [+ rsdrp_votes +]%
 
 [? if rsrpi_formed: {!<span class="tooltip-text" title="The Russian Socialist Worker's Party of Internationalists"><span style="color: #d84c4c;">RSRPI</span></span>!}: [+ rsrpi_votes +]% ?]
 
