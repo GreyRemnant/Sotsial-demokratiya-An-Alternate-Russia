@@ -28,11 +28,11 @@ if (Q.economic_growth) {
 
 {!<span class="tooltip-text" title="The Unions of the Party are vast, varied, and represent our strongest link to Labor, they often advocate for whatever helps the worker.">Labor</span>!} strength: [+ labor_strength : strength +], dissent: [+ labor_dissent : dissent +]
 
-{!<span class="tooltip-text" title="Reformists are the pragmatic heirs of Bernstiein, they pursue government participation and seek to expand the welfare state while defending democracy at all costs.">Reformist</span>!} strength: [+ reformist_strength : strength +], dissent: [+ reformist_dissent : dissent +]
+{!<span class="tooltip-text" title="The Reformists are the pragmatic heirs of Bernstein, they pursue government participation and seek to expand the welfare state while defending democracy at all costs.">Reformist</span>!} strength: [+ reformist_strength : strength +], dissent: [+ reformist_dissent : dissent +]
 
 [? if neorevisionism > 0 : {!<span class="tooltip-text" title="The Young Turks are a varied bunch, from stern Internationalists to ethical Reformists, they represent the party's *next* generation, the youth of today and the elders of tomorrow.">Reformist</span>!} strength:[+ neorevisionist_strength : strength +], dissent: [+ neorevisionist_dissent : dissent +] ?]
 
-= Executive Committee of the Social Democratic Labor Party
+= Executive Committee of the RSDRP(O)
 
 *Coming Soon...*
 
