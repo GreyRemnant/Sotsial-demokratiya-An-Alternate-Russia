@@ -203,6 +203,10 @@ blockquote + blockquote.attribution {
   text-indent: 0;
   line-height: 1.3em;
 }
+#qualities_right {
+  text-indent: 0;
+  line-height: 1.3em;
+}
 #qualities p {
   text-indent: 0;
 }
