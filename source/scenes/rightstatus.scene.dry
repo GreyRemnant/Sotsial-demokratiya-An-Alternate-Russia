@@ -14,238 +14,38 @@ if (Q.economic_growth) {
 }
 !}
 
-= Status
+= News
 
+[? if year = 1928 and month = 2 : The current bourgeois-right government has fallen. The next elections are slated for May of this year. ?]
 
-[+ month : month +] [+ year +]
+@partypolitics
 
-Resources available: [+ resources +]
+= Party Factionalism
 
-{!<span class="tooltip-text" title="The Russian Social Democratic Labor Party (United)"><span style="color: #ED1B34;">RSDRP(O)</span></span>!} position: [? if rsdrp_toleration : toleration ?][? if rsdrp_in_government : in government - ?][? if rsdrp_toleration == 0 and rsdrp_in_government == 0 and rsdrp_caretaker == 0 : opposition ?][? if rsdrp_caretaker : caretaker government ?]
-[? if in_weimar_coalition and rsdrp_in_government: Weimar Coalition ?][? if in_vremennyy_coalition and rsdrp_in_government: Vremennyy Coalition ?][? if in_popular_front and rsdrp_in_government: Popular Front ?][? if in_left_front and rsdrp_in_government: Left Front ?][? if in_rsdrp_majority and rsdrp_in_government: RSDRP majority ?][? if in_minority_government and rsdrp_in_government: minority government ?][? if in_emergency_government and rsdrp_in_government: emergency government ?]
+{!<span class="tooltip-text" title="The Party Left is interested in radical, transformative policies and advocates for a revolutionary-minded, All-Socialist Coalition.">Internationalist</span>!} strength: [+ left_strength : strength +], dissent: [+ left_dissent : dissent +]
 
-[? if rsdrp_in_government and not in_rsdrp_majority and not in_left_front : Coalition dissent: [+ coalition_dissent : coalition_dissent +] ?]
+{!<span class="tooltip-text" title="The Center is a faction of Orthodox Marxists, the ideological adherents of Kautsky and Martov, who seek a middle ground between reform and revolution.">Center</span>!} strength: [+ center_strength : strength +], dissent: [+ center_dissent : dissent +]
 
-[? if rsdrp_in_government and (in_left_front or in_popular_front): RKP coalition dissent: [+ rkp_coalition_dissent : coalition_dissent +] ?]
+{!<span class="tooltip-text" title="The Unions of the Party are vast, varied, and represent our strongest link to Labor, they often advocate for whatever helps the worker.">Labor</span>!} strength: [+ labor_strength : strength +], dissent: [+ labor_dissent : dissent +]
 
-Internal dissent: [+ dissent_percent : dissent +]
+{!<span class="tooltip-text" title="Reformists are the pragmatic heirs of Bernstiein, they pursue government participation and seek to expand the welfare state while defending democracy at all costs.">Reformist</span>!} strength: [+ reformist_strength : strength +], dissent: [+ reformist_dissent : dissent +]
 
-= Government
+[? if neorevisionism > 0 : {!<span class="tooltip-text" title="The Young Turks are a varied bunch, from stern Internationalists to ethical Reformists, they represent the party's *next* generation, the youth of today and the elders of tomorrow.">Reformist</span>!} strength:[+ neorevisionist_strength : strength +], dissent: [+ neorevisionist_dissent : dissent +] ?]
 
+= Executive Committee of the Social Democratic Labor Party
 
-President: [+ president +]
+*Coming Soon...*
 
-Chancellor: [+ chancellor +] ([+ chancellor_party +])
+= Party Affiliates
 
-State Duma composition:
+*Coming Soon...*
 
+@localgovs
 
-# 1928: 30, 1930: 25, 1932: 22
-{!<span class="tooltip-text" title="Social Democratic Labor Party of Russia (United)">RSDRP(o)</span>!}: [+ rsdrp_r +]%
-[? if rsrpi_formed and rsrpi_r > 0: RSRPI: [+ rsrpi_r +]% ?]
-[? if rdp_formed and rdp_r > 0: RDP: [+ rdp_r +]% ?]
-# 1928: 15, 1930: 15, 1932: 
-{!<span class="tooltip-text" title="Party of Socialist-Revolutionaries">PSR</span>!}: [+ psr_r +]%
-# 1928: 10, 1930: 13
-{!<span class="tooltip-text" title="Russian Communist Party (Bolsheviks)">RKP</span>!}: [+ rkp_r +]%
-# 1928: 5, 1930: 4
-{!<span class="tooltip-text" title="Party of Left Socialist-Revolutionaries-Internationalists">PLSRI</span>!}: [+ plsr_r +]%
-# 1928: 5, 1930: 4
-{!<span class="tooltip-text" title="Müsavat Party"></span>!}: [+ musavat_r +]%
-# 1928: 9, 1930: 5
-{!<span class="tooltip-text" title="Party of People's Freedom (Constitutional-Democratic Party)">K-D (Kadets)</span>!}: [+ kadets_r +]%
-# 1928: 14, 1930: 7
-{!<span class="tooltip-text" title="All-Russian Union">VS</span>!}: [+ vs_r +]%
-# 1928: 3, 1930: 18
-{!<span class="tooltip-text" title="National Alliance of Russian Solidarists (Solidarists)">NTS</span>!}: [+ nts_r +]%
-# 1928: 9, 1930: 10
-Others Rightists: [+ other_r +]%
-Other Leftists: [+ otherleft_r +]%
+= Local Governments
 
-[? if rsdrp_in_government = 1 : Budget: [+ budget +] ?]
+Transcaucasian Democratic Federative Republic: Trudovaya Coalition
 
-Next election: [+ next_election_month : month +] [+ next_election_year +]
+Alash Orda: Bourgeois Coalition
 
-= {!<span class="tooltip-text" title="Stock Exchange News">Birzhevyie Vedomosti</span>!}
-
-Inflation: [+ inflation_2 +]%
-
-[? if black_thursday_seen = 1 : Unemployment: [+ unemployed_2 +]% ?]
-
-Economic Growth: [+ economic_growth_2 +]%
-
-# = Public Opinion
-
-@politics
-
-
-
-= Inter-party Relations
-
-[? if rsrpi_formed = 1: {!<span class="tooltip-text" title="The Russian Socialist Worker's Party of Internationalists, our old Internationalist wing. Socialist, Marxist, and opposed to Liberal cooperation."><span style="color: #d84c4c;">RSRPI</span></span>!}: <span style="color: #80FF00 ;">**Warm**</span> ?]
-
-[? if rdp_formed = 1: {!<span class="tooltip-text" title="The Radical-Democratic Party, our old Right wing. Socialist, Marxist, and opposed to Liberal cooperation."><span style="color: #d84c4c;">RDP</span></span>!}: <span style="color: #80FF00 ;">**Warm**</span> ?]
-
-{!<span class="tooltip-text" title="Party of Socialist-Revolutionaries"><span style="color: #b4121a;">PSR</span></span>!}: [+ psr_relation : relationships +]
-
-{!<span class="tooltip-text" title="Müsavat Party"><span style="color: #3bb9ff;">Müsavat</span></span>!}: [+ musavat_relation : relationships +]
-
-{!<span class="tooltip-text" title="Constitutional-Democratic Party"><span style="color: #0087dc;">K-D</span></span>!}: [+ kadets_relation : relationships +]
-
-{!<span class="tooltip-text" title="Party of Left-Socialist-Revolutionaries-Internationalists"><span style="color: #990000;">PLSRI</span></span>!}: [+ plsr_relation : relationships +]
-
-{!<span class="tooltip-text" title="Russian Communist Party (Bolsheviks)"><span style="color: #D40000;">RKP(B)</span></span>!}: [+ rkp_relation : relationships +]
-
-{!<span class="tooltip-text" title="All-Russian Union"><span style="color: #004090;">VS</span></span>!}: [+ vs_relation : relationships +]
-
-{!<span class="tooltip-text" title="National Alliance of Russian Solidarists "><span style="color: #F9DA00;">NTS</span></span>!}: [+ nts_relation : relationships +]
-
-{!<span class="tooltip-text" title="Other Center-Left to Left-wing Parties"><span style="color: #ff0000;">L</span></span>!}: <span style="color: #80FF00 ;">**Friendly**</span>
-
-{!<span class="tooltip-text" title="Other Center-Right to Right-wing Parties"><span style="color: #F48100;">P</span></span>!}: <span style="color: #FF7900 ;">**Frigid**</span>
-
-= Party Leaders & ideologies
-
-{!<span class="tooltip-text" title="The Russian Communist Party (Bolsheviks), our old rivals composed of Lenin's cadre and radical hardliners."><span style="color: #D40000;">RKP(B)</span></span>!}: Bolshevism (Zinoviev)
-
-{!<span class="tooltip-text" title="The Party of Left-Socialist-Revolutionaries-Internationalists, revolutionaries who split from the PSR to work with the Bolsheviks."><span style="color: #990000;">PLSRI</span></span>!}: Revolutionary Narodism (Kamkov)
-
-[? if rsrpi_formed = 1: {!<span class="tooltip-text" title="The Socialist Worker's Party of Internationalists, our old left-wing. Socialist, Marxist, and opposed to cooperation with the bourgeoisie, they represent the ideologies between us and the Bolsheviks."><span style="color: #d84c4c;">RSRPI</span></span>!}: Orthodox Marxism (Abramovitch) ?]
-
-{!<span class="tooltip-text" title="The Russian Social Democratic Labor Party (United), this is us, Socialist, Marxist, and United."><span style="color: #ED1B34;">RSDRP(O)</span></span>!}: [? if ideology = 0: Social Democracy (Interim Collective Leadership) ?] [? if ideology = "centrist": Menshevism (Martov/Axelrod) ?] [? if ideology = "left" : Orthodox Marxism (Martov/Abramovitch) ?]  [? if ideology = "reformist": Ethical Socialism (Martov/Potresov) ?] [? if ideology = "labor": Labor Menshevism (Martov/Voitinsky) ?] [? if ideology = "partydeath": Classical Marxism (The Ghost of Karl Marx) ?]
-
-[? if rdp_formed = 1: {!<span class="tooltip-text" title="The Radical-Democratic Party, our old right-wing. Social Democratic, Laborist, and firmly against cooperation with radicals, left or right. Their existence has had the effect of turning the Kadets rightwards, as disgruntled Left-Kadets have been defecting to the RDP."><span style="color: #F0456A;">RDP</span></span>!}: Liberal Socialism (Struve) ?]
-
-{!<span class="tooltip-text" title="The informal grouping of many small, minority-focused, or regionalist Socialist and Narodist parties."><span style="color: #ff0000;">Other Leftists</span></span>!}: Socialism (Various)
-
-{!<span class="tooltip-text" title="The Party of Socialist-Revolutionaries, Narodists focused on Agrarian Socialism, they've taken a Marxist turn in recent years."><span style="color: #b4121a;">PSR</span></span>!}: Narodism (Avksentyev)
-
-{!<span class="tooltip-text" title="The Constitutional-Democratic Party, often called Kadets, the conglomeration of many Liberal groups, left and right."><span style="color: #0087dc;">K-D</span></span>!}: Liberal Constitutionalism (Prince Dolgorukov)
-
-{!<span class="tooltip-text" title="The Müsavat Party, a pan-Islamic, sometimes pan-Turkic, and moderate party."><span style="color: #3bb9ff;">Müsavat</span></span>!}: Pan-Islamism (Rasulzade)
-
-{!<span class="tooltip-text" title="The informal grouping of many small, minority-focused, or regionalist Liberal and Conservative parties."><span style="color: #F48100;">Other Rightists</span></span>!}: Market Liberalism (Various)
-
-{!<span class="tooltip-text" title="The All-Russian Union, a Nationalist, Conservative, Monarchist, and often antisemitic party."><span style="color: #004090;">VS</span></span>!}: Conservative Liberalism (Guchkov)
-
-{!<span class="tooltip-text" title="The National Alliance of Russian Solidarists (Solidarists), antisemitic, ultranationalist, corporatist, extremists who can't let go of the past."><span style="color: #F9DA00;">NTS</span></span>!}: Solidarism (Leuchtenberg)
-
-
-
-= Internal Factions of the RSDRP
-
-{!<span class="tooltip-text" title="The Left is interested in radical, transformative policies and cooperation with the RKP(b) and PLSRI.">Internationalist</span>!} strength: [+ left_strength : strength +], dissent: [+ left_dissent : dissent +]
-
-{!<span class="tooltip-text" title="The Center is a faction of Orthodox Marxists, who seek a middle ground between reform and revolution.">Center</span>!} strength: [+ center_strength : strength +], dissent: [+ center_dissent : dissent +]
-
-{!<span class="tooltip-text" title="Labor's goal is economic reform and benefits for organized workers.">Labor</span>!} strength: [+ labor_strength : strength +], dissent: [+ labor_dissent : dissent +]
-
-{!<span class="tooltip-text" title="Reformists are pragmatic participants in government, and seek to expand the welfare state and defend democracy.">Reformist</span>!} strength: [+ reformist_strength : strength +], dissent: [+ reformist_dissent : dissent +]
-
-[? if neorevisionism > 0 : Neorevisionist strength: [+ neorevisionist_strength : strength +], dissent: [+ neorevisionist_dissent : dissent +] ?]
-
-
-
-@paramilitaries
-on-arrival: {!
-if (Q.rb_strength) {
-    Q.rb_strength_2 = Q.rb_strength.toFixed(1);
-}
-if (Q.rfb_strength) {
-    Q.rfb_strength_2 = Q.rfb_strength.toFixed(1);
-}
-if (Q.sh_strength) {
-    Q.sh_strength_2 = Q.sh_strength.toFixed(1);
-}
-if (Q.sa_strength) {
-    Q.sa_strength_2 = Q.sa_strength.toFixed(1);
-}
-!}
-
-= Paramilitaries
-
-{!<span class="tooltip-text" title="The Reichsbanner Schwarz-Rot-Gold is a popular organization for defending democracy, mostly affiliated with the RSDRP.">Reichsbanner</span>!} Strength: [+ rb_strength_2 +] thousand
-
-Reichsbanner Militarization: [+ rb_militancy : militancy +]
-
-{!<span class="tooltip-text" title="The RFB (Rotfrontkämpferbund) is a communist group associated with the RKP.">RFB</span>!} Strength: [+ rfb_strength_2 +] thousand
-
-RFB Militarization: [+ rfb_militancy : militancy +]
-
-{!<span class="tooltip-text" title="The Stahlhelm is a right-wing organization of war veterans associated with the VS.">Stahlhelm</span>!} Strength: [+ sh_strength_2 +] thousand
-
-Stahlhelm Militarization: [+ sh_militancy : militancy +]
-
-{!<span class="tooltip-text" title="The SA (Sturmabteilung) is the Nazi paramilitary.">SA</span>!} Strength: [+ sa_strength_2 +] thousand
-
-SA Militarization: [+ sa_militancy : militancy +]
-
-= Official military/paramilitaries
-
-Russkaya armiya: [+ reichswehr_strength +] thousand troops.
-
-Russkaya armiya Loyalty: [+ reichswehr_loyalty : loyalty +]
-
-Worker's Militsiya: [+ prussian_police_strength +] thousand members.
-
-Worker's Militsiya loyalty: [+ prussian_police_loyalty : loyalty +]
-
-[? if rsdrp_in_government : State Police loyalty: [+ interior_police_loyalty : loyalty +] ?]
-
-@polls
-on-arrival: {!
-Q.pro_republic_disp = Math.round(Q.pro_republic);
-Q.nationalism_disp = Math.round(Q.nationalism);
-Q.socialism_disp = Math.round(Q.socialism);
-!}
-
-**{!<span class="tooltip-text" title="Government Gazette Election Polling">Pravitel'stvennyy Byulleten Election Polling</span>!}**
-
-(if the election were to be held now):
-
-{!<span class="tooltip-text" title="The Russian Social Democratic Labor Party (United)"><span style="color: #ED1B34;">RSDRP(O)</span></span>!}: [+ rsdrp_votes +]%
-
-[? if rsrpi_formed: {!<span class="tooltip-text" title="The Russian Socialist Worker's Party of Internationalists"><span style="color: #d84c4c;">RSRPI</span></span>!}: [+ rsrpi_votes +]% ?]
-
-[? if rdp_formed: {!<span class="tooltip-text" title="The Radical-Democratic Party"><span style="color: #d84c4c;">RDP</span></span>!}: [+ rdp_votes +]% ?]
-
-{!<span class="tooltip-text" title="Müsavat Party"><span style="color: #3bb9ff;">Müsavat</span></span>!}: [+ musavat_votes +]%
-
-{!<span class="tooltip-text" title="Russian Communist Party (Bolsheviks)"><span style="color: #D40000;">RKP(B)</span></span>!}: [+ rkp_votes +]%
-
-{!<span class="tooltip-text" title="Party of Left-Socialist-Revolutionaries-Internationalists"><span style="color: #990000;">PLSRI</span></span>!}: [+ plsr_votes +]%
-
-{!<span class="tooltip-text" title="Party of Socialist-Revolutionaries"><span style="color: #b4121a;">PSR</span></span>!}: [+ psr_votes +]%
-
-{!<span class="tooltip-text" title="Constitutional-Democratic Party"><span style="color: #0087dc;">K-D</span></span>!}: [+ kadets_votes +]%
-
-{!<span class="tooltip-text" title="All-Russian Union"><span style="color: #004090;">VS</span></span>!}: [+ vs_votes +]%
-
-{!<span class="tooltip-text" title="National Alliance of Russian Solidarists"><span style="color: #F9DA00;">NTS</span></span>!}:: [+ nts_votes +]%
-
-{!<span class="tooltip-text" title="Other Center-Right to Right-wing Parties"><span style="color: #F48100;">P</span></span>!}: [+ other_votes +]%
-
-{!<span class="tooltip-text" title="Other Center-Left to Left-wing Parties"><span style="color: #ff0000;">L</span></span>!}: [+ otherleft_votes +]%
-
-**{!<span class="tooltip-text" title="Government Gazette National Polling">Pravitel'stvennyy Byulleten National Polling</span>!}**
-
-Support for Republicanism: [+ pro_republic_disp +]%
-
-Support for Russian Nationalism: [+ nationalism_disp +]%
-
-Support for Socialism: [+ socialism_disp +]%
-
-**{!<span class="tooltip-text" title="Government Gazette Demographic Polling">Pravitel'stvennyy Byulleten Demographic Polling</span>!}**
-
-Workers: RSDRP(O): [+ workers_rsdrp_display +]%, PSR: [+ workers_psr_display +]%, RKP: [+ workers_rkp_display +]%, [? if not musavat_name: Müsavat?][? if musavat_name != 0 : [+ musavat_name +]?]: [+ workers_musavat_display +]%, K-D: [+ workers_kadets_display +]%; VS: [+ workers_vs_display +]%, NTS: [+ workers_nts_display +]%, Other Leftists: [+ workers_otherleft_display +]%, Others: [+ workers_other_display +]%, [? if rsrpi_formed: RSRPI: [+ workers_rsrpi_display +]%, ?] [? if rdp_formed: RDP: [+ workers_rdp_display +]%, ?] PLSRI: [+ workers_plsr_display +]%
-
-New Middle Class: RSDRP(O): [+ new_middle_rsdrp_display +]%, PSR: [+ new_middle_psr_display +]%, RKP: [+ new_middle_rkp_display +]%, [? if not musavat_name: Müsavat?][? if musavat_name != 0 : [+ musavat_name +]?]: [+ new_middle_musavat_display +]%, K-D: [+ new_middle_kadets_display +]%; VS: [+ new_middle_vs_display +]%, NTS: [+ new_middle_nts_display +]%, Other Leftists: [+ new_middle_otherleft_display +]%, Others: [+ new_middle_other_display +]%, [? if rsrpi_formed: RSRPI: [+ new_middle_rsrpi_display +]%, ?] [? if rdp_formed: RDP: [+ new_middle_rdp_display +]%, ?]  PLSRI: [+ new_middle_plsr_display +]%
-
-Old Middle Class: RSDRP(O): [+ old_middle_rsdrp_display +]%, PSR: [+ old_middle_psr_display +]%, RKP: [+ old_middle_rkp_display +]%, [? if not musavat_name: Müsavat?][? if musavat_name != 0 : [+ musavat_name +]?]: [+ old_middle_musavat_display +]%, K-D: [+ old_middle_kadets_display +]%; VS: [+ old_middle_vs_display +]%, NTS: [+ old_middle_nts_display +]%, Other Leftists: [+ old_middle_otherleft_display +]%, Others: [+ old_middle_other_display +]%, [? if rsrpi_formed: RSRPI: [+ old_middle_rsrpi_display +]%, ?] [? if rdp_formed: RDP: [+ old_middle_rdp_display +]%, ?] PLSRI: [+ old_middle_plsr_display +]%
-
-Rural: RSDRP(O): [+ rural_rsdrp_display +]%, PSR: [+ rural_psr_display +]%, RKP: [+ rural_rkp_display +]%, [? if not musavat_name: Müsavat?][? if musavat_name != 0 : [+ musavat_name +]?]: [+ rural_musavat_display +]%, K-D: [+ rural_kadets_display +]%; VS: [+ rural_vs_display +]%, NTS: [+ rural_nts_display +]%, Other Leftists: [+ rural_otherleft_display +]%, Others: [+ rural_other_display +]%, [? if rsrpi_formed: RSRPI: [+ rural_rsrpi_display +]%, ?] [? if rdp_formed: RDP: [+ rural_rdp_display +]%, ?] PLSRI: [+ rural_plsr_display +]%
-
-Unemployed: RSDRP(O): [+ unemployed_rsdrp_display +]%, PSR: [+ unemployed_psr_display +]%, RKP: [+ unemployed_rkp_display +]%, [? if not musavat_name: Müsavat?][? if musavat_name != 0 : [+ musavat_name +]?]: [+ unemployed_musavat_display +]%, K-D: [+ unemployed_kadets_display +]%; VS: [+ unemployed_vs_display +]%, NTS: [+ unemployed_nts_display +]%, Other Leftists: [+ unemployed_otherleft_display +]%, Others: [+ unemployed_other_display +]%, [? if rsrpi_formed: RSRPI: [+ unemployed_rsrpi_display +]%, ?] [? if rdp_formed: RDP: [+ unemployed_rdp_display +]%, ?] PLSRI: [+ unemployed_plsr_display +]%
-
-Catholics: RSDRP(O): [+ catholics_rsdrp_display +]%, PSR: [+ catholics_psr_display +]%, RKP: [+ catholics_rkp_display +]%, [? if not musavat_name: Müsavat?][? if musavat_name != 0 : [+ musavat_name +]?]: [+ catholics_musavat_display +]%, K-D: [+ catholics_kadets_display +]%; VS: [+ catholics_vs_display +]%, NTS: [+ catholics_nts_display +]%, Other Leftists: [+ catholics_otherleft_display +]%, Others: [+ catholics_other_display +]%, [? if rsrpi_formed: RSRPI: [+ catholics_rsrpi_display +]%, ?] [? if rdp_formed: RDP: [+ catholics_rdpi_display +]%, ?] PLSRI: [+ catholics_plsr_display +]%
-
+Belarusian People's Republic: Liberal-Narodist Coalition
