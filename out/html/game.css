@@ -575,10 +575,14 @@ table {
 .seat.nts {
     fill: #F9DA00;
 }
-.seat.rsrpi {
-    fill: #C40000;
+.seat.ssrr {
+    fill: #264E4E;
+    stroke: var(--border-color);
+    stroke-width: 1.5px;
 }
-
+.seat.khdp {
+    fill: #9999FF;
+}
 .tooltip-text {
     text-decoration: underline;
     text-decoration-style: dotted;
