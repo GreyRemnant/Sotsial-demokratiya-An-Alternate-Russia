@@ -16,7 +16,18 @@ if (Q.economic_growth) {
 
 = News
 
-[? if year = 1928 and month = 2 : The current bourgeois-right government has fallen. The next elections are slated for May of this year. ?]
+[? if year = 1928 and month = 1 : Wilhelm Groener has replaced Otto Gessler as Defense Minister in Germany, following the Lohmann Affair and the uncovering of a secret rearmament programme. ?]
+[? if year = 1928 and month = 2 : The bourgeois Blue-White-Blue Coalition has fallen, elections are scheduled for May of this year. ?]
+[? if year = 1928 and month = 3 : Following a hung parliament in last months elections, the conservative Seiyūkai-led Japanese government has begun a massive crackdown on Communists and Socialists. ?]
+[? if year = 1928 and month = 4 : The Supreme Court of Canada rules that women were ineligible to be appointed to the Senate. In other news, French Prime Minister Poincaré has won a strong majority in the French Legislative Elections. ?]
+[? if year = 1928 and month = 5 : Britain passes the Representation of the People Act, lowering women's voting age from 30 to 21 and giving them equal suffrage to men. ?]
+[? if year = 1928 and month = 6 : Zhang Zuolin has been assassinated. The Filipino Nacionalista Party wins an overwhelming majority in both chambers of the Kongreso. Hermann Müller has been appoitned Chancellor of Germany. ?]
+[? if year = 1928 and month = 7 : The Chinese Guómíndǎng has declared all "unequal" treaties void, this might become relevant in future versions of the game. The Amur River in Blagoveshchensk has burst, leaving 36 thousand people, nearly half of the city's 61,205 citizens, homeless. ?]
+[? if year = 1928 and month = 8 : The Greek Liberal Party, led by Prime Minister Venizelos, has won 178 of 250 seats in the Vouli. The Kellogg–Briand Pact is signed by dozens of countries. ?]
+[? if year = 1928 and month = 9 : Albania has been declared a monarchy, long live King Zog I! The Swedish Social Democrats lost seats, but has retained their plurality. Some domestic newspapers are claiming the French and British governments have made secret pacts, which France has denied. ?]
+[? if year = 1928 and month = 10 : The first Iron Lung has been used to help Polio victim's breathe in America, representing a breakthrough for Polio treatment. A Macedonian plot to assassinate the King of Yugoslavia has been revealed. ?]
+[? if year = 1928 and month = 11 : Herbert Hoover has been elected President of the United States with 83% of the electoral vote. King George V has come down with a serious case of Sepsis. ?]
+[? if year = 1928 and month = 12 : Anywhere between 47−2,000 striking Banana-plantation workers have been killed while attempting to unionize, thanks to United Fruit Company's suggestion to the Colombian government. Merry Christmas, by the way! ?]
 
 @partypolitics
 

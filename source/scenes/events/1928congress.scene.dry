@@ -4,7 +4,7 @@ tags: event
 on-arrival: ideology = "centrist"
 new-page: true
 face-image: img/programme.jpg
-view-if: ideology == 0 and year = 1928
+view-if: ideology == 0 and year = 1928 and month = 2
 max-visits: 1
 priority: 2
 
