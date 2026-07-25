@@ -5,7 +5,7 @@ view-if: year = 1928 and (month = 8 or month = 9)
 max-visits: 1
 on-arrival: kellogg_briand_seen = 1; kellogg_briand_signed = 1 if foreign_minister_party = "DVP"
 tags: event
-#face-image: img/portraits/StresemannGustav.jpg
+face-image: img/kelloggbriand.jpeg
 
 = Kellogg-Briand Pact
 
@@ -16,6 +16,7 @@ An international treaty has been negotiated which promises an end to war. The tr
 - @sign_treaty: Foreign Minister Breitscheid will sign the treaty, of course.
 - @step_forward
 - @not_enough
+- @notourministry
 
 @sign_treaty
 view-if: rsdrp_in_government and foreign_minister_party = "RSDRP"
@@ -37,3 +38,9 @@ view-if: kellogg_briand_signed
 title: The treaty is not enough.
 
 Despite the idealism behind the treaty, it is inadequate for its goal of preventing wars. There must be some enforcement mechanism, perhaps automatic trade sanctions, or an intervention force controlled by the League of Nations. As it stands, the League of Nations and this treaty is toothless.
+
+@notourministry
+view-if: foreign_minister_party != "RSDRP"
+title: The Foreign Ministry signs the treaty.
+
+Foreign Affairs Minister [+ foreign_minister +] has signed the Kellogg-Briand Pact, although the reaction is generally muted; both pacifists and militarists are skeptical about the efficacy of the treaty.

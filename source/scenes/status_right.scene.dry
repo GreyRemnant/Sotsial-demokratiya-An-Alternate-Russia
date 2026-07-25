@@ -20,7 +20,7 @@ if (Q.economic_growth) {
 
 @partypolitics
 
-= Party Factionalism
+= Internal Factions of the RSDRP
 
 {!<span class="tooltip-text" title="The Party Left is interested in radical, transformative policies and advocates for a revolutionary-minded, All-Socialist Coalition.">Internationalist</span>!} strength: [+ left_strength : strength +], dissent: [+ left_dissent : dissent +]
 
