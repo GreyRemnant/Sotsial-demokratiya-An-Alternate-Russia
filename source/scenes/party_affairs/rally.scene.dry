@@ -75,7 +75,7 @@ Mass rallies are a common feature of social democratic life, especially in the l
 - @class_struggle: The class struggle of the proletariat against the bourgeoisie.
 - @welfare: Rabochaya Politika - the maintenance and expansion of social welfare programs.
 - @democracy: Expanding our nascent democracy and defending it against conservatism and autocracy.
-- @pacifism: Opposing war, nationalism, and militarism at all costs.
+- @pacifism: Opposing irredentism, nationalism, and militarism at all costs.
 - @wtb: Support the WTB plan!
 - @local: A mixture of various local and national concerns that resonate most with the audience.
 - @easy_discard
@@ -103,7 +103,7 @@ on-arrival: pacifism += 1; nationalism -= 2*(1 - dissent); workers_rsdrp += 4*(1
 
 Our speakers denounce the military establishment and all the spending entering that black hole. Some adventurous speakers question the responsibility of the military elites in organizing the Great War.
 
-[? if pacifism < 3 : Given the volume of nationalist indoctrination in our society, it is difficult to argue so vehemently against the military. ?]
+[? if pacifism < 3 : Given the volume of nationalist sentiment in our society, it is difficult to argue so vehemently against the military. ?]
 [? if pacifism >= 3 : Since we have consistently made pacifism a theme of our campaign, the workers are enthusiastic about our message. ?]
 
 @wtb
