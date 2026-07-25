@@ -301,10 +301,10 @@ Q.rural_vs = 25;
 Q.rural_nts = 5;
 Q.rural_other = 10;
 Q.rural_otherleft = 16;
-Q.rural_plsr = 10;
+Q.rural_plsr = 5;
 
-Q.unemployed_rsdrp = 45;
-Q.unemployed_rkp = 25;
+Q.unemployed_rsdrp = 60;
+Q.unemployed_rkp = 15;
 Q.unemployed_psr = 2;
 Q.unemployed_musavat = 1;
 Q.unemployed_kadets = 2;
@@ -312,7 +312,7 @@ Q.unemployed_vs = 5;
 Q.unemployed_nts = 20;
 Q.unemployed_other = 9;
 Q.unemployed_otherleft = 12;
-Q.unemployed_plsr = 25;
+Q.unemployed_plsr = 10;
 
 Q.catholics_rsdrp = 15;
 Q.catholics_rkp = 2;
