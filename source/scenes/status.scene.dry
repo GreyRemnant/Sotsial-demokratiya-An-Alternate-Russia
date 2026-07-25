@@ -192,7 +192,7 @@ Worker's Militsiya loyalty: [+ prussian_police_loyalty : loyalty +]
 
 [? if rsdrp_in_government : State Police loyalty: [+ interior_police_loyalty : loyalty +] ?]
 
-@Polling
+@polling
 on-arrival: {!
 Q.pro_republic_disp = Math.round(Q.pro_republic);
 Q.nationalism_disp = Math.round(Q.nationalism);
