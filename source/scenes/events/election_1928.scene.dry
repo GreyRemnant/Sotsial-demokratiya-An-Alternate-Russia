@@ -313,9 +313,9 @@ Bourgeois Coalition (PSR + [+ musavat_name +] + K-D + Others): [+ bourgeois_coal
 
 Right-wing Coalition (PSR + K-D + Others + VS): [+ right_coalition +]%
 
-[? if nazi_urgency <= 1 and nts_r >= 15 : The rapid rise in NTS votes is extremely worrying. Many had believed that the party was moribund; now, some of us consider it to be the greatest threat to democracy in Germany. ?]
+[? if nazi_urgency <= 1 and nts_r >= 15 : The rapid rise in Solidarist votes is extremely worrying. Many had believed that the party was moribund; now, some of us consider it to be the greatest threat to democracy in Russia. ?]
 
-[? if anti_democratic_coalition >= 50 : Together, the anti-democratic RKP, PLSRI, VS, and NTS have a majority in the State Duma. A stable governing majority will be almost impossible. ?]
+[? if anti_democratic_coalition >= 50 : Together, the anti-republican RKP, PLSRI, VS, and NTS have a majority in the State Duma. A stable governing majority will be almost impossible. ?]
 
 There are some potential coalition arrangements.
 

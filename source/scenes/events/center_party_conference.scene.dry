@@ -12,33 +12,34 @@ The Party of Socialist-Revolutionaries is holding their quadrennial party congre
 
 The candidate championed by many Liberal-Narodists and sympathetic Centrists is Alexander Kerensky, the former Government Chairman. His election would mark a turn towards a liberalized form of Narodism, something he has been slowly leaning towards since the Eser's turned to the Liberals for governance.
 
-Our ideal Chairman would be Avksentyev, an Eser who is sympathetic to Marxism and has long been an advocate for leftist unity.
+Our ideal Chairman would be Avksentyev, an Eser who is widely respected for being a political moderate. His election would mean a continuation of good relations with our party.
 
-The nationalist-wing of the PSR is calling for Dmitry Odinets, a Nationalist, irredentist, and Narodist who has previously voiced his support for restoring Russia's imperial borders.
+The concservative-wing of the PSR is calling for Dmitry Odinets, a Nationalist, irredentist, and Narodist who has previously voiced his support for restoring Russia's imperial borders.
 
-Then, there is Boris Savinkov, the man who convinced the PSR to support Lavr Kornilov's presidential run. Savinkov has presented himself as the pragmatic candidate, calling on his ties to Kornilov and to the Western powers. However, most of the PSR is opposed to his candidacy, as he is considered shady and unreliable.
+Then, there is Boris Savinkov, the man who split the Eser vote to provide support Lavr Kornilov's presidential run. Savinkov has attempted to present himself as a pragmatic candidate, pointing to his ties with Kornilov and his experience from the Civil War; short as it was. However, most of the PSR is opposed to his candidacy, as he is considered shady and unreliable.
 
 - @kerensky: Alexander Kerensky is elected as party chair.
 - @avksentyev: Nikolay Avksentyev is elected as party chair.
 - @odinets: Dmitry Odinets is, shockingly, elected as party chair.
 - @savinkov: Boris Savinkov is, somehow, elected as party chair.
+- @nomajorityeser: No candidate has managed to secure a majority.
 
 @kerensky
-choose-if: psr_right >= psr_left and psr_relation >= 35
+choose-if: psr_right >= psr_left or psr_relation >= 50
 on-arrival: psr_party_leader = "Kerensky"; psr_relation -= 5
 face-image: img/kerenskywin.jpg
 
 Alexander Kerensky has been selected as the chairman of the Party of Socialist-Revolutionaries. He seems to represent a rightward turn from Chernov, with his history of liberal sympathies. He will preside over a Narodist Party less inclined to compromise with Socialists and more inclined to compromise with the Liberal parties.
 
 @avksentyev
-choose-if: psr_right <= psr_left and psr_relation <= 65
-on-arrival: psr_party_leader = "Avksentyev"; rural_rsdrp += 5; workers_psr += 3; psr_relation += 5
+choose-if: psr_right <= psr_left or psr_relation <= 50
+on-arrival: psr_party_leader = "Avksentyev"; rural_rsdrp += 5; workers_psr += 3; psr_relation += 5; pro_republic += 8
 face-image:img/avkwin.jpg
 
-Nikolay Avksentyev has emerged victorious in the Congress, and is the new SR Chairman! Avksentyev is a "Heidelberg Eser", and has been influenced by Marxism in the past, the feelings of goodwill between Socialists and Narodists appears to be renewed!
+Nikolay Avksentyev has emerged victorious in the Congress, and is the new SR Chairman! Avksentyev is a "Heidelberg Eser", a known moderate, and has been influenced by Marxism in the past, the feelings of goodwill between Socialists and Narodists appears to be renewed!
 
 @savinkov
-choose-if: psr_right = 10 and psr_relation >= 10
+choose-if: psr_right = 10 and psr_relation >= 25
 on-arrival: psr_party_leader = "Savinkov"; psr_relation -= 25
 face-image:img/SAVVY.jpg
 
@@ -49,4 +50,11 @@ choose-if: psr_right >= 10 and psr_left <=5 and psr_relation >= 10
 on-arrival: psr_party_leader = "Odinets"; psr_relation -= 25
 face-image: img/odinets.jpg
 
-It appears the Conservatives of the PSR have emerged triumphant, as Dmitry Odinets, a Russian Nationalist and Narodist, has been elected party chairman. This is horrible for our relations, as Odinets is a known irredentist and nationalist.
+It appears the Conservatives of the PSR have emerged triumphant, as Dmitry Odinets, a Russian Nationalist and Conservative-Narodist, has been elected party chairman. This, obviously, spells ill for our relations.
+
+@nomajorityeser
+choose-if: psr_right = psr_left and psr_relation = 50
+on-arrival: psr_party_leader = "Avksentyev"; rural_rsdrp += 5; workers_psr += 3; psr_relation += 5; pro_republic += 8
+face-image:img/avkwin.jpg
+
+Nikolay Avksentyev has emerged victorious in the Congress' second round of voting, and is the new SR Chairman! Avksentyev is a "Heidelberg Eser", a known moderate, and has been influenced by Marxism in the past, the feelings of goodwill between Socialists and Narodists appears to be renewed!
