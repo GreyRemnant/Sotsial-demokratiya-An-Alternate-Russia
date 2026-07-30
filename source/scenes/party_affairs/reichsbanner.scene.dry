@@ -10,9 +10,9 @@ max-visits: 6
 
 = Reichsbanner
 
-The *Soyuz Fevralya* is a mass organization for the defense of the Republic against the extremists who threaten it. Some would call it a paramilitary, although currently it is hardly any sort of military. It is officially associated with the pro-democratic parties -the RSDRP, PSR, and Kadets, but by far the largest component is with the RSDRP due to the SF's urban nature.
+The *Soyuz Fevralya*, or *Esfa*, is a mass organization for the defense of the Republic against the extremists who threaten it. Some would call it a paramilitary, although currently it is hardly any sort of military. It is officially associated with the pro-democratic parties -the RSDRP, PSR, and, in select cases, the Kadets, but by far the largest component is with the RSDRP due to the Esfa's urban nature.
 
-[? if workers_rsdrp < 46 or workers_rsdrp < workers_nts or workers_rsdrp < workers_rkp : The SF is having a more difficult time recruiting, as the RSDRP is no longer the dominant party among the workers. Many of its members have left. ?]
+[? if workers_rsdrp < 46 or workers_rsdrp < workers_nts or workers_rsdrp < workers_rkp : The Esfa is having a difficult time recruiting, as the RSDRP is no longer the dominant party among the workers. Many of its members have left. ?]
 
 - @militant: Fund more military-style training and equipment for the Reichsbanner.
 - @militant_2: Use our existing resources to support more training for the Reichsbanner.
@@ -22,7 +22,7 @@ The *Soyuz Fevralya* is a mass organization for the defense of the Republic agai
 - @easy_discard
 - @cancel_advisor_action
 
-#- Orient SF towards anti-Solidarism (only available if we have prioritized anti fascism)
+#- Orient Esfa towards anti-Solidarism (only available if we have prioritized anti fascism)
 
 @militant
 choose-if: resources >= rb_militarization_cost
@@ -30,16 +30,16 @@ unavailable-subtitle: Not enough resources ([+ rb_militarization_cost +] needed)
 subtitle: -[+ rb_militarization_cost +] resources
 on-arrival: resources -= rb_militarization_cost; rb_investment += 1; rb_strength += 100; rb_militancy += 0.05; left_strength += 2; left_dissent -= 2; reformist_dissent += 5; rsdrp_militancy += 0.05; workers_rsdrp += 2*(1-dissent); unemployed_rsdrp += 2*(1-dissent); z_relation -= 5 if historical_mode 
 
-Some in our party decry the increasing militarization of the SF. They say it is emulating the right-wing nationalists or the communists, and risks alienating our allies in the centrist parties. On the other hand, more left-leaning radicals are being lured to our organizations, away from the communists.
+Some in our party decry the increasing militarization of the Esfa. They say it is emulating the right-wing nationalists or the communists, and risks alienating our allies in the centrist parties. On the other hand, more left-leaning radicals are being lured to our organizations, away from the communists.
 
-[? if historical_mode : The Center Party decries the militarization of the SF, and its members are leaving the republican organization. ?]
+[? if historical_mode : The Center Party decries the militarization of the Esfa, and its members are leaving the republican organization. ?]
 
 
 @militant_2
 view-if: funded_reichsbanner >= 1
 on-arrival: rb_militancy += 0.02; funded_reichsbanner -= 1
 
-As we have already funded resources towards the SF, we can invest in building up their militancy.
+As we have already funded resources towards the Esfa, we can invest in building up their militancy.
 
 
 @same
@@ -53,7 +53,7 @@ The Soyuz is already serving the purpose it needs to serve. There is no reason t
 subtitle: +1 resources
 on-arrival: resources += 1; rb_strength -= 100; rb_militancy -= 0.05; left_strength -= 2; left_dissent -= 2; rsdrp_militancy -= 0.05; workers_rkp += 2; unemployed_rkp += 2
 
-Cutting resources to the Soyu causes a drop in the membership, and leads some would-be members to join the Communists instead.
+Cutting resources to the Esfa causes a drop in the membership, and leads some would-be members to join the far-left Red Guard instead.
 
 
 @women_rb

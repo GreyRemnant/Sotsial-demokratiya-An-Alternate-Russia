@@ -2,22 +2,22 @@ title: Streetfighting
 new-page: true
 is-card: true
 on-arrival: streetfighting_timer = 6; month_actions += 1; rb_militarization_cost = 2 if rb_militancy > 0.1 else rb_militarization_cost = 1; rb_militarization_cost = 3 if rb_militancy > 0.25; strife += 1
-view-if: year >= 1930 and sa_strength >= 150 and streetfighting_timer == 0 and not return_to_normalcy
+view-if: streetfighting_timer == 0 and not return_to_normalcy and streetviolence = 1
 card-image: img/steeetfighting.jpg
 tags: party_affairs; antifascism
 
 = Streetfighting
 
-Battles rage on the streets between the Nazi SA, nationalist Stahlhelm, communist Rotfrontkämpferbund (RFB), and our own Reichsbanner. In some parts of the country, conditions are nearing civil war levels, as dozens of people are killed each month.
+Battles rage on the streets between the Solidarist SRNM, nationalist ROVS, communist Red Guard, and our own Soyuz Fevralya. In some parts of the country, conditions are nearing levels similar to the Civil War, as dozens of people are killed each month.
 
 We must do something to protect the workers against these predations.
 
-# - @battle: Test our defense units in battle against the fascists!
-- @arm_rb: Increase training and armaments for the Reichsbanner.
-- @if_training: Train union members to fight as part of the Iron Front.
-- @prussian_police_training: Use the Prussian police to help train the Reichsbanner.
+# - @battle: Test our defense units in battle against the Solidarists!
+- @arm_rb: Increase training and armaments for the Esfa.
+- @if_training: Train union members to fight as part of the Red Banner.
+- @prussian_police_training: Use the National Militia to help train the Soyuz.
 - @peace: Try to avoid all militant confrontations, as much as possible.
-- @truce_rfb: Try to make peace with the RFB.
+- @truce_rfb: Try to make peace with the Red Guard.
 - @easy_discard
 
 @battle
@@ -25,7 +25,7 @@ view-if: rb_militancy > 0.1 and rb_militancy < 0.5
 on-arrival: rb_militancy += 0.1; sa_strength += 40; rb_strength -= 100; 
 max-visits: 1
 
-Many Reichsbanner members are not ready for actual fighting, and thus quit. However, the remainder are toughened as a result. Our confrontations also provide ample recruiting material for the Nazi SA.
+Many Esfa members are not ready for actual fighting, and thus quit. However, the remainder are toughened as a result. Our confrontations also provide ample recruiting material for the Nazi SA.
 
 @arm_rb
 subtitle: -[+ rb_militarization_cost +] resource
@@ -33,7 +33,7 @@ choose-if: resources >= rb_militarization_cost
 unavailable-subtitle: Not enough resources ([+ rb_militarization_cost +] needed).
 on-arrival: resources -= rb_militarization_cost; rb_militancy += 0.06; rb_strength += 50; sa_strength += 50; z_relation -= 5 if historical_mode 
 
-We have increased training and purchased more armaments for the Reichsbanner.
+We have increased training and purchased more armaments for the Esfa.
 
 [? if historical_mode : The Center Party decries the militarization of the Reichsbanner, and its members are leaving the republican organization. ?]
 
@@ -43,18 +43,18 @@ view-if: iron_front_formed == 1
 on-arrival: rb_militancy += 0.03; rb_strength += 200; sa_strength += 50; 
 max-visits: 2
 
-As part of the Iron Front, we are increasing coordination between the Reichsbanner and the unions, and many union members want to become more involved.
+As part of the Red Banner, we are increasing coordination between the Esfa and the unions, and many union members want to become more involved.
 
 @prussian_police_training
 view-if: rsdrp_prussia == 1 and prussian_police_loyalty > 0.5
 on-arrival: rb_militancy += 0.05; sa_strength += 50; prussian_police_training += 1
 
-The loyal sections of the Prussian police can help train the Reichsbanner.
+The loyal sections of the National Militia can help train the Esfa.
 
 @peace
 on-arrival: rb_militancy -= 0.02; rb_strength -= 50; pacifism += 1
 
-By not fighting, the strength of the Reichsbanner atrophies. Pacifists in the party are gaining the upper hand.
+By not fighting, the strength of the Esfa atrophies, but Pacifists in the party are happier.
 
 @truce_rfb
 choose-if: rkp_relation >= 45
@@ -62,4 +62,4 @@ view-if: rkp_truce == 0
 unavailable-subtitle: The RKP is not interested.
 on-arrival: rkp_truce = 1; rkp_relation += 5; rfb_strength += 50; rb_strength += 50; sa_strength += 50;
 
-We have made at least a temporary truce with the RKP, so that our respective paramilitaries will stop fighting.
+We have made at least a temporary truce with the Red Guard, so that our respective paramilitaries will stop fighting.

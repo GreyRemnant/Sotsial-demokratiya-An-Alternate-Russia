@@ -4,7 +4,7 @@ is-card: true
 tags: govt_affairs, cabinet
 on-arrival: economic_policy_timer += 12; month_actions += 1; nationalize_budget = 4; nationalize_budget -= 1 if works_councils >= 2; nationalize_budget -= 1 if works_councils >= 3; nationalize_budget -= 1 if socializations + nationalization_progress >= 2; wtb_budget = 4; wtb_budget -= 1 if works_councils >= 2 or socializations >= 1 or pro_labor >= 2
 view-if: rsdrp_in_government = 1 and (economic_minister_party == "RSDRP" or finance_minister_party == "RSDRP") and economic_policy_timer <= 0 and economic_plan > 0
-card-image: img/portraits/martynov.jpg
+card-image: img/petrosoviet.jpg
 #subtitle: Policies to address the economic crisis.
 
 = Economic Policy
@@ -25,25 +25,25 @@ We have already formulated an economic plan. Now we have to implement it.
 - @cancel_advisor_action
 
 @wtb_2
-title: Continue the implementation of the WTB-Plan.
+title: Continue the implementation of the Voitinsky-Plan.
 subtitle: -3 budget
-unavailable-subtitle: Unemployment is low enough that the time for the WTB-Plan has passed.
+unavailable-subtitle: Unemployment is low enough that the time for the Voitinsky-Plan has passed.
 view-if: wtb_implemented > 2 and budget >= 3 
 choose-if: unemployed > 8
 on-arrival: works_program += 1; budget -= 3; workers_rsdrp += 7*(1-dissent); workers += 1 if works_program <= 4; unemployed -= 3 if unemployed > 8; unemployed_rsdrp += 7*(1-dissent); workers_rkp -= 3; workers_nts -= 3; wtb_implemented += 1; rkp_coalition_dissent += 1; rkp_relation -= 5 if in_popular_front or in_left_front; inflation += 2; economic_growth += 1.6; economic_growth -= 0.6 if economic_growth > 5
 
-[? if works_program == 4 : We have commenced Phase 2 of the WTB-Plan. ?][? if works_program > 4 :  We have continued our implementation of the WTB-Plan. ?] In addition to public works, we are now focusing on rebuilding our industries.
+[? if works_program == 4 : We have commenced Phase 2 of the Voitinsky-Plan. ?][? if works_program > 4 :  We have continued our implementation of the Voitinsky-Plan. ?] In addition to public works, we are now focusing on rebuilding our industries.
 
 
 @wtb_2_deficit
-title: Continue the implementation of the WTB-Plan.
+title: Continue the implementation of the Voitinsky-Plan.
 subtitle: -3 budget - we will enter a deficit.
 unavailable-subtitle: Unemployment is low enough that we should not do deficit spending.
 view-if: wtb_implemented > 2 and budget < 3 and budget >= -3
 choose-if: unemployed > 10
 on-arrival: works_program += 1; budget -= 3; workers_rsdrp += 6*(1-dissent); workers += 1 if works_program <= 4; unemployed -= 3 if unemployed > 8; unemployed_rsdrp += 6*(1-dissent); workers_rkp -= 2; workers_nts -= 2; coalition_dissent += 1; capital_strike_progress += 1; wtb_implemented += 1; rkp_coalition_dissent += 1; rkp_relation -= 5 if in_popular_front or in_left_front; inflation += 3; economic_growth += 1.6; economic_growth -= 0.6 if economic_growth > 5
 
-We have continued our implementation of the WTB-Plan, despite the continued deficit spending. In addition to public works, we are now focusing on rebuilding our industries.
+We have continued our implementation of the Voitinsky-Plan, despite the continued deficit spending. In addition to public works, we are now focusing on rebuilding our industries.
 
 
 @wtb_continuation
@@ -58,30 +58,30 @@ The economy is doing better, finally. Even the bourgeois parties are beginning t
 [? if in_popular_front or in_left_front: The RKP, however, still opposes our policy of "rescuing" capitalism. ?]
 
 @implement_wtb_no_deficit
-title: Implement the WTB plan.
+title: Implement the Voitinsky-Plan.
 subtitle: -[+ wtb_budget +] budget. [? if wtb_budget == 3 : Our pro-labor policies have reduced the cost of the plan. ?]
-unavailable-subtitle: Unemployment is low enough that the time for the WTB-Plan has passed.
+unavailable-subtitle: Unemployment is low enough that the time for the Voitinsky-Plan has passed.
 view-if: budget >= wtb_budget and wtb_implemented == 0 and wtb_adopted == 1
 choose-if: unemployed > 8
 on-arrival: budget -= wtb_budget; works_program += 1; unemployed -= 4; workers_rsdrp += 8*(1-dissent); unemployed_rsdrp += 8*(1-dissent); wtb_implemented += 1; rkp_coalition_dissent += 1; rkp_relation -= 5 if in_popular_front or in_left_front; inflation += 2; economic_growth += 2.8; pro_republic += 3*(1-dissent);
 achievement: wirtschaftspolitik
 
-We have started to enact the WTB plan. Money is beginning to flow through the economy via investments in large-scale public works.
+We have started to enact the Voitinsky-Plan. Money is beginning to flow through the economy via investments in large-scale public works.
 
-[? if in_popular_front or in_left_front: The RKP opposes the WTB plan, seeing it as a rescue of capitalism rather than a step towards real socialism. ?]
+[? if in_popular_front or in_left_front: The RKP opposes the Voitinsky-Plan, seeing it as a rescue of capitalism rather than a step towards real socialism. ?]
 
 @implement_wtb_deficit
-title: Implement the WTB plan.
+title: Implement the Voitinsky-Plan.
 subtitle: -[+ wtb_budget +] budget - we will enter deficit spending. [? if wtb_budget == 3 : Our pro-labor policies have reduced the cost of the plan. ?]
-unavailable-subtitle: Unemployment is low enough that the time for the WTB-Plan has passed.
+unavailable-subtitle: Unemployment is low enough that the time for the Voitinsky-Plan has passed.
 view-if: budget < wtb_budget and wtb_implemented == 0 and wtb_adopted == 1
 choose-if: unemployed > 8
 on-arrival: coalition_dissent += 1; coalition_dissent += 1 if historical_mode; coalition_dissent += 1 if chancellor == "Brüning"; works_program += 1; budget -= wtb_budget; unemployed -= 4; workers += 2; workers_rsdrp += 8*(1-dissent); unemployed_rsdrp += 8*(1-dissent); capital_strike_progress += 1; wtb_implemented += 1; rkp_coalition_dissent += 1; rkp_relation -= 5 if in_popular_front or in_left_front; inflation += 3; economic_growth += 3; pro_republic += 3*(1-dissent);
 achievement: wirtschaftspolitik
 
-We have entered the realm of deficit spending. Our coalition partners are disgusted, but the works plan is enacted anyway. Money is beginning to flow through the economy via investments in large-scale public works.
+We have entered the realm of deficit spending. Our coalition partners are disgusted, pointing to the hyperinflation of the Empire's last days, but the works plan is enacted anyway. Money is beginning to flow through the economy via investments in large-scale public works.
 
-[? if in_popular_front or in_left_front: The RKP opposes the WTB plan, seeing it as a rescue of capitalism rather than a step towards real socialism. ?]
+[? if in_popular_front or in_left_front: The RKP opposes the Voitinsky-Plan, seeing it as a rescue of capitalism rather than a step towards real socialism. ?]
 
 
 ####################### left economic policies (socializations)
@@ -158,7 +158,7 @@ Fascists have been taking increasingly violent actions around the occupied facto
 
 @nationalize_2
 title: Continue the Left plan for the transformation of the economy.
-subtitle: -[+ nationalize_budget +] budget. [? if works_councils >= 3 : Our works councils have reduced the budget necessary for this program. ?] [? if socializations + nationalization_progress >= 2: Our existing socialization policies have reduced the budget necessary for this program. ?]
+subtitle: -[+ nationalize_budget +] budget. [? if works_councils >= 3 : Our works councils have reduced the budget necessary for this program. ?] [? if socializations + nationalization_progress >= 2: Our existing socialization policies have reduced the budget necessary for this program. Perhaps economic planning really is the future. ?]
 view-if: nationalization_adopted == 1 and nationalization_progress >= 1
 go-to: nationalize_deficit if budget < nationalize_budget; nationalize_no_deficit if budget >= nationalize_budget
 

@@ -1,0 +1,31 @@
+title: Violence on the Streets of Petrograd!
+subtitle: National Ban on Paramilitaries Ignored.
+face-image: img/petrogradvio.jpg
+on-arrival: streetviolence = 1
+tags: event
+view-if: year = 1930 and month = 4 
+priority: 2
+max-visits: 1
+
+WIP. Will write when it's not almost 1AM and I'm tired damn it!
+
+- @bansolidar
+- @nothingeverhappens
+
+@bansolidar
+title: Issue a ban on the Solidarist paramilitary.
+subtitle: The Esfa, Police, and National Militia may have trouble stopping the highly militarized and radical Solidarists.
+unavailable-subtitle: We aren't in government.
+on-arrival: strife += 2
+face-image: img/streetfighting2.jpg
+
+WIP. you fail, social-fascist. haha!
+
+@nothingeverhappens
+title: Deploy the Soyuz Fevralya.
+subtitle: The Esfa will have trouble stopping the highly militarized and radical Solidarists.
+unavailable-subtitle: We are in government and can use better methods to solve this.
+on-arrival: strife += 2
+face-image: img/streetfighting2.jpg
+
+WIP. you fail, social-fascist. haha!
