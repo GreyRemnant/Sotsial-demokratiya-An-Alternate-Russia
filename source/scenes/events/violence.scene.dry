@@ -1,6 +1,6 @@
 title: Violence on the Streets of Petrograd!
 subtitle: National Ban on Paramilitaries Ignored.
-face-image: img/petrogradvio.jpg
+face-image: img/petrogradvio.jpeg
 on-arrival: streetviolence = 1
 tags: event
 view-if: year = 1930 and month = 4 
