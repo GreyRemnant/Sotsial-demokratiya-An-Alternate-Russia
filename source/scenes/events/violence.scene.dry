@@ -16,15 +16,17 @@ title: Shots are heard in Petrograd.
 subtitle: Armed Solidarists are attempting to disrupt celebrations in Petrograd! 
 face-image: img/petrogradvio.jpeg
 
-- @bansolidar
+Members of the Russian National Youth League (SRNM), a Solidarist-aligned "youth organization", have attacked Soviet-organized celebrations across the city. Casualties are already in the dozens, gunshots echo through the streets of Petrograd, action must be taken immediately!
+
+- @bansrnm
 - @nothingeverhappens
 
-@bansolidar
+@bansrnm
 title: Rally local forces and issue a ban on the Solidarist paramilitary.
-subtitle: The Esfe, Police, and National Militia were not prepared for this and will no doubt trouble stopping the highly militarized and radical Solidarists.
+subtitle: The Esfe, Police, and National Militia will do what they can to fend off these terrorists.
 unavailable-subtitle: We aren't in government.
 choose-if: rsdrp_in_government = 1 and interior_minister_party = "RSDRP"
-on-arrival: strife += 2; sa_strength *= 0.85; workers_nts += 2; new_middle_nts += 2; old_middle_nts += 3; rural_nts += 2; unemployed_nts += 3; republicanism += 3
+on-arrival: strife += 2; sa_strength *= 0.85; workers_nts += 2; new_middle_nts += 2; old_middle_nts += 3; rural_nts += 2; unemployed_nts += 3; republicanism += 3; sa_banned = 1
 face-image: img/streetfighting2.jpg
 
 The Esfe, Militsiya, and loyal portions of the Petrograd Politsiya have managed to fend off the Solidarists, dealing and taking a great deal of damage. Despite our losses, this represents a victory for Republicanism.
@@ -38,6 +40,8 @@ unavailable-subtitle: We are in government and can use better methods to solve t
 on-arrival: strife += 2; sa_strength *= 0.65; workers_nts += 2; new_middle_nts += 3; old_middle_nts += 6; rural_nts += 4; unemployed_nts += 5; republicanism -= 5
 face-image: img/streetfighting2.jpg
 
-The Esfe and loyal portions of the Petrograd Politsiya have attempted to fend off the Solidarists, inflicting some damage, but have ultimately been forced to flee.
+The Esfe and loyal portions of the Petrograd Politsiya mount a valiant defense against the SRNM, inflicting a great deal damage, but have ultimately been forced to flee under the force of the radicals.
 
 Radicalism is on the rise. **Streetfighting is now unlocked.**
+
+# to-do: make a win and fail condition for this, for now the social-fascists get the shit kicked out of them by the fascists if you ain't got the interior ministry. sucker.
