@@ -1,31 +1,43 @@
-title: Violence on the Streets of Petrograd!
-subtitle: National Ban on Paramilitaries Ignored.
-face-image: img/petrogradvio.jpeg
+title: Anniversary of the Republic.
+subtitle: The Republic celebrates it's eleventh anniversary!
+face-image: img/russiacelebrate.jpg
 on-arrival: streetviolence = 1
 tags: event
-view-if: year = 1930 and month = 4 
+view-if: year = 1930 and month = 3 
 priority: 2
 max-visits: 1
 
-WIP. Will write when it's not almost 1AM and I'm tired damn it!
+Today marks the eleventh anniversary of the February Revolution, and in turn the Russian Democratic Federative Republic! Social Democrats, Liberals, and Narodists nation-wide are taking part in jubilees to celebrate our continued freedom from Tsarist autocracy! What a time to be alive!
+
+- @petrogradvio
+
+@petrogradvio
+title: Shots are heard in Petrograd.
+subtitle: Armed Solidarists are attempting to disrupt celebrations in Petrograd! 
+face-image: img/petrogradvio.jpeg
 
 - @bansolidar
 - @nothingeverhappens
 
 @bansolidar
-title: Issue a ban on the Solidarist paramilitary.
-subtitle: The Esfa, Police, and National Militia may have trouble stopping the highly militarized and radical Solidarists.
+title: Rally local forces and issue a ban on the Solidarist paramilitary.
+subtitle: The Esfe, Police, and National Militia were not prepared for this and will no doubt trouble stopping the highly militarized and radical Solidarists.
 unavailable-subtitle: We aren't in government.
-on-arrival: strife += 2
+choose-if: rsdrp_in_government = 1 and interior_minister_party = "RSDRP"
+on-arrival: strife += 2; sa_strength *= 0.85; workers_nts += 2; new_middle_nts += 2; old_middle_nts += 3; rural_nts += 2; unemployed_nts += 3; republicanism += 3
 face-image: img/streetfighting2.jpg
 
-WIP. you fail, social-fascist. haha!
+The Esfe, Militsiya, and loyal portions of the Petrograd Politsiya have managed to fend off the Solidarists, dealing and taking a great deal of damage. Despite our losses, this represents a victory for Republicanism.
+
+Radicalism is on the rise. **Streetfighting is now unlocked.**
 
 @nothingeverhappens
 title: Deploy the Soyuz Fevralya.
-subtitle: The Esfa will have trouble stopping the highly militarized and radical Solidarists.
+subtitle: The Esfe will have trouble stopping the highly militarized and radical Solidarists on such short notice.
 unavailable-subtitle: We are in government and can use better methods to solve this.
-on-arrival: strife += 2
+on-arrival: strife += 2; sa_strength *= 0.65; workers_nts += 2; new_middle_nts += 3; old_middle_nts += 6; rural_nts += 4; unemployed_nts += 5; republicanism -= 5
 face-image: img/streetfighting2.jpg
 
-WIP. you fail, social-fascist. haha!
+The Esfe and loyal portions of the Petrograd Politsiya have attempted to fend off the Solidarists, inflicting some damage, but have ultimately been forced to flee.
+
+Radicalism is on the rise. **Streetfighting is now unlocked.**

@@ -15,7 +15,7 @@ In addition to being a political party, the RSDRP is a social world onto itself,
 - @newspapers: Fund more newspapers and journalists.
 - @welfare: Fund more mutual aid and welfare programs.
 - @culture: Fund sports leagues, educational, and cultural programs.
-- @sf: Fund the Soyuz Fevralya, our self-defense organization.
+- @esfe: Fund the Soyuz Fevralya, our self-defense organization.
 - @youth: We have the reputation of being a party for old men. Support the youth organizations.
 - @nothing: Do not increase funding for any program.
 - @easy_discard
@@ -26,9 +26,6 @@ unavailable-subtitle: Not enough resources.
 subtitle: -1 resources
 on-arrival: resources -= 1; media_timer = 0;
 go-to: media
-
-# TODO: differing outcomes based on whether you've seen media, and what kind of media you've supported.
-
 
 @welfare
 choose-if: resources > 0
@@ -46,15 +43,15 @@ on-arrival: resources -= 1; cultural_organizations += 1; left_dissent -= 6; cent
 
 It is not enough for the RSDRP to solely be a political party. The Worker Singer's League, Worker's Sports, and our schools and libraries are crucial to our members' lives. Funding these organizations makes our members more committed to the party, even when our policies might not be to their liking.
 
-[? if sa_strength > 500 : However, it feels frivolous to spend on sports and choirs when the Solidarists are murdering us in the streets. ?]
+[? if sa_strength > 500 : Comrade Martov, doesn't it feel frivolous to spend on sports and choirs when the Solidarists are murdering us in the streets? ?]
 
-@sf
+@esfe
 choose-if: resources > 0
 unavailable-subtitle: Not enough resources.
 subtitle: -1 resources
 on-arrival: resources -= 1; rb_strength  += 100; rb_militancy += 0.01; reichsbanner_timer = 0; funded_reichsbanner += 1
 
-We have increased recruiting to the SF.
+We have increased the Esfe's budget for recruitment [? if streetviolence = 1 : and armaments ?].
 
 @youth
 choose-if: resources > 0
