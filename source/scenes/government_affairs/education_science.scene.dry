@@ -1,9 +1,9 @@
 title: Education & Science
 new-page: true
 is-card: true
-view-if: rsdrp_in_government and rsdrp_prussia and chancellor_party = "RSDRP" and education_science_timer = 0 and (black_thursday_seen = 0 or return_to_normalcy = 1)
+view-if: rsdrp_in_government and chancellor_party = "RSDRP" and education_science_timer = 0
 on-arrival: education_science_timer += 9; month_actions += 1
-card-image: img/portraits/potresov.jpg
+card-image: img/portraits/literacy.jpg
 go-to: ed_menu
 tags: govt_affairs, cabinet
 
@@ -26,7 +26,7 @@ tags: govt_affairs, cabinet
 
 = Education and Science
 
-Education in Germany is an area of mixed responsibility between the state governments and the central government. The Weimar Constitution claims that schools are the domain of the central government, but in practice much of it is left to the states, as the Reichstag has historically been unable to pass an education law. Currently, with our control of Prussia and the Chancellorship, we can try to set policy for a large part of the country.
+Education in Russia is an area of mixed responsibility between the state governments and the central government. The Constitution claims that schools are the domain of the central government, but in practice much of it is left to the oblasts, as the Duma has been unable to pass an education law. Currently, with our control of the Chairmanship and the Education Ministry, we can try to set policy for a large part of the country.
 
 [? if major_curriculum: Current educational curriculum - [+ major_curriculum +], [+ minor_curriculum +] ?]
 
@@ -34,6 +34,7 @@ Education in Germany is an area of mixed responsibility between the state govern
 view-if: not last_advisor_action
 
 - @increase_science
+- @literacy
 - @structure
 - @curriculum
 - @return: Do not enact any policies for now.
@@ -89,6 +90,79 @@ on-arrival: budget += 1; science -= 1; science_funding -= 1; applied_research -=
 
 We have cut funding for science. This has a negative effect on our economic growth, and unemployed scientists are less likely to support the RSDRP.
 
+
+@literacy
+title: Enact literacy programs.
+face-image: img/literacy.jpg
+
+Literacy in Tsarist Russia was abysmal, not even breaking a quarter of the population, and it was even worse in rural areas. However, it is currently our responsibility to fix this issue, despite failures from the Liberal-Narodist Coalition of the mid '20s.
+
+- @fundlit
+- @defundlit
+- @builded
+- @unionlit
+- @womened
+- @eduagitprop
+
+@fundlit
+title: Increase education funding.
+subtitle: -1 budget
+choose-if: budget >= 1
+unavailable-subtitle: We do not have the money.
+on-arrival: budget -= 1; workers_rsdrp += 5*(1-dissent); rural_rsdrp += 3*(1-dissent); unemployed -= 0.2 if unemployed >= 4; literacy_rate += 3
+face-image: img/fundlit.jpg
+
+We have increased funding for literacy programs. This has a will have a positive effect on our literacy rate and newly employed teachers are more likely to support the RSDRP.
+
+@defundlit
+title: Decrease education funding.
+subtitle: +1 budget
+choose-if: literacy_funding <= 1
+unavailable-subtitle: Literacy programs have no funding.
+on-arrival: budget += 1; workers_rsdrp -= 5*(1-dissent); rural_rsdrp -= 3*(1-dissent); unemployed += 0.2 if unemployed >= 4; literacy_rate -= 4
+face-image: img/fundlit.jpg
+
+We have cut funding for literacy programs. This has a will have a negative effect on our literacy rate and the newly unemployed are less likely to support the RSDRP.
+
+@builded
+title: Build schools in rural oblasts.
+subtitle: -2 budget
+choose-if: budget >= 2
+unavailable-subtitle: We do not have the money.
+on-arrival: budget -= 2; workers_rsdrp += 3*(1-dissent); rural_rsdrp += 7*(1-dissent); unemployed -= 0.4 if unemployed >= 4; literacy_rate += 6
+face-image: img/laborlit.jpg
+
+We have funded government construction of schools. This has a will have a great effect on our literacy rate, especially in rural areas, and the newly employed teachers are more likely to support the RSDRP.
+
+@unionlit
+title: Work with the Unions to improve literacy.
+subtitle: -1 budget
+choose-if: budget >= 1
+unavailable-subtitle: We do not have the money.
+on-arrival: budget -= 1; workers_rsdrp += 6*(1-dissent); new_middle_rsdrp += 3*(1-dissent); unemployed -= 0.2 if unemployed >= 4; literacy_rate += 5
+face-image: img/laborlit.jpg
+
+Working with unions, we have hired teachers to improve the literacy rate among workers and others union-members. The new teachers and newly-educated workers are sure to be thankful.
+
+@womened
+title: Improve literacy among women.
+subtitle: -1 budget
+choose-if: budget >= 1
+unavailable-subtitle: We do not have the money.
+on-arrival: budget -= 1; workers_rsdrp += 3*(1-dissent); new_middle_rsdrp += 3*(1-dissent); old_middle_rsdrp += 3*(1-dissent); rural_rsdrp += 3*(1-dissent); unemployed_rsdrp += 3*(1-dissent); unemployed -= 0.2 if unemployed >= 4; literacy_rate += 6
+face-image: img/womenliteracy.jpg
+
+Working with the All-Russian League for Women's Equality, we have hired teachers to work with women and improve their literacy. The Russian Feminist movement is sure to appreciate our efforts.
+
+@eduagitprop
+title: Promote government-sponsored literacy programs on the streets.
+subtitle: -1 budget
+choose-if: budget >= 1
+unavailable-subtitle: We do not have the money.
+on-arrival: budget -= 1; workers_rsdrp += 4*(1-dissent); new_middle_rsdrp += 2*(1-dissent); old_middle_rsdrp += 2*(1-dissent); rural_rsdrp += 3*(1-dissent); unemployed_rsdrp += 3*(1-dissent); literacy_rate += 5
+face-image: img/readmfr.jpg
+
+Posters on the streets are an effective, cheap, and wide-reaching way to promote and advertise our efforts in defeating illiteracy. Hopefully these inspire the illiterate and semi-literate to start or finish their education.
 
 @structure
 title: Change the structure and funding of education.

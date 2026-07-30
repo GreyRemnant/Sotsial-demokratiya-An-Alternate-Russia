@@ -545,7 +545,7 @@ Mikhail Liber is now an advisor.
 
 @add_Voitinsky
 title: Vladimir Voitinsky
-subtitle: Vladimir Voitinsky is a former Russian Menshevik who is now the lead trade union economist. {!<br><br>!}[? if difficulty < 0 : Actions - Addressing the Economic Crisis, Carrying Out the Economic Plan ?]
+subtitle: Vladimir Voitinsky is a long-time Menshevik, and the chief economist of the All-Russian Conference of the Soviets. {!<br><br>!}[? if difficulty < 0 : Actions - Addressing the Economic Crisis, Carrying Out the Economic Plan ?]
 is-card: true
 card-image: img/portraits/VoitinskyWladimir.jpg
 tags: labor_advisor
