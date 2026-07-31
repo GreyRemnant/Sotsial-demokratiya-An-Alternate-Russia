@@ -34,6 +34,7 @@ on-arrival: advisor_action_timer = 6; labor_dissent -= 10;
 We have reduced tensions with the Labor faction.
 
 @welfare
+title: Fund welfare
 choose-if: advisor_action_timer <= 0 and resources > 0
 unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?] Not enough resources.
 subtitle: -1 resources
