@@ -581,7 +581,7 @@ Q.march_on_berlin_timer = 0;
 
 
 // all the initial advisors are centrists.
-Q.strumlin_advisor = 1;
+Q.strumilin_advisor = 1;
 Q.axelrod_advisor = 1;
 Q.axelrod_dead = 0;
 Q.crispien_advisor = 0;
