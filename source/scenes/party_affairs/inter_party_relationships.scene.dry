@@ -67,7 +67,7 @@ After the events of *Red Tuesday*, reconciling with the Communists is difficult,
 subtitle: -1 resources
 choose-if: resources >= 1
 unavailable-subtitle: Not enough resources.
-on-arrival: resources -= 1; psr_relation += 2 if psr_party_leader == "Avksentyev"
+on-arrival: resources -= 1; psr_relation += 2 if psr_party_leader == "Avksentyev"; psr_left +=1;
 go-to: center_op if psr_in_government = 1 and rsdrp_in_government = 0 and chancellor != "Brüning"; center_coalition if rsdrp_in_government = 1 and psr_in_government = 1; center_bruning if chancellor = "Brüning"
 
 @center_op
