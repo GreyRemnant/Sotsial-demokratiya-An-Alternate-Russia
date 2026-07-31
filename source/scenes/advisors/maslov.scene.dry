@@ -2,7 +2,7 @@ title: Pyotr Maslov
 is-pinned-card: true
 tags: advisor, reformist
 card-image: img/portraits/maslov.jpg
-view-if: baade_advisor = 1
+view-if: maslov_advisor = 1
 new-page: true 
 
 = Pyotr Maslov

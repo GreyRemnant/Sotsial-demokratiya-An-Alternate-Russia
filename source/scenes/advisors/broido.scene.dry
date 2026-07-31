@@ -2,7 +2,7 @@ title: Eva Broido
 is-pinned-card: true
 tags: advisor, left
 card-image: img/portraits/EvaBroido.jpg
-view-if: siemsen_advisor = 1
+view-if: broido_advisor = 1
 new-page: true 
 
 = Eva Broido

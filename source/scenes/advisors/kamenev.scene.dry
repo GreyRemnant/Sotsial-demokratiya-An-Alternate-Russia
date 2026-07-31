@@ -2,7 +2,7 @@ title: Lev Kamenev
 is-pinned-card: true
 tags: advisor, left
 card-image: img/portraits/kamenev.jpg
-view-if: seydewitz_advisor = 1
+view-if: kamenev_advisor = 1
 new-page: true 
 
 = Lev Kamenev
@@ -27,7 +27,7 @@ Our message of class struggle appeals to the left wing of the working class, whi
 @snap_election
 title: Snap Election
 subtitle: Call a snap election.
-unavailable-subtitle: [? if chancellor != "Seydewitz" : Kamenev must be Chariman. ?][? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?]
+unavailable-subtitle: [? if chancellor != "Kamenev" : Kamenev must be Chariman. ?][? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?]
 choose-if: advisor_action_timer == 0 and chancellor == "Kamenev"
 on-arrival: advisor_action_timer = 6; next_election_time = time + 3 if next_election_time > time+3; next_election_month = month + 3 if next_election_time >= time+3; next_election_year = year if next_election_time >= time+3; next_election_year += 1 if next_election_month > 12; next_election_month -= 12 if next_election_month > 12;
 

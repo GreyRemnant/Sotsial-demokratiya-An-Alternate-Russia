@@ -2,7 +2,7 @@ title: Aleksey Nikitin
 is-pinned-card: true
 tags: advisor, reformist
 card-image: img/portraits/nikitin.jpg
-view-if: severing_advisor = 1
+view-if: nikitin_advisor = 1
 new-page: true 
 
 = Aleksey Nikitin
@@ -15,7 +15,7 @@ Aleksey Nikitin is a lawyer, former Police Chief, and reformist-Menshevik. He ad
 
 @prussian_bulwark
 title: Prussian Bulwark
-subtitle: Severing has influence over Prussian politics.
+subtitle: Nikitin has influence over Prussian politics.
 choose-if: advisor_action_timer <= 0 and rsdrp_prussia = 1
 unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?][? if not rsdrp_prussia : The RSDRP is not in control of Prussia. ?]
 on-arrival: advisor_action_timer = 6; prussian_affairs_timer -= 6; last_advisor_action = 1

@@ -2,7 +2,7 @@ title: Rafail Abramovich
 is-pinned-card: true
 tags: advisor, left
 card-image: img/portraits/Abramovitch.jpg
-view-if: rosenfeld_advisor = 1
+view-if: abramovich_advisor = 1
 new-page: true 
 
 = Rafail Abramovich
@@ -30,7 +30,7 @@ unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +
 choose-if: advisor_action_timer = 0
 on-arrival: advisor_action_timer = 6; left_strength += 5; rkp_relation += 4*(1-dissent); reformist_dissent += 2; communist_coalition += 1 if rkp_cooperation_seen <= 1; rkp_cooperation_seen += 1
 
-Through his work, Rosenfeld has defended individual RKP members; this should make some connections possible.
+Through his work, Abramovich has defended individual RKP members; this should make some connections possible.
 
 @against_toleration
 title: Against toleration

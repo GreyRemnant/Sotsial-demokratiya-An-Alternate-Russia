@@ -581,34 +581,35 @@ Q.march_on_berlin_timer = 0;
 
 
 // all the initial advisors are centrists.
-Q.wels_advisor = 1;
-Q.muller_advisor = 1;
-Q.muller_dead = 0;
+Q.strumlin_advisor = 1;
+Q.axelrod_advisor = 1;
+Q.axelrod_dead = 0;
 Q.crispien_advisor = 0;
-Q.hilferding_advisor = 1;
+Q.martov_advisor = 1;
 
 // left advisors
-Q.sender_advisor = 0; // Toni Sender
-Q.levi_advisor = 0; // Paul Levi
-Q.levi_dead = 0;
-Q.rosenfeld_advisor = 0; // Kurt Rosenfeld
-Q.seydewitz_advisor = 0; // Max Seydewitz
+Q.sukhanov_advisor = 0;
+Q.dan_advisor = 0;
+Q.dan_dead = 0;
+Q.abramovich_advisor = 0; // Kurt Abramovich
+Q.kamenev_advisor = 0; // Max Kamenev
+Q.broido_advisor = 0;
 
 // centrist alternate advisors
 Q.pfulf_advisor = 0; // Antonie Pfülf
-Q.breitscheid_advisor = 0; // Rudolf Breitscheid
+Q.maisky_advisor = 0; // Rudolf Breitscheid
 
 // Reformist advisors
-Q.severing_advisor = 0; // Carl Severing
-Q.braun_advisor = 0; // Otto Braun
+Q.nikitin_advisor = 0; // Carl Severing
+Q.potresov_advisor = 0; // Otto Braun
 Q.juchacz_advisor = 0; // Marie Juchacz
-Q.baade_advisor = 0; // Fritz Baade
+Q.maslov_advisor = 0; // Fritz Maslov
 
 // Labor advisors
-Q.leipart_advisor = 0; // Theodor Leipart
-Q.aufhauser_advisor = 0; // Siegfried Aufhäuser
+Q.skobelev_advisor = 0; // Theodor Skobelev
+Q.kremer_advisor = 0; // Siegfried Kremer
 Q.Voitinsky_advisor = 0; // Vladimir Voitinsky (post-1930)
-Q.wissell_advisor = 0; // Rudolf Wissell
+Q.liber_advisor = 0; // Rudolf Liber
 
 // Revisionist advisors
 Q.mierendorff_advisor = 0; // Carlo Mierendorf (post-1930)

@@ -1,17 +1,17 @@
-title: Arkadi Kremer
+title: Arkady Kremer
 is-pinned-card: true
 tags: advisor, reformist
 card-image: img/portraits/kremer.jpg
-view-if: aufhauser_advisor = 1
+view-if: kremer_advisor = 1
 new-page: true 
 
-= Arkadi Kremer
+= Arkady Kremer
 
-Kremer is a leader of the General Jewish Labour Bund, the federation of Jewish socialists.
+Arkady Kremer is a leader of the General Jewish Labour Bund, the federation of Jewish socialists.
 
 - @white_collar
 - @union_unity
-- @crisis
+- @welfare
 - @moderate_economic_plan
 - @root: Return to main
 
@@ -33,17 +33,17 @@ on-arrival: advisor_action_timer = 6; labor_dissent -= 10;
 
 We have reduced tensions with the Labor faction.
 
-@crisis
-title: Addressing the economic crisis
-subtitle: Aufhäuser can help support a left-wing economic program.
-choose-if: advisor_action_timer <= 0 and nationalization_adopted == 0 and black_thursday_seen == 1 and nationalization_support <= 3
-unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?][? if black_thursday_seen == 0 : We are not currently in an economic crisis. ?][? if nationalization_adopted > 0 : We have already adopted the Left plan. ?]
-on-arrival: advisor_action_timer = 6; 
-go-to: crisis_program.support_left 
+welfare
+choose-if: advisor_action_timer <= 0 and resources > 0
+unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?] Not enough resources.
+subtitle: -1 resources
+on-arrival: resources -= 1; workers_aid += 1; unemployed_rsdrp += 5*(1 - dissent); advisor_action_timer = 6;
+
+Kremer has directed the Bund to send funding to welfare organizations. [? if black_thursday_seen > 0 : In an age of economic crisis, this will be helpful for improving our standing among the unemployed. ?]
 
 @moderate_economic_plan
 title: Support the reformist economic plan
-subtitle: Aufhäuser can also support a moderate economic plan.
+subtitle: Kremer can also support a moderate economic plan.
 choose-if: advisor_action_timer = 0 and moderate_plan_adopted = 0 and black_thursday_seen = 1
 unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?] [? if moderate_economic_plan = 0 : We have already adopted the reformist economic plan. ?] [? if black_thursday_seen == 0 : We are not currently in an economic crisis. ?]
 on-arrival: advisor_action_timer = 6

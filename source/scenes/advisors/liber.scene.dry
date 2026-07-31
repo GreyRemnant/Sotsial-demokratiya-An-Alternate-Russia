@@ -2,12 +2,12 @@ title: Mikhail Liber
 is-pinned-card: true
 tags: advisor, labor
 card-image: img/portraits/liber.jpg
-view-if: wissell_advisor = 1
+view-if: liber_advisor = 1
 new-page: true 
 
 = Mikhail Liber
 
-Liber is a Bundist economist working for the RSDRP and has been a labor minister on multiple occasions. His priority is to improve conditions for organized workers.
+Liber is a Bundist economist and anti-Bolshevist working for the RSDRP and has been a labor minister on multiple occasions. His priority is to improve conditions for organized workers.
 
 - @labor_rights_
 - @union_unity
@@ -16,7 +16,7 @@ Liber is a Bundist economist working for the RSDRP and has been a labor minister
 
 @labor_rights_
 title: Labor Rights
-subtitle: As Labor Minister, Wissell can help set regulations for working conditions.
+subtitle: As Labor Minister, Liber can help set regulations for working conditions.
 choose-if: advisor_action_timer <= 0 and rsdrp_in_government and labor_minister_party = "RSDRP"
 unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?][? if labor_minister_party != "RSDRP" : The RSDRP does not control the Labor Ministry. ?]
 on-arrival: advisor_action_timer = 6; labor_rights_timer -= 10; last_advisor_action = 1
@@ -36,8 +36,8 @@ We have reduced tensions with the Labor faction, and increased its strength in t
 title: Organize Jewish workers
 subtitle: Organize among Jewish workers.
 choose-if: advisor_action_timer <= 0 and resources >= 999
-unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?] Apologies, Comrade Martov, the Bund is too busy to do this right now. Perhaps we can try another time?
-on-arrival: advisor_action_timer = 6; labor_dissent -= 5; labor_strength += 5
+unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?]
+on-arrival: advisor_action_timer = 6; labor_dissent -= 5; labor_strength += 5; workers_rsdrp += 3;
 
 We have worked with the Bund to organize among Jewish workers, increasing their support for the party.
 

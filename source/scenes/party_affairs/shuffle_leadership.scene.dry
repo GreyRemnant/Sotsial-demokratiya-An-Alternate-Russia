@@ -43,39 +43,39 @@ go-to: root
 tags: remove_advisor
 
 
-@remove_hilferding
+@remove_strumilin
 title: Remove Strumilin
-view-if: hilferding_advisor = 1
-on-arrival: hilferding_advisor = 0; center_dissent += 5; n_advisors -= 1
+view-if: strumilin_advisor = 1
+on-arrival: strumilin_advisor = 0; center_dissent += 5; n_advisors -= 1
 tags: remove_advisor
 go-to: rm_main
 
 Strumilin has been removed as an advisor. The Centrist faction disapproves.
 
-@remove_wels
+@remove_martov
 title: Remove Martov
-view-if: wels_advisor = 1
+view-if: martov_advisor = 1
 tags: remove_advisor
-on-arrival: wels_advisor = 0; center_dissent += 5; n_advisors -= 1
+on-arrival: martov_advisor = 0; center_dissent += 5; n_advisors -= 1
 go-to: rm_main
 
 Martov has been removed as an advisor. The Centrist faction disapproves.
 
-@remove_muller
+@remove_axelrod
 title: Remove Axelrod
-view-if: muller_advisor = 1
+view-if: axelrod_advisor = 1
 tags: remove_advisor
-on-arrival: muller_advisor = 0; center_dissent += 5; n_advisors -= 1
+on-arrival: axelrod_advisor = 0; center_dissent += 5; n_advisors -= 1
 go-to: rm_main
 
 Axelrod has been removed as an advisor. The Centrist faction disapproves.
 
 
-@remove_breitscheid
+@remove_maisky
 title: Remove Maisky
-view-if: breitscheid_advisor = 1
+view-if: maisky_advisor = 1
 tags: remove_advisor
-on-arrival: breitscheid_advisor = 0; center_dissent += 5; n_advisors -= 1
+on-arrival: maisky_advisor = 0; center_dissent += 5; n_advisors -= 1
 go-to: rm_main
 
 Maisky has been removed as an advisor. The Centrist faction disapproves.
@@ -83,20 +83,20 @@ Maisky has been removed as an advisor. The Centrist faction disapproves.
 # reformists
 
 
-@remove_severing
+@remove_nikitin
 title: Remove Nikitin
-view-if: severing_advisor = 1
+view-if: nikitin_advisor = 1
 tags: remove_advisor
-on-arrival: severing_advisor = 0; reformist_dissent += 5; n_advisors -= 1
+on-arrival: nikitin_advisor = 0; reformist_dissent += 5; n_advisors -= 1
 go-to: rm_main
 
 Nikitin has been removed as an advisor. The Reformist faction disapproves.
 
-@remove_braun
+@remove_potresov
 title: Remove Potresov
-view-if: braun_advisor = 1
+view-if: potresov_advisor = 1
 tags: remove_advisor
-on-arrival: braun_advisor = 0; reformist_dissent += 5; n_advisors -= 1
+on-arrival: potresov_advisor = 0; reformist_dissent += 5; n_advisors -= 1
 go-to: rm_main
 
 Potresov has been removed as an advisor. The Reformist faction disapproves.
@@ -110,41 +110,40 @@ go-to: rm_main
 
 Juchacz has been removed as an advisor. The Reformist faction disapproves.
 
-@remove_pfulf
-title: Remove Pfülf
-view-if: pfulf_advisor = 1
+@remove_dan
+title: Remove Dan
+view-if: dan_advisor = 1
 tags: remove_advisor
-on-arrival: pfulf_advisor = 0; reformist_dissent += 5; n_advisors -= 1
+on-arrival: dan_advisor = 0; left_dissent += 5; n_advisors -= 1
 go-to: rm_main
 
-Pfülf has been removed as an advisor. The Reformist faction disapproves.
-
+Dan has been removed as an advisor. The Reformist faction disapproves.
 
 # labor
 
-@remove_leipart
+@remove_skobelev
 title: Remove Skobelev
-view-if: leipart_advisor = 1
+view-if: skobelev_advisor = 1
 tags: remove_advisor
-on-arrival: leipart_advisor = 0; labor_dissent += 5; n_advisors -= 1
+on-arrival: skobelev_advisor = 0; labor_dissent += 5; n_advisors -= 1
 go-to: rm_main
 
 Skobelev has been removed as an advisor. The Labor faction disapproves.
 
-@remove_aufhauser
+@remove_kremer
 title: Remove Kremer
-view-if: aufhauser_advisor = 1
+view-if: kremer_advisor = 1
 tags: remove_advisor
-on-arrival: aufhauser_advisor = 0; labor_dissent += 5; n_advisors -= 1
+on-arrival: kremer_advisor = 0; labor_dissent += 5; n_advisors -= 1
 go-to: rm_main
 
 Kremer has been removed as an advisor. The Labor faction disapproves.
 
-@remove_wissell
+@remove_liber
 title: Remove Liber
-view-if: wissell_advisor = 1
+view-if: liber_advisor = 1
 tags: remove_advisor
-on-arrival: wissell_advisor = 0; labor_dissent += 3; n_advisors -= 1
+on-arrival: liber_advisor = 0; labor_dissent += 3; n_advisors -= 1
 go-to: rm_main
 
 Liber has been removed as an advisor. The Labor faction disapproves.
@@ -161,47 +160,47 @@ Voitinsky has been removed as an advisor. The Labor faction disapproves.
 
 # left
 
-@remove_levi
-title: Remove Dan
-view-if: levi_advisor = 1
+@remove_pfulf
+title: Remove Pfülf
+view-if: pfulf_advisor = 1
 tags: remove_advisor
-on-arrival: levi_advisor = 0; left_dissent += 5; n_advisors -= 1
+on-arrival: pfulf_advisor = 0; reformist_dissent += 5; n_advisors -= 1
 go-to: rm_main
 
-Dan has been removed as an advisor. The Leftist faction disapproves.
+Pfülf has been removed as an advisor. The Reformist faction disapproves.
 
-@remove_sender
-title: Remove Sender
-view-if: sender_advisor = 1
+@remove_sukhanov
+title: Remove Sukhanov
+view-if: sukhanov_advisor = 1
 tags: remove_advisor
-on-arrival: sender_advisor = 0; left_dissent += 3; n_advisors -= 1
+on-arrival: sukhanov_advisor = 0; left_dissent += 3; n_advisors -= 1
 go-to: rm_main
 
-Sender has been removed as an advisor. The Leftist faction disapproves.
+Sukhanov has been removed as an advisor. The Leftist faction disapproves.
 
-@remove_rosenfeld
+@remove_abramovich
 title: Remove Abramovich
-view-if: rosenfeld_advisor = 1
+view-if: abramovich_advisor = 1
 tags: remove_advisor
-on-arrival: rosenfeld_advisor = 0; left_dissent += 3; n_advisors -= 1
+on-arrival: abramovich_advisor = 0; left_dissent += 3; n_advisors -= 1
 go-to: rm_main
 
 Abramovich has been removed as an advisor. The Leftist faction disapproves.
 
-@remove_seydewitz
+@remove_kamenev
 title: Remove Kamenev
-view-if: seydewitz_advisor = 1
+view-if: kamenev_advisor = 1
 tags: remove_advisor
-on-arrival: seydewitz_advisor = 0; left_dissent += 3; n_advisors -= 1
+on-arrival: kamenev_advisor = 0; left_dissent += 3; n_advisors -= 1
 go-to: rm_main
 
 Kamenev has been removed as an advisor. The Leftist faction disapproves.
 
-@remove_siemsen
+@remove_broido
 title: Remove Broido
-view-if: siemsen_advisor = 1
+view-if: broido_advisor = 1
 tags: remove_advisor
-on-arrival: siemsen_advisor = 0; left_dissent += 3; n_advisors -= 1
+on-arrival: broido_advisor = 0; left_dissent += 3; n_advisors -= 1
 go-to: rm_main
 
 Broido has been removed as an advisor. The Leftist faction disapproves.
@@ -241,13 +240,13 @@ Schumacher has been removed as an advisor. The Neorevisionist faction disapprove
 
 ## nonfactional
 
-# tbh I'm not sure if Baade should be a reformist or nonfactional. same for stampfer. they were vaguely reformist-aligned but had pretty different ideas from the other reformists here. so they're non-factional.
+# tbh I'm not sure if Maslov should be a reformist or nonfactional. same for stampfer. they were vaguely reformist-aligned but had pretty different ideas from the other reformists here. so they're non-factional.
 
-@remove_baade
+@remove_maslov
 title: Remove Maslov
-view-if: baade_advisor = 1
+view-if: maslov_advisor = 1
 tags: remove_advisor
-on-arrival: baade_advisor = 0; n_advisors -= 1
+on-arrival: maslov_advisor = 0; n_advisors -= 1
 go-to: rm_main
 
 Maslov has been removed as an advisor.
@@ -339,49 +338,49 @@ view-if: n_advisors < 3
 
 - #nonfactional_advisor
 
-@add_hilferding
+@add_strumilin
 title: Stanislav Strumilin
 subtitle: Rudolf Hilferding is a statistician and our go-to economist. {!<br><br>!}[? if difficulty < 0 : Actions - Against Right and Left, Defending Toleration, Fiscal Policy, Economic Democracy ?]
 is-card: true
 card-image: img/portraits/Strumilin.jpg
 tags: center_advisor
-view-if: hilferding_advisor = 0 and n_advisors < 3 and centrists_resign = 0
-on-arrival: hilferding_advisor = 1; n_advisors += 1
+view-if: strumilin_advisor = 0 and n_advisors < 3 and centrists_resign = 0
+on-arrival: strumilin_advisor = 1; n_advisors += 1
 go-to: advisor_menu
 
 Stanislav Strumilin is now an advisor.
 
-@add_wels
+@add_martov
 title: Yuliy Martov
 subtitle: Yuliy Martov is a long-time party organizer and member of the leadership, going back to the party's founding. {!<br><br>!}[? if difficulty < 0 : Actions -  Clear the Agenda, Party Discipline, Emergency Fundraising ?]
 is-card: true
 card-image: img/portraits/MartovHat.jpg
 tags: center_advisor
-view-if: wels_advisor = 0 and n_advisors < 3 and centrists_resign = 0
-on-arrival: wels_advisor = 1; n_advisors += 1
+view-if: martov_advisor = 0 and n_advisors < 3 and centrists_resign = 0
+on-arrival: martov_advisor = 1; n_advisors += 1
 go-to: advisor_menu
 
 Yuliy Martov is now an advisor.
 
-@add_muller
+@add_axelrod
 title: Pavel Axelrod
 subtitle: Pavel Axelrod is the last Social Democratic Chancellor. {!<br><br>!}[? if difficulty < 0 : Actions - Negotiating with the Coalition, Defending Toleration ?]
 is-card: true
 card-image: img/portraits/Axelrod.jpg
 tags: center_advisor
-view-if: muller_advisor = 0 and muller_dead = 0 and n_advisors < 3 and centrists_resign = 0
-on-arrival: muller_advisor = 1; n_advisors += 1
+view-if: axelrod_advisor = 0 and axelrod_dead = 0 and n_advisors < 3 and centrists_resign = 0
+on-arrival: axelrod_advisor = 1; n_advisors += 1
 go-to: advisor_menu
 
 Pavel Axelrod is now an advisor.
 
-@add_breitscheid
+@add_maisky
 title: Ivan Maisky
 subtitle: Ivan Maisky comes from a well-educated background and is one of our foreign policy leaders. {!<br><br>!}[? if difficulty < 0 : Actions - International Relations, Foreign Policy, Party Discipline ?]
 is-card: true
 card-image: img/portraits/maisky.jpg
-view-if: breitscheid_advisor = 0 and n_advisors < 3
-on-arrival: breitscheid_advisor = 1; n_advisors += 1
+view-if: maisky_advisor = 0 and n_advisors < 3
+on-arrival: maisky_advisor = 1; n_advisors += 1
 go-to: advisor_menu
 tags: center_advisor
 
@@ -390,26 +389,26 @@ Ivan Maisky is now an advisor.
 # reformist
 
 
-@add_severing
+@add_nikitin
 title: Aleksey Nikitin
 subtitle: Aleksey Nikitin is a lawyer, former Police Chief, and reformist-Menshevik. He advocated for harsh anti-Bolshevik measures during the Civil War. {!<br><br>!}[? if difficulty < 0 : Actions - Prussian Bulwark, Police Affairs ?]
 is-card: true
 card-image: img/portraits/nikitin.jpg
 tags: reformist_advisor
-view-if: severing_advisor = 0 and n_advisors < 3
-on-arrival: severing_advisor = 1; n_advisors += 1; reformist_strength += 5
+view-if: nikitin_advisor = 0 and n_advisors < 3
+on-arrival: nikitin_advisor = 1; n_advisors += 1; reformist_strength += 5
 go-to: advisor_menu
 
 Aleksey Nikitin is now an advisor.
 
-@add_braun
+@add_potresov
 title: Aleksandr Potresov
 subtitle: Potresov has been a Social Democrat since the Emancipation of Labor group was founded. A long-time editor of Iskra, and now Novaya Zhizn, he is a die-hard reformist and anti-Bolshevik. {!<br><br>!}[? if difficulty < 0 : Actions - Prussian Bulwark, Negotiating with the Coalition ?]
 is-card: true
 card-image: img/portraits/potresov.jpg
 tags: reformist_advisor
-view-if: braun_advisor = 0 and n_advisors < 3
-on-arrival: braun_advisor = 1; n_advisors += 1; reformist_strength += 5
+view-if: potresov_advisor = 0 and n_advisors < 3
+on-arrival: potresov_advisor = 1; n_advisors += 1; reformist_strength += 5
 go-to: advisor_menu
 
 Aleksandr Potresov is now an advisor.
@@ -426,6 +425,20 @@ tags: reformist_advisor
 
 Marie Juchacz is now an advisor.
 
+@add_dan
+title: Fyodor Dan
+subtitle: Fyodor Dan is a theorist of the Internationalists and advocate for leftist unity. {!<br><br>!}[? if difficulty < 0 : Actions - Building the Left, Cooperation with the RKP ?]
+is-card: true
+card-image: img/portraits/dan.jpg
+view-if: dan_advisor = 0 and dan_dead = 0 and n_advisors < 3 and left_split = 0
+on-arrival: dan_advisor = 1; n_advisors += 1; left_strength += 5
+go-to: advisor_menu
+tags: left_advisor
+
+Fyodor Dan is now an advisor.
+
+# left
+
 @add_pfulf
 title: Antonie Pfülf
 subtitle: Antonie Pfülf is a leader in social policy and women's rights. {!<br><br>!}[? if difficulty < 0 : Actions - Support a People's Party, Women's Rights ?]
@@ -438,65 +451,49 @@ tags: reformist_advisor
 
 Antonie Pfülf is now an advisor.
 
-
-
-# left
-
-@add_levi
-title: Fyodor Dan
-subtitle: Fyodor Dan is a theorist of the Internationalists and advocate for leftist unity. {!<br><br>!}[? if difficulty < 0 : Actions - Building the Left, Cooperation with the RKP ?]
+@add_sukhanov
+title: Nikolay Sukhanov
+subtitle: Nikolay Sukhanov is a former Eser, an economist, and long-time Menshevik-Internationalist. {!<br><br>!}[? if difficulty < 0 : Actions - Left-Center Unity, Rural Campaigning, RKP & PLSR Relations, Addressing the Economic Crisis ?]
 is-card: true
-card-image: img/portraits/dan.jpg
-view-if: levi_advisor = 0 and levi_dead = 0 and n_advisors < 3 and left_split = 0
-on-arrival: levi_advisor = 1; n_advisors += 1; left_strength += 5
+card-image: img/portraits/Sukhanov.jpg
+view-if: sukhanov_advisor = 0 and n_advisors < 3
+on-arrival: sukhanov_advisor = 1; n_advisors += 1; left_strength += 5
 go-to: advisor_menu
 tags: left_advisor
 
-Fyodor Dan is now an advisor.
+Nikolay Sukhanov is now an advisor.
 
-@add_sender
-title: Toni Sender
-subtitle: Toni Sender is an anti-war and womens' rights advocate, and Reichstag member. {!<br><br>!}[? if difficulty < 0 : Actions - Left-Center Unity, Organizing Women, Against Toleration, Addressing the Economic Crisis ?]
-is-card: true
-card-image: img/portraits/SenderToni.jpg
-view-if: sender_advisor = 0 and n_advisors < 3
-on-arrival: sender_advisor = 1; n_advisors += 1; left_strength += 5
-go-to: advisor_menu
-tags: left_advisor
-
-Toni Sender is now an advisor.
-
-@add_rosenfeld
+@add_abramovich
 title: Rafail Abramovitch
 subtitle: Rafail Abramovitch is a Bundist, Internationalist, and Reichstag member. {!<br><br>!}[? if difficulty < 0 : Actions - Building the Left, Cooperation with the RKP, Against Toleration ?]
 is-card: true
 card-image: img/portraits/Abramovitch.jpg
-view-if: rosenfeld_advisor = 0 and n_advisors < 3 and left_split = 0
-on-arrival: rosenfeld_advisor = 1; n_advisors += 1; left_strength += 5
+view-if: abramovich_advisor = 0 and n_advisors < 3 and left_split = 0
+on-arrival: abramovich_advisor = 1; n_advisors += 1; left_strength += 5
 go-to: advisor_menu
 tags: left_advisor
 
 Rafail Abramovitch is now an advisor.
 
-@add_seydewitz
+@add_kamenev
 title: Lev Kamenev
 subtitle: Lev Kamenev is a former Bolshevik who opposed their failed rebellion, he is a current supporter of the left wing of the RSDRP, and advocates for class struggle. {!<br><br>!}[? if difficulty < 0 : Actions - Rally for Class Struggle, Snap Elections, Against Toleration ?]
 is-card: true
 card-image: img/portraits/kamenev.jpg
-view-if: seydewitz_advisor = 0 and n_advisors < 3 and left_split = 0
-on-arrival: seydewitz_advisor = 1; n_advisors += 1; left_strength += 5
+view-if: kamenev_advisor = 0 and n_advisors < 3 and left_split = 0
+on-arrival: kamenev_advisor = 1; n_advisors += 1; left_strength += 5
 go-to: advisor_menu
 tags: left_advisor
 
 Lev Kamenev is now an advisor.
 
-@add_siemsen
+@add_broido
 title: Eva Broido
 subtitle: Eva Broido is an internationalist, women's rights advocate, and author. {!<br><br>!}[? if difficulty < 0 : Actions - Rally for Pacifism, Educational Curriculum, Educational Structure ?]
 is-card: true
 card-image: img/portraits/EvaBroido.jpg
-view-if: siemsen_advisor = 0 and n_advisors < 3 and left_split = 0
-on-arrival: siemsen_advisor = 1; n_advisors += 1; left_strength += 5
+view-if: broido_advisor = 0 and n_advisors < 3 and left_split = 0
+on-arrival: broido_advisor = 1; n_advisors += 1; left_strength += 5
 go-to: advisor_menu
 tags: left_advisor
 
@@ -506,38 +503,38 @@ Eva Broido is now an advisor.
 
 # labor
 
-@add_leipart
+@add_skobelev
 title: Matvey Skobelev
 subtitle: Matvey Skobelev is the leader of the VSS, the All-Russian Congress of Soviets. {!<br><br>!}[? if difficulty < 0 : Actions - Organizing Workers, Addressing the Economic Crisis, Union Unity ?]
 is-card: true
 card-image: img/portraits/Skobelev.jpg
 tags: labor_advisor
-view-if: leipart_advisor = 0 and n_advisors < 3 and unions_independent = 0
-on-arrival: leipart_advisor = 1; n_advisors += 1; labor_strength += 5
+view-if: skobelev_advisor = 0 and n_advisors < 3 and unions_independent = 0
+on-arrival: skobelev_advisor = 1; n_advisors += 1; labor_strength += 5
 go-to: advisor_menu
 
 Matvey Skobelev is now an advisor.
 
-@add_aufhauser
-title: Arkadi Kremer
+@add_kremer
+title: Arkady Kremer
 subtitle: Kremer is a leader of the General Jewish Labour Bund, the federation of Jewish socialists. {!<br><br>!}[? if difficulty < 0 : Actions - Organizing White-Collar Workers, Union-Party Coordination, Addressing the Economic Crisis ?]
 is-card: true
 card-image: img/portraits/kremer.jpg
 tags: labor_advisor
-view-if: aufhauser_advisor = 0 and n_advisors < 3
-on-arrival: aufhauser_advisor = 1; n_advisors += 1; labor_strength += 5
+view-if: kremer_advisor = 0 and n_advisors < 3
+on-arrival: kremer_advisor = 1; n_advisors += 1; labor_strength += 5
 go-to: advisor_menu
 
-Arkadi Kremer is now an advisor.
+Arkady Kremer is now an advisor.
 
-@add_wissell
+@add_liber
 title: Mikhail Liber
 subtitle: Liber is a Bundist economist working for the RSDRP and has been a labor minister on multiple occasions. His priority is to improve conditions for organized workers. {!<br><br>!}[? if difficulty < 0 : Actions - Union-Party Coordination, Labor Rights, Organize Jewish Workers ?]
 is-card: true
 card-image: img/portraits/liber.jpg
 tags: labor_advisor
-view-if: wissell_advisor = 0 and n_advisors < 3 and unions_independent = 0
-on-arrival: wissell_advisor = 1; n_advisors += 1; labor_strength += 3
+view-if: liber_advisor = 0 and n_advisors < 3 and unions_independent = 0
+on-arrival: liber_advisor = 1; n_advisors += 1; labor_strength += 3
 go-to: advisor_menu
 
 Mikhail Liber is now an advisor.
@@ -596,13 +593,13 @@ Julius Leber is now an advisor.
 
 # Nonfactional advisors
 
-@add_baade
+@add_maslov
 title: Pyotr Maslov
 subtitle: Pyotr Maslov is one of the few agricultural policy experts in the RSDRP. {!<br><br>!}[? if difficulty < 0 : Actions - Agricultural Policy, Rural Campaigning, Addressing the Economic Crisis ?]
 is-card: true
 card-image: img/portraits/maslov.jpg
-view-if: baade_advisor = 0 and n_advisors < 3
-on-arrival: baade_advisor = 1; n_advisors += 1
+view-if: maslov_advisor = 0 and n_advisors < 3
+on-arrival: maslov_advisor = 1; n_advisors += 1
 go-to: advisor_menu
 tags: nonfactional_advisor
 
