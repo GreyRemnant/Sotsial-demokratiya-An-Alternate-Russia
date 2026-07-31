@@ -340,7 +340,7 @@ view-if: n_advisors < 3
 
 @add_strumilin
 title: Stanislav Strumilin
-subtitle: Rudolf Hilferding is a statistician and our go-to economist. {!<br><br>!}[? if difficulty < 0 : Actions - Against Right and Left, Defending Toleration, Fiscal Policy, Economic Democracy ?]
+subtitle: Stanislav Strumilin is planned economic advocate. {!<br><br>!}[? if difficulty < 0 : Actions - Against Right and Left, Defending Toleration, Fiscal Policy, Economic Democracy ?]
 is-card: true
 card-image: img/portraits/Strumilin.jpg
 tags: center_advisor
