@@ -45,7 +45,7 @@
   window.showOptions = function() {
       var save_element = document.getElementById('options');
       window.populateOptions();
-      save_element.style.display = "block";
+      save_element.style.display = "bk";
       if (!save_element.onclick) {
           save_element.onclick = function(evt) {
               var target = evt.target;

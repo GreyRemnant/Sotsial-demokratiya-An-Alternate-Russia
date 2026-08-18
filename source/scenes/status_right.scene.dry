@@ -42,10 +42,22 @@ if (Q.economic_growth) {
 
 @localgovs
 
-= Local Governments
+= Local & Regional Governments
 
-Transcaucasian Democratic Federative Republic: Trudovaya Coalition
+**Transcaucasian Democratic Federative Republic:**
+[+ transcauc_gov +]
 
-Alash Orda: Bourgeois Coalition
+**Alash Orda:**
+[+ alash_gov +]
 
-Belarusian People's Republic: Liberal-Narodist Coalition
+**Don Republic:**
+[+ don_gov +]
+
+**Belarusian People's Republic:**
+[+ belarus_gov +]
+
+**Mossoviet:**
+[+ moscow_gov +]
+
+**Petrograd Soviet:**
+[+ petro_gov +]

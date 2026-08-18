@@ -101,14 +101,14 @@ go-to: rm_main
 
 Potresov has been removed as an advisor. The Reformist faction disapproves.
 
-@remove_juchacz
-title: Remove Juchacz
-view-if: juchacz_advisor = 1
+@remove_radchenko
+title: Remove Radchenko
+view-if: radchenko_advisor = 1
 tags: remove_advisor
-on-arrival: juchacz_advisor = 0; reformist_dissent += 5; n_advisors -= 1
+on-arrival: radchenko_advisor = 0; reformist_dissent += 5; n_advisors -= 1
 go-to: rm_main
 
-Juchacz has been removed as an advisor. The Reformist faction disapproves.
+Radchenko has been removed as an advisor. The Reformist faction disapproves.
 
 @remove_dan
 title: Remove Dan
@@ -413,17 +413,17 @@ go-to: advisor_menu
 
 Aleksandr Potresov is now an advisor.
 
-@add_juchacz
-title: Marie Juchacz
-subtitle: Marie Juchacz is the founder of Worker's Welfare, a mutual-aid organization. {!<br><br>!}[? if difficulty < 0 : Actions - Emergency Fundraising, Worker's Welfare, Organizing Women ?]
+@add_radchenko
+title: Lyubov Radchenko
+subtitle: Lyubov Radchenko is the founder of Worker's Welfare, a mutual-aid organization. {!<br><br>!}[? if difficulty < 0 : Actions - Emergency Fundraising, Worker's Welfare, Organizing Women ?]
 is-card: true
-card-image: img/portraits/JuchaczMarie.jpg
-view-if: juchacz_advisor = 0 and n_advisors < 3
-on-arrival: juchacz_advisor = 1; n_advisors += 1; reformist_strength += 5
+card-image: img/portraits/radchenko.jpg
+view-if: radchenko_advisor = 0 and n_advisors < 3
+on-arrival: radchenko_advisor = 1; n_advisors += 1; reformist_strength += 5
 go-to: advisor_menu
 tags: reformist_advisor
 
-Marie Juchacz is now an advisor.
+Lyubov Radchenko is now an advisor.
 
 @add_dan
 title: Fyodor Dan
