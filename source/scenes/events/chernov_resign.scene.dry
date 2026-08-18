@@ -8,15 +8,17 @@ new-page: true
 
 = Viktor Chernov to resign!
 
-Viktor Chernov, the leader of the Socialist-Revolutionaries, has announced his intent to resign by the end of the year. We should lobby for a pro-Menshevik candidate if possible, good relations or a left-leaning PSR could go a long way in the future.
+Viktor Chernov, the leader of the Socialist-Revolutionaries, has announced his intent to resign by the end of the year, citing his age, the failed Liberal-Narodist Coalition, and internal pressure.
+
+We should lobby for a pro-Menshevik candidate if possible. A Menshevik-friendly PSR could go a long way towards our participation in future governments.
 
 - @lobby
 - @lobbybig
-- @root: We have no interest in lobbying for the Esers at this time.
+- @root: Whether out of disinterest or a lack of funding, we won't lobby for the Esers at this time.
 
 @lobby
-title: Provide funding for the Eser's left-wing.
-subtitle: Supporting candidates like Avksentyev will help turn the Esers leftwards, towards us.
+title: Provide minor funding to Eser moderates.
+subtitle: Supporting candidates like Avksentyev will help turn the Esers leftwards, even if just a little.
 unavailable-subtitle: Not enough resources
 choose-if: resources >= 1
 on-arrival: psr_relation += 5; resources -= 1; psr_left +=1
@@ -24,10 +26,10 @@ on-arrival: psr_relation += 5; resources -= 1; psr_left +=1
 Avksentyev and his allies sends their thanks, hopefully our support can turn the tide.
 
 @lobbybig
-title: Provide funding for the Eser's left-wing.
-subtitle: Supporting candidates like Avksentyev and Zenzinov will help turn the Esers leftwards, towards us.
+title: Provide large donations to the Eser's left-wing.
+subtitle: Supporting candidates like Zenzinov will help turn the Esers leftwards, towards us.
 unavailable-subtitle: Not enough resources
 choose-if: resources >= 2
 on-arrival: psr_relation += 10; resources -= 2; psr_left +=2
 
-The Eser Left appreciates our funding, hopefully Zenzinov can come out on top, or Avksentyev, at the very least.
+The Eser Left appreciates our funding, hopefully Zenzinov or, at the very least, Avksentyev, can come out on top.
