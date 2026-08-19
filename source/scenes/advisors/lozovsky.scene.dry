@@ -1,0 +1,43 @@
+title: Solomon Lozovsky
+is-pinned-card: true
+tags: advisor, left
+card-image: img/portraits/lozovsky.jpg
+view-if: lozovsky_advisor = 1
+new-page: true 
+
+= Solomon Lozovsky
+
+Solomon Lozovsky is a former Bolshevik who left due to their opposition to a All-Socialist Coalition government. He has been a long-time conciliator, calling for the Bolsheviks and Mensheviks to reunite.
+
+- @class_struggle
+- @snap_election
+- @rkp_cooperation
+- @root: Return to main
+
+@class_struggle
+title: Rally for class struggle
+subtitle: The core of socialism should be the struggle of the proletariat against the bourgeoisie.
+unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?]
+choose-if: advisor_action_timer = 0
+on-arrival: advisor_action_timer = 6; workers_rsdrp += 4*(1-dissent); unemployed_rsdrp += 3*(1-dissent); workers_rsdrp += 4*(1-dissent) if nationalization_progress > 0; unemployed_rsdrp += 3*(1-dissent) if nationalization_progress > 0; left_strength += 5; left_dissent -= 5; old_middle_rsdrp -= 3; new_middle_rsdrp -= 2
+
+Our message of class struggle appeals to the left wing of the working class, while alienating the intelligensia and bourgeois. [? if nationalization_progress > 0 : Our achievements in nationalization have assisted our messaging. ?]
+
+
+@snap_election
+title: Snap Election
+subtitle: Call a snap election.
+unavailable-subtitle: [? if chancellor != "Lozovsky" : Lozovsky must be Chariman. ?][? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?]
+choose-if: advisor_action_timer == 0 and chancellor == "Lozovsky"
+on-arrival: advisor_action_timer = 6; next_election_time = time + 3 if next_election_time > time+3; next_election_month = month + 3 if next_election_time >= time+3; next_election_year = year if next_election_time >= time+3; next_election_year += 1 if next_election_month > 12; next_election_month -= 12 if next_election_month > 12;
+
+We have called for new elections, set for [+ next_election_month : month +] [+ next_election_year +].
+
+@rkp_cooperation
+title: Cooperation with the RKP
+subtitle: Any cooperation between the parties requires compromise from the RKP as well as the RSDRP.
+unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?]
+choose-if: advisor_action_timer = 0
+on-arrival: advisor_action_timer = 6; left_strength += 5; rkp_relation += 6*(1-dissent); reformist_dissent += 3; communist_coalition += 1 if rkp_cooperation_seen <= 1; rkp_cooperation_seen += 1
+
+Lozovsky attempts to reach out to his former colleagues to dissuade the RKP from their current extreme path. Some concessions are extracted.

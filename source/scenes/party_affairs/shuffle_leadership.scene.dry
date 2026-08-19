@@ -187,14 +187,14 @@ go-to: rm_main
 
 Abramovich has been removed as an advisor. The Leftist faction disapproves.
 
-@remove_kamenev
-title: Remove Kamenev
-view-if: kamenev_advisor = 1
+@remove_lozovsky
+title: Remove Lozovsky
+view-if: lozovsky_advisor = 1
 tags: remove_advisor
-on-arrival: kamenev_advisor = 0; left_dissent += 3; n_advisors -= 1
+on-arrival: lozovsky_advisor = 0; left_dissent += 3; n_advisors -= 1
 go-to: rm_main
 
-Kamenev has been removed as an advisor. The Leftist faction disapproves.
+Lozovsky has been removed as an advisor. The Leftist faction disapproves.
 
 @remove_broido
 title: Remove Broido
@@ -433,7 +433,7 @@ card-image: img/portraits/dan.jpg
 view-if: dan_advisor = 0 and dan_dead = 0 and n_advisors < 3 and left_split = 0
 on-arrival: dan_advisor = 1; n_advisors += 1; left_strength += 5
 go-to: advisor_menu
-tags: left_advisor
+tags: center_advisor
 
 Fyodor Dan is now an advisor.
 
@@ -447,7 +447,7 @@ card-image: img/portraits/PfülfAntonie.jpg
 view-if: pfulf_advisor = 0 and n_advisors < 3
 on-arrival: pfulf_advisor = 1; n_advisors += 1
 go-to: advisor_menu
-tags: reformist_advisor
+tags: left_advisor
 
 Antonie Pfülf is now an advisor.
 
@@ -475,17 +475,17 @@ tags: left_advisor
 
 Rafail Abramovitch is now an advisor.
 
-@add_kamenev
-title: Lev Kamenev
-subtitle: Lev Kamenev is a former Bolshevik who opposed their failed rebellion, he is a current supporter of the left wing of the RSDRP, and advocates for class struggle. {!<br><br>!}[? if difficulty < 0 : Actions - Rally for Class Struggle, Snap Elections, Against Toleration ?]
+@add_lozovsky
+title: Solomon Lozovsky
+subtitle: Solomon Lozovsky is a former Bolshevik who left due to their opposition to a All-Socialist Coalition government. He has been a long-time conciliator, calling for the Bolsheviks and Mensheviks to reunite. {!<br><br>!}[? if difficulty < 0 : Actions - Rally for Class Struggle, Snap Elections, Against Toleration ?]
 is-card: true
-card-image: img/portraits/kamenev.jpg
-view-if: kamenev_advisor = 0 and n_advisors < 3 and left_split = 0
-on-arrival: kamenev_advisor = 1; n_advisors += 1; left_strength += 5
+card-image: img/portraits/lozovsky.jpg
+view-if: lozovsky_advisor = 0 and n_advisors < 3 and left_split = 0
+on-arrival: lozovsky_advisor = 1; n_advisors += 1; left_strength += 5
 go-to: advisor_menu
 tags: left_advisor
 
-Lev Kamenev is now an advisor.
+Solomon Lozovsky is now an advisor.
 
 @add_broido
 title: Eva Broido
@@ -505,7 +505,7 @@ Eva Broido is now an advisor.
 
 @add_skobelev
 title: Matvey Skobelev
-subtitle: Matvey Skobelev is the leader of the VSS, the All-Russian Congress of Soviets. {!<br><br>!}[? if difficulty < 0 : Actions - Organizing Workers, Addressing the Economic Crisis, Union Unity ?]
+subtitle: Matvey Skobelev is the leader of the VKPS, the All-Russian Congress of Soviets. {!<br><br>!}[? if difficulty < 0 : Actions - Organizing Workers, Addressing the Economic Crisis, Union Unity ?]
 is-card: true
 card-image: img/portraits/Skobelev.jpg
 tags: labor_advisor
