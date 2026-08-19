@@ -427,13 +427,13 @@ Lyubov Radchenko is now an advisor.
 
 @add_dan
 title: Fyodor Dan
-subtitle: Fyodor Dan is a theorist of the Internationalists and advocate for leftist unity. {!<br><br>!}[? if difficulty < 0 : Actions - Building the Left, Cooperation with the RKP ?]
+subtitle: Fyodor Dan is a party theorist, a former Internationalist, and advocate for leftist unity. {!<br><br>!}[? if difficulty < 0 : Actions - Building the Left, Cooperation with the RKP ?]
 is-card: true
 card-image: img/portraits/dan.jpg
 view-if: dan_advisor = 0 and dan_dead = 0 and n_advisors < 3 and left_split = 0
 on-arrival: dan_advisor = 1; n_advisors += 1; left_strength += 5
 go-to: advisor_menu
-tags: center_advisor
+tags: reformist_advisor
 
 Fyodor Dan is now an advisor.
 
