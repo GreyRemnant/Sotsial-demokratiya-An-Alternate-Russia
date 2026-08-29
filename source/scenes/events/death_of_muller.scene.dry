@@ -73,10 +73,11 @@ subtitle: Odinets, supported by the Nationalist and Conservative Esers, has dema
 
 Our party is all but unanimously against this, and if we follow through with his demands it will cause a storm internally. Many within the party are calling for an end to our coalition, and that we cease working with the PSR until Odinets is removed.
 
-- @new_elections
-- @youcantconcedetodmitryodinetsyoufuckingidiot
+- @new_elections: We will host a Vote of No-Confidence and bring down the governing Coalition, ushering in new elections.
+- @youcantconcedetodmitryodinetsyoufuckingidiot: Let Dmitry Odinets of the PSR become Government Chairman.
 
 @new_elections
+subtitle:
 on-arrival: rsdrp_in_government = 0; in_grand_coalition = 0; in_weimar_coalition = 0; chancellor = "Zarudny"; chancellor_party = "PSR"; next_election_time = time + 3 if next_election_time > time+3; next_election_month = month + 3 if next_election_time >= time+3; next_election_year = year if next_election_time >= time+3; next_election_year += 1 if next_election_month > 12; next_election_month -= 12 if next_election_month > 12; rsdrp_toleration = 0; left_strength += 8; pro_republic -= 5; new_middle_rsdrp -= 3; rural_rsdrp -= 3; old_middle_rsdrp -= 3; catholics_rsdrp -= 3
 
 We have called for a vote of no confidence ourselves, and have brought down this government. Chancellor [+ chancellor +], a respected Narodist Lawyer, currently rules as acting chancellor until a new government can be formed.
@@ -84,8 +85,14 @@ We have called for a vote of no confidence ourselves, and have brought down this
 New elections have been set for [+ next_election_month : month +] [+ next_election_year +].
 
 @youcantconcedetodmitryodinetsyoufuckingidiot
+subtitle: You shouldn't see this, so this will do the exact same thing as calling new elections. Fuck you.
 choose-if: has_real_marxism_been_tried_yet = fuck_nah
 unavailable-subtitle: The Party would rebel if we did this.
+on-arrival: rsdrp_in_government = 0; in_grand_coalition = 0; in_weimar_coalition = 0; chancellor = "Zarudny"; chancellor_party = "PSR"; next_election_time = time + 3 if next_election_time > time+3; next_election_month = month + 3 if next_election_time >= time+3; next_election_year = year if next_election_time >= time+3; next_election_year += 1 if next_election_month > 12; next_election_month -= 12 if next_election_month > 12; rsdrp_toleration = 0; left_strength += 8; pro_republic -= 5; new_middle_rsdrp -= 3; rural_rsdrp -= 3; old_middle_rsdrp -= 3; catholics_rsdrp -= 3
+
+We have called for a vote of no confidence ourselves, and have brought down this government. Chancellor [+ chancellor +], a respected Narodist Lawyer, currently rules as acting chancellor until a new government can be formed.
+
+New elections have been set for [+ next_election_month : month +] [+ next_election_year +].
 
 @not_pm
 
