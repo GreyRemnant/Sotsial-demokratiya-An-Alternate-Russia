@@ -366,3 +366,5 @@ Right-wing Coalition (PSR + K-D + Others + VS): [+ right_coalition +]
 
 Tsarist-Socialist Coalition (RSDRP + SRN): [+ noway_coalition +]
 
+// Military duma votes
+Q.peacesr_r = Q.psr_votes / 2
