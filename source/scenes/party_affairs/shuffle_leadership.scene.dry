@@ -21,6 +21,8 @@ Removing advisors will increase dissent from their faction of the party, while s
 
 [? if neorevisionism > 0 : Neorevisionist strength: [+ neorevisionist_strength : strength +], dissent: [+ neorevisionist_dissent : dissent +] ?]
 
+Be aware, all the "actions" that advisors have are subject to be changed and the actions preview may not match what the card actually has.
+
 - @rm_main: Remove advisors
 - @add_advisors: Add advisors
 - @remove_none: Don't change advisors.
@@ -427,7 +429,7 @@ Lyubov Radchenko is now an advisor.
 
 @add_dan
 title: Fyodor Dan
-subtitle: Fyodor Dan is a party theorist, a former Internationalist, and advocate for leftist unity. {!<br><br>!}[? if difficulty < 0 : Actions - Building the Left, Cooperation with the RKP ?]
+subtitle: Fyodor Dan is a party theorist, moderate Social Democrat, and advocate for Menshevism. {!<br><br>!}[? if difficulty < 0 : Actions - People's Party things, wip generally. ?]
 is-card: true
 card-image: img/portraits/dan.jpg
 view-if: dan_advisor = 0 and dan_dead = 0 and n_advisors < 3 and left_split = 0

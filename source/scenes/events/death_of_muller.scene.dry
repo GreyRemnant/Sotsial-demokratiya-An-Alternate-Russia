@@ -1,59 +1,91 @@
-title: The Death of Hermann Müller
-view-if: year = 1931 and month >= 3
+title: The Death of Pavel Axelrod
+view-if: year = 1928 and month >= 4
 frequency: 1000
 max-visits: 1
 tags: event
-go-to: pm if chancellor = "Müller"; not_pm if chancellor != "Müller"
-on-arrival: axelrod_dead = 1; n_advisors -= 1 if muller_advisor == 1; muller_advisor = 0;
+go-to: pm if chancellor = "Axelrod"; not_pm if chancellor != "Axelrod"
+on-arrival: axelrod_dead = 1; n_advisors -= 1 if axelrod_advisor == 1; axelrod_advisor = 0;
 new-page: true
-face-image: img/portraits/MüllerHermann.jpg
+face-image: img/portraits/Axelrod.jpg
 
-= The Death of Hermann Müller
+= The Death of Pavel Axelrod
 
 @pm
-on-arrival: muller_died_in_office = 1
-# TODO: achievement for muller dying in office
+on-arrival: axelrod_died_in_office = 1
+# TODO: achievement for axelrod dying in office
 
-Chancellor Hermann Müller has died while in office. He will be greatly missed. But now, we must select a new Chancellor.
+Government Chairman Pavel Axelrod has died while in office. He will be greatly missed. But now, we must select a new Government Chairman.
 
-- @braun_chancellor: Otto Braun (RSDRP) for Chancellor.
-- @wels_chancellor: Otto Wels (RSDRP) for Chancellor.
-- @breitscheid_chancellor: Rudolf Breitscheid (RSDRP) for Chancellor.
-- @bruning_chancellor: Let Heinrich Bruning of the Center Party become Chancellor.
-- @wirth_chancellor: Joseph Wirth of the Center Party should be Chancellor.
+- @lozovsky_chancellor: Solomon Lozovsky (RSDRP) for Government Chairman.
+- @martov_chancellor: Yuliy Martov (RSDRP) for Government Chairman.
+- @dan_chancellor: Fyodor Dan (RSDRP) for Government Chairman.
+- @kerensky_chancellor: Let Alexander Kerensky of the PSR become Government Chairman.
+- @avksentyev_chancellor: Nikolay Avksentyev of the PSR should be Government Chairman.
+- @zenzinov_chancellor: Vladimir Zenzinov of the PSR should be Government Chairman.
+- @odinets: Dmitry Odinets has threatened to sink the coalition if we fail to concede the Chairmanship.
 
-@braun_chancellor
-on-arrival: chancellor = "Braun"; chancellor_party = "RSDRP"; z_relation -= 5; kadets_relation -= 5
-subtitle: The Center Party is worried about having so much power in one man.
+@lozovsky_chancellor
+on-arrival: chancellor = "Lozovsky"; chancellor_party = "RSDRP"; psr_relation -= 5; kadets_relation -= 5; rkp_relation += 5
+view-if: psr_party_leader != "Odinets"
+subtitle: The Socialist-Revolutionaries are worried about giving power to a former Bolshevik.
 
-Our coalition partners are reluctant to accept the new Chancellor, but they do not make loud objections.
+Our coalition partners are reluctant to accept the new Government Chairman, but they do not make loud objections.
 
+@martov_chancellor
+on-arrival: chancellor = "Martov"; chancellor_party = "RSDRP"; psr_relation -= 3; kadets_relation -= 3
+view-if: psr_party_leader != "Odinets"
+subtitle: He is a good organizer and party leader, but is he also a good chairman?
 
-@wels_chancellor
-on-arrival: chancellor = "Wels"; chancellor_party = "RSDRP"; z_relation -= 3; kadets_relation -= 3
-subtitle: He is a good organizer, but is he also a good chancellor?
+Our coalition partners are reluctant to accept the new Government Chairman, but they do not make loud objections.
 
-Our coalition partners are reluctant to accept the new Chancellor, but they do not make loud objections.
+@dan_chancellor
+on-arrival: chancellor = "Dan"; chancellor_party = "RSDRP"; psr_relation -= 3; kadets_relation -= 3; rkp_relation -= 5
+view-if: psr_party_leader != "Odinets"
+subtitle: The Socialist-Revolutionary Party is worried about his calls for expanding our electoral base into the countryside.
 
-@breitscheid_chancellor
-on-arrival: chancellor = "Breitscheid"; chancellor_party = "RSDRP"; z_relation -= 5; kadets_relation -= 5; rkp_relation += 1
-subtitle: The Center Party is worried about his left-leaning tendencies.
+Our coalition partners are reluctant to accept the new Government Chairman, but they do not make loud objections.
 
-Our coalition partners are reluctant to accept the new Chancellor, but they do not make loud objections.
+@kerensky_chancellor
+on-arrival: chancellor = "Kerensky"; chancellor_party = "PSR"; psr_relation += 5; kadets_relation += 5
+view-if: psr_party_leader != "Odinets"
+subtitle: The Socialist-Revolutionary Party claims it is their turn...
 
-@bruning_chancellor
-on-arrival: chancellor = "Brüning"; chancellor_party = "Z"; z_relation += 5; kadets_relation += 5
-subtitle: The Center Party claims it is their turn...
+The Socialist-Revolutionaries and sympathetic Liberals are grateful that we have supported Alexander Kerensky for Government Chairman.
 
-The Center Party is grateful that we have supported Brüning for Chancellor.
+@avksentyev_chancellor
+on-arrival: chancellor = "Avksentyev"; chancellor_party = "PSR"; psr_relation += 5; kadets_relation += 2
+view-if: psr_party_leader != "Odinets"
+subtitle: As a moderate member of the Socialist-Revolutionary Party, he could represent unity.
 
-@wirth_chancellor
-on-arrival: chancellor = "Wirth"; chancellor_party = "Z"; z_relation += 5; kadets_relation += 2
-view-if: z_party_leader = "Joos"
-subtitle: As a moderate member of the Center Party, he could represent unity.
+Our coalition partners accept Nikolay Avksentyev of the Socialist-Revolutionary Party as the new Government Chairman.
 
-Our coalition partners accept Joseph Wirth of the Center Party as the new Chancellor.
+@zenzinov_chancellor
+on-arrival: chancellor = "Zenzinov"; chancellor_party = "PSR"; psr_relation += 5
+view-if: psr_party_leader = "Zenzinov"
+subtitle: As a sympathetic member of the Socialist-Revolutionary Party, he could represent unity.
 
+Our coalition partners accept Vladimir Zenzinov of the Socialist-Revolutionary Party as the new Government Chairman.
+
+@odinets
+on-arrival: chancellor = "Odinets"; chancellor_party = "PSR"; psr_relation += 5; psr_party_leader = "Odinets"
+view-if: psr_party_leader = "Odinets"
+subtitle: Odinets, supported by the Nationalist and Conservative Esers, has demanded we support his appointment as Government Chairman.
+
+Our party is all but unanimously against this, and if we follow through with his demands it will cause a storm internally. Many within the party are calling for an end to our coalition, and that we cease working with the PSR until Odinets is removed.
+
+- @new_elections
+- @youcantconcedetodmitryodinetsyoufuckingidiot
+
+@new_elections
+on-arrival: rsdrp_in_government = 0; in_grand_coalition = 0; in_weimar_coalition = 0; chancellor = "Zarudny"; chancellor_party = "PSR"; next_election_time = time + 3 if next_election_time > time+3; next_election_month = month + 3 if next_election_time >= time+3; next_election_year = year if next_election_time >= time+3; next_election_year += 1 if next_election_month > 12; next_election_month -= 12 if next_election_month > 12; rsdrp_toleration = 0; left_strength += 8; pro_republic -= 5; new_middle_rsdrp -= 3; rural_rsdrp -= 3; old_middle_rsdrp -= 3; catholics_rsdrp -= 3
+
+We have called for a vote of no confidence ourselves, and have brought down this government. Chancellor [+ chancellor +], a respected Narodist Lawyer, currently rules as acting chancellor until a new government can be formed.
+
+New elections have been set for [+ next_election_month : month +] [+ next_election_year +].
+
+@youcantconcedetodmitryodinetsyoufuckingidiot
+choose-if: has_real_marxism_been_tried_yet = fuck_nah
+unavailable-subtitle: The Party would rebel if we did this.
 
 @not_pm
 

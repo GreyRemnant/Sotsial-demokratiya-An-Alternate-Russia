@@ -387,7 +387,7 @@ on-arrival: rsdrp_in_government = 1; in_popular_front = 1; chancellor = "Martov"
 achievement: grosse_volksfront
 go-to: popular_front_civil_war if coup_progress >= 10; popular_front_no_civil_war if coup_progress < 10
 
-Somehow, the coalition is successfully formed! The conciliatory leadership of the Center Party and RKP helped make the negotiations possible. We still need a chancellor; the only acceptable choice among the parties was Yuliy Martov of the RSDRP, acceptable to the Center and RKP [? if president == "Hindenburg" : as well as President Hindenburg, albeit reluctantly ?].
+Somehow, the coalition is successfully formed! The conciliatory leadership of the Socialist-Revolutionary Party and RKP helped make the negotiations possible. We still need a chancellor; the only acceptable choice among the parties was Yuliy Martov of the RSDRP, acceptable to the Center and RKP [? if president == "Hindenburg" : as well as President Hindenburg, albeit reluctantly ?].
 
 @popular_front_success
 on-arrival: rsdrp_in_government = 1; in_popular_front = 1; chancellor = "Martov"; chancellor_party = "RSDRP"; rkp_relation += 10; coup_progress += 2; in_left_front = 0; in_trudovaya_coalition = 0; in_vremennyy_coalition = 0; coalition_dissent = 0;
@@ -494,7 +494,7 @@ With great reluctance, President [+ president +] appoints [+ chancellor +] as ch
 
 Immediately, [+ chancellor +] goes to work building a "Soviet Germany": consolidating as much power as possible in the RKP, purging state institutions of anti-communists, and sending street fighters against the "enemies of the people".
 
-In response to [+ chancellor +] being appointed Chancellor, the right-wing forces launches almost immediately launch an attempted coup. Troops of the Stahlhelm and Solidarist SA enter Berlin and immediately begin clashing with our supporters! Reactionary officers within the Reichswehr have taken their troops out of the barracks and joined them with the Stahlhelm to stop the RKP from taking power. We are forced to be on the same side as the RKP, whether we want to or not.
+In response to [+ chancellor +] being appointed Government Chairman, the right-wing forces launches almost immediately launch an attempted coup. Troops of the Stahlhelm and Solidarist SA enter Berlin and immediately begin clashing with our supporters! Reactionary officers within the Reichswehr have taken their troops out of the barracks and joined them with the Stahlhelm to stop the RKP from taking power. We are forced to be on the same side as the RKP, whether we want to or not.
 
 - @civil_war
 
@@ -556,7 +556,7 @@ There are enough votes for a right-wing coalition of the Center , K-D, VS, and m
 @no_right_coalition
 go-to: no_majority
 
-However, the VS and its leader Hugenberg is refusing to partake in a coalition with the "November criminals" in the Center Party. Thus, there is no clear path towards a Duma majority.
+However, the VS and its leader Hugenberg is refusing to partake in a coalition with the "November criminals" in the Socialist-Revolutionary Party. Thus, there is no clear path towards a Duma majority.
 
 @right_coalition_sure
 subtitle: This will be extremely unpopular within our party.
@@ -592,7 +592,7 @@ go-to: no_majority_bruning if chancellor = "Brüning" or chancellor = "Wirth"; n
 @no_majority_rsdrp
 on-arrival: chancellor = "Brüning"; chancellor_party = "PSR"
 
-There is no path to an obviously workable majority. Since President Hindenburg is unwilling to work with a minority or caretaker RSDRP government, his preferred chancellor is Heinrich Brüning of the Center Party, who could lead a "presidential" government.
+There is no path to an obviously workable majority. Since President Hindenburg is unwilling to work with a minority or caretaker RSDRP government, his preferred chancellor is Heinrich Brüning of the Socialist-Revolutionary Party, who could lead a "presidential" government.
 
 - @toleration_bruning: We will tolerate Brüning.
 - @new_vremennyy_coalition: We will try to form a new vremennyy coalition.
@@ -607,7 +607,7 @@ go-to: no_majority_bruning_toleration if (no_majority_elections <= 3 and anti_de
 @hindenburg_appoints_papen
 on-arrival: chancellor = "Papen"; chancellor_party = "I"; next_election_time = time+3; next_election_month = month + 3; next_election_year = year; next_election_year += 1 if next_election_month > 12; next_election_month -= 12 if next_election_month > 12; sa_banned = 0; pro_republic -= 8; finance_minister_party = "I"; interior_minister_party = "I"; economic_minister_party = "I"; labor_minister_party = "I"; foreign_minister_party = "I"; agriculture_minister_party = "I"; reichswehr_minister = "I";
 
-There is no path to a majority government. President Hindenburg is tired of the chaos, and appoints Franz von Papen as chancellor instead of Brüning. Papen is a indenpendent formerly from the Center Party, and is significantly to the right of the majority of the Center Party.
+There is no path to a majority government. President Hindenburg is tired of the chaos, and appoints Franz von Papen as chancellor instead of Brüning. Papen is a indenpendent formerly from the Socialist-Revolutionary Party, and is significantly to the right of the majority of the Socialist-Revolutionary Party.
 
 Papen is immediately faced with a vote of no confidence, given his unpopularity. However the RSDRP votes, he is guaranteed to fall, due to the unanimous hatred against him from all other parties.
 
@@ -633,7 +633,7 @@ title: A "New Vremennyy Coalition" of all the constitutional parties?
 subtitle: RSDRP + PSR + [+ musavat_name +] + K-D + Others ([+ neo_trudovaya_coalition +]%)
 view-if: neo_trudovaya_coalition >= 50 and vremennyy_coalition < 50
 choose-if: psr_relation >= 50 and kadets_relation >= 30
-unavailable-subtitle: RSDRP + PSR + [+ musavat_name +] + K-D + Others ([+ neo_trudovaya_coalition +]%) - [? if psr_relation < 50 : We do not have adequate relations with the Center Party. ?][? if kadets_relation < 30 : We do not have adequate relations with the K-D. ?]
+unavailable-subtitle: RSDRP + PSR + [+ musavat_name +] + K-D + Others ([+ neo_trudovaya_coalition +]%) - [? if psr_relation < 50 : We do not have adequate relations with the Socialist-Revolutionary Party. ?][? if kadets_relation < 30 : We do not have adequate relations with the K-D. ?]
 
 How do we convince vehemently anti-socialist parties to allow us to form a majority coalition? Our largely benevolent relations with the Center and K-D may allow us some leverage.
 
@@ -658,7 +658,7 @@ Now, we have a new vremennyy coalition, a "Constitutional Coalition" of all the 
 Who should be chancellor?
 
 - @join_bruning: For better or for worse, it must be Heinrich Brüning of the Center.
-- @dan_chancellor_new: Fyodor Dan for Chancellor?
+- @dan_chancellor_new: Fyodor Dan for Government Chairman?
 
 @dan_chancellor_new
 subtitle: This will reduce our leverage in the ministries.
@@ -670,11 +670,11 @@ We have assembled a new coalition under Fyodor Dan.
 
 
 @unity_government
-title: The Center Party offers a "Government of National Unity" under Chancellor Joseph Wirth.
+title: The Socialist-Revolutionary Party offers a "Government of National Unity" under Government Chairman Joseph Wirth.
 subtitle: RSDRP + PSR + [+ musavat_name +] + K-D + Others ([+ neo_trudovaya_coalition +]%)
 view-if: psr_party_leader == "Joos" and neo_trudovaya_coalition >= 50 and trudovaya_coalition < 50 and psr_relation >= 10
 
-The Center Party leader, Joseph Joos, clearly sees the threat from the ascension of the anti-democratic extremist parties, and thus tries to negotiate a "Government of National Unity" to save the republic. This coalition would be led by Joseph Wirth, a left-leaning member of the Center Party and former chancellor, and would encompass all of the constitutional parties. Our role in this government might be limited, however.
+The Socialist-Revolutionary Party leader, Joseph Joos, clearly sees the threat from the ascension of the anti-democratic extremist parties, and thus tries to negotiate a "Government of National Unity" to save the republic. This coalition would be led by Joseph Wirth, a left-leaning member of the Socialist-Revolutionary Party and former chancellor, and would encompass all of the constitutional parties. Our role in this government might be limited, however.
 
 - @unity_government_2
 - @reject_unity_government: No, we will not accept this offer.
@@ -705,7 +705,7 @@ choose-if: president == "Dan"
 unavailable-subtitle: President Hindenburg will not support a minority government led by Joseph Wirth.
 on-arrival: chancellor = "Wirth"; chancellor_party = "PSR"; rsdrp_in_government = 0; rsdrp_toleration = 1; psr_relation += 5; foreign_minister_party = "K-D"; interior_minister_party = "PSR"; justice_minister_party = "I"; labor_minister_party = "PSR"; reichswehr_minister_party = "I"; economic_minister_party = musavat_name; finance_minister_party = "K-D"; agriculture_minister_party = "PSR"; pro_republic -= 2;
 
-We have supported a minority government led by the Center Party under Chancellor Joseph Wirth.
+We have supported a minority government led by the Socialist-Revolutionary Party under Government Chairman Joseph Wirth.
 
 
 
@@ -736,7 +736,7 @@ go-to: leuchtenberg_chancellor
 @leuchtenberg_chancellor
 on-arrival: chancellor = "Leuchtenberg"; chancellor_party = "NTS"
 
-There is no path to a majority government for now. The scheming around President Hindenburg is leading to only one path - that of Chancellor Sergey Leuchtenberg. [? if largest_party == "NTS" : Since they are the largest party, it is not exactly contrary to parliamentary procedure, so it is difficult to raise objections solely on procedural grounds. ?] [? if leuchtenberg_deported: Despite his earlier deportation, the Solidarist leaders and their reactionary allies have connived for the president to give him German citizenship after all. ?]
+There is no path to a majority government for now. The scheming around President Hindenburg is leading to only one path - that of Government Chairman Sergey Leuchtenberg. [? if largest_party == "NTS" : Since they are the largest party, it is not exactly contrary to parliamentary procedure, so it is difficult to raise objections solely on procedural grounds. ?] [? if leuchtenberg_deported: Despite his earlier deportation, the Solidarist leaders and their reactionary allies have connived for the president to give him German citizenship after all. ?]
 
 - @leuchtenberg_takes_power: What now?
 
@@ -753,16 +753,16 @@ Finally, the RSDRP can govern alone! Our long campaign of electioneering has pai
 
 Who should be chancellor?
 
-- @dan_majority_chancellor: Fyodor Dan for Chancellor.
-- @martov_majority_chancellor: Yuliy Martov for Chancellor.
-- @axelrod_majority_chancellor: Pavel Axelrod for Chancellor.
-- @lozovsky_majority_chancellor: Solomon Lozovsky for Chancellor.
+- @dan_majority_chancellor: Fyodor Dan for Government Chairman.
+- @martov_majority_chancellor: Yuliy Martov for Government Chairman.
+- @axelrod_majority_chancellor: Pavel Axelrod for Government Chairman.
+- @lozovsky_majority_chancellor: Solomon Lozovsky for Government Chairman.
 
 @dan_majority_chancellor
 view-if: not historical_mode or not rsdrp_prussia
 on-arrival: chancellor = "Dan"
 
-[? if president == "Dan": Our experts have checked the constitution, and have discovered that there is no specific prohibition against the Chancellor also being the President (the President may not be a member of the State Duma; there is no law saying that the Chancellor must be a member of the State Duma). Thus, we have Chancellor-President Fyodor Dan. ?]
+[? if president == "Dan": Our experts have checked the constitution, and have discovered that there is no specific prohibition against the Government Chairman also being the President (the President may not be a member of the State Duma; there is no law saying that the Government Chairman must be a member of the State Duma). Thus, we have Government Chairman-President Fyodor Dan. ?]
 [? if president != "Dan": Fyodor Dan has become chancellor of the RSDRP majority. ?]
 
 @martov_majority_chancellor
@@ -806,19 +806,19 @@ on-arrival: sa_strength += 100; sh_strength += 100; in_emergency_government = 1
 
 Yes, an emergency minority government, with the support of the RSDRP. Who should lead this emergency minority government?
 
-- @dan_emergency_chancellor: Fyodor Dan for Chancellor-President!
-- @martov_emergency_chancellor: Yuliy Martov for emergency Chancellor.
-- @bruning_emergency_chancellor: Brüning of the Center Party, as a goodwill gesture toward the bourgeoisie.
-- @wirth_emergency_chancellor: Joseph Wirth of the Center Party, as a gesture of republican unity.
+- @dan_emergency_chancellor: Fyodor Dan for Government Chairman-President!
+- @martov_emergency_chancellor: Yuliy Martov for emergency Government Chairman.
+- @bruning_emergency_chancellor: Brüning of the Socialist-Revolutionary Party, as a goodwill gesture toward the bourgeoisie.
+- @wirth_emergency_chancellor: Joseph Wirth of the Socialist-Revolutionary Party, as a gesture of republican unity.
 
 @dan_emergency_chancellor
 subtitle: This is unprecedented.
 view-if: not historical_mode or not rsdrp_prussia
 on-arrival: chancellor = "Dan"; chancellor_party = "RSDRP"; rsdrp_in_government = 1; pro_republic -= 5; foreign_minister_party = "RSDRP"; interior_minister_party = "RSDRP"; justice_minister_party = "RSDRP"; labor_minister_party = "RSDRP"; reichswehr_minister_party = "RSDRP"; economic_minister_party = "RSDRP"; finance_minister_party = "RSDRP"; agriculture_minister_party = "RSDRP"; reichswehr_loyalty -= 0.1; 
 
-Our experts have checked the constitution, and have discovered that there is no specific prohibition against the Chancellor also being the President (the President may not be a member of the State Duma; there is no law saying that the Chancellor *must* be a member of the State Duma).
+Our experts have checked the constitution, and have discovered that there is no specific prohibition against the Government Chairman also being the President (the President may not be a member of the State Duma; there is no law saying that the Government Chairman *must* be a member of the State Duma).
 
-Thus, we have Chancellor-President Fyodor Dan. He claims that he will resign as soon as the economic-political crisis is over. The right-wing parties, who were once clamoring to replace parliamentary rule with dictatorship or monarchy, are now clamoring for the restoration of democracy.
+Thus, we have Government Chairman-President Fyodor Dan. He claims that he will resign as soon as the economic-political crisis is over. The right-wing parties, who were once clamoring to replace parliamentary rule with dictatorship or monarchy, are now clamoring for the restoration of democracy.
 
 - @far_right_coup
 - @emergency_no_confidence: The Solidarists immediately call a no-confidence vote against us...
@@ -836,7 +836,7 @@ We have appointed Yuliy Martov as emergency chancellor. The Communists consider 
 @bruning_emergency_chancellor
 on-arrival: chancellor = "Brüning"; chancellor_party = "PSR"; rsdrp_in_government = 1; psr_relation += 10; foreign_minister_party = "RSDRP"; interior_minister_party = "RSDRP"; justice_minister_party = "RSDRP"; labor_minister_party = "RSDRP"; reichswehr_minister_party = "RSDRP"; economic_minister_party = "RSDRP"; finance_minister_party = "RSDRP"; agriculture_minister_party = "RSDRP" 
 
-The Center Party is pleased, and somewhat surprised, that we have appointed [+ chancellor +] as chancellor.
+The Socialist-Revolutionary Party is pleased, and somewhat surprised, that we have appointed [+ chancellor +] as chancellor.
 
 - @far_right_coup
 - @emergency_no_confidence
@@ -845,7 +845,7 @@ The Center Party is pleased, and somewhat surprised, that we have appointed [+ c
 view-if: psr_party_leader == "Joos"
 on-arrival: chancellor = "Wirth"; chancellor_party = "PSR"; rsdrp_in_government = 1; psr_relation += 10; foreign_minister_party = "RSDRP"; interior_minister_party = "RSDRP"; justice_minister_party = "RSDRP"; labor_minister_party = "RSDRP"; reichswehr_minister_party = "RSDRP"; economic_minister_party = "RSDRP"; finance_minister_party = "RSDRP"; agriculture_minister_party = "RSDRP" 
 
-The Center Party is pleased that we have appointed [+ chancellor +] as chancellor.
+The Socialist-Revolutionary Party is pleased that we have appointed [+ chancellor +] as chancellor.
 
 - @far_right_coup
 - @emergency_no_confidence
@@ -869,7 +869,7 @@ title: The Solidarists immediately call a no-confidence vote against us...
 view-if: far_right_coalition < 45
 on-arrival: psr_no_confidence = 1 if psr_relation < 45; rkp_no_confidence = 1 if rkp_relation < 45; other_no_confidence = 1 if (psr_relation + kadets_relation)/2 < 45; kadets_no_confidence = 1 if kadets_relation < 45; sa_strength += 200; sh_strength += 200; no_confidence_votes = nts_r + vs_r; no_confidence_votes += psr_r if psr_no_confidence; no_confidence_votes += kadets_r if kadets_no_confidence; no_confidence_votes += rkp_r if rkp_no_confidence; no_confidence_votes += other_r if other_no_confidence; no_confidence_succeeds = 1 if no_confidence_votes > 50
 
-The NTS and VS will vote against us, of course. The other parties vote their conscience. [? if psr_no_confidence: The Center Party is voting against us. ?] [? if rkp_no_confidence: The RKP votes against us. ?] [? if other_no_confidence: The assortment of minor parties are voting against us. ?]
+The NTS and VS will vote against us, of course. The other parties vote their conscience. [? if psr_no_confidence: The Socialist-Revolutionary Party is voting against us. ?] [? if rkp_no_confidence: The RKP votes against us. ?] [? if other_no_confidence: The assortment of minor parties are voting against us. ?]
 
 In total, [+ no_confidence_votes +]% of the State Duma is against us. [? if no_confidence_succeeds : We have lost the vote of no confidence. ?]
 
@@ -949,7 +949,7 @@ Who should be the chancellor?
 - @minorparty
 
 @martov_coalition_chancellor
-title: Yuliy Martov for Chancellor
+title: Yuliy Martov for Government Chairman
 subtitle: Martov is viewed as a unifying figure in the RSDRP.
 view-if: year >= 1930
 on-arrival: chancellor = "Martov"; chancellor_party = "RSDRP";
@@ -969,7 +969,7 @@ go-to: vremennyy_coalition_rsdrp_lead if (n_elections <= 1 and largest_party == 
 @vremennyy_coalition_psr_lead
 go-to: vremennyy_coalition_psr_lead_2 if kadets_relation >= 30; vremennyy_coalition_fail if kadets_relation < 30
 
-There are enough votes to form a majority coalition consisting of the RSDRP, Center (Z), Democratic ([+ musavat_name +]), and People's (K-D) parties. Given our rather weak electoral performance, [? if rsdrp_no_confidence = 1 : and our previous vote of no confidence against the government, ?][? if no_confidence_against_rsdrp = 1 : and the vote of no confidence against us, ?] President Kornilov has asked the Center Party to take the lead role in forming a government.
+There are enough votes to form a majority coalition consisting of the RSDRP, Center (Z), Democratic ([+ musavat_name +]), and People's (K-D) parties. Given our rather weak electoral performance, [? if rsdrp_no_confidence = 1 : and our previous vote of no confidence against the government, ?][? if no_confidence_against_rsdrp = 1 : and the vote of no confidence against us, ?] President Kornilov has asked the Socialist-Revolutionary Party to take the lead role in forming a government.
 
 # TODO: if the RSDRP participated in bringing down the previous government via a vote-of-no-confidence, or if we were essentially removed from government by our coalition partners, we should be more reluctant to participate in a new government.
 
@@ -994,9 +994,9 @@ Heinrich Brüning welcomes us into his new cabinet. Now, we have our pick of min
 @bruning_oppo
 on-arrival: rsdrp_in_government = 0; rsdrp_toleration = 0; chancellor = "Brüning"; chancellor_party = "PSR"; foreign_minister_party = "K-D"; interior_minister_party = "PSR"; justice_minister_party = "PSR"; labor_minister_party = "PSR"; reichswehr_minister_party = "I"; economic_minister_party = "PSR"; finance_minister_party = "PSR"; agriculture_minister_party = "PSR"; vremennyy_coalition_failed = 1
 
-By refusing to join the vremennyy coalition or tolerating it, we essentially throw the balance of government to the right wing. [? if right_coalition >= 50 : There are enough votes to form a right-wing coalition that includes the VS. However, the VS leader, Hugenberg, is opposed to a coalition with the "November criminals" of the Center Party. And of course, the NTS is not interested in coalition government. This means that there will not be enough votes to form a majority coalition. ?][? if right_coalition < 50 : There are not enough votes to form a right-wing coalition that includes the VS, and they are not interested in joining in a coalition with the "November criminals" of the Center Party, anyhow. And of course, the NTS is not interested in coalition government. This means that there is no route to a majority coalition. ?]
+By refusing to join the vremennyy coalition or tolerating it, we essentially throw the balance of government to the right wing. [? if right_coalition >= 50 : There are enough votes to form a right-wing coalition that includes the VS. However, the VS leader, Hugenberg, is opposed to a coalition with the "November criminals" of the Socialist-Revolutionary Party. And of course, the NTS is not interested in coalition government. This means that there will not be enough votes to form a majority coalition. ?][? if right_coalition < 50 : There are not enough votes to form a right-wing coalition that includes the VS, and they are not interested in joining in a coalition with the "November criminals" of the Socialist-Revolutionary Party, anyhow. And of course, the NTS is not interested in coalition government. This means that there is no route to a majority coalition. ?]
 
-If we do not at least "tolerate" the government, there will be new elections in a few months. In the meantime, the President and Chancellor may use the emergency powers granted by Article 48 of the constitution to essentially govern by decree. And it is not at all clear that we will do any better in the next election.
+If we do not at least "tolerate" the government, there will be new elections in a few months. In the meantime, the President and Government Chairman may use the emergency powers granted by Article 48 of the constitution to essentially govern by decree. And it is not at all clear that we will do any better in the next election.
 
 - @join_bruning: Join the Brüning coalition.
 - @toleration_bruning: We will tolerate Brüning after all.
@@ -1142,7 +1142,7 @@ Who should be the chancellor?
 
 
 @axelrod
-title: Pavel Axelrod for Chancellor
+title: Pavel Axelrod for Government Chairman
 view-if: axelrod_dead = 0
 subtitle: Axelrod is popular within the party, and is the preferred candidate of the Center and other parties.
 on-arrival: rsdrp_in_government = 1; chancellor = "Axelrod"; chancellor_party = "RSDRP"; in_vremennyy_coalition = 1 if in_trudovaya_coalition == 0
@@ -1151,7 +1151,7 @@ go-to: ministries
 Axelrod's appointment as chancellor is approved by all our potential allies.
 
 @lozovsky
-title: Solomon Lozovsky for Chancellor
+title: Solomon Lozovsky for Government Chairman
 view-if: axelrod_dead = 1
 subtitle: Solomon Lozovsky is a Homogeneous Socialist and former Bolshevik, but can he also be chancellor? *It will take some convincing...*
 choose-if: resources >= 2
@@ -1198,7 +1198,7 @@ go-to: ministries
 
 
 @dan
-title: Fyodor Dan for Chancellor
+title: Fyodor Dan for Government Chairman
 view-if: not historical_mode or not rsdrp_prussia
 subtitle: Dan is currently the Minister-President of Prussia, and is one of our most popular leaders. However, other parties may have qualms about concentrating too much power in one man.
 
@@ -1209,7 +1209,7 @@ The Center party has significant qualms about appointing Dan as chancellor, give
 - @dan_2: Let the Center have their cabinet positions.
 
 @dan_2
-subtitle: Fyodor Dan will be Chancellor.
+subtitle: Fyodor Dan will be Government Chairman.
 view-if: not historical_mode
 on-arrival: rsdrp_in_government = 1; chancellor = "Dan"; chancellor_party = "RSDRP"; leverage -= 10; in_vremennyy_coalition = 1 if in_trudovaya_coalition == 0
 go-to: ministries
@@ -1218,7 +1218,7 @@ We have promised to let the Center have more influence in the government in resp
 
 
 @psr_chancellor
-title: Let the Center Party have their chancellor.
+title: Let the Socialist-Revolutionary Party have their chancellor.
 subtitle: Heinrich Brüning will be chancellor. This is unexpected and will cause internal dissent, but may give us a better position in negotiating for other cabinet positions.
 on-arrival: left_dissent += 5; center_dissent += 5; labor_dissent += 5; psr_relation += 10; kadets_relation += 5; rkp_relation -= 5; in_vremennyy_coalition = 1 if in_trudovaya_coalition == 0; chancellor = "Brüning"; chancellor_party = "PSR"; rsdrp_in_government = 1; leverage += 5
 go-to: ministries
@@ -1226,7 +1226,7 @@ go-to: ministries
 This is highly unexpected, and many in the left and center of our party are criticizing this decision.
 
 [? if year == 1928 : Since Wilhelm Marx resigned, Heinrich Brüning has been appointed chancellor. ?]
-[? if year > 1928: Heinrich Brüning of the Center Party has been appointed chancellor. ?]
+[? if year > 1928: Heinrich Brüning of the Socialist-Revolutionary Party has been appointed chancellor. ?]
 
 @psr_chancellor_wirth
 title: Let Viktor Chernov of the <span style="color: #b4121a;">**Socialist-Revolutionaries**</span> be Government Chairman.
@@ -1280,7 +1280,7 @@ go-to: right_coalition_2
 @new_elections_rsdrp
 on-arrival: next_election_time = time+3; next_election_month = month + 3; next_election_year = year; next_election_year = year + 1 if next_election_month > 12; next_election_month = next_election_month - 12 if next_election_month > 12; new_middle_rsdrp -= 5; old_middle_rsdrp -= 5; workers_rsdrp -= 3; catholics_rsdrp -= 3; in_election = 1
 
-Since the remaining bourgeois and right-wing parties cannot form a tolerable governing agreement, new elections have been called for [+ next_election_month : month +] [+ next_election_year +]. The previous chancellor has resigned, and has been replaced by Heinrich Brüning, also of the Center Party, ruling as part of a presidential cabinet. 
+Since the remaining bourgeois and right-wing parties cannot form a tolerable governing agreement, new elections have been called for [+ next_election_month : month +] [+ next_election_year +]. The previous chancellor has resigned, and has been replaced by Heinrich Brüning, also of the Socialist-Revolutionary Party, ruling as part of a presidential cabinet. 
 
 We are seen as responsible for the failure to form a government, and many of our middle-class and even some working-class supporters have deserted the party.
 

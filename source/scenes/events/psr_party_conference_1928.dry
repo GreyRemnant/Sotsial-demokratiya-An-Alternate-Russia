@@ -25,7 +25,7 @@ Then, there is Boris Savinkov, the man who split the Eser vote to provide suppor
 - @nomajorityeser: No candidate has managed to secure a majority.
 
 @kerensky
-choose-if: psr_right >= psr_left or psr_relation >= 50
+choose-if: psr_right >= psr_left or psr_relation >= 50; 
 on-arrival: psr_party_leader = "Kerensky"; psr_relation -= 5
 face-image: img/kerenskywin.jpg
 
@@ -43,7 +43,7 @@ choose-if: psr_right = 10 and psr_relation >= 25
 on-arrival: psr_party_leader = "Savinkov"; psr_relation -= 25
 face-image:img/SAVVY.jpg
 
-To the shock and dismay of every democratic party, Boris Savinkov, the champion of Conservative, Nationalist, and anti-Democratic Narodism, has been elected Chariman of the PSR in an upset! The Party of Socialist-Revolutionaries is expected to split in half soon, now split between Savinkov's supporters and his many detractors. We should watch his "National-Narodism" closely...
+To the shock and dismay of every democratic party, Boris Savinkov, the champion of a Conservative, Nationalist, and Militarist form of Narodism, has been elected Chariman of the PSR in an upset! The Party of Socialist-Revolutionaries is expected to undergo major internal division, factional divides mend as the party now splits between the outnumbered Savinkovists and their detractors. We should watch his "National-Narodism" closely...
 
 @odinets
 choose-if: psr_right >= 10 and psr_left <=5 and psr_relation >= 10
