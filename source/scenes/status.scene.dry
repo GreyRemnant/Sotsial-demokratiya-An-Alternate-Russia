@@ -22,7 +22,7 @@ if (Q.economic_growth) {
 Resources available: [+ resources +]
 
 {!<span class="tooltip-text" title="The Russian Social Democratic Labor Party (United)"><span style="color: #ED1B34;">RSDRP(O)</span></span>!} position: [? if rsdrp_toleration : toleration ?][? if rsdrp_in_government : in government - ?][? if rsdrp_toleration == 0 and rsdrp_in_government == 0 and rsdrp_caretaker == 0 : opposition ?][? if rsdrp_caretaker : caretaker government ?]
-[? if in_weimar_coalition and rsdrp_in_government: Weimar Coalition ?][? if in_vremennyy_coalition and rsdrp_in_government: Vremennyy Coalition ?][? if in_popular_front and rsdrp_in_government: Popular Front ?][? if in_left_front and rsdrp_in_government: Left Front ?][? if in_rsdrp_majority and rsdrp_in_government: RSDRP majority ?][? if in_minority_government and rsdrp_in_government: minority government ?][? if in_emergency_government and rsdrp_in_government: emergency government ?]
+[? if in_weimar_coalition and rsdrp_in_government: Weimar Coalition ?][? if in_socialliberal_coalition_coalition and rsdrp_in_government: Vremennyy Coalition ?][? if in_popular_front and rsdrp_in_government: Popular Front ?][? if in_left_front and rsdrp_in_government: Left Front ?][? if in_rsdrp_majority and rsdrp_in_government: RSDRP majority ?][? if in_minority_government and rsdrp_in_government: minority government ?][? if in_emergency_government and rsdrp_in_government: emergency government ?]
 
 [? if rsdrp_in_government and not in_rsdrp_majority and not in_left_front : Coalition dissent: [+ coalition_dissent : coalition_dissent +] ?]
 
