@@ -28,16 +28,16 @@ on-arrival: kadets_relation -= 8; psr_relation -= 5; pacifism += 1; nationalism 
 go-to: vote_no_does_not_pass if rsdrp_r + rkp_r + peacesr_r < 50; vote_no_pass if rsdrp_r + rkp_r + peacesr_r >= 50
 
 @vote_no_does_not_pass
-on-arrival: panzerkreuzer_funded = 0; nationalism -= 3*(1-dissent); panzerkreuzer_failed = 1; workers_rsdrp += 5*(1-dissent); rkp_relation += 2
+on-arrival: panzerkreuzer_funded = 0; nationalism -= 3*(1-dissent); panzerkreuzer_failed = 1; workers_rsdrp += 5*(1-dissent); rkp_relation += 2; psr_left +=1
 
-Our coalition partners are shocked by our intransigence while the pacifists of the party rejoice! Government Chairman [+ chancellor +] brings the matter to a Duma vote, which fails through the combined forces of the RSDRP, anti-militarist Esers, and the RKP. The military will not be expanded!
+Our militarist coalition partners are shocked by our intransigence while the pacifists of the party and coalition rejoice! Government Chairman [+ chancellor +], pressured by President Kornilov, brings the matter to a Duma vote, and it fails to pass through the combined forces of the RSDRP, anti-militarist Esers, and the RKP. The military will not be expanded!
 
 @vote_no_pass
-on-arrival: panzerkreuzer_funded = 1; nationalism += 3*(1-dissent)
+on-arrival: panzerkreuzer_funded = 1; nationalism += 3*(1-dissent); psr_right += 1;
 
-Our coalition partners are shocked by our intransigence! Government Chairman [+ chancellor +] brings the matter to a Duma vote, which passes with all parties in favor except the RSDRP and RKP. The program will be funded.
+Our coalition partners are shocked by our intransigence! Government Chairman [+ chancellor +], pressured by President Kornilov, brings the matter to a Duma vote, which passes with all parties in favor except the RSDRP, RKP, and other minor left-wing parties. The program will be funded.
 
 @abstain
-on-arrival: kadets_relation -= 5; psr_relation -= 3; left_dissent += 5; labor_dissent += 5; panzerkreuzer_funded = 1; rkp_relation -= 3
+on-arrival: kadets_relation -= 5; psr_relation -= 3; left_dissent += 5; labor_dissent += 5; panzerkreuzer_funded = 1; rkp_relation -= 3; psr_right += 2; psr_left -= 2
 
-Our coalition partners are shocked by our intransigence and the party's pacifists are angered. Despite our abstention, the vote in the Duma goes through, with all parties in favor except the RSDRP and RKP. The program will be funded.
+Our coalition partners are shocked by our intransigence and the party's pacifists are angered. Our failure to take a stance has emboldened the militarists of the PSR, and they have managed to whip their party in favor, the vote goes through to the Duma due to executive pressure, with all parties in favor except the RSDRP, RKP, and other minor left-wing parties. The program will be funded.

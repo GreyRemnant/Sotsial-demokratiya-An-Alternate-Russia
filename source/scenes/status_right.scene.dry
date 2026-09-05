@@ -22,7 +22,7 @@ if (Q.economic_growth) {
 
 = Internal Factions of the RSDRP
 
-{!<span class="tooltip-text" title="The Party Left is interested in radical, transformative policies and advocates for a revolutionary-minded, All-Socialist Coalition.">Internationalist</span>!} strength: [+ left_strength : strength +], dissent: [+ left_dissent : dissent +]
+{!<span class="tooltip-text" title="The Party Left is interested in radical, transformative policies and advocate for Socialist unity and continued homogeneous Socialist governance.">Internationalist</span>!} strength: [+ left_strength : strength +], dissent: [+ left_dissent : dissent +]
 
 {!<span class="tooltip-text" title="The Center is a faction of Orthodox Marxists, the ideological adherents of Kautsky and Martov, who seek a middle ground between reform and revolution.">Center</span>!} strength: [+ center_strength : strength +], dissent: [+ center_dissent : dissent +]
 

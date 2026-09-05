@@ -194,7 +194,7 @@ Q.nationalism = 60;
 Q.socialism = 40;
 // pro-republic vs anti-republic
 Q.pro_republic = 59;
-Q.literacy_rate = 29;
+Q.literacy_rate = 31;
 
 Q.emergency_rule = 0;
 

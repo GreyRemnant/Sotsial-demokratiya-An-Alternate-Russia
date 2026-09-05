@@ -97,6 +97,8 @@ face-image: img/literacy.jpg
 
 Literacy in Tsarist Russia was abysmal, not even breaking a quarter of the population, and it was even worse in rural areas. However, it is currently our responsibility to fix this issue, despite failures from the Liberal-Narodist Coalition of the mid '20s.
 
+According to ministry reports, which are prone to error, rounding, and falsifications on the part of local officials, the current literacy rate hovers somewhere [+ literacy_rate : literacy_rough +].
+
 - @fundlit
 - @defundlit
 - @builded
