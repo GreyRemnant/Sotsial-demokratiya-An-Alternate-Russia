@@ -657,8 +657,8 @@ Now, we have a new social-liberal coalition, a "Constitutional Coalition" of all
 
 Who should be chancellor?
 
-- @join_bruning: For better or for worse, it must be Heinrich Brüning of the Center.
-- @dan_chancellor_new: Fyodor Dan for Government Chairman?
+- @join_chernov: For better or for worse, it must be Alexander Kerensky of the PSR.
+- @dan_chancellor_new: Perhaps the other parties will accept Fyodor Dan, of the RSDRP, for Government Chairman?
 
 @dan_chancellor_new
 subtitle: This will reduce our leverage in the ministries.
@@ -670,18 +670,18 @@ We have assembled a new coalition under Fyodor Dan.
 
 
 @unity_government
-title: The Socialist-Revolutionary Party offers a "Government of National Unity" under Government Chairman Joseph Wirth.
+title: The Socialist-Revolutionary Party offers a "Government of National Unity" under Government Chairman Alexander Kerensky.
 subtitle: RSDRP + PSR + [+ musavat_name +] + K-D + Others ([+ neo_trudovaya_coalition +]%)
 view-if: psr_party_leader == "Joos" and neo_trudovaya_coalition >= 50 and trudovaya_coalition < 50 and psr_relation >= 10
 
-The Socialist-Revolutionary Party leader, Joseph Joos, clearly sees the threat from the ascension of the anti-democratic extremist parties, and thus tries to negotiate a "Government of National Unity" to save the republic. This coalition would be led by Joseph Wirth, a left-leaning member of the Socialist-Revolutionary Party and former chancellor, and would encompass all of the constitutional parties. Our role in this government might be limited, however.
+The Socialist-Revolutionary Party leader, [+ psr_leader +], clearly sees the threat from the ascension of the anti-democratic extremist parties, and thus tries to negotiate a "Government of National Unity" to save the republic. This coalition would be led by Alexander Kerensky, a Liberal-leaning member of the Socialist-Revolutionary Party and former Government Chairman, and would encompass all of the constitutional parties. Our role in this government might be limited, however.
 
 - @unity_government_2
 - @reject_unity_government: No, we will not accept this offer.
 
 @unity_government_2
 title: Accept the offer!
-on-arrival: chancellor = "Wirth"; chancellor_party = "PSR"; rsdrp_in_government = 1; in_socialliberal_coalition = 1; in_unity_government = 1; leverage = 15; psr_relation += 5; kadets_relation += 4
+on-arrival: chancellor = "Kerensky"; chancellor_party = "PSR"; rsdrp_in_government = 1; in_socialliberal_coalition = 1; in_unity_government = 1; leverage = 15; psr_relation += 5; kadets_relation += 4
 achievement: constitutional_coalition
 go-to: ministries
 
@@ -694,18 +694,18 @@ on-arrival: psr_relation -= 8; musavat_relation -= 5; kadets_relation -= 5
 Our rejection of the unity government has hurt our relations with the bourgeois and center-right parties.
 
 - @dans_dilemma
-- @toleration_bruning: We will tolerate a minority government led by Brüning.
-- @toleration_wirth: We will tolerate a minority government led by Joseph Wirth.
+- @toleration_bruning: We will tolerate a minority government led by Alexander Kerensky.
+- @toleration_wirth: We will tolerate a minority government led by Chernov.
 - @new_elections: There will be new elections.
 
 
 @toleration_wirth
-view-if: psr_party_leader = "Joos"
+view-if: psr_party_leader = "Avksentyev"
 choose-if: president == "Dan"
-unavailable-subtitle: President Hindenburg will not support a minority government led by Joseph Wirth.
-on-arrival: chancellor = "Wirth"; chancellor_party = "PSR"; rsdrp_in_government = 0; rsdrp_toleration = 1; psr_relation += 5; foreign_minister_party = "K-D"; interior_minister_party = "PSR"; justice_minister_party = "I"; labor_minister_party = "PSR"; reichswehr_minister_party = "I"; economic_minister_party = musavat_name; finance_minister_party = "K-D"; agriculture_minister_party = "PSR"; pro_republic -= 2;
+unavailable-subtitle: President Kornilov will not support a minority government led by Chernov.
+on-arrival: chancellor = "Chernov"; chancellor_party = "PSR"; rsdrp_in_government = 0; rsdrp_toleration = 1; psr_relation += 5; foreign_minister_party = "K-D"; interior_minister_party = "PSR"; justice_minister_party = "I"; labor_minister_party = "PSR"; reichswehr_minister_party = "I"; economic_minister_party = musavat_name; finance_minister_party = "K-D"; agriculture_minister_party = "PSR"; pro_republic -= 2;
 
-We have supported a minority government led by the Socialist-Revolutionary Party under Government Chairman Joseph Wirth.
+We have supported a minority government led by the Socialist-Revolutionary Party under Government Chairman Viktor Chernov.
 
 
 
