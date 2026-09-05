@@ -25,7 +25,7 @@ The campaign against the battlecruiser fails, with only the dissident RSDRP and 
 
 @vote_no
 on-arrival: kadets_relation -= 8; psr_relation -= 5; pacifism += 1; nationalism -= 5*(1-dissent); coalition_dissent += 1; psr_left += 2; rkp_concil += 1
-go-to: vote_no_does_not_pass rsdrp_r + rkp_r + peacesr_r < 50; vote_no_pass if rsdrp_r + rkp_r + peacesr_r >= 50
+go-to: vote_no_does_not_pass if: rsdrp_r + rkp_r + peacesr_r < 50; vote_no_pass if: rsdrp_r + rkp_r + peacesr_r >= 50
 
 @vote_no_does_not_pass
 on-arrival: panzerkreuzer_funded = 0; nationalism -= 3*(1-dissent); panzerkreuzer_failed = 1; workers_rsdrp += 5*(1-dissent); rkp_relation += 2
