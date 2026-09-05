@@ -26,28 +26,28 @@ Then, there is Boris Savinkov, the man who split the Eser vote to provide suppor
 
 @kerensky
 choose-if: psr_right >= psr_left or psr_relation >= 50; 
-on-arrival: psr_party_leader = "Kerensky"; psr_relation -= 5
+on-arrival: psr_party_leader = "Kerensky"; psr_leader = "Kerensky"; psr_relation -= 5
 face-image: img/kerenskywin.jpg
 
 Alexander Kerensky has been selected as the chairman of the Party of Socialist-Revolutionaries. He seems to represent a rightward turn from Chernov, with his history of liberal sympathies. He will preside over a Narodist Party less inclined to compromise with Socialists and more inclined to compromise with the Liberal parties.
 
 @avksentyev
 choose-if: psr_right <= psr_left or psr_relation <= 50
-on-arrival: psr_party_leader = "Avksentyev"; rural_rsdrp += 5; workers_psr += 3; psr_relation += 5; pro_republic += 8
+on-arrival: psr_party_leader = "Avksentyev"; psr_leader = "Avksentyev"; rural_rsdrp += 5; workers_psr += 3; psr_relation += 5; pro_republic += 8
 face-image:img/avkwin.jpg
 
 Nikolay Avksentyev has emerged victorious in the Congress, and is the new SR Chairman! Avksentyev is a "Heidelberg Eser", a known moderate, and has been influenced by Marxism in the past, the feelings of goodwill between Socialists and Narodists appears to be renewed!
 
 @savinkov
 choose-if: psr_right = 10 and psr_relation >= 25
-on-arrival: psr_party_leader = "Savinkov"; psr_relation -= 25
+on-arrival: psr_party_leader = "Savinkov"; psr_leader = "Savinkov"; psr_relation -= 25
 face-image:img/SAVVY.jpg
 
 To the shock and dismay of every democratic party, Boris Savinkov, the champion of a Conservative, Nationalist, and Militarist form of Narodism, has been elected Chariman of the PSR in an upset! The Party of Socialist-Revolutionaries is expected to undergo major internal division, factional divides mend as the party now splits between the outnumbered Savinkovists and their detractors. We should watch his "National-Narodism" closely...
 
 @odinets
 choose-if: psr_right >= 10 and psr_left <=5 and psr_relation >= 10
-on-arrival: psr_party_leader = "Odinets"; psr_relation -= 25
+on-arrival: psr_party_leader = "Odinets"; psr_relation -= 25; psr_leader = "Odinets"
 face-image: img/odinets.jpg
 
 It appears the Conservatives of the PSR have emerged triumphant, as Dmitry Odinets, a Russian Nationalist and Conservative-Narodist, has been elected party chairman. This, obviously, spells ill for our relations.

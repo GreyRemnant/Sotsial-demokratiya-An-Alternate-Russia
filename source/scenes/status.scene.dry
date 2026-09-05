@@ -118,7 +118,7 @@ Economic Growth: [+ economic_growth_2 +]%
 
 {!<span class="tooltip-text" title="The informal grouping of many small, minority-focused, or regionalist Socialist and Narodist parties."><span style="color: #ff0000;">Other Leftists</span></span>!}: Socialism (Various)
 
-{!<span class="tooltip-text" title="The Party of Socialist-Revolutionaries, Narodists focused on Agrarian Socialism, they've taken a Marxist turn in recent years."><span style="color: #76ba22;">PSR</span></span>!}: Narodism (Avksentyev)
+{!<span class="tooltip-text" title="The Party of Socialist-Revolutionaries, Narodists focused on Agrarian Socialism[if psr_leader != "Savinkov" or if psr_leader != "Kerensky" or if psr_leader != "Odinets":, they've taken a Marxist turn in recent years]."><span style="color: #76ba22;">PSR</span></span>!}: [if psr_leader = "Kerensky": Liberal Narodism (Kerensky)] [if psr_leader = "Chernov": Narodism (Chernov)] [if psr_leader = "Avksentyev": Narodism (Avksentyev)] [if psr_leader = "Odinets": Conservative Narodism (Odinets)] [if psr_leader = "Savinkov": National-Narodism (Savinkov)]
 
 {!<span class="tooltip-text" title="The Constitutional-Democratic Party, often called Kadets, the conglomeration of many Liberal groups, left and right."><span style="color: #0087dc;">K-D</span></span>!}: Liberal Constitutionalism (Prince Dolgorukov)
 
