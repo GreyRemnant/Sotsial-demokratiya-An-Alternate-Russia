@@ -306,7 +306,7 @@ if (Q.rkp_r >= Q.rsdrp_r && Q.rkp_r >= Q.nts_r) {
 
 // coalitions
 Q.trudovaya_coalition = Q.rsdrp_r + Q.otherleft_r + Q.psr_r;
-Q.vremennyy_coalition = Q.rsdrp_r + Q.musavat_r + Q.psr_r;
+Q.social-liberal_coalition = Q.rsdrp_r + Q.musavat_r + Q.psr_r;
 Q.bourgeois_coalition = Q.musavat_r + Q.psr_r + Q.kadets_r + Q.other_r;
 Q.center_right_coalition = Q.psr_r + Q.musavat_r + Q.kadets_r + Q.other_r + Q.vs_r;
 Q.right_coalition = Q.psr_r + Q.kadets_r + Q.other_r + Q.vs_r;
@@ -358,7 +358,7 @@ Other: [+ other_r +]
 
 Trudovaya Coalition (RSDRP + PSR + Other Leftists): [+ trudovaya_coalition +]
 
-Vremennyy Coalition (RSDRP + PSR + Müsavat + K-D): [+ vremennyy_coalition +]
+Social-Liberal Coalition (RSDRP + PSR + Müsavat + K-D): [+ social-liberal_coalition +]
 
 Bourgeois Coalition (PSR + Müsavat + K-D + Others): [+ bourgeois_coalition +]
 

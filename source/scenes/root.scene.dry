@@ -135,8 +135,7 @@ Q.NTS_relation = 0;
 Q.rkp_leader = "Zinoviev";
 // alternative is the Conciliators as party leader
 Q.rkp_party_leader = "Zinoviev";
-Q.psr_leader = "Chernov";
-// party leader - can be Alexander Kerensky, Nikolay Avksentyev, or Adam Stegerwald after the 1928 December conference. Avksentyev will be most friendly to the RSDRP.
+Q.psr_leader = "Kerensky";
 Q.psr_party_leader = "Chernov";
 Q.nts_leader = "Leuchtenberg";
 
