@@ -1229,9 +1229,9 @@ This is highly unexpected, and many in the left and center of our party are crit
 [? if year > 1928: Heinrich Brüning of the Socialist-Revolutionary Party has been appointed chancellor. ?]
 
 @psr_chancellor_wirth
-title: Let Viktor Chernov of the <span style="color: #b4121a;">**Socialist-Revolutionaries**</span> be Government Chairman.
+title: Let Viktor Chernov of the <span style="color: #76ba22;">**Socialist-Revolutionaries**</span> be Government Chairman.
 view-if: psr_party_leader == "Joos"
-subtitle: Chernov is on the Marxist wing of the <span style="color: #b4121a;">**PSR**</span>. This may give us a better position in negotiating for other cabinet positions.
+subtitle: Chernov is on the Marxist wing of the <span style="color: #76ba22;">**PSR**</span>. This may give us a better position in negotiating for other cabinet positions.
 on-arrival: left_dissent += 2; psr_relation += 6; musavat_relation += 3; rkp_relation -= 5; in_vremennyy_coalition = 1 if in_trudovaya_coalition == 0; chancellor = "Chernov"; chancellor_party = "PSR"; rsdrp_in_government = 1; leverage += 5
 go-to: ministries
 

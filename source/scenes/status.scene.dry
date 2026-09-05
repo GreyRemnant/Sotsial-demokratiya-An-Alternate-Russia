@@ -86,7 +86,7 @@ Economic Growth: [+ economic_growth_2 +]%
 
 [? if rdp_formed = 1: {!<span class="tooltip-text" title="The Radical-Democratic Party, our old Right wing. Socialist, Marxist, and opposed to Liberal cooperation."><span style="color: #d84c4c;">RDP</span></span>!}: <span style="color: #80FF00 ;">**Warm**</span> ?]
 
-{!<span class="tooltip-text" title="Party of Socialist-Revolutionaries"><span style="color: #b4121a;">PSR</span></span>!}: [+ psr_relation : relationships +]
+{!<span class="tooltip-text" title="Party of Socialist-Revolutionaries"><span style="color: #76ba22;">PSR</span></span>!}: [+ psr_relation : relationships +]
 
 {!<span class="tooltip-text" title="Müsavat Party"><span style="color: #3bb9ff;">Müsavat</span></span>!}: [+ musavat_relation : relationships +]
 
@@ -118,7 +118,7 @@ Economic Growth: [+ economic_growth_2 +]%
 
 {!<span class="tooltip-text" title="The informal grouping of many small, minority-focused, or regionalist Socialist and Narodist parties."><span style="color: #ff0000;">Other Leftists</span></span>!}: Socialism (Various)
 
-{!<span class="tooltip-text" title="The Party of Socialist-Revolutionaries, Narodists focused on Agrarian Socialism, they've taken a Marxist turn in recent years."><span style="color: #b4121a;">PSR</span></span>!}: Narodism (Avksentyev)
+{!<span class="tooltip-text" title="The Party of Socialist-Revolutionaries, Narodists focused on Agrarian Socialism, they've taken a Marxist turn in recent years."><span style="color: #76ba22;">PSR</span></span>!}: Narodism (Avksentyev)
 
 {!<span class="tooltip-text" title="The Constitutional-Democratic Party, often called Kadets, the conglomeration of many Liberal groups, left and right."><span style="color: #0087dc;">K-D</span></span>!}: Liberal Constitutionalism (Prince Dolgorukov)
 
@@ -203,7 +203,7 @@ Q.socialism_disp = Math.round(Q.socialism);
 
 {!<span class="tooltip-text" title="Party of Left-Socialist-Revolutionaries-Internationalists"><span style="color: #990000;">PLSRI</span></span>!}: [+ plsr_votes +]%
 
-{!<span class="tooltip-text" title="Party of Socialist-Revolutionaries"><span style="color: #b4121a;">PSR</span></span>!}: [+ psr_votes +]%
+{!<span class="tooltip-text" title="Party of Socialist-Revolutionaries"><span style="color: #76ba22;">PSR</span></span>!}: [+ psr_votes +]%
 
 {!<span class="tooltip-text" title="Constitutional-Democratic Party"><span style="color: #0087dc;">K-D</span></span>!}: [+ kadets_votes +]%
 
