@@ -317,7 +317,7 @@ Q.united_front_coalition = Q.rsdrp_r + Q.rkp_r + Q.plsr_r + Q.psr_r + Q.musavat_
 Q.anti_democratic_coalition = Q.rkp_r + Q.nts_r;
 Q.noway_coalition = Q.rsdrp_r + Q.nts_r;
 // aka everyone except nazi, rkp, vs
-Q.neo_trudovaya_coalition = Q.rsdrp_r + Q.musavat_r + Q.psr_r + Q.kadets_r + Q.other_r;
+Q.neo_trudovaya_coalition = Q.rsdrp_r + Q.musavat_r + Q.psr_r + Q.kadets_r + Q.other_r + Q.otherleft_r;
 !}
 
 The electoral system is essentially proportional, with the proportion of Reichstag seats roughly equal to the proportion of votes.

@@ -932,7 +932,7 @@ We have won the vote of no confidence, and are currently ruling under an RSDRP m
 @trudovaya_coalition
 title: We can form an <span style="color: #DA291C;">**Trudovaya**</span> Coalition.
 subtitle: RSDRP + PSR + Other Leftists [? if rsrpi_formed and rkp_relation >= 30 : + RSRPI toleration ?] ([+ trudovaya_coalition +]%)
-view-if: trudovaya_coalition >= 50
+view-if: trudovaya_coalition >= 50;
 choose-if: psr_leader != "Kerensky"
 unavailable-subtitle: [if psr_leader = "Kerensky": It is no secret that Alexander Kerensky prefers governing with the Liberals instead of the Social Democrats, as such, he insists any RSDRP-PSR Coalition would need to include the Kadets.]
 on-arrival: leverage += 5; leverage += 5 if psr_party_leader == "Joos"; in_trudovaya_coalition = 1; rsdrp_in_government = 1; in_popular_front = 0; in_left_front = 0; foreign_minister_party = "PSR"; interior_minister_party = "PSR"; justice_minister_party = musavat_name; labor_minister_party = "PSR"; reichswehr_minister_party = "I"; economic_minister_party = musavat_name; finance_minister_party = "PSR"; agriculture_minister_party = "PSR"; foreign_minister = "Fondaminsky"; interior_minister = "Avksentiev"; justice_minister = "Khasmammadov"; labor_minister = "Peshekhonov"; reichswehr_minister = "Verkhovsky"; economic_minister = "Jafarov"; finance_minister = "Gendelman"; agriculture_minister = "Chernov";
