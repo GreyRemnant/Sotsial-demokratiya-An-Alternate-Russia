@@ -49,14 +49,14 @@ By transferring resources to our coalition partners, we can reduce their dissent
 
 
 @support_center
-choose-if: (trudovaya_coalition >= 50 and z_relation >= 40) or (socialliberal_coalition_coalition >= 50 and z_relation >= 45 and kadets_relation >= 30)
-unavailable-subtitle: [? if socialliberal_coalition_coalition < 50 : This would not give us a majority. ?] [? if z_relation < 45 : After working with the Communists, the Center Party does not wish to form a coalition with us. ?] [? if kadets_relation < 30 : The DVP would rather see the government fall than rescue us from the Communists. ?]
+choose-if: (trudovaya_coalition >= 50 and z_relation >= 40) or (socialliberal_coalition >= 50 and z_relation >= 45 and kadets_relation >= 30)
+unavailable-subtitle: [? if socialliberal_coalition < 50 : This would not give us a majority. ?] [? if z_relation < 45 : After working with the Communists, the Center Party does not wish to form a coalition with us. ?] [? if kadets_relation < 30 : The DVP would rather see the government fall than rescue us from the Communists. ?]
 
 We could try to boot the RKP from our governing coalition, and form a new government[? if rsdrp_r <= 50 : with the bourgeois parties ?].
 
 - @election_1928.rsdrp_majority: Form an RSDRP government, without the RKP?
 - @election_1928.trudovaya_coalition: Form a trudovaya Coalition?
-- @election_1928.socialliberal_coalition_coalition: Form a Vremennyy Coalition?
+- @election_1928.socialliberal_coalition: Form a Vremennyy Coalition?
 - @let_it_happen: There is nothing we can do.
 
 
