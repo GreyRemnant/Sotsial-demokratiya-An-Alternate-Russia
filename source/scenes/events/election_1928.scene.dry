@@ -292,7 +292,7 @@ go-to: coalition_menu
 
 {!<tr><td><div class="box" style='background-color:#3bb9ff'> </div> !} [+ musavat_name +]: {!</td><td>!} [+ musavat_r +]% {!</td><td>!} [+ str_change_musavat +] {!</td></tr>!}
 
-{!<tr><td><div class="box" style='background-color:#b4121a'> </div> !} PSR: {!</td><td>!} [+ psr_r +]% {!</td><td>!} [+ str_change_psr +] {!</td></tr>!}
+{!<tr><td><div class="box" style='background-color:#76ba22'> </div> !} PSR: {!</td><td>!} [+ psr_r +]% {!</td><td>!} [+ str_change_psr +] {!</td></tr>!}
 
 {!<tr><td><div class="box" style='background-color:#0087dc'> </div> !} K-D: {!</td><td>!} [+ kadets_r +]% {!</td><td>!} [+ str_change_kadets +] {!</td></tr>!}
  
