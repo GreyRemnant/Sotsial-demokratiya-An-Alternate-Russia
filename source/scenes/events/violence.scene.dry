@@ -7,23 +7,25 @@ view-if: year = 1930 and month = 3
 priority: 2
 max-visits: 1
 
-Today marks the eleventh anniversary of the February Revolution, and in turn the Russian Democratic Federative Republic! Social Democrats, Liberals, and Narodists nation-wide are taking part in jubilees to celebrate our continued freedom from Tsarist autocracy! What a time to be alive!
+Today marks the eleventh anniversary of the February Revolution, and in turn the Russian Democratic Federative Republic! Social Democrats, Liberals, and Narodists nation-wide are taking part in celebrations to commemorate our continued freedom from Tsarist autocracy and to give the people a break from the harsh economic crisis of the day! 
+
+**What a time to be alive!**
 
 - @petrogradvio
 
 @petrogradvio
-title: Shots are heard in Petrograd.
+title: Gunshots ring in the streets of Petrograd.
 subtitle: Armed Solidarists are attempting to disrupt celebrations in Petrograd! 
 face-image: img/petrogradvio.jpeg
 
-Members of the Russian National Youth League (SRNM), a Solidarist-aligned "youth organization", have attacked Soviet-organized celebrations across the city. Casualties are already in the dozens, gunshots echo through the streets of Petrograd, action must be taken immediately!
+Members of the All-Russian Social-Christian Union for the Liberation of the People (VSKhSON), a Solidarist "athletic organization", have attacked Republican-organized celebrations across the city. Casualties are already in the dozens, and gunshots echo through the streets of Petrograd. Action must be taken immediately!
 
 - @bansrnm
 - @nothingeverhappens
 
 @bansrnm
 title: Rally local forces and issue a ban on the Solidarist paramilitary.
-subtitle: The Esfe, Police, and National Militia will do what they can to fend off these terrorists.
+subtitle: The Esfe, Police, and National Militia will do what they can to fend off these terrorists while we push for a national ban on the Solidarists.
 unavailable-subtitle: We aren't in government.
 choose-if: rsdrp_in_government = 1 and interior_minister_party = "RSDRP"
 on-arrival: strife += 2; sa_strength *= 0.85; workers_nts += 2; new_middle_nts += 2; old_middle_nts += 3; rural_nts += 2; unemployed_nts += 3; republicanism += 3; sa_banned = 1
@@ -31,17 +33,19 @@ face-image: img/streetfighting2.jpg
 
 The Esfe, Militsiya, and loyal portions of the Petrograd Politsiya have managed to fend off the Solidarists, dealing and taking a great deal of damage. Despite our losses, this represents a victory for Republicanism.
 
-Radicalism is on the rise. **Streetfighting is now unlocked.**
+Unfortunately, we find ourselves unable to ban the NTS as a whole, though we have managed to ban the VSKhSON and the SRNM, the main "youth wing" of Solidarism.
+
+**Radicalism is on the rise. Streetfighting is now unlocked.**
 
 @nothingeverhappens
 title: Deploy the Soyuz Fevralya.
-subtitle: The Esfe will have trouble stopping the highly militarized and radical Solidarists on such short notice.
+subtitle: The mostly ceremonial Esfe will have trouble stopping the militarized and radical Solidarists on such short notice.
 unavailable-subtitle: We are in government and can use better methods to solve this.
-on-arrival: strife += 2; sa_strength *= 0.65; workers_nts += 2; new_middle_nts += 3; old_middle_nts += 6; rural_nts += 4; unemployed_nts += 5; republicanism -= 5
+on-arrival: strife += 2; sa_strength *= 0.65; workers_nts += 4; new_middle_nts += 3; old_middle_nts += 6; rural_nts += 4; unemployed_nts += 5; republicanism -= 5
 face-image: img/streetfighting2.jpg
 
-The Esfe and loyal portions of the Petrograd Politsiya mount a valiant defense against the SRNM, inflicting a great deal damage, but have ultimately been forced to flee under the force of the radicals.
+The Esfe and loyal portions of the Petrograd Politsiya mount a valiant defense against the VSKhSON, inflicting a great deal of damage, but have ultimately been forced to flee under the force of the radicals. It appears that the Solidarists have won this show of force.
 
-Radicalism is on the rise. **Streetfighting is now unlocked.**
+**Radicalism is on the rise. Streetfighting is now unlocked.**
 
-# to-do: make a win and fail condition for this, for now the social-fascists get the shit kicked out of them by the fascists if you ain't got the interior ministry. sucker.
+# to-do: make a win and fail condition for this, for now the social-fascists get the shit kicked out of them by the fascists if you ain't got the interior ministry. sucker. laugh at this user.

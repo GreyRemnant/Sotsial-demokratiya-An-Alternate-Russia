@@ -142,7 +142,7 @@ title: Work with the Unions to improve literacy.
 subtitle: -1 budget
 choose-if: budget >= 1
 unavailable-subtitle: We do not have the money.
-on-arrival: budget -= 1; workers_rsdrp += 6*(1-dissent); new_middle_rsdrp += 3*(1-dissent); unemployed -= 0.2 if unemployed >= 4; literacy_rate += 5
+on-arrival: budget -= 1; workers_rsdrp += 6*(1-dissent); new_middle_rsdrp += 3*(1-dissent); unemployed -= 0.2 if unemployed >= 4; literacy_rate += 3
 face-image: img/laborlit.jpg
 
 Working with unions, we have hired teachers to improve the literacy rate among workers and others union-members. The new teachers and newly-educated workers are sure to be thankful.
@@ -152,7 +152,7 @@ title: Improve literacy among women.
 subtitle: -1 budget
 choose-if: budget >= 1
 unavailable-subtitle: We do not have the money.
-on-arrival: budget -= 1; workers_rsdrp += 3*(1-dissent); new_middle_rsdrp += 3*(1-dissent); old_middle_rsdrp += 3*(1-dissent); rural_rsdrp += 3*(1-dissent); unemployed_rsdrp += 3*(1-dissent); unemployed -= 0.2 if unemployed >= 4; literacy_rate += 6
+on-arrival: budget -= 1; workers_rsdrp += 3*(1-dissent); new_middle_rsdrp += 3*(1-dissent); old_middle_rsdrp += 3*(1-dissent); rural_rsdrp += 3*(1-dissent); unemployed_rsdrp += 3*(1-dissent); unemployed -= 0.2 if unemployed >= 4; literacy_rate += 4
 face-image: img/womenliteracy.jpg
 
 Working with the All-Russian League for Women's Equality, we have hired teachers to work with women and improve their literacy. The Russian Feminist movement is sure to appreciate our efforts.
