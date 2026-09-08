@@ -198,7 +198,15 @@ if (Q.rsrpi_formed && Q.rsrpi_r) {
             "seats": Math.round(Q.rsrpi_r*7.67),
             });
 }
-data = data.concat([
+if (Q.rdp_formed && Q.rdp_r) {
+    data.push({
+            "id": "rdp",
+            "legend": "RDP",
+            "name": "RDP",
+            "seats": Math.round(Q.rdp_r*7.67),
+            });
+}
+data = data.concat ([
     {
         "id": "plsr",
         "legend": "PLSRI",
@@ -211,14 +219,6 @@ data = data.concat([
         "name": "RSDRP",
         "seats": Math.round(Q.rsdrp_r*7.67),
     },
-if (Q.rdp_formed && Q.rdp_r) {
-    data.push({
-            "id": "rdp",
-            "legend": "RDP",
-            "name": "RDP",
-            "seats": Math.round(Q.rdp_r*7.67),
-            });
-}
     {
         "id": "psr",
         "legend": "PSR",
