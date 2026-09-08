@@ -211,7 +211,7 @@ data = data.concat([
         "name": "RSDRP",
         "seats": Math.round(Q.rsdrp_r*7.67),
     },
-    if (Q.rsrpi_formed && Q.rdp_r) {
+if (Q.rdp_formed && Q.rdp_r) {
     data.push({
             "id": "rdp",
             "legend": "RDP",
