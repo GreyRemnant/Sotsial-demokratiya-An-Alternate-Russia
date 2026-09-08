@@ -256,6 +256,12 @@ Q.parties = ['rsdrp', 'rkp', 'plsr', 'psr', 'musavat', 'kadets', 'vs', 'nts', 'o
 // splinters
 Q.rsrpi_formed = 0;
 Q.rdp_formed = 0;
+Q.lrp_formed = 0;
+Q.dpr_formed = 0;
+Q.ssrr_formed = 0;
+Q.kpr_formed = 0;
+Q.pst_formed = 0;
+Q.khdp_formed = 0;
 
 // Support for party by social group
 // they don't have to sum to 100 since the electoral calculations will be normalized.
