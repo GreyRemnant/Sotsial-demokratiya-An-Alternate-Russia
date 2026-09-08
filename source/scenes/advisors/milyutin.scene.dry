@@ -1,13 +1,13 @@
-title: Antonie Pfülf
+title: Vladimir Milyutin
 is-pinned-card: true
 tags: advisor, left
-card-image: img/portraits/PfülfAntonie.jpg
-view-if: pfulf_advisor = 1
+card-image: img/portraits/milyutin.jpg
+view-if: milyutin_advisor = 1
 new-page: true 
 
-= Antonie Pfülf
+= Vladimir Milyutin
 
-Pfülf is a former teacher from Bavaria who came from a conservative Catholic family. She is an activist for women's rights and for broadening the support of the RSDRP. 
+Milyutin is a former Bolshevik, former Agricultural Minister, and is controversial within the party for his conciliatory views.
 
 - @building_the_left
 - @rkp_cooperation
@@ -29,4 +29,4 @@ unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +
 choose-if: advisor_action_timer = 0
 on-arrival: advisor_action_timer = 6; left_strength += 5; rkp_relation += 6*(1-dissent); reformist_dissent += 3; communist_coalition += 1 if rkp_cooperation_seen <= 1; rkp_cooperation_seen += 1
 
-Dan attempts to reach out to his former colleagues to dissuade the RKP from their current extreme Stalinist path. Some concessions are extracted.
+Milyutin attempts to reach out to his former colleagues to dissuade the RKP from their current path. Some concessions are extracted.

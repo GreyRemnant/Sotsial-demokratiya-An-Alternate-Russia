@@ -162,20 +162,20 @@ Voitinsky has been removed as an advisor. The Labor faction disapproves.
 
 # left
 
-@remove_pfulf
-title: Remove Pfülf
-view-if: pfulf_advisor = 1
+@remove_milyutin
+title: Remove Milyutin
+view-if: milyutin_advisor = 1
 tags: remove_advisor
-on-arrival: pfulf_advisor = 0; reformist_dissent += 5; n_advisors -= 1
+on-arrival: milyutin_advisor = 0; reformist_dissent += 5; n_advisors -= 1
 go-to: rm_main
 
-Pfülf has been removed as an advisor. The Reformist faction disapproves.
+Milyutin has been removed as an advisor. The Reformist faction disapproves.
 
 @remove_sukhanov
 title: Remove Sukhanov
 view-if: sukhanov_advisor = 1
 tags: remove_advisor
-on-arrival: sukhanov_advisor = 0; left_dissent += 3; n_advisors -= 1
+on-arrival: sukhanov_advisor = 0; center_dissent += 3; n_advisors -= 1
 go-to: rm_main
 
 Sukhanov has been removed as an advisor. The Leftist faction disapproves.
@@ -441,27 +441,27 @@ Fyodor Dan is now an advisor.
 
 # left
 
-@add_pfulf
-title: Antonie Pfülf
-subtitle: Antonie Pfülf is a leader in social policy and women's rights. {!<br><br>!}[? if difficulty < 0 : Actions - Support a People's Party, Women's Rights ?]
+@add_milyutin
+title: Vladimir Milyutin
+subtitle: Milyutin is a former Bolshevik and is controversial within the party for his conciliatory views. {!<br><br>!}[? if difficulty < 0 : Actions - Building the Left, RKP Cooperation ?]
 is-card: true
-card-image: img/portraits/PfülfAntonie.jpg
-view-if: pfulf_advisor = 0 and n_advisors < 3
-on-arrival: pfulf_advisor = 1; n_advisors += 1
+card-image: img/portraits/milyutin.jpg
+view-if: milyutin_advisor = 0 and n_advisors < 3
+on-arrival: milyutin_advisor = 1; n_advisors += 1
 go-to: advisor_menu
 tags: left_advisor
 
-Antonie Pfülf is now an advisor.
+Vladimir Milyutin is now an advisor.
 
 @add_sukhanov
 title: Nikolay Sukhanov
-subtitle: Nikolay Sukhanov is a former Eser, an economist, and long-time Menshevik-Internationalist. {!<br><br>!}[? if difficulty < 0 : Actions - Left-Center Unity, Rural Campaigning, RKP & PLSR Relations, Addressing the Economic Crisis ?]
+subtitle: Nikolay Sukhanov is a former SR, an economist, and is known for being friendly with the Internationalist-wing of the Party. {!<br><br>!}[? if difficulty < 0 : Actions - Left-Center Unity, Rural Campaigning, RKP & PLSR Relations, Addressing the Economic Crisis ?]
 is-card: true
 card-image: img/portraits/Sukhanov.jpg
 view-if: sukhanov_advisor = 0 and n_advisors < 3
-on-arrival: sukhanov_advisor = 1; n_advisors += 1; left_strength += 5
+on-arrival: sukhanov_advisor = 1; n_advisors += 1; center_strength += 5; left_dissent -=3
 go-to: advisor_menu
-tags: left_advisor
+tags: center_advisor
 
 Nikolay Sukhanov is now an advisor.
 
