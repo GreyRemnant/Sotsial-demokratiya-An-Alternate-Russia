@@ -2,7 +2,7 @@ title: The Death of Kornilov
 subtitle: The President has died...
 new-page: true
 view-if: year = 1934 and month >= 7 and president = "Kornilov"
-on-arrival: round = 0; kornilov_dead = 1; president = "Bumke (acting)"; president = "Großmann (acting)" if judicial_reform >= 4; rsdrp_candidate = "Eckener"; rkp_candidate = "Thälmann"; rkp_candidate = "Münzenberg" if rkp_party_leader = "Conciliators"; z_candidate = "Adenauer"; musavat_candidate = "Gessler"; nts_candidate = "Leuchtenberg"; nts_candidate = "Baidalakov" if leuchtenberg_deported; vs_candidate = "Seldte"; kadets_candidate = "Gessler"; other_candidate = "Seldte"; is_unity_candidate = 0; rsrpi_candidate = rkp_candidate;
+on-arrival: round = 0; kornilov_dead = 1; president = "Efremov (acting)"; president = "Zarudny (acting)" if judicial_reform >= 4; rsdrp_candidate = "Maisky"; rkp_candidate = "Kalinin"; rkp_candidate = "Milyutin" if rkp_party_leader = "Conciliators"; psr_candidate = "Chernov"; musavat_candidate = "Rasulzade"; nts_candidate = "Leuchtenberg"; nts_candidate = "Baidalakov" if leuchtenberg_deported; vs_candidate = "Romanov"; kadets_candidate = "Shingarev"; other_candidate = "Shingarev"; is_unity_candidate = 0; rsrpi_candidate = rkp_candidate;
 max-visits: 1
 face-image: img/kornilovdead.png
 tags: event
@@ -11,138 +11,131 @@ tags: event
 
 President Lavr Kornilov has passed away at age 64. An era of history is closing, and the future remains to be seen. He had reportedly contracted tubercolosis while visiting Ukraine, this does explain his unusual absence since he left office.
 
-The nation engages in an outpouring of grief for its war hero and president, with even some sympathy among committed republicans and socialists. After all, Kornilov steered the republic through some of its most challenging times, without giving in to extremists on the far right. Perhaps he is one reason democracy remains alive.
+The nation engages in an outpouring of grief for its war hero and president, with even some sympathy among committed republicans and socialists. After all, Kornilov steered the republic through some of its most challenging times, both before and after the Civil War, without giving in to extremists on the far right. Perhaps he is one reason democracy remains alive.
 
-New presidential elections are to be held as soon as possible. The Russian political landscape is wide open, with contenders from all over the political space. In the meantime, Supreme Court chief justice [? if judicial_reform < 4 : Erwin Bumke ?][? if judicial_reform >= 4 : Hermann Großmann ?] serves as the acting president.
-
-# Hermann Großmann is the supreme court chief justice in judicial reform.
+New presidential elections are to be held as soon as possible. The Russian political landscape is wide open, with contenders from all over the political space. In the meantime, Supreme Court chief justice [? if judicial_reform < 4 : Ivan Efremov ?][? if judicial_reform >= 4 : Alexander Zarudny ?] serves as the acting president.
 
 - @candidates: Who are the candidates so far?
 
 @candidates
 go-to: candidate_menu
 
-[? if not leuchtenberg_deported : Of course, Sergey Leuchtenberg will be running for the Nazis, in his third run. We have kept him out of power so far, but nothing is certain. ?]
-[? if leuchtenberg_deported : With Leuchtenberg deported, the Nazis will be running Viktor Baidalakov as their candidate. ?]
-This might be the Nazis' last hurrah; the party's internal contradictions are heightening, and it is in desperate shortage of funds.
+[? if not leuchtenberg_deported : Of course, Sergey Leuchtenberg will be running for the Soldiarists, in his third run. We have kept him out of power so far, but nothing is certain. ?]
+[? if leuchtenberg_deported : With Leuchtenberg deported, the Solidarists will be running Viktor Baidalakov as their candidate. ?]
+This might be the Solidarist's last hurrah; the party's factionalism has been reaching new heights as of late, and it is in desperate shortage of funds.
 
 The VS will nominate Michael Alexandrovich Romanov, the brother of Nicholas II who refused the throne. He will be endorsed by many of Kornilovs's Monarchist and Conservative supporters. They are working more closely with the Right-Liberals than before, and in the second round, the far-right parties are expected to consolidate into a single anti-socialist front.
 
-[? if rkp_party_leader = "Conciliators" : Given the failure of Thälmann's previous runs for president, and his declining stature in the party, the RKP will be running Vladimir Milyutin, a controversial figure sometimes called the "Red millionaire". He is a media magnate who leads a number of Communist front organizations. ?]
-[? if rkp_party_leader != "Conciliators" : This will be Mikhail Kalinin's third run for president as leader of the RKP. Despite his previous electoral defeats, he retains the loyalty of the party as well as Stalin's Soviet Union. ?]
+[? if rkp_party_leader = "Conciliators" : Given the failure of Kalinin's previous runs for president, and his declining stature in the party, the RKP will be running Vladimir Milyutin, a controversial in the party sometimes called "Mr. Right". He is a Conciliator who leads a number of Communist front organizations. ?]
+[? if rkp_party_leader != "Conciliators" : This will be Mikhail Kalinin's third run for president under the RKP. Despite his previous electoral defeats, he retains the loyalty of the party as well as the Communist international. ?]
 
-Many republicans of the Müsavat Party, Kadets, PSR, and RSDRP float the idea of running Vasily Maklakov, a nationally renowed lawyer, diplomat, activist, and Liberal Republican, as a unity candidate. While he has some conservative views, he is also ardently opposed to Solidarism.
+Many republicans of the Müsavat Party, Kadets, PSR, and RSDRP float the idea of running Vladimir Nabokov, a nationally renowed lawyer, statesman, and Kadet, as a unity candidate. He has a history of working with moderate socialists, conservatives, and liberals, while also being ardently opposed to Solidarism.
 
-Barring that, the Müsavat Party, Esers, and Kadets are planning to run separate candidates in the first round if the RSDRP runs its own candidate. The Kadets are considering nominating Dr. Andrei Shingarev, a Duma member from Voronezh and member of the Kadet's right-wing. He calls for an alliance of Liberals and Conservatives that encompasses both Orthodox Democrats and Constitutional Monarchists. The Müsavat Party might nominate Mahammad Amin Rasulzade, their party leader, who has crossover appeal to Muslims and other regionalist parties who dislike the Solidarist's ultranationalism.
+Barring that, the Müsavat Party, Esers, and Kadets are planning to run separate candidates in the first round if the RSDRP runs its own candidate. The Kadets are considering nominating Dr. Aleksandr Konovalov, a businessman and member of the Kadet's right-wing. He calls for an alliance of Liberals and Conservatives that encompasses both Orthodox Democrats and Constitutional Monarchists. The Müsavat Party might nominate Mahammad Amin Rasulzade, their party leader, who has crossover appeal to Muslims and other regionalist parties who dislike the Russian-orientation of the mainstream parties.
 
-As for the RSDRP, we could support a joint Trudovaya Koalitsiya candidate or run our own.
-[? if braun_campaign : Otto Braun is tired. He ran and failed in the previous two presidential elections, and no longer wishes to run. His wife is ill enough that he wishes to stay by her side. ?][? if braun_campaign = 0 and not rsdrp_prussia: Otto Braun is tired. After being deposed in Prussia, he has largely retired from politics, and is devoting his time to caring for his dying wife. ?][? if braun_campaign = 0 and rsdrp_prussia : Otto Braun is tired. He does not wish to run, but he is willing to be convinced that he is needed at this moment. His wife is terminally ill, and he does not want more responsibilities. ?]
-Kurt Schumacher is an ambitious rising star in the party, and would be all too willing to run. He was a hero in the Great War, but his relatively young age might be relevant.
-[? if womens_rights >= 6 and family_law >= 2 and womens_work >= 2 and welfare > 0: Or, perhaps it is time for a woman to become president. Germany and the RSDRP have been leading on women's rights for years, and it is only fitting that we should elect the world's first female president. Perhaps Marie Juchacz could be seen as the "mother of the nation" for her work in social welfare. However, her divorce 28 years ago might make it difficult for the Catholics to support her. ?]
+As for the RSDRP, we could support a joint Socialist candidate or run our own.
+[? if maisky_campaign : Ivan Maisky is tired. He ran and failed in the previous presidential election, and no longer wishes to run. He voiced his preference to be a diplomat over a president. ?] [? if maisky_campaign = 0 and rsdrp_prussia : Ivan Maisky is tired. He does not wish to run, but he is willing to be convinced that he is needed at this moment. ?]
+Mikhail Yakubovich is an ambitious rising star in the party, and would be all too willing to run. He was a Bolshevik before the Great War and became a Menshevik because of the war, but his relatively young age might be relevant.
+[? if womens_rights >= 6 and family_law >= 2 and womens_work >= 2 and welfare > 0: Or, perhaps it is time for a woman to become president. Germany and the RSDRP have been leading on women's rights for years, and it is only fitting that we should elect the world's first female president. Perhaps Eva Broido or Lyubov Radchenko could be seen as the "mother of the nation" for their work in social welfare. However, the very fact that either of the two are women may prove a challenge among the conservative population of Russia. ?]
 
-[? if presidential_powers >= 1 and pro_republic >= 60 and pacifism >= 3: Since Germany has been largely democratized and presidential powers reduced, we can also support another non-traditional political figure, someone from the cultural, scientific, or literary spheres. They will perhaps be the symbol of a new Germany that has moved beyond its past. ?]
-# if Otto Braun ran last time: he can only run if he controls Prussia. Otherwise, it's Kurt Schumacher.
+[? if presidential_powers >= 1 and pro_republic >= 60 and pacifism >= 3: Since Russia has been largely democratized and presidential powers reduced, we can also support another non-traditional political figure, someone from the cultural, scientific, or literary spheres. They will perhaps be the symbol of a new Russia that has moved beyond its past. ?]
 
 # options: 
-# - Otto Braun (only if rsdrp_prussia)
-# - Kurt Schumacher
-# - Marie Juchacz (The mother of the nation, only available if women's rights is full)
+# - Ivan Maisky (only if rsdrp_prussia)
+# - Mikhail Yakubovich
+# - Eva Broido/Lyubov Radchenko (The mother of the nation, only available if women's rights is full)
 
 @candidate_menu
 
-- @eckener_r1: Support Hugo Eckener as a joint Trudovaya Koalitsiya candidate.
-- @adenauer_r1: Support Viktor Chernov of the Center Party.
-- @gessler_r1: Support Dr. Andrei Shingarev of the [+ musavat_name +]. *This will not be popular within the party.*
-- @thalmann_r1: Support Mikhail Kalinin of the RKP.
-- @munzenberg_r1: Support Vladimir Milyutin, a known member of the RKP's Conciliator faction.
-- @braun_r1: Support Otto Braun.
-- @schumacher_r1: Support Kurt Schumacher.
-- @juchacz_r1: Support Marie Juchacz.
+- @nabokov_r1: Support Vladimir Nabokov as a joint Republican candidate.
+- @chernov_r1: Support Viktor Chernov of the Socialist-Revolutionary Party.
+- @rasulzade_r1: Support Mahammad Amin Rasulzade of the [+ musavat_name +]. *The Party questions why we would endorse him over one of our own.*
+- @kalinin_r1: Support Mikhail Kalinin of the RKP.
+- @milyutin_r1: Support Vladimir Milyutin, a known member of the RKP's Conciliator faction.
+- @maisky_r1: Support Ivan Maisky.
+- @yakubovich_r1: Support Mikhail Yakubovich.
+- @radchenko_r1: Support Lyubov Radchenko.
 - @cultural_figure: Support a nonpartisan cultural figure?
 
-@eckener_r1
+@nabokov_r1
 subtitle: -1 resource - After nominating him, we still have to convince the other parties to support him.
 unavailable-subtitle: [? if resources < 1 : -1 resource - Not enough resources. ?]
 choose-if: resources >= 1
-on-arrival: rsdrp_candidate = "Eckener"; is_unity_candidate = 1
+on-arrival: rsdrp_candidate = "Nabokov"; is_unity_candidate = 1
 go-to: r1_menu
 
-We have convinced Hugo Eckener to run on behalf of the RSDRP, and hopefully the rest of the Trudovaya Koalitsiya as well.
+We have convinced Vladimir Nabokov to run on behalf of the RSDRP, and hopefully the rest of the Republican Coalition as well.
 
 
-@adenauer_r1
-on-arrival: rsdrp_candidate = "Adenauer"; psr_relation += 4; Adenauer_bonus -= 2.5 if psr_relation < 40; Seldte_bonus += 2.5 if psr_relation < 40; is_unity_candidate = 1
+@chernov_r1
+on-arrival: rsdrp_candidate = "Chernov"; psr_relation += 4; Chernov_bonus -= 2.5 if psr_relation < 40; is_unity_candidate = 1
 go-to: r1_menu
 
-We have endorsed Viktor Chernov of the Center Party.
+We have endorsed Viktor Chernov of the Socialist-Revolutionary Party.
 
-[? if psr_relation < 40 : With our support of Adenauer, some of the most conservative parts of the Bavarian People's Party have broken away from the Center Party, shifting their support to the Stahlhelm leader Seldte. ?]
-
-@gessler_r1
-on-arrival: rsdrp_candidate = "Gessler"; musavat_relation += 4; kadets_candidate = "Seldte" if kadets_relation < 40; is_unity_candidate = 1
+@rasulzade_r1
+on-arrival: rsdrp_candidate = "Rasulzade"; musavat_relation += 4; kadets_candidate = "Shingarev" if kadets_relation < 40; is_unity_candidate = 1
 go-to: r1_menu
 
-We have endorsed Dr. Andrei Shingarev, independent formerly of the Müsavat.
+We have endorsed Mahammad Amin Rasulzade, party leader of the Müsavat.
 
-[? if kadets_relation < 40 : With our support of Gessler, the DVP components supporting him have broken away and are now shifting their support to Seldte. ?]
-
-@thalmann_r1
-view-if: rkp_candidate = "Thälmann" 
+@kalinin_r1
+view-if: rkp_candidate = "Kalinin" 
 choose-if: rkp_relation >= 50 and reformist_strength < left_strength
 unavailable-subtitle: [? if rkp_relation < 50 : We do not have good enough relations with the Communists, so they are not even willing to accept our support. ?] [? if reformist_strength >= left_strength : The reformist faction is able to dissuade the party from supporting this arrangement. ?]
 
-Supporting Thälmann is rather unpopular in our party, even if the Communists accept our support. Are we sure?
+Supporting Kalinin is rather unpopular in our party, even if the Communists accept our support. Are we sure?
 
-- @support_thalmann_2: Yes, we will support Thälmann, despite the reformists' pleas against it.
+- @support_kalinin_2: Yes, we will support Kalinin, despite the reformists' pleas against it.
 - @candidate_menu: Who else can we support?
 
-@support_thalmann_2
-on-arrival: rsdrp_candidate = "Thälmann"; rkp_relation += 5; reformist_dissent += 10; center_dissent += 6; labor_dissent += 5; neorevisionist_dissent += 10; catholics_rsdrp -= 5; new_middle_rsdrp -= 5; old_middle_rsdrp -= 5; rural_rsdrp -= 5; musavat_relation -= 8; kadets_relation -= 15; psr_relation -= 10; communist_coalition += 2; is_unity_candidate = 0
+@support_kalinin_2
+on-arrival: rsdrp_candidate = "Kalinin"; rkp_relation += 5; reformist_dissent += 10; center_dissent += 6; labor_dissent += 5; neorevisionist_dissent += 10; catholics_rsdrp -= 5; new_middle_rsdrp -= 5; old_middle_rsdrp -= 5; rural_rsdrp -= 5; musavat_relation -= 8; kadets_relation -= 15; psr_relation -= 10; communist_coalition += 2; is_unity_candidate = 0
 go-to: r1_menu
 
-Fine. We have endorsed Mikhail Kalinin of the RKP for president.
+For better or worse, we have endorsed Mikhail Kalinin of the RKP for president.
 
 
-@munzenberg_r1
-subtitle: Supporting Münzenberg is unpopular among the reformists, but less so than Thälmann would've been.
-view-if: rkp_candidate = "Münzenberg" 
+@milyutin_r1
+subtitle: Supporting Milyutin is unpopular among the reformists, but far less so than Kalinin would've been.
+view-if: rkp_candidate = "Milyutin" 
 choose-if: rkp_relation >= 40 and reformist_strength < left_strength
 unavailable-subtitle: [? if rkp_relation < 40 : We do not have good enough relations with the Communists, so they are not even willing to accept our support. ?] [? if reformist_strength >= left_strength : The reformist faction is able to dissuade the party from supporting this arrangement. ?]
-on-arrival: rsdrp_candidate = "Münzenberg"; rkp_relation += 5; reformist_dissent += 5; musavat_relation -= 3; kadets_relation -= 5; psr_relation -= 5; is_unity_candidate = 0
+on-arrival: rsdrp_candidate = "Milyutin"; rkp_relation += 5; reformist_dissent += 5; musavat_relation -= 3; kadets_relation -= 5; psr_relation -= 5; is_unity_candidate = 0
 go-to: r1_menu
 
 We have endorsed Vladimir Milyutin of the RKP.
 
 
-@braun_r1
+@maisky_r1
 subtitle: -2 resources.
-unavailable-subtitle: [? if resources < 2 : -2 resources - Not enough resources. ?][? if braun_campaign != 0 or not rsdrp_prussia : Braun no longer wants to run. ?]
-choose-if: braun_campaign = 0 and rsdrp_prussia and resources >= 2
-on-arrival: rsdrp_candidate = "Braun"; resources -= 2; is_unity_candidate = 0
+unavailable-subtitle: [? if resources < 2 : -2 resources - Not enough resources. ?][? if maisky_campaign != 0 or not rsdrp_prussia : Maisky no longer wants to run. ?]
+choose-if: maisky_campaign = 0 and rsdrp_prussia and resources >= 2
+on-arrival: rsdrp_candidate = "Maisky"; resources -= 2; is_unity_candidate = 0
 go-to: r1_menu
 
-We have convinced Otto Braun to run for president once more.
+We have convinced Ivan Maisky to run for president once more.
 
 
-@schumacher_r1
+@yakubovich_r1
 subtitle: -2 resources.
 unavailable-subtitle: [? if resources < 2 : -2 resources - Not enough resources. ?]
 choose-if: resources >= 2
-on-arrival: rsdrp_candidate = "Schumacher"; resources -= 2; is_unity_candidate = 0
+on-arrival: rsdrp_candidate = "Yakubovich"; resources -= 2; is_unity_candidate = 0
 go-to: r1_menu
 
-We have nominated Kurt Schumacher to be our presidential candidate.
+We have nominated the young and upcoming Mikhail Yakubovich to be our presidential candidate.
 
 
-@juchacz_r1
+@radchenko_r1
 subtitle: -2 resources.
 unavailable-subtitle: [? if resources < 2 : -2 resources - Not enough resources. ?]
 view-if: womens_rights >= 6 and family_law >= 2 and womens_work >= 2 and welfare > 0
 choose-if: resources >= 2
-on-arrival: rsdrp_candidate = "Juchacz"; resources -= 2; is_unity_candidate = 0
+on-arrival: rsdrp_candidate = "Radchenko"; resources -= 2; is_unity_candidate = 0
 go-to: r1_menu
 
-We have nominated Marie Juchacz as our presidential candidate, the first woman ever to be nominated for this position!
+We have nominated Lyubov Radchenko as our presidential candidate, the first woman ever to be nominated for this position!
 
 @cultural_figure
 view-if: presidential_powers >= 1 and pro_republic >= 60 and pacifism >= 3
@@ -150,46 +143,44 @@ subtitle: The next president should be a symbol of the new Germany...
 
 Since the presidency has been made a largely ceremonial figure by our reforms, we might set a precedent by nominating a nonpartisan pro-democracy figure from the cultural, scientific, or literary worlds. There are many potential candidates...
 
-- @einstein_r1: Albert Einstein, physicist.
-- @mann_r1: Heinrich Mann, left-wing writer.
-- @ossietzky_r1: Carl von Ossietzky, pacifist journalist.
+- @pavlov_r1: Ivan Pavlov, the renowned scientist.
+- @gorky_r1: Maxim Gorky, left-wing writer.
+- @zaslavsky_r1: David Zaslavsky, former Bundist and non-partisan Social Democrat.
 - @candidate_menu: Actually, we should nominate someone else.
 
-@einstein_r1
+@pavlov_r1
 subtitle: -2 resources
 view-if: science >= 2 and kwg_research >= 1 and (major_curriculum = "scientific" or minor_curriculum = "scientific")
 choose-if: resources >= 2
-on-arrival: rsdrp_candidate = "Einstein"; musavat_candidate = "Einstein"; resources -= 2; is_unity_candidate = 0; is_cultural_candidate = 1;
+on-arrival: rsdrp_candidate = "Pavlov"; resources -= 2; is_unity_candidate = 0; is_cultural_candidate = 1;
 go-to: r1_menu
 
-Albert Einstein is a Nobel Prize-winning scientist, director of the Kaiser Wilhelm Institute for Physics, and international advocate for peace. He was a founding member of the German Democratic Party (whose successor would support him in the election), but has also expressed sympathy towards socialism.
+Ivan Pavlov is a Nobel Prize-winning scientist, director of the Physiological Institute of the Russian Academy of Sciences, and disoverved Classical Conditioning.
 
-He did not wish to run for president, disliking the public nature of campaigning, but we have somehow convinced him that his candidacy will be crucial to the future of Germany and the world. As a Jewish German pacifist, his becoming president would be a repudiation of everything the Nazis stand for.
+He did not wish to run for president, preferring to remain in his position as a scientist, but we have somehow convinced him that his candidacy will be crucial to the future of Russian democracy and the world.
 
-The [+ musavat_name +] will endorse Einstein's candidacy.
-
-@mann_r1
+@gorky_r1
 subtitle: -2 resources - He might be too far left for the bourgeois parties.
 view-if: rkp_relation >= 50
 choose-if: resources >= 2
-on-arrival: rsdrp_candidate = "Mann"; resources -= 2; is_unity_candidate = 0; is_cultural_candidate = 1;
+on-arrival: rsdrp_candidate = "Gorky"; resources -= 2; is_unity_candidate = 0; is_cultural_candidate = 1;
 go-to: r1_menu
 
-Heinrich Mann is a world-renowned novelist and poet who is also known to be a left-wing activist. His political sympathy lies with the far left, and he supported the revolutions in 1918 and 1919. He has long lived in the shadow of his better-known brother, Thomas Mann.
+Maxim Gorky is a world-renowned novelist and poet who is also known to be a left-wing activist. His political sympathy lies with the far left, and he supported the Bolsheviks for a short-while, before turning away from them due to their democratic backsliding.
 
-Mann is willing to accept the nomination for president.
+Gorky is willing to accept the nomination for president.
 
 
-@ossietzky_r1
+@zaslavsky_r1
 view-if: weltbuhne_dropped = 1
 subtitle: -2 resources - He might be too far left for the bourgeois parties.
 choose-if: resources >= 2
-on-arrival: rsdrp_candidate = "Ossietzky"; resources -= 2; is_unity_candidate = 0; is_cultural_candidate = 1;
+on-arrival: rsdrp_candidate = "Zaslavsky"; resources -= 2; is_unity_candidate = 0; is_cultural_candidate = 1;
 go-to: r1_menu
 
-Carl von Ossietzky is a left-wing journalist who is the publisher of the Weltbühne, a news magazine. He is most known for exposing the secret German rearmament program in 1929, which brought him international renown. In the 1932 presidential election, he endorsed the Communist Thälmann.
+David Zaslavsky is a left-wing journalist who is the publisher of the Coming Day, a Socialist magazine. He is most known for exposing the fact that Lenin as a paid German agent. In the 1932 presidential election, he endorsed the {!<span class="tooltip-text" title="Independent Socialist Bloc"><span style="color: #E48085;">NS Bloc</span></span>!} candidate, Semyon Semkovsky.
 
-Ossietzky is extremely reluctant to become a politician, and has been an iconoclastic figure his entire life, criticizing the RSDRP as being part of the establishment. It is with a sense of irony that he accepts our nomination.
+Zaslavsky is somewhat reluctant to become a candidate, citing his previous expulsion from the Bund and the RSDRP over corresponding with conservative generals during the civil war, as well as our status as one of the "mainstream" parties. It is with a sense of irony that he accepts our nomination.
 
 
 @r1_menu
@@ -205,104 +196,98 @@ view-if: round = 0
 - @round_1: Let the voting begin.
 
 
-# convincing Z to support a unity candidate
 @convince_psr_unity
-title: Convince the Center Party to support [+ rsdrp_candidate +].
-view-if: (rsdrp_candidate = "Eckener" or rsdrp_candidate = "Gessler") and z_candidate != rsdrp_candidate
+title: Convince the Socialist-Revolutionary Party to support [+ rsdrp_candidate +].
+view-if: (rsdrp_candidate = "Nabokov" or rsdrp_candidate = "Rasulzade") and psr_candidate != rsdrp_candidate
 on-arrival: {!
-Q.z_support_braun = 0;
+Q.psr_support_maisky = 0;
 if (Q.psr_relation >= 40 || (Q.psr_relation > 20 && Q.psr_party_leader == "Avksentyev")) {
-    Q.z_support_braun = 1;
+    Q.psr_support_maisky = 1;
 } else if (Q.psr_relation <= 20) {
-    Q.z_support_braun = 0;
+    Q.psr_support_maisky = 0;
 } else {
-    Q.z_support_braun = 2;
+    Q.psr_support_maisky = 2;
 }
 !}
 max-visits: 1
-go-to: z_failed if z_support_braun = 0 or (z_support_braun == 2 and historical_mode); z_success if z_support_braun = 1; z_partial if z_support_braun = 2 and not historical_mode
+go-to: psr_failed if psr_support_maisky = 0 or (psr_support_maisky == 2 and historical_mode); psr_success if psr_support_maisky = 1; psr_partial if psr_support_maisky = 2 and not historical_mode
 
-# use the same supports as the Center Party in 1932
-We implore the Center Party to support [+ rsdrp_candidate +] as a unity candidate against fascism, arguing that together, the Trudovaya Koalitsiya can defeat the Nazis. [? if psr_relation >= 50 : We also remind them of the history of cooperation between our parties, dating back to 1918. ?]
+We implore the Socialist-Revolutionary Party to support [+ rsdrp_candidate +] as a unity candidate against fascism, arguing that together, the Trudovaya Koalitsiya can defeat the Solidarists. [? if psr_relation >= 50 : We also remind them of the history of cooperation between our parties, dating back to 1918. ?]
 
 
-# convincing Z to support an RSDRP candidate
 @convince_psr_rsdrp
-title: Convince the Center Party to support [+ rsdrp_candidate +].
-choose-if: rsdrp_votes >= z_votes
-unavailable-subtitle: [? if rsdrp_votes < z_votes: The Center knows that they are more popular than us; they do not see a reason to support our candidate. ?]
-view-if: (rsdrp_candidate = "Braun" or rsdrp_candidate = "Schumacher" or rsdrp_candidate = "Juchacz" or is_cultural_candidate) and z_candidate != rsdrp_candidate
+title: Convince the Socialist-Revolutionary Party to support [+ rsdrp_candidate +].
+choose-if: rsdrp_votes >= psr_votes
+unavailable-subtitle: [? if rsdrp_votes < psr_votes: The Narodists know that they are more popular than us; they do not see a reason to support our candidate. ?]
+view-if: (rsdrp_candidate = "Maisky" or rsdrp_candidate = "Yakubovich" or rsdrp_candidate = "Radchenko" or is_cultural_candidate) and psr_candidate != rsdrp_candidate
 on-arrival: {!
-Q.z_support_braun = 0;
-if (Q.rsdrp_candidate == "Juchacz") {
+Q.psr_support_maisky = 0;
+if (Q.rsdrp_candidate == "Radchenko") {
     if (Q.psr_relation >= 60 || (Q.psr_relation > 40 && Q.psr_party_leader == "Avksentyev")) {
-        Q.z_support_braun = 1;
+        Q.psr_support_maisky = 1;
     } else if (Q.psr_relation <= 40) {
-        Q.z_support_braun = 0;
+        Q.psr_support_maisky = 0;
     } else {
-        Q.z_support_braun = 2;
+        Q.psr_support_maisky = 2;
     }
 } else {
     if (Q.psr_relation >= 55 || (Q.psr_relation > 35 && Q.psr_party_leader == "Avksentyev")) {
-        Q.z_support_braun = 1;
+        Q.psr_support_maisky = 1;
     } else if (Q.psr_relation <= 35) {
-        Q.z_support_braun = 0;
+        Q.psr_support_maisky = 0;
     } else {
-        Q.z_support_braun = 2;
+        Q.psr_support_maisky = 2;
     }
 }
 !}
 max-visits: 1
-go-to: z_failed if z_support_braun = 0 or (z_support_braun == 2 and historical_mode); z_success if z_support_braun = 1; z_partial if z_support_braun = 2 and not historical_mode
+go-to: psr_failed if psr_support_maisky = 0 or (psr_support_maisky == 2 and historical_mode); psr_success if psr_support_maisky = 1; psr_partial if psr_support_maisky = 2 and not historical_mode
 
-We implore the Center Party to support [+ rsdrp_candidate +]. We attempt to convince them of the necessity for unity in the face of fascism: that if we were divided, we would fall to the Nazis. [? if psr_relation >= 50 : We also remind them of the history of cooperation between our parties, dating back to 1918. ?]
+We implore the Socialist-Revolutionary Party to support [+ rsdrp_candidate +]. We attempt to convince them of the necessity for unity in the face of fascism: that if we were divided, we would fall to the Solidarists. [? if psr_relation >= 50 : We also remind them of the history of cooperation between our parties, dating back to 1918. ?]
 
-@z_failed
+@psr_failed
 go-to: r1_menu if round = 0; r2_campaigning if round > 0
 
-Unfortunately, the Center Party is not convinced. [? if rsdrp_candidate = "Juchacz" : The Catholics are not impressed with Marie Juchacz. This is in part because she is a woman, in part because she had a divorce. ?]
+Unfortunately, the Socialist-Revolutionary Party is not convinced. [? if rsdrp_candidate = "Radchenko" : The Catholics are not impressed with Lyubov Radchenko. This is in part because she is a woman, in part because she had a divorce. ?]
 
-@z_success
-on-arrival: z_candidate = rsdrp_candidate; Seldte_bonus += 2.5 if psr_relation < 40
+@psr_success
+on-arrival: psr_candidate = rsdrp_candidate; Shingarev_bonus += 2.5 if psr_relation < 40
 go-to: r1_menu if round = 0; r2_campaigning if round > 0
 
-The Center Party is convinced! They will be supporting [+ rsdrp_candidate +] for the election.
+The Socialist-Revolutionary Party is convinced! They will be supporting [+ rsdrp_candidate +] for the election.
 
-[? if psr_relation < 40 : Unfortunately, the BVP is breaking with the Center on this election, supporting Seldte of the VS instead.  ?]
+[? if psr_relation < 40 : Unfortunately, the BVP is breaking with the PSR on this election, supporting Shingarev of the VS instead.  ?]
 
-@z_partial
+@psr_partial
 
-The Center are not satisfied with our arguments, but they are open to being convinced. They are willing to run a joint campaign if we front the resources.
+The PSR are not satisfied with our arguments, but they are open to being convinced. They are willing to run a joint campaign if we front the resources.
 
 - @pay_psr: Give them the resources they need.
-- @r1_menu: Forget about the Center.
-- @r2_campaigning: Forget about the Center.
+- @r1_menu: Forget about the PSR.
+- @r2_campaigning: Forget about the PSR.
 
 @pay_psr
 choose-if: resources >= 2
 subtitle: -2 resources
-on-arrival: resources -= 2; z_candidate = rsdrp_candidate; Seldte_bonus += 2.5 if psr_relation < 40 and vs_candidate = "Seldte"
+on-arrival: resources -= 2; psr_candidate = rsdrp_candidate
 go-to: r1_menu if round = 0; r2_campaigning if round > 0
 
-With our resources, the Center are convinced to support [+ rsdrp_candidate +]. Viktor Chernov will drop out of the race.
-
-[? if psr_relation < 40 and vs_candidate = "Seldte" : Unfortunately, the BVP is breaking with the Center on this election, supporting Seldte of the VS instead.  ?]
-
+With our resources, the PSR are convinced to support [+ rsdrp_candidate +]. Viktor Chernov will drop out of the race.
 
 @convince_musavat_unity
 title: Convince the [+ musavat_name +] to support [+ rsdrp_candidate +].
-view-if: (rsdrp_candidate = "Eckener" or rsdrp_candidate = "Adenauer") and musavat_candidate != rsdrp_candidate
+view-if: (rsdrp_candidate = "Nabokov" or rsdrp_candidate = "Chernov") and musavat_candidate != rsdrp_candidate
 on-arrival: musavat_candidate = rsdrp_candidate if musavat_relation >= 30
 go-to: r1_menu if round = 0; r2_campaigning if round > 0
 max-visits: 1
 
 [? if musavat_candidate = rsdrp_candidate: The [+ musavat_name +] is easily persuaded to support [+ rsdrp_candidate +]! ?]
-[? if musavat_candidate != rsdrp_candidate: Unfortunately, the [+ musavat_name +] is unwilling to support [+ rsdrp_candidate +]. The Trudovaya Koalitsiya seems to be fracturing. ?]
+[? if musavat_candidate != rsdrp_candidate: Unfortunately, the [+ musavat_name +] is unwilling to support [+ rsdrp_candidate +]. ?]
 
 
 @convince_musavat_rsdrp
 title: Convince the [+ musavat_name +] to support [+ rsdrp_candidate +].
-view-if: (rsdrp_candidate = "Braun" or rsdrp_candidate = "Schumacher" or rsdrp_candidate = "Juchacz"or is_cultural_candidate) and musavat_candidate != rsdrp_candidate
+view-if: (rsdrp_candidate = "Maisky" or rsdrp_candidate = "Yakubovich" or rsdrp_candidate = "Radchenko" or is_cultural_candidate) and musavat_candidate != rsdrp_candidate
 on-arrival: musavat_candidate = rsdrp_candidate if musavat_relation >= 40
 go-to: r1_menu if round = 0; r2_campaigning if round > 0
 max-visits: 1
@@ -312,7 +297,7 @@ max-visits: 1
 
 @convince_rkp_rsdrp
 title: Convince the RKP to support [+ rsdrp_candidate +].
-view-if: (rsdrp_candidate = "Braun" or rsdrp_candidate = "Schumacher" or rsdrp_candidate = "Juchacz" or is_cultural_candidate) and rkp_candidate != rsdrp_candidate
+view-if: (rsdrp_candidate = "Maisky" or rsdrp_candidate = "Yakubovich" or rsdrp_candidate = "Radchenko" or is_cultural_candidate) and rkp_candidate != rsdrp_candidate
 choose-if: rsdrp_votes >= rkp_votes
 unavailable-subtitle: The RKP knows that they are more popular than us; they do not see a reason to support our candidate.
 max-visits: 1
@@ -344,26 +329,26 @@ The RKP now endorses [+ rsdrp_candidate +] in the presidential election! We ask 
 
 
 @convince_kadets_rsdrp
-title: Convince the DVP to support [+ rsdrp_candidate +].
-unavailable-subtitle: The DVP is not willing to support our candidate.
-view-if: rsdrp_candidate = "Braun" or rsdrp_candidate = "Schumacher" or rsdrp_candidate = "Juchacz" or is_cultural_candidate
-choose-if: (kadets_relation >= 50 and candidate != "Juchacz") or (kadets_relation >= 60 and candidate = "Juchacz")
+title: Convince the K-D to support [+ rsdrp_candidate +].
+unavailable-subtitle: The K-D is not willing to support our candidate.
+view-if: rsdrp_candidate = "Maisky" or rsdrp_candidate = "Yakubovich" or rsdrp_candidate = "Radchenko" or is_cultural_candidate
+choose-if: (kadets_relation >= 65 and candidate != "Radchenko") or (kadets_relation >= 65 and candidate = "Radchenko")
 on-arrival: kadets_candidate = rsdrp_candidate
 go-to: r1_menu if round = 0; r2_campaigning if round > 0
 max-visits: 1
 
-[? if kadets_candidate = rsdrp_candidate: Thanks to our good relations, the DVP is persuaded to support [+ rsdrp_candidate +]! ?]
+[? if kadets_candidate = rsdrp_candidate: Thanks to our good relations, the Kadets are persuaded to support [+ rsdrp_candidate +]! ?]
 
 @convince_kadets_unity
-title: Convince the DVP to support [+ rsdrp_candidate +].
-unavailable-subtitle: The DVP is not willing to support our candidate.
-view-if: (rsdrp_candidate = "Adenauer" or rsdrp_candidate = "Gessler" or rsdrp_candidate = "Eckener") and kadets_candidate != rsdrp_candidate
+title: Convince the Kadets to support [+ rsdrp_candidate +].
+unavailable-subtitle: The Kadets is not willing to support our candidate.
+view-if: (rsdrp_candidate = "Chernov" or rsdrp_candidate = "Rasulzade" or rsdrp_candidate = "Nabokov") and kadets_candidate != rsdrp_candidate
 choose-if: kadets_relation >= 40
 on-arrival: kadets_candidate = rsdrp_candidate
 go-to: r1_menu if round = 0; r2_campaigning if round > 0
 max-visits: 1
 
-[? if kadets_candidate = rsdrp_candidate: Thanks to our good relations, and the fact that our candidate is a unity candidate not affiliated with the RSDRP, the DVP is persuaded to support [+ rsdrp_candidate +]. ?]
+[? if kadets_candidate = rsdrp_candidate: Thanks to our good relations, and the fact that our candidate is a unity candidate not affiliated with the RSDRP, the Kadets are persuaded to support [+ rsdrp_candidate +]. ?]
 
 
 
@@ -376,19 +361,19 @@ set-jump: post_election
 on-arrival: {!
 var candidate_descs = {
 Leuchtenberg: "Sergey Leuchtenberg of the NTS",
-Goring: "Viktor Baidalakov of the NTS",
-Seldte: "Franz Seldte of the Stahlhelm/VS",
-Eckener: "the independent republican candidate Hugo Eckener",
-Adenauer: "Viktor Chernov of the Center Party",
-Gessler: "Dr. Andrei Shingarev, independent formerly of the Müsavat",
-Thalmann: "Mikhail Kalinin of the RKP",
-Munzenberg: "Vladimir Milyutin of the RKP",
-Braun: "Otto Braun of the RSDRP",
-Schumacher: "Kurt Schumacher of the RSDRP",
-Juchacz: "Marie Juchacz of the RSDRP",
-Einstein: "Albert Einstein, scientist",
-Mann: "Heinrich Mann, writer",
-Ossietzky: "Carl von Ossietzky, journalist"
+Baidalakov: "Viktor Baidalakov of the NTS",
+Shingarev: "Andrei Shingarev of the Kadets",
+Nabokov: "the joint-republican candidate Vladimir Nabokov of the Kadets",
+Chernov: "Viktor Chernov of the Socialist-Revolutionary Party",
+Rasulzade: "Dr. Andrei Shingarev of the Kadets",
+Kalinin: "Mikhail Kalinin of the RKP",
+Milyutin: "Vladimir Milyutin of the RKP",
+Maisky: "Ivan Maisky of the RSDRP",
+Yakubovich: "Mikhail Yakubovich of the RSDRP",
+Radchenko: "Lyubov Radchenko of the RSDRP",
+Pavlov: "Ivan Pavlov, a left-wing scientist",
+Gorky: "Maxim Gorky, a left-wing writer",
+Zaslavsky: "David Zaslavsky, a former Menshevik-Bundist and left-wing journalist"
 }
 for (var k in candidate_descs) {
     Q[k + '_running'] = 0;
@@ -438,75 +423,75 @@ go-to: r2_start if round = 1 and not has_majority; election_end if round > 1; r1
 Election results:
 
 [? if Leuchtenberg_running : Leuchtenberg - [+ Leuchtenberg_votes_disp +]% ?]
-[? if Goring_running : Baidalakov - [+ Goring_votes_disp +]% ?]
+[? if Baidalakov_running : Baidalakov - [+ Baidalakov_votes_disp +]% ?]
 
-[? if Seldte_running : Seldte - [+ Seldte_votes_disp +]% ?]
+[? if Shingarev_running : Shingarev - [+ Shingarev_votes_disp +]% ?]
 
-[? if Thalmann_running : Thälmann - [+ Thalmann_votes_disp +]% ?]
-[? if Munzenberg_running : Münzenberg - [+ Munzenberg_votes_disp +]% ?]
+[? if Kalinin_running : Kalinin - [+ Kalinin_votes_disp +]% ?]
+[? if Milyutin_running : Milyutin - [+ Milyutin_votes_disp +]% ?]
 
-[? if Adenauer_running : Adenauer - [+ Adenauer_votes_disp +]% ?]
+[? if Chernov_running : Chernov - [+ Chernov_votes_disp +]% ?]
 
-[? if Gessler_running : Gessler - [+ Gessler_votes_disp +]% ?]
+[? if Rasulzade_running : Rasulzade - [+ Rasulzade_votes_disp +]% ?]
 
-[? if Eckener_running : Eckener - [+ Eckener_votes_disp +]% ?]
+[? if Nabokov_running : Nabokov - [+ Nabokov_votes_disp +]% ?]
 
-[? if Braun_running : Braun - [+ Braun_votes_disp +]% ?]
-[? if Schumacher_running : Schumacher - [+ Schumacher_votes_disp +]% ?]
-[? if Juchacz_running : Juchacz - [+ Juchacz_votes_disp +]% ?]
+[? if Maisky_running : Maisky - [+ Maisky_votes_disp +]% ?]
+[? if Yakubovich_running : Yakubovich - [+ Yakubovich_votes_disp +]% ?]
+[? if Radchenko_running : Radchenko - [+ Radchenko_votes_disp +]% ?]
 # cultural candidates
-[? if Einstein_running : Einstein - [+ Einstein_votes_disp +]% ?]
-[? if Ossietzky_running : Ossietzky - [+ Ossietzky_votes_disp +]% ?]
-[? if Mann_running : Mann - [+ Mann_votes_disp +]% ?]
+[? if Pavlov_running : Pavlov - [+ Pavlov_votes_disp +]% ?]
+[? if Zaslavsky_running : Zaslavsky - [+ Zaslavsky_votes_disp +]% ?]
+[? if Gorky_running : Gorky - [+ Gorky_votes_disp +]% ?]
 
 @r2_start
 on-arrival: {!
 // 1. coordination between the right/far-right
-if (Q.Leuchtenberg_votes && Q.Seldte_votes) {
-    if (Q.Leuchtenberg_votes > Q.Seldte_votes) {
+if (Q.Leuchtenberg_votes && Q.Shingarev_votes) {
+    if (Q.Leuchtenberg_votes > Q.Shingarev_votes) {
         Q.vs_candidate = "Leuchtenberg";
         Q.other_candidate = "Leuchtenberg";
         Q.Leuchtenberg_bonus = (Q.Leuchtenberg_bonus || 0) - 0.25*Q.other_votes;
-        if (Q.z_candidate == "Adenauer") {
-            Q.Adenauer_bonus = (Q.Adenauer_bonus || 0) + 0.25*Q.other_votes;
+        if (Q.psr_candidate == "Chernov") {
+            Q.Chernov_bonus = (Q.Chernov_bonus || 0) + 0.25*Q.other_votes;
         }
     } else {
-        Q.nts_candidate = "Seldte";
+        Q.nts_candidate = "Shingarev";
     }
-} else if (Q.Goring_votes && Q.Seldte_votes) {
-    if (Q.Goring_votes > Q.Seldte_votes) {
+} else if (Q.Baidalakov_votes && Q.Shingarev_votes) {
+    if (Q.Baidalakov_votes > Q.Shingarev_votes) {
         Q.vs_candidate = "Baidalakov";
         Q.other_candidate = "Baidalakov";
     } else {
-        Q.nts_candidate = "Seldte";
+        Q.nts_candidate = "Shingarev";
     }
 }
-// 2. If Adenauer & Gessler are both running and neither are part of the RSDRP coalition, the smaller of these drops out.
-Q.adenauer_drops_out = 0;
-Q.gessler_drops_out = 0;
-if (Q.z_candidate == "Adenauer" && (Q.musavat_candidate == "Gessler" || Q.kadets_candidate == "Gessler") && Q.z_candidate != Q.rsdrp_candidate && (Q.musavat_candidate != Q.rsdrp_candidate || Q.kadets_candidate != Q.rsdrp_candidate)) {
-    if (Q.Adenauer_votes > Q.Gessler_votes) {
-        Q.gessler_drops_out = 1;
+// 2. If Chernov & Rasulzade are both running and neither are part of the RSDRP coalition, the smaller of these drops out.
+Q.chernov_drops_out = 0;
+Q.rasulzade_drops_out = 0;
+if (Q.psr_candidate == "Chernov" && (Q.musavat_candidate == "Rasulzade" || Q.kadets_candidate == "Rasulzade") && Q.psr_candidate != Q.rsdrp_candidate && (Q.musavat_candidate != Q.rsdrp_candidate || Q.kadets_candidate != Q.rsdrp_candidate)) {
+    if (Q.Chernov_votes > Q.Rasulzade_votes) {
+        Q.rasulzade_drops_out = 1;
         if (Q.musavat_candidate != Q.rsdrp_candidate) {
-            Q.musavat_candidate = "Adenauer";
+            Q.musavat_candidate = "Chernov";
         }
         if (Q.kadets_candidate != Q.rsdrp_candidate) {
-            Q.kadets_candidate = "Adenauer";
+            Q.kadets_candidate = "Chernov";
         }
-        Q.Adenauer_bonus = (Q.Adenauer_bonus || 0) + 0.25*Q.other_votes;
+        Q.Chernov_bonus = (Q.Chernov_bonus || 0) + 0.25*Q.other_votes;
     } else {
-        Q.adenauer_drops_out = 1;
-        Q.z_candidate = "Gessler";
-        Q.Gessler_bonus = 0.25*Q.other_votes;
+        Q.chernov_drops_out = 1;
+        Q.psr_candidate = "Rasulzade";
+        Q.Rasulzade_bonus = 0.25*Q.other_votes;
     }
-    if (Q.nts_candidate == 'Seldte') {
-        Q.Seldte_bonus = (Q.Seldte_bonus || 0) - 0.25*Q.other_votes;
+    if (Q.nts_candidate == 'Shingarev') {
+        Q.Shingarev_bonus = (Q.Shingarev_bonus || 0) - 0.25*Q.other_votes;
     } else if (Q.nts_candidate == "Leuchtenberg") {
         Q.Leuchtenberg_bonus = (Q.Leuchtenberg_bonus || 0) - 0.25*Q.other_votes;
     }
 }
-// DVP drops out to favor the center candidate
-if (Q.kadets_candidate != Q.rsdrp_candidate && Q.kadets_candidate != Q.musavat_candidate && Q.kadets_candidate != Q.z_candidate) {
+// kadets drops out to favor the psr candidate
+if (Q.kadets_candidate != Q.rsdrp_candidate && Q.kadets_candidate != Q.musavat_candidate && Q.kadets_candidate != Q.psr_candidate) {
 }
 !}
 go-to: r2_menu
@@ -515,93 +500,91 @@ In the lead is [+ winner_desc +]. There is no majority in the first round. In th
 
 [? if vs_candidate = "Leuchtenberg" : The VS and NTS have consolidated their electoral efforts, with the VS now endorsing Leuchtenberg for the second round. Some right-wing voters are uncomfortable with this arrangement, and might not vote. ?]
 [? if vs_candidate = "Baidalakov" : The VS and NTS have consolidated their electoral efforts, with the VS now endorsing Baidalakov for the second round. ?]
-[? if nts_candidate = "Seldte" : The VS and NTS have consolidated their electoral efforts, with the NTS now endorsing Seldte for the second round. ?]
+[? if nts_candidate = "Shingarev" : The VS and NTS have consolidated their electoral efforts, with the NTS now endorsing Shingarev for the second round. ?]
 
-[? if gessler_drops_out : The liberal candidate Dr. Andrei Shingarev has dropped out in favor of the Center Party's Viktor Chernov. This consolidates the votes of the moderate bürgerblock, and attracts some votes from the right-wing minor parties. ?]
-[? if adenauer_drops_out : The Center Party candidate Viktor Chernov has dropped out in favor of the DStP-DVP candidate Dr. Andrei Shingarev. This consolidates the votes of the moderate bürgerblock, and attracts some votes from the right-wing minor parties. ?]
+[? if rasulzade_drops_out : The liberal candidate Dr. Andrei Shingarev has dropped out in favor of the Socialist-Revolutionary Party's Viktor Chernov. This consolidates the votes of the moderates, and attracts some votes from the minor liberal parties, at the cost of some conservatives turning to other right-wing candidates. ?]
+[? if chernov_drops_out : The Socialist-Revolutionary Party candidate Viktor Chernov has dropped out in favor of the Kadet candidate Dr. Andrei Shingarev. This consolidates the votes of the moderates, and attracts some votes from the right-wing minor parties, however many leftists will likely turn towards other left-wing candidates. ?]
 
 What should we do?
 
 @r2_menu
 
-# convince Müsavat/DVP/Z/RKP to endorse our candidate
+# convince Müsavat/Kadets/PSR/RKP to endorse our candidate
 # change the endorsement, if they aren't endorsing our candidate
 # campaign
 
-- @r2_endorse_thalmann
-- @r2_endorse_munzenberg
-- @r2_endorse_adenauer
-- @r2_endorse_gessler
-- @r2_endorse_eckener
+- @r2_endorse_kalinin
+- @r2_endorse_milyutin
+- @r2_endorse_chernov
+- @r2_endorse_rasulzade
+- @r2_endorse_nabokov
 - @r2_campaigning: Can we convince any of the parties to change their endorsements?
 - @r2_vote: Let the voting begin.
 
-@r2_endorse_thalmann
-title: Switch our support to Thälmann of the RKP.
+@r2_endorse_kalinin
+title: Switch our support to Kalinin of the RKP.
 subtitle: This will hurt our party's support.
-view-if: rsdrp_candidate != "Thälmann" and rkp_candidate = "Thälmann"
+view-if: rsdrp_candidate != "Kalinin" and rkp_candidate = "Kalinin"
 choose-if: rkp_relation >= 50 and left_strength > reformist_strength
 unavailable-subtitle: [? if rkp_relation < 50 : We do not have good enough relations with the Communists, so they are not even willing to accept our support. ?] [? if reformist_strength >= left_strength : The reformist faction is able to dissuade the party from supporting this bizarre arrangement. ?]
 on-arrival: reformist_dissent += 15; center_dissent += 10; labor_dissent += 5; neorevisionist_dissent += 10; catholics_rsdrp -= 5; workers_rsdrp -= 3; rkp_relation += 10; communist_coalition += 2; psr_relation -= 15; kadets_relation -= 15; musavat_relation -= 12
-on-departure: z_candidate = "Adenauer" if z_candidate = "Braun" or z_candidate = "Schumacher" or z_candidate = "Juchacz"; musavat_candidate = z_candidate if musavat_candidate = "Braun" or musavat_candidate = "Schumacher" or musavat_candidate = "Juchacz"; kadets_candidate = z_candidate if kadets_candidate = "Braun" or kadets_candidate = "Schumacher" or kadets_candidate = "Juchacz"; rsdrp_candidate = "Thälmann"; 
+on-departure: psr_candidate = "Chernov" if psr_candidate = "Maisky" or psr_candidate = "Yakubovich" or psr_candidate = "Radchenko"; musavat_candidate = psr_candidate if musavat_candidate = "Maisky" or musavat_candidate = "Yakubovich" or musavat_candidate = "Radchenko"; kadets_candidate = psr_candidate if kadets_candidate = "Maisky" or kadets_candidate = "Yakubovich" or kadets_candidate = "Radchenko"; rsdrp_candidate = "Kalinin"; 
 max-visits: 1
 
-We have switched our endorsement to Mikhail Kalinin of the RKP. [? if z_candidate = rsdrp_candidate : Our former allies in the Center Party see this as a betrayal. ?][? if z_candidate = "Braun" or z_candidate = "Schumacher" or z_candidate = "Juchacz": Now, they will support Viktor Chernov once again. ?][? if musavat_candidate = "Braun" or musavat_candidate = "Schumacher" or musavat_candidate = "Juchacz": The [+ musavat_name +] will switch their support to the Center Party candidate. ?][? if kadets_candidate = "Braun" or kadets_candidate = "Schumacher" or kadets_candidate = "Juchacz": The DVP will also support the Center Party candidate. ?]
+We have switched our endorsement to Mikhail Kalinin of the RKP. [? if psr_candidate = rsdrp_candidate : Our former allies in the Socialist-Revolutionary Party see this as a betrayal. ?][? if psr_candidate = "Maisky" or psr_candidate = "Yakubovich" or psr_candidate = "Radchenko": Now, they will support Viktor Chernov once again. ?][? if musavat_candidate = "Maisky" or musavat_candidate = "Yakubovich" or musavat_candidate = "Radchenko": The [+ musavat_name +] will switch their support to the Socialist-Revolutionary Party candidate. ?][? if kadets_candidate = "Maisky" or kadets_candidate = "Yakubovich" or kadets_candidate = "Radchenko": The K-D will also support the Socialist-Revolutionary Party candidate. ?]
 
 - @r2_vote: Let the voting begin.
 
-@r2_endorse_munzenberg
-title: Switch our support to Münzenberg of the RKP.
+@r2_endorse_milyutin
+title: Switch our support to Milyutin of the RKP.
 subtitle: This will hurt our party's support.
-view-if: rsdrp_candidate != "Münzenberg" and rkp_candidate = "Münzenberg"
+view-if: rsdrp_candidate != "Milyutin" and rkp_candidate = "Milyutin"
 choose-if: rkp_relation >= 50 and left_strength > reformist_strength
 unavailable-subtitle: [? if rkp_relation < 50 : We do not have good enough relations with the Communists, so they are not even willing to accept our support. ?] [? if reformist_strength >= left_strength : The reformist faction is able to dissuade the party from supporting this bizarre arrangement. ?]
 on-arrival: reformist_dissent += 12; center_dissent += 10; labor_dissent += 5; neorevisionist_dissent += 10; catholics_rsdrp -= 5; workers_rsdrp -= 3; rkp_relation += 10; communist_coalition += 2; psr_relation -= 12; musavat_relation -= 10; kadets_relation -= 15; 
-on-departure: z_candidate = "Adenauer" if z_candidate = "Braun" or z_candidate = "Schumacher" or z_candidate = "Juchacz"; musavat_candidate = z_candidate if musavat_candidate = "Braun" or musavat_candidate = "Schumacher" or musavat_candidate = "Juchacz"; kadets_candidate = z_candidate if kadets_candidate = "Braun" or kadets_candidate = "Schumacher" or kadets_candidate = "Juchacz"; rsdrp_candidate = "Münzenberg"; 
+on-departure: psr_candidate = "Chernov" if psr_candidate = "Maisky" or psr_candidate = "Yakubovich" or psr_candidate = "Radchenko"; musavat_candidate = psr_candidate if musavat_candidate = "Maisky" or musavat_candidate = "Yakubovich" or musavat_candidate = "Radchenko"; kadets_candidate = psr_candidate if kadets_candidate = "Maisky" or kadets_candidate = "Yakubovich" or kadets_candidate = "Radchenko"; rsdrp_candidate = "Milyutin"; 
 max-visits: 1
 
-We have switched our endorsement to Vladimir Milyutin of the RKP. [? if z_candidate = rsdrp_candidate : Our former allies in the Center Party see this as a betrayal. ?][? if z_candidate = "Braun" or z_candidate = "Schumacher" or z_candidate = "Juchacz": Now, they will support Viktor Chernov once again. ?][? if musavat_candidate = "Braun" or musavat_candidate = "Schumacher" or musavat_candidate = "Juchacz": The [+ musavat_name +] will switch their support to the Center Party candidate. ?][? if kadets_candidate = "Braun" or kadets_candidate = "Schumacher" or kadets_candidate = "Juchacz": The DVP will also support the Center Party candidate. ?]
+We have switched our endorsement to Vladimir Milyutin of the RKP. [? if psr_candidate = rsdrp_candidate : Our former allies in the Socialist-Revolutionary Party see this as a betrayal. ?][? if psr_candidate = "Maisky" or psr_candidate = "Yakubovich" or psr_candidate = "Radchenko": Now, they will support Viktor Chernov once again. ?][? if musavat_candidate = "Maisky" or musavat_candidate = "Yakubovich" or musavat_candidate = "Radchenko": The [+ musavat_name +] will switch their support to the Socialist-Revolutionary Party candidate. ?][? if kadets_candidate = "Maisky" or kadets_candidate = "Yakubovich" or kadets_candidate = "Radchenko": The K-D will also support the Socialist-Revolutionary Party candidate. ?]
 
 - @r2_vote: Let the voting begin.
 
 
-@r2_endorse_adenauer
-title: Switch our support to Viktor Chernov of the Center Party.
-view-if: z_candidate = "Adenauer" and rsdrp_candidate != z_candidate
-on-departure: rkp_candidate = "Thälmann" if rkp_candidate == rsdrp_candidate and rkp_party_leader != "Conciliators"; rkp_candidate = "Münzenberg" if rkp_candidate == rsdrp_candidate and rkp_party_leader == "Conciliators"; rsrpi_candidate = rkp_candidate; rsdrp_candidate = "Adenauer"; psr_relation += 4; Adenauer_bonus -= 2.5 if psr_relation < 40; Seldte_bonus += 2.5 if psr_relation < 40; is_unity_candidate = 1
+@r2_endorse_chernov
+title: Switch our support to Viktor Chernov of the Socialist-Revolutionary Party.
+view-if: psr_candidate = "Chernov" and rsdrp_candidate != psr_candidate
+on-departure: rkp_candidate = "Kalinin" if rkp_candidate == rsdrp_candidate and rkp_party_leader != "Conciliators"; rkp_candidate = "Milyutin" if rkp_candidate == rsdrp_candidate and rkp_party_leader == "Conciliators"; rsrpi_candidate = rkp_candidate; rsdrp_candidate = "Chernov"; psr_relation += 4; Chernov_bonus -= 2.5 if psr_relation < 40; Shingarev_bonus += 2.5 if psr_relation < 40; is_unity_candidate = 1
 go-to: r2_campaigning
 
-We have endorsed Viktor Chernov of the Center Party.
+We have endorsed Viktor Chernov of the Socialist-Revolutionary Party.
 
-[? if psr_relation < 40 : With our support of Adenauer, some of the most conservative parts of the Bavarian People's Party have broken away from the Center Party, shifting their support to the Stahlhelm leader Seldte. ?]
+[? if psr_relation < 40 : With our support of Chernov, some of the most conservative parts of the Bavarian People's Party have broken away from the Socialist-Revolutionary Party, shifting their support to the Stahlhelm leader Shingarev. ?]
 
 [? if rkp_candidate = rsdrp_candidate: The RKP is now breaking from our previous coalition and supporting their own candidate. ?]
 
 
-@r2_endorse_gessler
+@r2_endorse_rasulzade
 title: Switch our support to Dr. Andrei Shingarev.
-view-if: musavat_candidate = "Gessler" and rsdrp_candidate != musavat_candidate
-on-departure: rkp_candidate = "Thälmann" if rkp_candidate == rsdrp_candidate and rkp_party_leader != "Conciliators"; rkp_candidate = "Münzenberg" if rkp_candidate == rsdrp_candidate and rkp_party_leader == "Conciliators"; rsrpi_candidate = rkp_candidate; rsdrp_candidate = "Gessler"; musavat_relation += 4; kadets_candidate = "Seldte" if kadets_relation < 40; is_unity_candidate = 1
+view-if: musavat_candidate = "Rasulzade" and rsdrp_candidate != musavat_candidate
+on-departure: rkp_candidate = "Kalinin" if rkp_candidate == rsdrp_candidate and rkp_party_leader != "Conciliators"; rkp_candidate = "Milyutin" if rkp_candidate == rsdrp_candidate and rkp_party_leader == "Conciliators"; rsrpi_candidate = rkp_candidate; rsdrp_candidate = "Rasulzade"; musavat_relation += 4; kadets_candidate = "Shingarev" if kadets_relation < 40; is_unity_candidate = 1
 go-to: r2_campaigning
 
-We have endorsed Dr. Andrei Shingarev, independent formerly of the Müsavat.
-
-[? if kadets_relation < 40 : With our support of Gessler, the DVP components supporting him have broken away and are now shifting their support to Seldte. ?]
+We have endorsed Dr. Andrei Shingarev, the Conservative Kadet.
 
 [? if rkp_candidate = rsdrp_candidate: The RKP is now breaking from our previous coalition and supporting their own candidate. ?]
 
 
 
-@r2_endorse_eckener
-title: Convince the Trudovaya Koalitsiya parties to unite behind Hugo Eckener.
+@r2_endorse_nabokov
+title: Convince the Trudovaya Koalitsiya parties to unite behind Vladimir Nabokov.
 subtitle: -2 resources
 unavailable-subtitle: [? if resources < 2 : -2 resources - Not enough resources. ?]
 choose-if: resources >= 2 and ((psr_relation >= 50 and psr_leader = "Kerensky") or (psr_relation >= 30 and psr_leader = "Avksentyev")) and musavat_relation >= 40
-view-if: z_candidate = "Adenauer" and musavat_candidate = "Gessler" and rsdrp_candidate != "Eckener"
-on-arrival: rkp_candidate = "Thälmann" if rkp_candidate == rsdrp_candidate and rkp_party_leader != "Conciliators"; rkp_candidate = "Münzenberg" if rkp_candidate == rsdrp_candidate and rkp_party_leader == "Conciliators"; rsrpi_candidate = rkp_candidate; rsdrp_candidate = "Eckener"; z_candidate = "Eckener"; musavat_candidate = "Eckener"; resources -= 2; is_unity_candidate = 1
+view-if: psr_candidate = "Chernov" and musavat_candidate = "Rasulzade" and rsdrp_candidate != "Nabokov"
+on-arrival: rkp_candidate = "Kalinin" if rkp_candidate == rsdrp_candidate and rkp_party_leader != "Conciliators"; rkp_candidate = "Milyutin" if rkp_candidate == rsdrp_candidate and rkp_party_leader == "Conciliators"; rsrpi_candidate = rkp_candidate; rsdrp_candidate = "Nabokov"; psr_candidate = "Nabokov"; musavat_candidate = "Nabokov"; resources -= 2; is_unity_candidate = 1
 go-to: r2_campaigning
 
-We have successfully united all of the parties of the Trudovaya Koalitsiya behind Hugo Eckener!
+We have successfully united all of the parties of the Trudovaya Koalitsiya behind Vladimir Nabokov!
 
 
 
@@ -634,15 +617,15 @@ go-to: election_end
 @leuchtenberg_victory
 on-arrival: chancellor = "Leuchtenberg"; chancellor_party = "NTS"
 
-With [+ nts_candidate +]'s victory, the Nazis waste no time in consolidating power. [? if president = "Baidalakov": His first act is to depose the current chancellor and appoint Leuchtenberg as chancellor, first undoing his deportation. ?][? if president = "Leuchtenberg": His first act is to depose the current chancellor and appoint himself chancellor, using his stormtroopers to attack any opposition. ?]
+With [+ nts_candidate +]'s victory, the Solidarists waste no time in consolidating power. [? if president = "Baidalakov": His first act is to depose the current chancellor and appoint Leuchtenberg as chancellor, first undoing his deportation. ?][? if president = "Leuchtenberg": His first act is to depose the current chancellor and appoint himself chancellor, using his stormtroopers to attack any opposition. ?]
 
 - @leuchtenberg_takes_power: What next?
 - @leuchtenberg_constitutional: This is unconstitutional!
 
-@seldte_victory
+@shingarev_victory
 on-arrival: chancellor = "Leuchtenberg"; chancellor_party = "NTS"
 
-With Seldte's victory, the balance of power passes to the Nazis. [? if leuchtenberg_deported: His first act is to depose the current chancellor and appoint Sergey Leuchtenberg as chancellor, first undoing his deportation. ?][? if not leuchtenberg_deported: His first act is to depose the current chancellor and appoint Sergey Leuchtenberg as chancellor. ?]
+With Shingarev's victory, the balance of power passes to the Solidarists. [? if leuchtenberg_deported: His first act is to depose the current chancellor and appoint Sergey Leuchtenberg as chancellor, first undoing his deportation. ?][? if not leuchtenberg_deported: His first act is to depose the current chancellor and appoint Sergey Leuchtenberg as chancellor. ?]
 
 - @leuchtenberg_takes_power: What next?
 - @leuchtenberg_constitutional: This is blatantly unconstitutional!
@@ -652,8 +635,8 @@ view-if: presidential_powers
 
 We have passed a constitutional amendment preventing the president from having the power to arbitrarily dismiss a government. To undo this, the far right has called a plebiscite on a new constitutional amendment. Stormtroopers are in the streets, "convincing" voters to support their proposal. Germany is nearing civil war.
 
-- @fight: We will fight the fascists in the streets!
-- @defeat_democratic: We can only defeat the fascists through democratic means!
+- @fight: We will fight the Solidarists in the streets!
+- @defeat_democratic: We can only defeat the Solidarists through democratic means!
 
 @fight
 
@@ -664,7 +647,7 @@ Do we realize that this means civil war, against the full force of the state?
 
 @defeat_democratic
 on-arrival: {!
-Q.pro_democracy_votes = Q.rsdrp_votes + Q.musavat_votes + Q.z_votes - (Q.sa_strength*Q.sa_militancy/10) + (Q.rb_strength*Q.rb_militancy/10);
+Q.pro_democracy_votes = Q.rsdrp_votes + Q.musavat_votes + Q.psr_votes - (Q.sa_strength*Q.sa_militancy/10) + (Q.rb_strength*Q.rb_militancy/10);
 if (Q.pro_republic >= 60) {
     Q.pro_democracy_votes += Q.rkp_votes;
     Q.pro_democracy_votes += Q.kadets_votes;
@@ -675,7 +658,7 @@ go-to: ref_win if pro_democracy_votes >= 50; ref_lose if pro_democracy_votes < 5
 @ref_win
 on-arrival: constitutional_crisis = 1
 
-Despite the Nazi threats, supporters of the RSDRP and the democratic parties refuse to turn out for the referendum, depriving it of the necessary threshold to pass. This is a small victory, as stormtroopers still run rampant in the streets. There is no constitutional path to absolute power, but will that stop the Nazis? 
+Despite the Solidarist threats, supporters of the RSDRP and the democratic parties refuse to turn out for the referendum, depriving it of the necessary threshold to pass. This is a small victory, as stormtroopers still run rampant in the streets. There is no constitutional path to absolute power, but will that stop the Solidarists? 
 
 - @game_over: The ending is yet to be seen...
 
@@ -685,46 +668,46 @@ Despite the Nazi threats, supporters of the RSDRP and the democratic parties ref
 
 
 @election_end
-go-to: eckener_win if winner = "Eckener"; juchacz_win if winner = "Juchacz"; bundesrepublik_win if winner = "Schumacher" or winner = "Adenauer"; leuchtenberg_victory if winner = "Leuchtenberg" or winner = "Baidalakov" or winner = "Goring"; seldte_victory if winner = "Seldte"; munzenberg_victory if winner = "Munzenberg" or winner = "Münzenberg"; thalmann_victory if winner = "Thalmann" or winner = "Thälmann"; nazis_lose if winner = "Braun" or winner = "Gessler"; cultural_victory if winner = "Ossietzky" or winner = "Mann"; einstein_victory if winner = "Einstein"
-on-arrival: president = winner; president = "Thälmann" if president == "Thalmann"; president = "Münzenberg" if president = "Munzenberg"; president = "Baidalakov" if president = "Goring"
+go-to: nabokov_win if winner = "Nabokov"; radchenko_win if winner = "Radchenko"; bundesrepublik_win if winner = "Yakubovich" or winner = "Chernov"; leuchtenberg_victory if winner = "Leuchtenberg" or winner = "Baidalakov" or winner = "Baidalakov"; shingarev_victory if winner = "Shingarev"; milyutin_victory if winner = "Milyutin" or winner = "Milyutin"; kalinin_victory if winner = "Kalinin" or winner = "Kalinin"; nazis_lose if winner = "Maisky" or winner = "Rasulzade"; cultural_victory if winner = "Zaslavsky" or winner = "Gorky"; pavlov_victory if winner = "Pavlov"
+on-arrival: president = winner; president = "Kalinin" if president == "Kalinin"; president = "Milyutin" if president = "Milyutin"; president = "Baidalakov" if president = "Baidalakov"
 
 The election has been won by [+ winner_desc +].
 
-@thalmann_victory
-go-to: thalmann_democrat if presidential_powers; thalmann_civil_war if not presidential_powers
+@kalinin_victory
+go-to: kalinin_democrat if presidential_powers; kalinin_civil_war if not presidential_powers
 
-@thalmann_civil_war
+@kalinin_civil_war
 on-arrival: rkp_relation = 80
 
 # TODO: depose the chancellor?
 
-Thälmann wastes no time in consolidating power, using all means available to reshape the government. In response, the far-right immediately launches a coup attempt. We have no choice but to unite with the RKP against the fascists...
+Kalinin wastes no time in consolidating power, using all means available to reshape the government. In response, the far-right immediately launches a coup attempt. We have no choice but to unite with the RKP against the Solidarists...
 
 - @civil_war: This is civil war.
 
-@thalmann_democrat
+@kalinin_democrat
 
-Despite the victory of the anti-constitutionalist Thälmann, he appears to be respecting the constitutional constraints on presidential power, at least for now. There is no appetite on the right for a coup at this moment. The bourgeoisie have to live with a communist president, at least for now.
+Despite the victory of the anti-constitutionalist Kalinin, he appears to be respecting the constitutional constraints on presidential power, at least for now. There is no appetite on the right for a coup at this moment. The bourgeoisie have to live with a communist president, at least for now.
 
 
-@munzenberg_victory
+@milyutin_victory
 achievement: rote_millionar
 go-to: nazis_lose
 
-The bourgeois and right-wing parties are up in arms about the prospect of a Communist president, although Münzenberg and the RKP conciliators take pains to assure Germany of their commitment to the democratic republic. There is no energy for a coup against the new president. The bourgeoisie will have to live with whatever comes.
+The bourgeois and right-wing parties are up in arms about the prospect of a Communist president, although Milyutin and the RKP conciliators take pains to assure Germany of their commitment to the democratic republic. There is no energy for a coup against the new president. The bourgeoisie will have to live with whatever comes.
 
-@eckener_win
+@nabokov_win
 achievement: zeppelin_kapitan
 go-to: nazis_lose
 
 
-@juchacz_win
+@radchenko_win
 achievement: wahlrechts
 go-to: nazis_lose
 
-This is a historic victory - Marie Juchacz is the first woman to be elected president in any republic, anywhere in the world.
+This is a historic victory - Lyubov Radchenko is the first woman to be elected president in any republic, anywhere in the world.
 
-@einstein_victory
+@pavlov_victory
 achievement: republik_der_wissenschaft
 go-to: nazis_lose
 

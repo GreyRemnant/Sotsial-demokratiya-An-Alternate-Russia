@@ -1,15 +1,15 @@
-title: 1928 RSDRP Party Congress
-subtitle: The 1928 Party Congress has finally arrived. We will choose our Party Programme for the coming election, and for the next two-years.
+title: 1927 RSDRP Party Congress
+subtitle: The 1927 Party Congress has finally arrived. We will choose our Party Programme for the coming election, and for the next two-years.
 tags: event
 on-arrival: ideology = "centrist"
 new-page: true
 face-image: img/programme.jpg
-view-if: year = 1928 and month = 4 and ideology == 0
+view-if: year = 1927 and month = 4 and ideology == 0
 max-visits: 1
 priority: 2
 
 
-= 1928 Party Congress of the Russian Social Democratic Labor Party
+= 1927 Party Congress of the Russian Social Democratic Labor Party
 
 the Bi-Annual Party Congress has finally arrived! For the past few days, our members have bickered, debated, and voted on the party programme that will serve us for the next two years.
 
