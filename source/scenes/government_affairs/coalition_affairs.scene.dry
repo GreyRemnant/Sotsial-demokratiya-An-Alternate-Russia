@@ -9,7 +9,7 @@ card-image: img/cabinet.jpg
 
 = Coalition Affairs
 
-Our coalition is in trouble. The right-leaning members of the PSR [? if in_grand_coalition: and Kadets ?] are constantly criticizing us for our policies, and are threatening to call a vote of no confidence to collapse this government[? if rsdrp_prussia :, or to do the same for our government in the state of Prussia ?].
+Our coalition is in trouble. The right-leaning members of the PSR [? if in_socialliberal_coalition: and Kadets ?] are constantly criticizing us for our policies, and are threatening to call a vote of no confidence to collapse this government[? if rsdrp_prussia :, or to do the same for our government in the state of Prussia ?].
 
 How do we reduce tensions with the coalition?
 
@@ -40,7 +40,7 @@ No. We will not do this.
 
 @bring_down
 subtitle: Bring down this government before our opponents do.
-on-arrival: rsdrp_in_government = 0; in_grand_coalition = 0; in_weimar_coalition = 0; chancellor = "Brüning"; chancellor_party = "Z"; next_election_time = time + 3 if next_election_time > time+3; next_election_month = month + 3 if next_election_time >= time+3; next_election_year = year if next_election_time >= time+3; next_election_year += 1 if next_election_month > 12; next_election_month -= 12 if next_election_month > 12; rsdrp_toleration = 0; left_strength += 8; pro_republic -= 5; new_middle_rsdrp -= 3; rural_rsdrp -= 3; old_middle_rsdrp -= 3; catholics_rsdrp -= 3; reformist_dissent += 5
+on-arrival: rsdrp_in_government = 0; in_socialliberal_coalition = 0; in_trudovaya_coalition = 0; chancellor = "Brüning"; chancellor_party = "PSR"; next_election_time = time + 3 if next_election_time > time+3; next_election_month = month + 3 if next_election_time >= time+3; next_election_year = year if next_election_time >= time+3; next_election_year += 1 if next_election_month > 12; next_election_month -= 12 if next_election_month > 12; rsdrp_toleration = 0; left_strength += 8; pro_republic -= 5; new_middle_rsdrp -= 3; rural_rsdrp -= 3; old_middle_rsdrp -= 3; catholics_rsdrp -= 3; reformist_dissent += 5
 
 We have called for a vote of no confidence ourselves, and have brought down this government. Chancellor [+ chancellor +] currently rules as acting chancellor until a new government can be formed.
 
