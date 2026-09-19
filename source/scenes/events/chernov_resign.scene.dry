@@ -5,6 +5,7 @@ max-visits: 1
 face-image: img/psrcongress.jpg
 tags: event
 new-page: true
+on-arrival: psr_party_leader = "Breshko-Breshkovskaya"
 
 = Viktor Chernov to resign!
 
