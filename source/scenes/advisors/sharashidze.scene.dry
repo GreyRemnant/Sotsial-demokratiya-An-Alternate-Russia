@@ -1,0 +1,43 @@
+title: Kristina Sharashidze
+is-pinned-card: true
+tags: advisor
+card-image: img/portraits/sharashidze.jpg
+view-if: sharashidze_advisor = 1
+new-page: true
+#face-image: img/portraits/sharashidze.jpg
+
+= Kristina Sharashidze
+
+Kristina Sharashidze is a Georgian Social-Democrat, teacher, and member of the Duma.
+
+- @readmfr
+- @campaign_welfare
+- @solidarist_urgency
+- @root: Return to main
+
+@readmfr
+title: Fund Social-Democratic Literacy Programs.
+subtitle: -1 resources
+choose-if: resources >= 1
+unavailable-subtitle: We do not have the money.
+on-arrival: budget -= 1; workers_rsdrp += 5*(1-dissent); rural_rsdrp += 3*(1-dissent); unemployed -= 0.2 if unemployed >= 4; literacy_rate += 3
+
+We have increased funding for party-sponsored literacy programs.
+
+@campaign_welfare
+title: Rally in favor of Trudopolit.
+subtitle: Campaign for food, welfare, and education.
+choose-if: advisor_action_timer = 0
+unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?]
+on-arrival: advisor_action_timer = 6;
+go-to: rally.welfare
+
+
+@solidarist_urgency
+title: Warning about the Solidarists
+subtitle: A life-long advocate against autocracy, Sharashidze can warn the party about the rising threat that is Solidarism.
+choose-if: advisor_action_timer == 0
+unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?]
+on-arrival: advisor_action_timer = 6; nazi_urgency += 1; rb_militancy += 0.01; nts_workers -= 4*(1-dissent);
+
+We have begun a propaganda campaign to warn our members away from the Solidarism.

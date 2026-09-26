@@ -1,16 +1,16 @@
-title: Kurt Schumacher
+title: Boris Nicolaevsky
 is-pinned-card: true
 tags: advisor, neorevisionist
-card-image: img/portraits/SchumacherKurt.jpg
-view-if: schumacher_advisor = 1
+card-image: img/portraits/nicolaevsky.JPG
+view-if: nicolaevsky_advisor = 1
 new-page: true 
 
-= Kurt Schumacher
+= Boris Nicolaevsky
 
-A Great War veteran and a neorevisionist leader, Kurt Schumacher argues for a strong resistance against the Nazis.
+A three-time Siberian exile and eight-time arrestee, Boris Nicolaevsky has a long history of anti-authoritarian activism, and is a respected Marxist historian. 
 
 - @emergency_fundraising
-- @build_reichsbanner
+- @democratic_rally
 - @moderate_economic_plan
 - @root: Return to main
 
@@ -22,17 +22,18 @@ unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +
 on-arrival: advisor_action_timer = 6; resources += dues
 #view-if: difficulty < 1
 
-# Schumacher's emergency fundraising is available on all difficulties.
+# Nicolaevsky's emergency fundraising is available on all difficulties.
 
 We have gained +[+ dues +] resources.
 
-@build_reichsbanner
-title: Reichsbanner
-subtitle: Schumacher supports providing more resources to the Reichsbanner.
-choose-if: advisor_action_timer = 0
+@democratic_rally
+title: Rally for democracy
+subtitle: Rally our party and the Russian people to defend democracy and freedom.
+choose-if: advisor_action_timer == 0 
 unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?]
-on-arrival: advisor_action_timer = 6; reichsbanner_timer -= 6; last_advisor_action = 1
-go-to: reichsbanner
+on-arrival: advisor_action_timer = 6; pro_republic += 5; democratization += 1; neorevisionist_strength += 5; reformist_strength += 3; workers_rsdrp += 4*(1-dissent) if democratization >= 4; new_middle_rsdrp += 3*(1-dissent) if democratization >= 4
+
+Nicolaevsky helps us to rally the people in defense of democracy against authoritarianism, be it left or right.
 
 @moderate_economic_plan
 title: Support the reformist economic plan

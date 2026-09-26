@@ -35,14 +35,14 @@ Barring that, the Müsavat Party, Esers, and Kadets are planning to run separate
 
 As for the RSDRP, we could support a joint Socialist candidate or run our own.
 [? if maisky_campaign : Ivan Maisky is tired. He ran and failed in the previous presidential election, and no longer wishes to run. He voiced his preference to be a diplomat over a president. ?] [? if maisky_campaign = 0 and rsdrp_prussia : Ivan Maisky is tired. He does not wish to run, but he is willing to be convinced that he is needed at this moment. ?]
-Mikhail Yakubovich is an ambitious rising star in the party, and would be all too willing to run. He was a Bolshevik before the Great War and became a Menshevik because of the war, but his relatively young age might be relevant.
+Boris Nicolaevsky is an ambitious rising star in the party, and would be all too willing to run. He was a Bolshevik before the Great War and became a Menshevik because of the war, but his relatively young age might be relevant.
 [? if womens_rights >= 6 and family_law >= 2 and womens_work >= 2 and welfare > 0: Or, perhaps it is time for a woman to become president. Germany and the RSDRP have been leading on women's rights for years, and it is only fitting that we should elect the world's first female president. Perhaps Eva Broido or Lyubov Radchenko could be seen as the "mother of the nation" for their work in social welfare. However, the very fact that either of the two are women may prove a challenge among the conservative population of Russia. ?]
 
 [? if presidential_powers >= 1 and pro_republic >= 60 and pacifism >= 3: Since Russia has been largely democratized and presidential powers reduced, we can also support another non-traditional political figure, someone from the cultural, scientific, or literary spheres. They will perhaps be the symbol of a new Russia that has moved beyond its past. ?]
 
 # options: 
 # - Ivan Maisky (only if rsdrp_prussia)
-# - Mikhail Yakubovich
+# - Boris Nicolaevsky
 # - Eva Broido/Lyubov Radchenko (The mother of the nation, only available if women's rights is full)
 
 @candidate_menu
@@ -53,7 +53,7 @@ Mikhail Yakubovich is an ambitious rising star in the party, and would be all to
 - @kalinin_r1: Support Mikhail Kalinin of the RKP.
 - @milyutin_r1: Support Vladimir Milyutin, a known member of the RKP's Conciliator faction.
 - @maisky_r1: Support Ivan Maisky.
-- @yakubovich_r1: Support Mikhail Yakubovich.
+- @nicolaevsky_r1: Support Boris Nicolaevsky.
 - @radchenko_r1: Support Lyubov Radchenko.
 - @cultural_figure: Support a nonpartisan cultural figure?
 
@@ -117,14 +117,14 @@ go-to: r1_menu
 We have convinced Ivan Maisky to run for president once more.
 
 
-@yakubovich_r1
+@nicolaevsky_r1
 subtitle: -2 resources.
 unavailable-subtitle: [? if resources < 2 : -2 resources - Not enough resources. ?]
 choose-if: resources >= 2
-on-arrival: rsdrp_candidate = "Yakubovich"; resources -= 2; is_unity_candidate = 0
+on-arrival: rsdrp_candidate = "Nicolaevsky"; resources -= 2; is_unity_candidate = 0
 go-to: r1_menu
 
-We have nominated the young and upcoming Mikhail Yakubovich to be our presidential candidate.
+We have nominated the young and upcoming Boris Nicolaevsky to be our presidential candidate.
 
 
 @radchenko_r1
@@ -219,7 +219,7 @@ We implore the Socialist-Revolutionary Party to support [+ rsdrp_candidate +] as
 title: Convince the Socialist-Revolutionary Party to support [+ rsdrp_candidate +].
 choose-if: rsdrp_votes >= psr_votes
 unavailable-subtitle: [? if rsdrp_votes < psr_votes: The Narodists know that they are more popular than us; they do not see a reason to support our candidate. ?]
-view-if: (rsdrp_candidate = "Maisky" or rsdrp_candidate = "Yakubovich" or rsdrp_candidate = "Radchenko" or is_cultural_candidate) and psr_candidate != rsdrp_candidate
+view-if: (rsdrp_candidate = "Maisky" or rsdrp_candidate = "Nicolaevsky" or rsdrp_candidate = "Radchenko" or is_cultural_candidate) and psr_candidate != rsdrp_candidate
 on-arrival: {!
 Q.psr_support_maisky = 0;
 if (Q.rsdrp_candidate == "Radchenko") {
@@ -287,7 +287,7 @@ max-visits: 1
 
 @convince_musavat_rsdrp
 title: Convince the [+ musavat_name +] to support [+ rsdrp_candidate +].
-view-if: (rsdrp_candidate = "Maisky" or rsdrp_candidate = "Yakubovich" or rsdrp_candidate = "Radchenko" or is_cultural_candidate) and musavat_candidate != rsdrp_candidate
+view-if: (rsdrp_candidate = "Maisky" or rsdrp_candidate = "Nicolaevsky" or rsdrp_candidate = "Radchenko" or is_cultural_candidate) and musavat_candidate != rsdrp_candidate
 on-arrival: musavat_candidate = rsdrp_candidate if musavat_relation >= 40
 go-to: r1_menu if round = 0; r2_campaigning if round > 0
 max-visits: 1
@@ -297,7 +297,7 @@ max-visits: 1
 
 @convince_rkp_rsdrp
 title: Convince the RKP to support [+ rsdrp_candidate +].
-view-if: (rsdrp_candidate = "Maisky" or rsdrp_candidate = "Yakubovich" or rsdrp_candidate = "Radchenko" or is_cultural_candidate) and rkp_candidate != rsdrp_candidate
+view-if: (rsdrp_candidate = "Maisky" or rsdrp_candidate = "Nicolaevsky" or rsdrp_candidate = "Radchenko" or is_cultural_candidate) and rkp_candidate != rsdrp_candidate
 choose-if: rsdrp_votes >= rkp_votes
 unavailable-subtitle: The RKP knows that they are more popular than us; they do not see a reason to support our candidate.
 max-visits: 1
@@ -331,7 +331,7 @@ The RKP now endorses [+ rsdrp_candidate +] in the presidential election! We ask 
 @convince_kadets_rsdrp
 title: Convince the K-D to support [+ rsdrp_candidate +].
 unavailable-subtitle: The K-D is not willing to support our candidate.
-view-if: rsdrp_candidate = "Maisky" or rsdrp_candidate = "Yakubovich" or rsdrp_candidate = "Radchenko" or is_cultural_candidate
+view-if: rsdrp_candidate = "Maisky" or rsdrp_candidate = "Nicolaevsky" or rsdrp_candidate = "Radchenko" or is_cultural_candidate
 choose-if: (kadets_relation >= 65 and candidate != "Radchenko") or (kadets_relation >= 65 and candidate = "Radchenko")
 on-arrival: kadets_candidate = rsdrp_candidate
 go-to: r1_menu if round = 0; r2_campaigning if round > 0
@@ -369,7 +369,7 @@ Rasulzade: "Dr. Andrei Shingarev of the Kadets",
 Kalinin: "Mikhail Kalinin of the RKP",
 Milyutin: "Vladimir Milyutin of the RKP",
 Maisky: "Ivan Maisky of the RSDRP",
-Yakubovich: "Mikhail Yakubovich of the RSDRP",
+Nicolaevsky: "Boris Nicolaevsky of the RSDRP",
 Radchenko: "Lyubov Radchenko of the RSDRP",
 Pavlov: "Ivan Pavlov, a left-wing scientist",
 Gorky: "Maxim Gorky, a left-wing writer",
@@ -437,7 +437,7 @@ Election results:
 [? if Nabokov_running : Nabokov - [+ Nabokov_votes_disp +]% ?]
 
 [? if Maisky_running : Maisky - [+ Maisky_votes_disp +]% ?]
-[? if Yakubovich_running : Yakubovich - [+ Yakubovich_votes_disp +]% ?]
+[? if Nicolaevsky_running : Nicolaevsky - [+ Nicolaevsky_votes_disp +]% ?]
 [? if Radchenko_running : Radchenko - [+ Radchenko_votes_disp +]% ?]
 # cultural candidates
 [? if Pavlov_running : Pavlov - [+ Pavlov_votes_disp +]% ?]
@@ -528,10 +528,10 @@ view-if: rsdrp_candidate != "Kalinin" and rkp_candidate = "Kalinin"
 choose-if: rkp_relation >= 50 and left_strength > reformist_strength
 unavailable-subtitle: [? if rkp_relation < 50 : We do not have good enough relations with the Communists, so they are not even willing to accept our support. ?] [? if reformist_strength >= left_strength : The reformist faction is able to dissuade the party from supporting this bizarre arrangement. ?]
 on-arrival: reformist_dissent += 15; center_dissent += 10; labor_dissent += 5; neorevisionist_dissent += 10; catholics_rsdrp -= 5; workers_rsdrp -= 3; rkp_relation += 10; communist_coalition += 2; psr_relation -= 15; kadets_relation -= 15; musavat_relation -= 12
-on-departure: psr_candidate = "Chernov" if psr_candidate = "Maisky" or psr_candidate = "Yakubovich" or psr_candidate = "Radchenko"; musavat_candidate = psr_candidate if musavat_candidate = "Maisky" or musavat_candidate = "Yakubovich" or musavat_candidate = "Radchenko"; kadets_candidate = psr_candidate if kadets_candidate = "Maisky" or kadets_candidate = "Yakubovich" or kadets_candidate = "Radchenko"; rsdrp_candidate = "Kalinin"; 
+on-departure: psr_candidate = "Chernov" if psr_candidate = "Maisky" or psr_candidate = "Nicolaevsky" or psr_candidate = "Radchenko"; musavat_candidate = psr_candidate if musavat_candidate = "Maisky" or musavat_candidate = "Nicolaevsky" or musavat_candidate = "Radchenko"; kadets_candidate = psr_candidate if kadets_candidate = "Maisky" or kadets_candidate = "Nicolaevsky" or kadets_candidate = "Radchenko"; rsdrp_candidate = "Kalinin"; 
 max-visits: 1
 
-We have switched our endorsement to Mikhail Kalinin of the RKP. [? if psr_candidate = rsdrp_candidate : Our former allies in the Socialist-Revolutionary Party see this as a betrayal. ?][? if psr_candidate = "Maisky" or psr_candidate = "Yakubovich" or psr_candidate = "Radchenko": Now, they will support Viktor Chernov once again. ?][? if musavat_candidate = "Maisky" or musavat_candidate = "Yakubovich" or musavat_candidate = "Radchenko": The [+ musavat_name +] will switch their support to the Socialist-Revolutionary Party candidate. ?][? if kadets_candidate = "Maisky" or kadets_candidate = "Yakubovich" or kadets_candidate = "Radchenko": The K-D will also support the Socialist-Revolutionary Party candidate. ?]
+We have switched our endorsement to Mikhail Kalinin of the RKP. [? if psr_candidate = rsdrp_candidate : Our former allies in the Socialist-Revolutionary Party see this as a betrayal. ?][? if psr_candidate = "Maisky" or psr_candidate = "Nicolaevsky" or psr_candidate = "Radchenko": Now, they will support Viktor Chernov once again. ?][? if musavat_candidate = "Maisky" or musavat_candidate = "Nicolaevsky" or musavat_candidate = "Radchenko": The [+ musavat_name +] will switch their support to the Socialist-Revolutionary Party candidate. ?][? if kadets_candidate = "Maisky" or kadets_candidate = "Nicolaevsky" or kadets_candidate = "Radchenko": The K-D will also support the Socialist-Revolutionary Party candidate. ?]
 
 - @r2_vote: Let the voting begin.
 
@@ -542,10 +542,10 @@ view-if: rsdrp_candidate != "Milyutin" and rkp_candidate = "Milyutin"
 choose-if: rkp_relation >= 50 and left_strength > reformist_strength
 unavailable-subtitle: [? if rkp_relation < 50 : We do not have good enough relations with the Communists, so they are not even willing to accept our support. ?] [? if reformist_strength >= left_strength : The reformist faction is able to dissuade the party from supporting this bizarre arrangement. ?]
 on-arrival: reformist_dissent += 12; center_dissent += 10; labor_dissent += 5; neorevisionist_dissent += 10; catholics_rsdrp -= 5; workers_rsdrp -= 3; rkp_relation += 10; communist_coalition += 2; psr_relation -= 12; musavat_relation -= 10; kadets_relation -= 15; 
-on-departure: psr_candidate = "Chernov" if psr_candidate = "Maisky" or psr_candidate = "Yakubovich" or psr_candidate = "Radchenko"; musavat_candidate = psr_candidate if musavat_candidate = "Maisky" or musavat_candidate = "Yakubovich" or musavat_candidate = "Radchenko"; kadets_candidate = psr_candidate if kadets_candidate = "Maisky" or kadets_candidate = "Yakubovich" or kadets_candidate = "Radchenko"; rsdrp_candidate = "Milyutin"; 
+on-departure: psr_candidate = "Chernov" if psr_candidate = "Maisky" or psr_candidate = "Nicolaevsky" or psr_candidate = "Radchenko"; musavat_candidate = psr_candidate if musavat_candidate = "Maisky" or musavat_candidate = "Nicolaevsky" or musavat_candidate = "Radchenko"; kadets_candidate = psr_candidate if kadets_candidate = "Maisky" or kadets_candidate = "Nicolaevsky" or kadets_candidate = "Radchenko"; rsdrp_candidate = "Milyutin"; 
 max-visits: 1
 
-We have switched our endorsement to Vladimir Milyutin of the RKP. [? if psr_candidate = rsdrp_candidate : Our former allies in the Socialist-Revolutionary Party see this as a betrayal. ?][? if psr_candidate = "Maisky" or psr_candidate = "Yakubovich" or psr_candidate = "Radchenko": Now, they will support Viktor Chernov once again. ?][? if musavat_candidate = "Maisky" or musavat_candidate = "Yakubovich" or musavat_candidate = "Radchenko": The [+ musavat_name +] will switch their support to the Socialist-Revolutionary Party candidate. ?][? if kadets_candidate = "Maisky" or kadets_candidate = "Yakubovich" or kadets_candidate = "Radchenko": The K-D will also support the Socialist-Revolutionary Party candidate. ?]
+We have switched our endorsement to Vladimir Milyutin of the RKP. [? if psr_candidate = rsdrp_candidate : Our former allies in the Socialist-Revolutionary Party see this as a betrayal. ?][? if psr_candidate = "Maisky" or psr_candidate = "Nicolaevsky" or psr_candidate = "Radchenko": Now, they will support Viktor Chernov once again. ?][? if musavat_candidate = "Maisky" or musavat_candidate = "Nicolaevsky" or musavat_candidate = "Radchenko": The [+ musavat_name +] will switch their support to the Socialist-Revolutionary Party candidate. ?][? if kadets_candidate = "Maisky" or kadets_candidate = "Nicolaevsky" or kadets_candidate = "Radchenko": The K-D will also support the Socialist-Revolutionary Party candidate. ?]
 
 - @r2_vote: Let the voting begin.
 
@@ -668,7 +668,7 @@ Despite the Solidarist threats, supporters of the RSDRP and the democratic parti
 
 
 @election_end
-go-to: nabokov_win if winner = "Nabokov"; radchenko_win if winner = "Radchenko"; bundesrepublik_win if winner = "Yakubovich" or winner = "Chernov"; leuchtenberg_victory if winner = "Leuchtenberg" or winner = "Baidalakov" or winner = "Baidalakov"; shingarev_victory if winner = "Shingarev"; milyutin_victory if winner = "Milyutin" or winner = "Milyutin"; kalinin_victory if winner = "Kalinin" or winner = "Kalinin"; nazis_lose if winner = "Maisky" or winner = "Rasulzade"; cultural_victory if winner = "Zaslavsky" or winner = "Gorky"; pavlov_victory if winner = "Pavlov"
+go-to: nabokov_win if winner = "Nabokov"; radchenko_win if winner = "Radchenko"; bundesrepublik_win if winner = "Nicolaevsky" or winner = "Chernov"; leuchtenberg_victory if winner = "Leuchtenberg" or winner = "Baidalakov" or winner = "Baidalakov"; shingarev_victory if winner = "Shingarev"; milyutin_victory if winner = "Milyutin" or winner = "Milyutin"; kalinin_victory if winner = "Kalinin" or winner = "Kalinin"; nazis_lose if winner = "Maisky" or winner = "Rasulzade"; cultural_victory if winner = "Zaslavsky" or winner = "Gorky"; pavlov_victory if winner = "Pavlov"
 on-arrival: president = winner; president = "Kalinin" if president == "Kalinin"; president = "Milyutin" if president = "Milyutin"; president = "Baidalakov" if president = "Baidalakov"
 
 The election has been won by [+ winner_desc +].

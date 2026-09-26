@@ -1,13 +1,13 @@
-title: Friedrich Stampfer
+title: Mark Rein
 is-pinned-card: true
 tags: advisor
-card-image: img/portraits/StampferFriedrich.jpg
-view-if: stampfer_advisor = 1
+card-image: img/portraits/rein.jpg
+view-if: rein_advisor = 1
 new-page: true 
 
-= Friedrich Stampfer
+= Mark Rein
 
-Friedrich Stampfer is the long-time editor-in-chief of Vorwärts, our party newspaper, and also a Reichstag member. He was historically part of the Majority RSDRP that supported our participation in the Great War, but also supports cooperation with the RKP to save the Republic.
+Mark Rein is a Socialist journalist for Novaya Zhizn, our party newspaper, and is also the son Rafail Abramovich. He breifly supported reconciliation with the Bolsheviks.
 
 - @media_
 - @faction_support_
@@ -26,44 +26,44 @@ go-to: media
 
 @faction_support_
 title: Editorial Line
-subtitle: We can change the editorial line of Vorwärts to support a particular faction.
+subtitle: We can influence the editorial line of Novaya Zhizn to support a particular faction.
 choose-if: advisor_action_timer = 0
 unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?]
 on-arrival: advisor_action_timer = 6
 
 Which faction should we support?
 
-- @support_left: Left
-- @support_center: Center
-- @support_labor: Labor
-- @support_reform: Reformists
-- @support_neorev: Neorevisionists
+- @support_left: Mezhraiontsy
+- @support_center: Mensheviks
+- @support_labor: Trudoviks
+- @support_reform: Yedinstvenny
+- @support_neorev: Novomen'sheviki
 
 @support_left
 on-arrival: left_dissent -= 8; left_strength += 8
 
-Vorwärts prints editorials in support of Left positions.
+Novaya Zhizn prints editorials in support of Internationalist positions.
 
 @support_center
 on-arrival: center_dissent -= 8; center_strength += 8
 
-Vorwärts prints editorials in support of centrist positions.
+Novaya Zhizn prints editorials in support of Centrist positions.
 
 @support_labor
 on-arrival: labor_dissent -= 8; labor_strength += 8
 
-Vorwärts prints editorials in support of the policies of the trade unions.
+Novaya Zhizn prints editorials in support of the policies of the trade unions.
 
 @support_reform
 on-arrival: reformist_dissent -= 8; reformist_strength += 8;
 
-Vorwärts prints editorials in support of the reformist policies.
+Novaya Zhizn prints editorials in support of the reformist policies.
 
 @support_neorev
 view-if: neorevisionism
 on-arrival: neorevisionist_dissent -= 8; neorevisionist_strength += 8
 
-Vorwärts prints editorials in support of neorevisionist ideas.
+Novaya Zhizn prints editorials in support of neorevisionist ideas.
 
 @rkp_cooperation
 title: Cooperation with the RKP
@@ -72,4 +72,4 @@ unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +
 choose-if: advisor_action_timer = 0
 on-arrival: advisor_action_timer = 6; left_strength += 2; rkp_relation += 4*(1-dissent); reformist_dissent += 2
 
-Stampfer works towards closer ties with the RKP through our media.
+Rein works towards closer ties with the RKP through our media.
