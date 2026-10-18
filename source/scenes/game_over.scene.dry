@@ -93,7 +93,7 @@ if (Q.rsdrp_in_government && ((Q.nationalization_progress >= 2 && Q.economic_dem
     this.achieve('raterepublik');
 }
 // Epokha krizisa - survive both a fascist coup and a capital strike.
-if (Q.march_on_berlin_seen && Q.capital_strike_seen && Q.chancellor != "Hitler" && Q.president != "Hitler" && !Q.total_defeat) {
+if (Q.march_on_berlin_seen && Q.capital_strike_seen && Q.chancellor != "Leuchtenberg" && Q.president != "Leuchtenberg" && !Q.total_defeat) {
     this.achieve("polykrise");
 }
 // Velikiy perelom - implement two different economic plans.
@@ -104,8 +104,8 @@ if ((Q.nationalization_progress >= 1 && Q.wtb_implemented >= 1) || (Q.wtb_implem
 if (Q.factory_takeovers >= 2) {
     this.achieve("syndikalismus");
 }
-// Bol'shoy terror - lose the civil war against Hitler.
-if ((Q.chancellor_party == "NTS" || Q.chancellor == "Hitler" || Q.president == "Hitler") && Q.total_defeat) {
+// Bol'shoy terror - lose the civil war against Leuchtenberg.
+if ((Q.chancellor_party == "NTS" || Q.chancellor == "Leuchtenberg" || Q.president == "Leuchtenberg") && Q.total_defeat) {
     this.achieve('stolperstein');
 }
 // party program wip name - fulfill the goals of the party programme - increase welfare, reform justice, support women's rights, progressive taxation, works councils, build a European Union.
@@ -123,42 +123,42 @@ if ((Q.welfare > 0 && Q.judicial_reform >= 2 && Q.womens_work >= 1 && Q.family_l
 - @end_game: End game.
 
 
-@hitler_wins
-view-if: (chancellor == "Hitler" or president == "Hitler") and (total_defeat==1 or civil_war_seen == 0)
-title: Adolf Hitler is in undisputed control over Germany.
+@leuchtenberg_wins
+view-if: (chancellor == "Leuchtenberg" or president == "Leuchtenberg") and (total_defeat==1 or civil_war_seen == 0)
+title: Sergey Leuchtenberg is in undisputed control over Germany.
 tags: endings
 go-to: eg_menu
 
-Adolf Hitler is in undisputed control over Germany. The RSDRP, along with all of the democratic forces, have failed.
+Sergey Leuchtenberg is in undisputed control over Russia. The Mensheviks, along with all of the democratic forces, have failed.
 
-[? if civil_war_seen == 1 : At the very least, we fought back. Perhaps our resistance will be celebrated in an impossible-to-forsee future. ?]
+[? if civil_war_seen == 1 : At the very least, we fought back. Perhaps our resistance will be celebrated in the future, even if we are not around to witness it. ?]
 
-@war_against_hitler
-view-if: (chancellor == "Hitler" or president == "Hitler") and (long_war == 1)
-title: Adolf Hitler is in power, but we are fighting to stop him.
+@war_against_leuchtenberg
+view-if: (chancellor == "Leuchtenberg" or president == "Leuchtenberg") and (long_war == 1)
+title: Sergey Leuchtenberg is in power, but we are fighting to stop him.
 tags: endings
 go-to: eg_menu
 
-Adolf Hitler has taken power in Germany. However, we have rallied the democratic forces of the country against him, and are fighting back. The outcome of this war is uncertain.
+Sergey Leuchtenberg has taken power in Russia. However, we have rallied the democratic forces of the country against him, and are fighting back. The outcome of this war is uncertain.
 
 
-@no_hitler
-view-if: chancellor != "Hitler" and president != "Hitler" and president != "Göring" and chancellor_party != "NTS"
-title: Hitler does not yet control Germany...
+@no_leuchtenberg
+view-if: chancellor != "Leuchtenberg" and president != "Leuchtenberg" and president != "Göring" and chancellor_party != "NTS"
+title: Leuchtenberg does not yet control Germany...
 tags: endings
 go-to: eg_menu
 
-Hitler does not yet control Germany. [? if chancellor == "Papen" : However, Chancellor Papen's authoritarianism and far-right politics are paving the way for Hitler, or someone like him, to take power. ?] [? if chancellor == "Schleicher" : However, Chancellor Schleicher's authoritarianism and scheming is paving the way for Hitler, or someone like him, to take power. ?][? if resist_coup == 1 and republic_victory == 0 and long_war == 0 and coup_victory == 0 : Given our defeat in the Prussian coup, the far-right appears to be ascendant. ?][? if chancellor == "Brüning" : However, Chancellor Brüning's austerity policies and the continuation of the depression are paving the way for Hitler, or someone like him, to take power. ?]
+Leuchtenberg does not yet control Russia. [? if chancellor == "Balashev" : However, Chairman Balashev's authoritarianism and nationalist-conservative politics are paving the way for Leuchtenberg, or someone like him, to take power. ?] [? if chancellor == "Krymov" : However, Chairman Krymov's authoritarianism and scheming is paving the way for Leuchtenberg, or someone like him, to take power. ?][? if resist_coup == 1 and republic_victory == 0 and long_war == 0 and coup_victory == 0 : Given our defeat in the Petrograd coup, the far-right appears to be ascendant. ?][? if chancellor == "Shingarev" : However, Chancellor Shingarev's austerity policies and the continuation of the depression are paving the way for Leuchtenberg, or someone like him, to take power. ?]
 
-[? if hitler_deported == 1 : We have deported Hitler back to Austria. Hopefully he will never return. ?]
+[? if leuchtenberg_deported == 1 : We have arrested Leuchtenberg for inciting public violence, revolutionary activity, and for heading an illegal paramilitary. Hopefully the courts keep him locked away for a long time. ?]
 
 @nts_win
-view-if: chancellor == "Goebbels" or president == "Göring"
-title: Despite the deportation of Hitler, the Nazis have still taken power...
+view-if: chancellor == "Baidalakov" or president == "Baidalakov"
+title: Despite the arrest of Leuchtenberg, the Solidarists have still taken power...
 tags: endings
 go-to: eg_menu
 
-Despite the deportation of Hitler, the NTS has somehow still wormed its way into power. [? if long_war == 1 : We are fighting them for control of Germany. ?]
+Despite the arrest of Leuchtenberg, the NTS has somehow still wormed its way into power. [? if long_war == 1 : We are fighting them for control of Russia. ?]
 
 
 @civil_war_won
@@ -167,7 +167,7 @@ view-if: republic_victory == 1
 tags: endings
 go-to: eg_menu
 
-We have won the civil war against the reactionary forces. Germany will be changed forever, but it is too early to know how.
+We have won the civil war against the reactionary forces. Russia will be changed forever, but it is too early to know how.
 
 @civil_war_lost
 title: We lost the civil war.
@@ -175,7 +175,7 @@ view-if: total_defeat == 1
 tags: endings
 go-to: eg_menu
 
-We have lost the civil war. At least it was a quick coup, and ended before Germany could be plunged into total war.
+We have lost the civil war. At least it was a quick coup, and ended before Russia could be plunged into total war.
 
 @long_war
 title: Germany is gripped by civil war.
@@ -183,42 +183,42 @@ view-if: long_war == 1
 tags: endings
 go-to: eg_menu
 
-Germany is currently in the grip of a civil war, a brutal affair that has no obvious end. Thousands of lives have already been extinguished, and it is likely that the war will not stop until Germany's cities are reduced to ruins. 
+Russia has been stricken by a second civil war. While the first was short, fast, and bloody, there is no doubt that this one will be longer, harsh, and devestating. Countless lives have already been extinguished. The Solidarist, Tsarist, Communist, and Democratic forces clash in the streets and countryside. The landscape, urban and rural, will be scarred for a long time to come.
 
-[? if is_favorable == 0 : The current conditions are not favorable for us. ?][? if west_relation >= 2: Our cause is popular in the West, but their sclerotic governments are reluctant to send us aid. ?][? if soviet_aid >= 1 : The Soviet Union has aided the Communists, but not the socialists and democrats, in an attempt to shape Germany's future government. ?][? if east_aid >= 1 : Poland and Czechoslovakia have sent some assistance against the fascists. ?]
+[? if is_favorable == 0 : The current conditions are not favorable for us. ?][? if west_relation >= 2: Our cause is popular in the West, but their sclerotic governments are reluctant to send us aid. ?][? if soviet_aid >= 1 : Communist parties abroad have sent aid to the Communists, but not the socialists and democrats, in an attempt to shape Russia's future government. ?][? if east_aid >= 1 : Poland, the Baltics, Ukraine, and Czechoslovakia have sent some assistance against the anti-democratic forces. ?]
 
 
-@braun_victorious
-title: Otto Braun victorious
-view-if: president == "Braun"
+@maisky_victorious
+title: Ivan Maisky victorious
+view-if: president == "Maisky"
 tags: endings
 go-to: eg_menu
 
-Otto Braun has been elected as President of Germany. He had never desired to be the most powerful man in Germany, but now he is.
+Ivan Maisky has been elected as President of Russia. He had never desired to be the most powerful man in Russia, but now he is.
 
-@president_schumacher
-title: Kurt Schumacher victorious
-view-if: president == "Schumacher"
+@president_nicolaevsky
+title: Boris Nicolaevsky victorious
+view-if: president == "Nicolaevsky"
 tags: endings
 go-to: eg_menu
 
-Kurt Schumacher has been elected as President of Germany. As a young and ambitious RSDRP member, he will be shaping Germany for years to come.
+Boris Nicolaevsky has been elected as President of Russia. As a young and ambitious RSDRP member, he will be shaping Russia for years to come.
 
-@president_juchacz
-title: Marie Juchacz is President
-view-if: president == "Juchacz"
+@president_radchenko
+title: Lyubov Radchenko is President
+view-if: president == "Radchenko"
 tags: endings
 go-to: eg_menu
 
-Marie Juchacz has been elected as President of Germany. She is the first woman to be elected as the head of state of any republic, and will contribute to shaping Germany for years to come.
+Lyubov Radchenko has been elected as President of Russia. She is the first woman to be elected as the head of state of any republic, and will contribute to shaping Russia for years to come.
 
-@president_einstein
-title: Albert Einstein is President
-view-if: president == "Einstein"
+@president_gorky
+title: Maxim Gorky is President
+view-if: president == "Gorky"
 tags: endings
 go-to: eg_menu
 
-Albert Einstein, possibly the most famous scientist in the world, has been elected as President of Germany. As a German Jew and a pacifist, he is the repudiation of everything the Nazis stood for, and a symbol of a new German Republic that has moved beyond its checkered past.
+Maxim Gorky, possibly the most famous novelist in the nation, has been elected as President of Russia. As a Socialist and a pacifist, he is the repudiation of everything the Soldiarists stand for, and a symbol of a new Russian Republic that has moved beyond its checkered past.
 
 
 
@@ -228,15 +228,15 @@ view-if: rsdrp_in_government == 1 and chancellor_party == "RSDRP" and total_defe
 tags: endings
 go-to: eg_menu
 
-The RSDRP is still in government, under Chancellor [+ chancellor +]. Given the circumstances, this is a substantial accomplishment.
+The RSDRP is still in government, under Chairman [+ chancellor +]. Given the circumstances, this is a substantial accomplishment.
 
 @communist_victory
 title: Communist victory
-view-if: chancellor_party == "RKP" or president == "Thälmann" and total_defeat == 0 and long_war == 0
+view-if: chancellor_party == "RKP" or president == "Kalinin" and total_defeat == 0 and long_war == 0
 tags: endings
 go-to: eg_menu
 
-The RKP has won power in Germany, with our assistance. They will try to remake Germany in the Soviet image. How much they succeed is yet to be determined.
+The RKP has won power in Russia, with our assistance. They will try to remake Germany in Lenin's image. How much they succeed is yet to be determined.
 
 @works_program
 title: Works program enacted!
@@ -266,11 +266,11 @@ Unemployment levels have fallen substantially! This is a success of our economic
 
 @unemployment_high
 title: Unemployment is still too high.
-view-if: unemployed >= 20 and (chancellor != "Hitler" and president != "Hitler") and (total_defeat == 0) and long_war == 0
+view-if: unemployed >= 20 and (chancellor != "Leuchtenberg" and president != "Leuchtenberg") and (total_defeat == 0) and long_war == 0
 tags: endings
 go-to: eg_menu
 
-Unemployment is still at dangerously high levels. Even though Hitler is not in power, the situation is ripe for instability and extremism.
+Unemployment is still at dangerously high levels. Even though Leuchtenberg is not in power, the situation is ripe for instability and extremism.
 
 
 @emergency_government
@@ -279,15 +279,15 @@ view-if: in_emergency_government == 1
 tags: endings
 go-to: eg_menu
 
-The RSDRP is ruling as part of an emergency minority government, led by President [+ president +] and Chancellor [+ chancellor +]. This is a temporary and unstable arrangement, leaving the door open to further authoritarianism.
+The RSDRP is ruling as part of an emergency minority government, led by President [+ president +] and Chairman [+ chancellor +]. This is a temporary and unstable arrangement, leaving the door open to further authoritarianism.
 
 @peoples_party_achieved
-title: The RSDRP is a "People's Party".
+title: The RSDRP is a "Mass Party".
 view-if: peoples_party == 1
 tags: endings
 go-to: eg_menu
 
-The RSDRP has been declared a "People's Party", representing all of the people, not just the working class. This policy has many supporters and detractors, and what will become of the party is still unclear.
+The RSDRP has been declared a "Mass Party", representing all of the people, not just the working class. This policy has many supporters and detractors, and what will become of the party is still unclear.
 
 @nationalization_achieved
 title: Socialization of the economy has commenced.
@@ -366,7 +366,7 @@ go-to: eg_menu if started == 1; root.start_menu_2 if started == 0
 
 [? if game_achievement_versohnler: **Versöhnler** - the Conciliators lead the RKP. ?]
 
-[? if game_achievement_deport_hitler : **Der österreichische Gefreite** - deported Hitler ?]
+[? if game_achievement_deport_leuchtenberg : **Der österreichische Gefreite** - deported Leuchtenberg ?]
 
 [? if game_achievement_wirtschaftspolitik: **Wirtschaftspolitik** - enact an economic plan. ?]
 
@@ -384,7 +384,7 @@ go-to: eg_menu if started == 1; root.start_menu_2 if started == 0
 
 [? if game_achievement_anders_als_die_andern: **Anders als die Andern** - sexual minorities will defend the Republic. ?]
 
-[? if game_achievement_bruder_zur_sonne: **Brüder, zur Sonne, zur Freiheit** - reduce unemployment, pause reparations, increase women's rights, elect an RSDRP president, and deport Hitler in one playthrough on at least normal difficulty. ?]
+[? if game_achievement_bruder_zur_sonne: **Brüder, zur Sonne, zur Freiheit** - reduce unemployment, pause reparations, increase women's rights, elect an RSDRP president, and deport Leuchtenberg in one playthrough on at least normal difficulty. ?]
 
 [? if game_achievement_die_rote_fahne: **Die Rote Fahne** - join the RKP in their May Day march. ?]
 
@@ -475,7 +475,7 @@ go-to: eg_menu if started == 1; root.start_menu_2 if started == 0
 
 [? if achievement_versohnler: **Osvobozhdeniye truda** - the Conciliators lead the RKP. ?]
 
-[? if achievement_deport_hitler : **Politicheskiy zaklyuchennyy** - arrested Leuchtenberg ?]
+[? if achievement_deport_leuchtenberg : **Politicheskiy zaklyuchennyy** - arrested Leuchtenberg ?]
 
 [? if achievement_wirtschaftspolitik: **Ekonomicheskoye planirovaniye** - enact an economic plan. ?]
 
@@ -493,7 +493,7 @@ go-to: eg_menu if started == 1; root.start_menu_2 if started == 0
 
 [? if achievement_anders_als_die_andern: **Prava transgenderov — eto prava cheloveka.** - sexual minorities will defend the Republic. ?]
 
-[? if achievement_bruder_zur_sonne: **Smelo, tovarishchi, v nogu!** - reduce unemployment, pause reparations, increase women's rights, elect an RSDRP president, and deport Hitler in one playthrough on at least normal difficulty. ?]
+[? if achievement_bruder_zur_sonne: **Smelo, tovarishchi, v nogu!** - reduce unemployment, pause reparations, increase women's rights, elect an RSDRP president, and deport Leuchtenberg in one playthrough on at least normal difficulty. ?]
 
 [? if achievement_die_rote_fahne: **Klassovaya voyna** - join the RKP in their May Day march. ?]
 
@@ -582,7 +582,7 @@ go-to: eg_menu if started == 1; root.start_menu_2 if started == 0
 
 [? if not achievement_versohnler: **Versöhnler** - the Conciliators lead the RKP. ?]
 
-[? if not achievement_deport_hitler : **Der österreichische Gefreite** - deported Hitler ?]
+[? if not achievement_deport_leuchtenberg : **Der österreichische Gefreite** - deported Leuchtenberg ?]
 
 [? if not achievement_wirtschaftspolitik: **Wirtschaftspolitik** - enact an economic plan. ?]
 
@@ -600,7 +600,7 @@ go-to: eg_menu if started == 1; root.start_menu_2 if started == 0
 
 [? if not achievement_anders_als_die_andern: **Anders als die Andern** - sexual minorities will defend the Republic. ?]
 
-[? if not achievement_bruder_zur_sonne: **Brüder, zur Sonne, zur Freiheit** - reduce unemployment, pause reparations, increase women's rights, elect an RSDRP president, and deport Hitler in one playthrough on at least normal difficulty. ?]
+[? if not achievement_bruder_zur_sonne: **Brüder, zur Sonne, zur Freiheit** - reduce unemployment, pause reparations, increase women's rights, elect an RSDRP president, and deport Leuchtenberg in one playthrough on at least normal difficulty. ?]
 
 [? if not achievement_die_rote_fahne: **Die Rote Fahne** - join the RKP in their May Day march. ?]
 

@@ -432,7 +432,7 @@ on-arrival: president = nts_candidate; chancellor = "Leuchtenberg"; chancellor_p
 face-image: img/badending.jpg
 
 [? if nts_candidate == "Leuchtenberg" : Sergey Leuchtenberg of the NTS has won the presidency. He wastes no time in consolidating power. ?]
-[? if nts_candidate != "Leuchtenberg" : The NTS candidate [+ president +] has won. The first action President [+ president +] takes is inviting Leuchtenberg back into Germany, and appointing him chancellor. The Solidarists waste no time in consolidating power. ?]
+[? if nts_candidate != "Leuchtenberg" : The NTS candidate [+ president +] has won. The first action President [+ president +] takes is pardoning Leuchtenberg and appointing him government chairman. The Solidarists waste no time in consolidating power. ?]
 
 - @leuchtenberg_takes_power: What do we do now?
 
